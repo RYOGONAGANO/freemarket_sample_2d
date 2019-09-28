@@ -60,7 +60,7 @@ has_one :user, dependent: destroy
 |column|type|options|
 |------|----|-------|
 |buyer_comment|text| |
-|exhibitor_comments|text| |
+|exhibitor_comment|text| |
 |buyer|references|null: false, foreign_key: true|
 |exhibitor|references|null: false, foreign_key: true|
 
@@ -98,6 +98,7 @@ belongs_to :user
 belongs_to :buyer, class_name: "User"  
 belongs_to :exhibitor, class_name: "User"  
 belongs_to :category  
+belongs_to :brand  
 has_many :nices
 
 ## nicesテーブル
