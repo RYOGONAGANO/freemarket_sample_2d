@@ -65,7 +65,7 @@ has_one :user, dependent: destroy
 |exhibitor|references|null: false, foreign_key: true|
 
 ### Assocation
-belongs_to :buyer, class_name: "User"
+belongs_to :buyer, class_name: "User"  
 belongs_to :exhibitor, class_name: "User"
 
 ## salesテーブル
@@ -95,9 +95,9 @@ belongs_to :user
 |exhibitor|references|null: false, foreign_key: true|
 
 ### Assocation
-belongs_to :buyer, class_name: "User"
-belongs_to :exhibitor, class_name: "User"
-belongs_to :category
+belongs_to :buyer, class_name: "User"  
+belongs_to :exhibitor, class_name: "User"  
+belongs_to :category  
 has_many :nices
 
 ## nicesテーブル
@@ -108,7 +108,7 @@ has_many :nices
 |product|references|null: false, foreign_key: true|
 
 ### Assocation
-belongs_to :user
+belongs_to :user  
 belongs_to :product
 
 ## categorysテーブル
@@ -120,7 +120,7 @@ belongs_to :product
 |product|references|null: false, foreign_key: true|
 
 ### Assocation
-has_many :products
+has_many :products  
 has_many :brands, through: :categorys_brands
 
 ## brandsテーブル
@@ -132,7 +132,7 @@ has_many :brands, through: :categorys_brands
 |category|references|null: false, foreign_key: true|
 
 ### Assocation
-has_many :products
+has_many :products  
 has_many :categorys, through: :categorys_brands
 
 ## categorys_brandsテーブル
@@ -143,5 +143,5 @@ has_many :categorys, through: :categorys_brands
 |brand |references|null: false, foreign_key: true|
 
 ### Assocation
-belongs_to :category
+belongs_to :category  
 belongs_to :brand
