@@ -4,18 +4,18 @@
 
 |column|type|options|
 |------|----|-------|
-|nick_name|string|null: false, index: true|
+|nick_name|string|null: false|
 |email |text|null: false, unique: true|
 |password|string|null: false|
 
 ### Assocation
-belongs_to :user_detail
-belongs_to :evaluate
-has_many :evaluate_comments
-has_many :seles
-has_many :buyed_products, foreign_key: "buyer_id", class_name: "Product"
-has_many :saling_products, -> { where("buyer_id is NULL") }, foreign_key: "exhibitor_id", class_name: "Product"
-has_many :sold_products, -> { where("buyer_id is not NULL") }, foreign_key: "exhibitor_id", class_name: "Product"
+belongs_to :user_detail  
+belongs_to :evaluate  
+has_many :evaluate_comments  
+has_many :seles  
+has_many :buyed_products, foreign_key: "buyer_id", class_name: "Product"  
+has_many :saling_products, -> { where("buyer_id is NULL") }, foreign_key: "exhibitor_id", class_name: "Product"  
+has_many :sold_products, -> { where("buyer_id is not NULL") }, foreign_key: "exhibitor_id", class_name: "Product"  
 has_many :nices
 
 
@@ -30,7 +30,7 @@ has_many :nices
 |year  |integer|null: false|
 |month |integer|null: false|
 |day   |integer|null: false|
-|sms_phone|string|null: false|
+|sms_phone|string|null: false, unique: true|
 |postal_code|string|null: false|
 |prefectures|string|null: false|
 |city  |string|null: false|
@@ -72,7 +72,7 @@ belongs_to :exhibitor, class_name: "User"
 
 |column|type|options|
 |------|----|-------|
-|money |integer|null: false|
+|money |integer|default: 0|
 |user  |references|null: false, foreign_key: true|
 
 ### Assocation
@@ -91,7 +91,7 @@ belongs_to :user
 |shipping_area|string|null: false|
 |shipping_date|string|null: false|
 |size  |string|     |
-|buyer|references|null: false, foreign_key: true|
+|buyer|references|foreign_key: true|
 |exhibitor|references|null: false, foreign_key: true|
 
 ### Assocation
@@ -127,7 +127,7 @@ has_many :brands, through: :categorys_brands
 
 |column|type|options|
 |------|----|-------|
-|name  |string|null: false|
+|name  |string|     |
 |product|references|null: false, foreign_key: true|
 |category|references|null: false, foreign_key: true|
 
