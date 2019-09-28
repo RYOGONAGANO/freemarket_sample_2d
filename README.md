@@ -9,16 +9,16 @@
 |password|string|null: false|
 
 ### Assocation
-belongs_to :user_detail  
-belongs_to :evaluate  
+has_one :user_detail  
+has_one :evaluate  
 has_many :evaluate_comments  
 has_many :seles  
 has_many :products  
 has_many :buyed_products, foreign_key: "buyer_id", class_name: "Product"  
 has_many :saling_products, -> { where("buyer_id is NULL") }, foreign_key: "exhibitor_id", class_name: "Product"  
 has_many :sold_products, -> { where("buyer_id is not NULL") }, foreign_key: "exhibitor_id", class_name: "Product"  
-has_many :nices  
-has_many :niced_products, through: :nices, source: :product
+has_many :likes  
+has_many :liked_products, through: :likes, source: :product
 
 
 ## user_detailsテーブル
@@ -43,7 +43,7 @@ has_many :niced_products, through: :nices, source: :product
 |user|references|null: false, foreign_key: true|
 
 ### Assocation
-has_one :user, dependent: destroy
+belongs_to :user, dependent: destroy
 
 ## evaluatesテーブル
 
@@ -55,7 +55,7 @@ has_one :user, dependent: destroy
 |user  |references|null: false, foreign_key: true|
 
 ### Assocation
-has_one :user, dependent: destroy
+belongs_to :user, dependent: destroy
 
 ## evaluate_commentsテーブル
 
@@ -101,10 +101,10 @@ belongs_to :buyer, class_name: "User"
 belongs_to :exhibitor, class_name: "User"  
 belongs_to :category  
 belongs_to :brand  
-has_many :nices
-has_many :niced_users, through: :nices, source: :user
+has_many :likes
+has_many :liked_users, through: :likes, source: :user
 
-## nicesテーブル
+## likesテーブル
 
 |column|type|options|
 |------|----|-------|
