@@ -49,13 +49,16 @@ belongs_to :user, dependent: destroy
 
 |column|type|options|
 |------|----|-------|
-|good  |integer|default: 0|
-|normal|integer|default: 0|
-|bad   |integer|default: 0|
-|user  |references|null: false, foreign_key: true|
+|buyer_evaluate|integer|null: false|
+|exhibitor_evaluate|integer|null: false|
+|buyer|references|null: false, foreign_key: true|
+|exhibitor|references|null: false, foreign_key: true|
+|product|references|null: false, foreign_key: true|
 
 ### Assocation
-belongs_to :user, dependent: destroy
+belongs_to :buyer, class_name: "User"  
+belongs_to :exhibitor, class_name: "User"
+belongs_to :product
 
 ## evaluate_commentsテーブル
 
@@ -103,6 +106,7 @@ belongs_to :category
 belongs_to :brand  
 has_many :likes
 has_many :liked_users, through: :likes, source: :user
+has_one :evaluate
 
 ## likesテーブル
 
