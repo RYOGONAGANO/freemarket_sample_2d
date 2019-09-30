@@ -13,7 +13,7 @@ has_one :user_detail
 has_one :address  
 has_one :evaluate  
 has_many :evaluate_comments  
-has_many :seles  
+has_many :sales  
 has_many :products  
 has_many :buyed_products, foreign_key: "buyer_id", class_name: "Product"  
 has_many :saling_products, -> { where("buyer_id is NULL") }, foreign_key: "exhibitor_id", class_name: "Product"  
