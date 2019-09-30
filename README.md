@@ -77,7 +77,7 @@ belongs_to :exhibitor, class_name: "User"
 
 |column|type|options|
 |------|----|-------|
-|money |integer|default: 0|
+|price |integer|default: 0|
 |user  |references|null: false, foreign_key: true|
 
 ### Assocation
