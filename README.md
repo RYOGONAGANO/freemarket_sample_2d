@@ -4,12 +4,13 @@
 
 |column|type|options|
 |------|----|-------|
-|nick_name|string|null: false|
+|nickname|string|null: false|
 |email |text|null: false, unique: true|
 |password|string|null: false|
 
 ### Assocation
 has_one :user_detail  
+has_one :address  
 has_one :evaluate  
 has_many :evaluate_comments  
 has_many :seles  
@@ -27,23 +28,32 @@ has_many :liked_products, through: :likes, source: :product
 |------|----|-------|
 |first_name|string|null: false|
 |last_name|string|null: false|
-|first_namek|string|null: false|
-|last_namek|string|null: false|
-|year  |integer|null: false|
-|month |integer|null: false|
-|day   |integer|null: false|
+|first_name_kata|string|null: false|
+|last_name_kata|string|null: false|
+|birth_year  |integer|null: false|
+|birth_month |integer|null: false|
+|birth_day   |integer|null: false|
 |sms_phone|string|null: false, unique: true|
 |postal_code|string|null: false|
-|prefectures|string|null: false|
-|city  |string|null: false|
-|address|string|null: false|
-|building|string|   |
 |phone |string|     |
 |profile|text|      |
 |user|references|null: false, foreign_key: true|
 
 ### Assocation
 belongs_to :user, dependent: destroy
+
+## addressesテーブル
+
+|column|type|options|
+|------|----|-------|
+|prefectures|string|null: false|
+|city  |string|null: false|
+|address|string|null: false|
+|building|string|   |
+|user  |reference|null: false, foreign_key: true|
+
+### Assocation
+belongs_to :user
 
 ## evaluatesテーブル
 
@@ -90,7 +100,7 @@ belongs_to :user
 |name  |text|null: false|
 |price |integer|null: false|
 |description|text|null: false|
-|status|string|null: false|
+|status|integer|null: false|
 |charge|string|null: false|
 |shipping_method|string|null :false|
 |shipping_area|string|null: false|
