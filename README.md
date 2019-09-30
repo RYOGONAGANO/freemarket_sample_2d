@@ -53,7 +53,7 @@ belongs_to :user, dependent: destroy
 |user  |reference|null: false, foreign_key: true|
 
 ### Assocation
-belongs_to :user
+belongs_to :user, dependent: destroy
 
 ## evaluatesテーブル
 
