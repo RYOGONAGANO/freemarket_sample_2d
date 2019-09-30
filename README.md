@@ -57,7 +57,7 @@ belongs_to :user, dependent: destroy
 
 ### Assocation
 belongs_to :buyer, class_name: "User"  
-belongs_to :exhibitor, class_name: "User"
+belongs_to :exhibitor, class_name: "User"  
 belongs_to :product
 
 ## evaluate_commentsテーブル
@@ -104,8 +104,8 @@ belongs_to :buyer, class_name: "User"
 belongs_to :exhibitor, class_name: "User"  
 belongs_to :category  
 belongs_to :brand  
-has_many :likes
-has_many :liked_users, through: :likes, source: :user
+has_many :likes  
+has_many :liked_users, through: :likes, source: :user  
 has_one :evaluate
 
 ## likesテーブル
