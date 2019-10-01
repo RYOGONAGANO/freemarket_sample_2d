@@ -41,11 +41,9 @@
         }
       }
       &__submit-btn{
-        height: 50px;
+        @include btn;
+        margin-top: 40px;
         background-color: #EA352D;
-        color: white;
-        font-size: 14px;
-        display: grid;
       }
     }
   }

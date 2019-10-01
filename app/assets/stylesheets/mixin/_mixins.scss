@@ -1,0 +1,9 @@
+@mixin btn ($background-color:#AAAAAA,$margin-top:15px){
+  font-size: 14px;
+  color: white;
+  height: 50px;  
+  width: 320px;
+  display: grid; 
+  margin-top: $margin-top;
+  background-color: $background-color;
+}

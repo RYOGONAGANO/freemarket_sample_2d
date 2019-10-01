@@ -1,0 +1,40 @@
+.no-reach{
+  background-color: white;
+  height: 545px;
+  width: 700px;
+  .no-reach-content{
+    margin: 0px 190px;
+    padding: 40px 0px;
+    text-align: left;
+    &__guide{
+      font-size: 14px;
+      font-weight: 600;
+    }
+    &__tel{
+      padding-top: 35px;
+      font-size: 14px;
+      &__btn{
+        @include btn;
+      }
+    }
+    &__resend{
+      padding-top: 35px;
+      font-size: 14px;
+      &__btn{
+        @include btn; 
+      }
+    }
+    &__email{
+      padding-top: 35px;
+      font-size: 14px;
+      &__btn{
+        @include btn; 
+      }
+    }
+    &__sms-guide{
+      padding-top: 35px;
+      font-size: 14px;
+
+    }
+  }
+}
