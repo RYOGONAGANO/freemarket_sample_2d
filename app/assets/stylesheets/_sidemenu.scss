@@ -1,0 +1,40 @@
+.side-contents {
+  height: 100%;
+  width: 500px;
+  margin: 40px auto 0;
+  padding-bottom: 40px;
+  display: inline-block;
+  .mypage-menu-lists {
+    height: 100%;
+    width: 280px;
+    margin: 0 0 0 auto;
+    .mypage-menu-list {
+      margin-top: 8px;
+      #active{
+      background: #eee;
+      font-weight: 600;
+      }
+      .mypage-menu-list__line {
+        active {
+          background-color: #eee;
+          font-weight: 600;
+        }
+        display: block;
+        background-color: #fff;
+        padding: 16px;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        color: #333;
+        border-top: 1px solid #eee;
+      }
+    }
+    .merpay-title {
+      margin-top: 40px;
+      font-size: 16px;
+    }
+    .setting-title {
+      margin-top: 40px;
+    }
+  }
+}
