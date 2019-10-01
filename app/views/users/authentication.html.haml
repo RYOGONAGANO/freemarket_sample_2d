@@ -5,3 +5,16 @@
 .main-items
   .title
     認証番号の確認
+  .input-screen
+    .content
+      .content__text
+        ***-****-1234にSMSでお送りした6桁の認証番号を入力してください。
+      .content__authentication
+        .content__authentication__text
+          認証番号
+        .content__authentication__input
+          %input{type: "text", placeholder:"6桁の暗証番号を入力", class: "content__authentication__input"}
+
+      .content__submit-btn
+        %button{type: "submit", class: "content__submit-btn"}
+          認証して完了
