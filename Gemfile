@@ -75,4 +75,4 @@ gem 'font-awesome-sass'
 gem 'aws-sdk-s3', require: false
 gem 'haml-rails'
 gem 'devise'
-gem 'font-awesome-sass', '~> 5.4.1'
+gem 'font-awesome-sass'
