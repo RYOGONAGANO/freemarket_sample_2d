@@ -1,0 +1,144 @@
+.footer{
+  position: relative;
+  bottom: -48px;
+  margin-left: 8px;
+  &__ad{
+    background-image: url("/images/スクリーンショット 2019-09-29 9.12.15.png");
+    height: 516px;
+    width: 2879px;
+    zoom: 0.5;
+    margin-left: -16px;
+  }
+  &__box{
+    background-color: rgb(34, 34, 34);;
+    height: 389px;
+    width: 1440px;
+    margin-left: -8px;
+    &__top{
+      margin: 0 15vw;
+      padding-top: 21px;
+      display: flex;
+      &__mercari{
+        &__title{
+          color: white;
+          font-weight: bold;
+          font-size: 16px;
+          padding-bottom: 3px;
+        }
+        &__text{
+          font-size: 12px;
+          color: #afafaf;
+          margin-bottom: 25px;
+          p{
+            margin-top: 19px;
+          }
+        }
+        &__icon{
+          display: flex;
+          width: 100px;
+          position: relative;
+          right: 8px;
+          &__twitter{
+            background-image: url("/images/スクリーンショット 2019-09-29 10.20.08.png");
+            height: 70px;
+            width: 80px;    
+            zoom: 0.5;
+          }
+          &__facebook{
+            background-image: url("/images/スクリーンショット 2019-09-29 10.25.44.png");
+            height: 70px;
+            width: 80px;    
+            zoom: 0.5;
+            margin-left: 15px;
+          }
+        }
+      }
+      &__help{
+        margin-left: 40px;
+        &__title{
+          color: white;
+          font-weight: bold;
+          font-size: 16px;
+          padding-bottom: 3px;
+        }
+        &__text{
+          font-size: 12px;
+          color: #afafaf;
+          margin-bottom: 25px;
+          p{
+            margin-top: 18px;
+          }
+        }
+     }
+     &__privacy1{
+      margin-left: 55px;
+      &__title{
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        padding-bottom: 3px;
+      }
+      &__text{
+        font-size: 12px;
+        color: #afafaf;
+        margin-bottom: 25px;
+        p{
+          margin-top: 18px;
+        }
+      }
+   }
+   &__privacy2{
+    margin-left: 35px;
+    margin-top: 20px;
+    &__text{
+      font-size: 12px;
+      color: #afafaf;
+      margin-bottom: 25px;
+      p{
+        margin-top: 18px;
+      }
+    }
+ }
+ &__country{
+  margin-left: 50px;
+  &__title{
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding-bottom: 3px;
+  }
+  &__text{
+    font-size: 12px;
+    color: #afafaf;
+    margin-bottom: 25px;
+    p{
+      margin-top: 18px;
+    }
+  }
+}
+   }
+    &__bottom{
+      background-image: url("/images/スクリーンショット 2019-09-29 10.39.29.png");
+      height: 70px;
+      width: 275px; 
+      zoom: 0.5;
+      margin-top: 35px;
+      margin-left: 420px;
+      &__text{
+        color: white;
+        width: 50vw;
+        margin-left: 960px;
+        line-height: 80px;
+        display: flex;
+        &__icon{
+          font-size: 25px;
+          margin-right: 6px;
+        }
+        &__main{
+        font-size: 24px;
+        }
+      }
+    }
+  }
+
+}
