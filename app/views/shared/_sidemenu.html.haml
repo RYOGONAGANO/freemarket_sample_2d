@@ -2,7 +2,7 @@
   .mypage-menu-lists
     %ul.mypage-menu-list
       %li
-        = link_to root_path, class: "mypage-menu-list__line", id: "active" do
+        = link_to root_path, class: "mypage-menu-list__line" do
           マイページ
           .mypage-menu-list__line--arrow
             = icon('fas', 'chevron-right')
@@ -97,6 +97,6 @@
           電話番号の確認
           = icon('fas', 'chevron-right')
       %li
-        = link_to root_path, class: "mypage-menu-list__line" do
+        = link_to root_path, class: "mypage-menu-list__line", id: "active" do
           ログアウト
           = icon('fas', 'chevron-right')
