@@ -64,8 +64,8 @@
             position: relative;
             display: block;
             padding: 16px;
-            color: #333;
-            border-bottom: 1px solid #eee;
+            color: colors(black);
+            border-bottom: 1px solid colors(gray);
             &__text {
               margin:0 40px 0 68px;
               line-height: 1.5;
@@ -97,8 +97,8 @@
               height: 55px;
               text-align: center;
               line-height: 55px;
-              background-color: #eee;
-              color: #333;
+              background-color: colors(gray);
+              color: colors(black);
               display: block;
             }
           }
