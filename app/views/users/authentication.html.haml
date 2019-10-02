@@ -1,7 +1,7 @@
 .header
   .header__logo
     .header__picture
-      = link_to image_tag( 'https://web-jp-assets.mercdn.net/_next/static/images/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg')
+      = link_to image_tag( 'logo (1).svg')
 .main-items
   .title
     認証番号の確認
@@ -35,3 +35,15 @@
           メールアドレスで認証する
       .no-reach-content__sms-guide
         *SMSが届かない場合はSMS受信設定を確認して、もう一度電話番号を入力してください。
+.bottom
+  .information
+    .information__privacy-policy
+      プライバシーポリシー
+    .information__terms
+      メルカリ利用規約
+    .information__transaction-law
+      特定商取引に関する表記
+  .bottom-logo
+    = link_to image_tag ( 'logo-gray.svg' )
+  .copywrite
+    @ 2019 Mercari
