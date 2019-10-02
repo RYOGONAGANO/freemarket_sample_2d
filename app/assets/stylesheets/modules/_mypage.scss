@@ -6,8 +6,7 @@
     width: 66%;
     margin: 40px auto 0;
     .mypage-user {
-      margin: 8px 0 0 40px;
-      width: 700px;
+      @include chapter;
       &__header {
         height: 120px;
         background: image-url('user-bg.jpg');
@@ -106,8 +105,7 @@
       }
     }
     .mypage-transaction {
-      width: 700px;
-      margin: 40px 0 0 40px;
+      @include chapter;
       background-color: #fff;
       &__header {
         background-color: #fafafa;
