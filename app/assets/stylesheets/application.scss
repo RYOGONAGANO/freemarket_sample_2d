@@ -1,9 +1,10 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 @import 'config/reset';
+@import 'config/variables';
 @import 'mixin/mixins';
 @import "modules/header";
 @import 'modules/sidemenu';
 @import 'modules/mypage';
-@import "footer";
-@import "buy";
+@import 'modules/footer';
+@import 'modules/buy';
