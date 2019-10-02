@@ -1,0 +1,78 @@
+.body{
+  background-color:rgb(245,245,245);
+  width: 100VW;
+  height: 100VH;
+  float: left;
+  .header{
+    background-color: white;
+    width: 700px;
+    height: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding:8px,24px;
+  }
+  .contents{
+    background-color: rgb(150, 125, 125);
+    width: 700px;
+    height: 156px;
+    margin: 0 auto;
+    .content{
+      padding: 72px 16px 24px;
+      width: 560px;
+      height: 100px;
+      margin: 0 auto;
+      .images{
+        width: 60px;
+        height: 60px;
+        float:left;
+        .chapter{
+        }
+      }
+      .text{
+        margin-left: 8px;
+        .text-field{
+          width: 500px;
+          height: 48px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          padding: 10px 16px 8px;
+          background: #fff;
+        }
+      }
+    }
+  }
+  .footer{
+    background-color: white;
+    width: 700px;
+    height: 362px;
+    margin: 0 auto;
+    &__text{
+      width: 668px;
+      height: 216px;
+      margin: 0 auto;
+      .text-area{
+        margin-top: 46px;
+        width:668px;
+        height:216px;
+        float:left;
+        font-size: 16px;
+        overflow: scroll;
+        padding: 10px;
+      }
+      .submit{
+        background-color:#EA352D;
+        width: 668px;
+        height: 50px;
+        float: left;
+        font-size: 14px;
+        color:#FFFFFF;
+        margin: 0 auto;
+        margin-top:8px;
+      }
+    }
+  }
+}
