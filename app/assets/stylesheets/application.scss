@@ -1,6 +1,14 @@
-@import "./reset";
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+@import 'config/reset';
+@import 'config/variables';
 @import 'mixin/mixins';
-@import 'users/_header.scss';
+@import "modules/header";
+@import 'modules/sidemenu';
+@import 'modules/mypage';
+@import 'modules/footer';
+@import 'modules/buy';
+@import 'users/_top.scss';
 @import 'users/_main-items.scss';
 @import 'users/no-reach';
 @import 'users/bottom';

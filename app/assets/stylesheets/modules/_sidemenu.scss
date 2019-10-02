@@ -1,0 +1,35 @@
+.side-contents {
+  height: 100%;
+  width: 34%;
+  margin: 40px auto 0;
+  padding-bottom: 40px;
+  .mypage-menu-lists {
+    height: 100%;
+    width: 280px;
+    margin: 0 0 0 auto;
+    .mypage-menu-list {
+      margin-top: 8px;
+      #active{
+      background: colors(gray);
+      font-weight: 600;
+      }
+      .mypage-menu-list__line {
+        display: block;
+        background-color: #fff;
+        padding: 16px;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+        color: #333;
+        border-top: 1px solid colors(gray);
+      }
+    }
+    .merpay-title {
+      margin-top: 40px;
+      font-size: 16px;
+    }
+    .setting-title {
+      margin-top: 40px;
+    }
+  }
+}
