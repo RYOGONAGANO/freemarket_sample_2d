@@ -1,103 +1,110 @@
-= render "tests/header"
-.side-contents
-  .mypage-menu-lists
-    %ul.mypage-menu-list
-      %li
-        = link_to root_path, class: "mypage-menu-list__line", id: "active" do
-          マイページ
-          .mypage-menu-list__line--right-arrow
-            = icon('fas', 'chevron-right')
-      %li
-        .mypage-menu-list__line
-          お知らせ
-          = icon('fas', 'chevron-right')
-      %li
-        .mypage-menu-list__line
-          やることリスト
-          = icon('fas', 'chevron-right')
-      %li
-        .mypage-menu-list__line
-          いいね！一覧
-          = icon('fas', 'chevron-right')
-      %li
-        .mypage-menu-list__line
-          出品する
-          = icon('fas', 'chevron-right')
-      %li
-        .mypage-menu-list__line
-          出品した商品 - 出品中
-          = icon('fas', 'chevron-right')
-      %li
-        .mypage-menu-list__line
-          出品した商品 - 取引中
-          = icon('fas', 'chevron-right')
-      %li
-        .mypage-menu-list__line
-          出品した商品 - 売却済
-          = icon('fas', 'chevron-right')
-      %li
-        .mypage-menu-list__line
-          購入した商品 - 取引中
-          = icon('fas', 'chevron-right')
-      %li
-        .mypage-menu-list__line
-          購入した商品 - 過去の取引
-          = icon('fas', 'chevron-right')
-      %li
-        .mypage-menu-list__line
-          ニュース一覧
-          = icon('fas', 'chevron-right')
-      %li
-        .mypage-menu-list__line
-          評価一覧
-          = icon('fas', 'chevron-right')
-      %li
-        .mypage-menu-list__line
-          ガイド
-          = icon('fas', 'chevron-right')
-      %li
-        .mypage-menu-list__line
-          お問い合わせ
-          = icon('fas', 'chevron-right')
-    %h3.merpay-title
-      メルペイ
-    %ul.mypage-menu-list
-      %li
-        .mypage-menu-list__line
-          売り上げ・振り込み申請
-          = icon('fas', 'chevron-right')
-      %li
-        .mypage-menu-list__line
-          ポイント
-          = icon('fas', 'chevron-right')
-    %h3.setting-title
-      設定
-    %ul.mypage-menu-list
-      %li
-        .mypage-menu-list__line
-          プロフィール
-          = icon('fas', 'chevron-right')
-      %li
-        .mypage-menu-list__line
-          発送元・お届け先住所変更
-          = icon('fas', 'chevron-right')
-      %li
-        .mypage-menu-list__line
-          支払い方法
-          = icon('fas', 'chevron-right')
-      %li
-        .mypage-menu-list__line
-          メール/パスワード
-          = icon('fas', 'chevron-right')
-      %li
-        .mypage-menu-list__line
-          本人情報
-          = icon('fas', 'chevron-right')
-      %li
-        .mypage-menu-list__line
-          電話番号の確認
-          = icon('fas', 'chevron-right')
-      %li
-        .mypage-menu-list__line
-          ログアウト
-          = icon('fas', 'chevron-right')
+= render "shared/header"
+.mypage-contents
+  = render "shared/sidemenu"
+  .mypage-main
+    .mypage-user
+      .mypage-user__header
+        = link_to root_path do
+          .mypage-user__header__icon
+            = image_tag "member_photo_noimage.png", width: '60px', height: '60px'
+          .mypage-user__header__name
+            user-name
+          .mypage-user__header__count
+            .mypage-user__header__count__evaluate
+              評価
+              %span.mypage-user__header__count__evaluate__number
+                0
+            .mypage-user__header__count__exhibit
+              出品数
+              %span.mypage-user__header__count__exhibit__number
+                0
+      .notice-todo
+        .mypage-menu-tabs
+          .mypage-menu-tab#active
+            = link_to root_path do
+              %h3 お知らせ
+          .mypage-menu-tab
+            = link_to root_path do
+              %h3 やることリスト
+        .notice-todo__contents
+          %ul
+            %li
+              =link_to root_path, class: 'notice-todo__contents__line' do
+                = image_tag 'mercari_profile.png', class: 'notice-todo__contents--mercari'
+                .notice-todo__contents__line__text
+                  《ご登録記念》¥1,000の商品を「実質1円」でご購入いただけます！
+                  .notice-todo__contents__line__text__time
+                    .notice-todo__contents__line__text__time--clock
+                      = icon('far', 'clock')
+                    .notice-todo__contents__line__text__time__date
+                      1日前
+                .notice-todo__contents__line--arrow
+                  = icon('fas', 'chevron-right')
+            %li
+              =link_to root_path, class: 'notice-todo__contents__line' do
+                = image_tag 'mercari_profile.png', class: 'notice-todo__contents--mercari'
+                .notice-todo__contents__line__text
+                  明日、P999還元クーポンの有効期限が切れます！タップして詳細を確認しましょう。
+                  .notice-todo__contents__line__text__time
+                    .notice-todo__contents__line__text__time--clock
+                      = icon('far', 'clock')
+                    .notice-todo__contents__line__text__time__date
+                      2日前
+                .notice-todo__contents__line--arrow
+                  = icon('fas', 'chevron-right')
+            %li
+              =link_to root_path, class: 'notice-todo__contents__line' do
+                = image_tag 'mercari_profile.png', class: 'notice-todo__contents--mercari'
+                .notice-todo__contents__line__text
+                  【今日まで！】本などをバーコード出品するだけで最大500ポイントがもらえる！
+                  .notice-todo__contents__line__text__time
+                    .notice-todo__contents__line__text__time--clock
+                      = icon('far', 'clock')
+                    .notice-todo__contents__line__text__time__date
+                      3日前
+                .notice-todo__contents__line--arrow
+                  = icon('fas', 'chevron-right')
+            %li
+              =link_to root_path, class: 'notice-todo__contents__line' do
+                = image_tag 'mercari_profile.png', class: 'notice-todo__contents--mercari'
+                .notice-todo__contents__line__text
+                  【明日まで！】スマホ出品で最大1000ポイントがもらえる♪
+                  .notice-todo__contents__line__text__time
+                    .notice-todo__contents__line__text__time--clock
+                      = icon('far', 'clock')
+                    .notice-todo__contents__line__text__time__date
+                      4日前
+                .notice-todo__contents__line--arrow
+                  = icon('fas', 'chevron-right')
+            %li
+              =link_to root_path, class: 'notice-todo__contents__line' do
+                = image_tag 'mercari_profile.png', class: 'notice-todo__contents--mercari'
+                .notice-todo__contents__line__text
+                  【明後日が最終日】”P200が必ずもらえる”はじめての出品キャンペーンまもなく終了！
+                  .notice-todo__contents__line__text__time
+                    .notice-todo__contents__line__text__time--clock
+                      = icon('far', 'clock')
+                    .notice-todo__contents__line__text__time__date
+                      4日前
+                .notice-todo__contents__line--arrow
+                  = icon('fas', 'chevron-right')
+            %li
+              .notice-todo__contents__show-list
+                .notice-todo__contents__show-list__btn
+                  = link_to root_path do
+                    一覧を見る
+    .mypage-transaction
+      .mypage-transaction__header
+        購入した商品
+      .mypage-menu-tabs
+        .mypage-menu-tab#active
+          = link_to root_path do
+            %h3 取引中
+        .mypage-menu-tab
+          = link_to root_path do
+            %h3 過去の取引
+      .mypage-products
+        %ul
+          %li
+            .mypage-products__no-product
+              取引中の商品がありません
