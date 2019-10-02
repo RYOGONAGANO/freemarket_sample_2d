@@ -1,0 +1,25 @@
+.buy{
+  border-radius: 50%;
+  height: 160px;
+  width: 160px;
+  background-color: rgb(234, 53, 45);
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 1;
+  left: 1250px;
+   &__name{
+    color: white;
+    font-size: 22px;
+    margin-left: 57px;
+    padding-top: 30px;
+   }
+   &__icon{
+    .fa{
+      color: white;
+      font-size: 60px;
+      padding-left: 50px;
+      padding-top: 5px;
+    }
+  }
+}
