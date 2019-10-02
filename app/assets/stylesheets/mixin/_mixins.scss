@@ -16,6 +16,11 @@
   font-size: 16px;
 }
 
+@mixin chapter() {
+  margin: 8px 36.5px 0;
+  width: 700px;
+}
+
 @mixin price{
   border-radius: 0 14px 14px 0;
   background-color: rgba(0,0,0,.4);
