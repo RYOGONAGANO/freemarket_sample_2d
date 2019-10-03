@@ -37,7 +37,7 @@
       &__text{
         margin-left: 8px;
         margin-top: 6px;
-        .text-field{
+        .profile__upper__box__text--username{
           width: 220px;
           height: 30px;
           border: 1px solid #ccc;
@@ -60,13 +60,7 @@
       width: 100%;
       height: 100%;
       margin: 0 auto;
-      .text-area{
-        textarea:focus, input:focus, input[type]:focus, .uneditable-input:focus {
-          outline: 0;
-          box-shadow: none;
-          border: 2px solid #FF9800;
-          background-color: #ffffff;
-        }
+      .profile__text-area__box--profile--comment{
         width:644px;
         height:216px;
         float:left;
