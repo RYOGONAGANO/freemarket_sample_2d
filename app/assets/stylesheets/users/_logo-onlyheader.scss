@@ -1,14 +1,17 @@
-.logo-onlyheader{
+.logo-onlyheader {
   width: 100vw;
   height: 128px;
-  background-color: rgb(245,245,245);
-  &__logo{
-    padding: 3%;
-    margin: auto;
+  background-color: rgb(245, 245, 245);
+  &__logo {
     
+    padding: 3%;
+    margin: 0px auto;
+
+    width: 282px;
+    height: 49px;
+  }
+  &__picture {
     width: 185px;
-    height: 50px;
-    &__picture{
-    }
+    height: 49px;
   }
 }

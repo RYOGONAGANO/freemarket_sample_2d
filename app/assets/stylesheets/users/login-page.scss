@@ -1,23 +1,70 @@
-.login_outline{
-  .login_contents{
-    background-color:white;
+.login_outline {
+  .login_contents {
     margin: 0px auto;
     width: 456px;
-    
-    .login_no_account{
-      text-align: center;
-      height: 164px;
 
-      &__text{
-        padding-top: 54px;
+    .login_no_account {
+      background-color: white;
+      text-align: center;
+      height: 144px;
+
+      &__text {
+        padding-top: 40px;
         margin-bottom: 8px;
       }
-      &__btn{
+      &__btn {
         @include btn;
         width: 328px;
         height: 42px;
         background-color: #0099e8;
-        margin:0px auto;
+        margin: 0px auto;
+      }
+    }
+
+    .login_otherways {
+      background-color: white;
+      margin-top: 2px;
+      height: 181px;
+
+      .login-type {
+        padding: 32px 0px;
+        text-align: center;
+        &__facebook {
+          width: 328px;
+          height: 50px;
+          background-color: #385185;
+          color: white;
+          font-size: 13px;
+          &__icon {
+            display: inline;
+            float: left;
+            font-size: 30px;
+            margin: 7px;
+          }
+          &__text {
+            margin: 16px 40px;
+          }
+        }
+
+        &__google {
+          margin-top: 16px;
+          width: 328px;
+          height: 50px;
+          background-color: rgb(255, 249, 249);
+          font-size: 13px;
+          background: url('google.icon.png');
+          background-size: 17px;
+          background-repeat: no-repeat;
+          background-position-x: 15px;
+          background-position-y: 15px;
+
+          &__icon {
+          }
+          &__text {
+            display: inline;
+            font-size: 20px;
+          }
+        }
       }
     }
   }

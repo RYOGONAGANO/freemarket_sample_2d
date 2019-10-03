@@ -6,4 +6,18 @@
         アカウントをお持ちでない方はこちら
       %button{type: "submit", class: "login_no_account__btn"}
         新規会員登録
+    .login_otherways
+      .login-type
+        %button{type: "submit", class: "login-type__facebook"}
+          .login-type__facebook__icon
+            <i class="fab fa-facebook-square"></i>
+          .login-type__facebook__text
+            Facebookでログイン
+        %button{type: "submit", class: "login-type__google"}
+          .login_type__google__icon
+            -# = image_tag "google.icon.png", width: '18px'
+
+          .login_type__google__text
+            Googleでログイン
+
 =render 'users/copywrite-bottom'
