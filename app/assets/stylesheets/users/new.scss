@@ -15,15 +15,15 @@
     display: flex;
     margin-left: 300px;
     &__mercarilogo{
-      height: 100%;
-      width: 300px;
+      height: 100px;
+      width: 200px;
       background-color: #eee;
       padding: 45px 0px 0px 50px;
     }   
     &__status{
       height: 100%;
       width: 508px;
-      background-color: aqua;
+      background-color: #eee;
       display: flex;
       align-items: center;
       &__statusbar{
@@ -70,7 +70,7 @@
     color: white;
     text-align: center;
     line-height: 50px;
-    margin: 40px 40px 40px 140px;
+    margin: 0 auto;
   }
 }
 .advertisement{
