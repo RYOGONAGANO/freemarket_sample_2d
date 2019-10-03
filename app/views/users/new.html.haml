@@ -2,9 +2,9 @@
   .header
     .headers
       .headers__mercarilogo
-        = image_tag 'logomercari.svg', id:'assets', class:'image', size:'185x49' 
+        = image_tag 'logomercari.svg', id:'assets', class:'image', size:'185x45' 
       .headers__status
-        .headers__status__statusbar
+        = render 'users/new-user-progress'
   .contents
     .uppercontent
       %h2会員登録完了
