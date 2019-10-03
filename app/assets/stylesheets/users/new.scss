@@ -1,14 +1,14 @@
-.body{
+.userRegist-complete-body{
   width: 100vw;
   height: 100vh;
   background-color: #eee;
   position: relative;
 }
-.header{
+.userRegist-complete-header{
   width: 100vw;
   height: 150px;
   background-color: #eee;
-  .headers{
+  .userRegist-complete-header-headers{
     height: 100%;
     width: 1000px;
     background-color: #eee;
@@ -34,11 +34,11 @@
     }
   }
 }
-.contents{
+.userRegist-complete-contents{
   margin: 0 auto;
   width: 700px;
   height: 550px;
-.uppercontent{
+.userRegist-complete-uppercontent{
   margin: 0 auto;
   height: 80px;
   width: 100%;
@@ -48,7 +48,7 @@
   border-bottom: solid 1px #eee;
   font-size: 14px;
 }
-.rowercontent{
+.userRegist-complete-rowercontent{
   margin: 0 auto;
   height: 220px;
   width: 100%;
@@ -73,13 +73,13 @@
     margin: 0 auto;
   }
 }
-.advertisement{
+.userRegist-complete-advertisement{
   width: 700px;
   height: 250px;
   background-color: black;
 }
 }
-.footer{
+.userRegist-complete-footer{
   width: 100vw;
   height: 70px;
   background-color: #eee;

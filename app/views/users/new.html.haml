@@ -1,27 +1,27 @@
-.body
-  .header
-    .headers
-      .headers__mercarilogo
+.userRegist-complete-body
+  .userRegist-complete-header
+    .userRegist-complete-header-headers
+      .userRegist-complete-header-headers__mercarilogo
         = image_tag 'logomercari.svg', id:'assets', class:'image', size:'185x45' 
-      .headers__status
+      .userRegist-complete-header-headers__status
         = render 'users/new-user-progress'
-  .contents
-    .uppercontent
+  .userRegist-complete-contents
+    .userRegist-complete-uppercontent
       %h2会員登録完了
-    .rowercontent
-      .rowercontent__text
+    .userRegist-complete-rowercontent
+      .userRegist-complete-rowercontent__text
         %pありがとうございます。
         %p会員登録が完了しました。
-      .rowercontent__box
+      .userRegist-complete-rowercontent__box
         %pメルカリをはじめる
-    .advertisement
+    .userRegist-complete-advertisement
       = image_tag 'user_rejister_complete_commerce.png', size: "700x250"
-  .footer
-    .footer__policy
+  .userRegist-complete-footer
+    .userRegist-complete-footer__policy
       %pプライバシーポリシー
-    .footer__rule
+    .userRegist-complete-footer__rule
       %pメルカリ利用規約
-    .footer__comarce
+    .userRegist-complete-footer__comarce
       %p特定商取引に関する表記
 
 
