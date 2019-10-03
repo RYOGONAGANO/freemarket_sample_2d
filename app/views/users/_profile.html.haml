@@ -1,0 +1,33 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title FreemarketSample2d
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    = render 'shared/header'
+    .mypage-contents
+      = render 'shared/sidemenu'
+      .mypage-main
+        .profile
+          .profile__top
+            プロフィール
+          .profile__upper
+            .profile__upper__box
+              .profile__upper__box__icon
+                = image_tag "chapter-head-face.png", id: "assets", class: "image", size: "60x60"
+              .profile__upper__box__text
+                %form
+                  %input{type: "text", class: "text-field",placeholder: "例)AYA☆セール中"}
+          .profile__text-area
+            .profile__text-area__box
+              %form
+                %textarea{type: "text-area", class: "text-area", cols: "50",placeholder: "例）こんにちは☆ ご覧いただきありがとうございます！かわいいものやきれいめオフィスカジュアル中心に出品しています。服のサイズは主に9号です。気持ちよくお取引できるよう心がけていますので、商品や発送方法などご質問がありましたらお気軽にどうぞ♪"} 
+                %button{type: "submit", class: "submit"}
+                  変更する
+    = render 'shared/footer'
+    = render 'shared/buy'
+
