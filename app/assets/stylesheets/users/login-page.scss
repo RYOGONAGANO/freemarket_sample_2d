@@ -1,0 +1,24 @@
+.login_outline{
+  .login_contents{
+    background-color:white;
+    margin: 0px auto;
+    width: 456px;
+    
+    .login_no_account{
+      text-align: center;
+      height: 164px;
+
+      &__text{
+        padding-top: 54px;
+        margin-bottom: 8px;
+      }
+      &__btn{
+        @include btn;
+        width: 328px;
+        height: 42px;
+        background-color: #0099e8;
+        margin:0px auto;
+      }
+    }
+  }
+}
