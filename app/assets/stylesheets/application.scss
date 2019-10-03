@@ -8,7 +8,6 @@
 @import 'modules/mypage';
 @import 'modules/footer';
 @import 'modules/buy';
-@import 'users/_top.scss';
-@import 'users/_main-items.scss';
-@import 'users/no-reach';
-@import 'users/bottom';
+@import 'users/logo-onlyheader';
+@import 'users/authentication.scss';
+@import 'users/copywrite-bottom.scss';

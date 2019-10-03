@@ -1,49 +1,39 @@
-.header
-  .header__logo
-    .header__picture
-      = link_to image_tag( 'logo (1).svg')
-.main-items
-  .title
-    認証番号の確認
-  .input-screen
-    .content
-      .content__text
-        ***-****-1234にSMSでお送りした6桁の認証番号を入力してください。
-      .content__authentication
-        .content__authentication__text
-          認証番号
-        .content__authentication__input
-          %input{type: "text", placeholder:"6桁の暗証番号を入力", class: "content__authentication__input"}
+= render 'users/logo-onlyheader'
+.authentication-contents
+  .main-items
+    .title
+      認証番号の確認
+    .input-screen
+      .content
+        .content__text
+          ***-****-1234にSMSでお送りした6桁の認証番号を入力してください。
+        .content__authentication
+          .content__authentication__text
+            認証番号
+          .content__authentication__inputs
+            %input{type: "text", placeholder:"6桁の暗証番号を入力", class: "content__authentication__input"}
 
-          %button{type: "submit", class: "content__submit-btn"}
-            認証して完了
-  .no-reach
-    .no-reach-content
-      .no-reach-content__guide
-        60秒たっても認証番号が届かない方へ
-      .no-reach-content__tel
-        電話で認証番号を聞くこともできます。
-        %button{type: "submit", class: "no-reach-content__tel__btn"}
-          電話で認証番号を聞く（通話無料）
-      .no-reach-content__resend
-        認証番号を再送することもできます。
-        %button{type: "submit", class: "no-reach-content__resend__btn"}
-          認証番号を再送する
-      .no-reach-content__email
-        メールアドレスで認証することもできます。
-        %button{type: "submit", class: "no-reach-content__email__btn"}
-          メールアドレスで認証する
-      .no-reach-content__sms-guide
-        *SMSが届かない場合はSMS受信設定を確認して、もう一度電話番号を入力してください。
-.bottom
-  .information
-    .information__privacy-policy
-      プライバシーポリシー
-    .information__terms
-      メルカリ利用規約
-    .information__transaction-law
-      特定商取引に関する表記
-  .bottom-logo
-    = link_to image_tag ( 'logo-gray.svg' )
-  .copywrite
-    @ 2019 Mercari
+            %button{type: "submit", class: "content__submit-btn"}
+              認証して完了
+    .no-reach
+      .no-reach-content
+        .no-reach-content__guide
+          60秒たっても認証番号が届かない方へ
+        .no-reach-content__tel
+          電話で認証番号を聞くこともできます。
+          %button{type: "submit", class: "no-reach-content__tel__btn"}
+            電話で認証番号を聞く（通話無料）
+        .no-reach-content__resend
+          認証番号を再送することもできます。
+          %button{type: "submit", class: "no-reach-content__resend__btn"}
+            認証番号を再送する
+        .no-reach-content__email
+          メールアドレスで認証することもできます。
+          %button{type: "submit", class: "no-reach-content__email__btn"}
+            メールアドレスで認証する
+        .no-reach-content__sms-guide
+          ※SMSが届かない場合は
+          %a{ href: "", class: "no-reach-content__sms-guide__a"}SMS受信設定
+          を確認して、
+          %P もう一度電話番号を入力してください。
+= render 'users/copywrite-bottom'
