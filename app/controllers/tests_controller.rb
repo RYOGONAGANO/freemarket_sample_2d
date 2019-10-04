@@ -4,7 +4,6 @@ class TestsController < ApplicationController
   end
 
   def new
-    render partial: "users/login-page"
   end
 
   def create

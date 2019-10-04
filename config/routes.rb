@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'tests#new'
+  root to: 'users#new'
   resources :tests
   resources :users
   

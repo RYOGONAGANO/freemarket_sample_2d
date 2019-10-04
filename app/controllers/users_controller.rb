@@ -4,6 +4,6 @@ class UsersController < ApplicationController
   end
 
   def new
-    render "users/authentication"
+    render partial: "users/login-page"
   end
 end
