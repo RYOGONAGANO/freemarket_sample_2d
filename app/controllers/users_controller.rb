@@ -1,9 +1,6 @@
 class UsersController < ApplicationController
-  def index
-    render partial: 'users/logout'
+  
+  def new
   end
 
-  def new
-    render "users/authentication"
-  end
 end
