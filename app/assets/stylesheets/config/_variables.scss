@@ -1,6 +1,8 @@
 $colors: (
   gray: #eee,
-  black: #333
+  black: #333,
+  blue: #0099e8
+
 );
 
 @function colors($key) {
