@@ -104,7 +104,9 @@
         &__foget-password__text{
           margin-top: 40px;
           color: #0099E8;
-
+        }
+        &__foget-password__text:hover{
+          text-decoration:underline;
         }
       }
     }

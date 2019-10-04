@@ -25,6 +25,6 @@
           re-captcha仮置きのハコです。
         %button{type: "submit", class: "login_form_contents__login-btn"}
           ログイン
-        %a{ href: "", class: "login_form_contents__foget-password__text"}パスワードをお忘れの方
-
+        = link_to  '', class: 'login_form_contents__foget-password__text' do
+          パスワードをお忘れの方
 =render 'users/copywrite-bottom'
