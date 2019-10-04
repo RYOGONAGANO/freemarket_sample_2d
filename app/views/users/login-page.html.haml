@@ -15,9 +15,16 @@
             Facebookでログイン
         %button{type: "submit", class: "login-type__google"}
           .login_type__google__icon
-            -# = image_tag "google.icon.png", width: '18px'
-
           .login_type__google__text
             Googleでログイン
+    .login_form
+      .login_form_contents
+        %input{type: "text",placeholder:"メールアドレス", class: "login_form_contents__input-email" } 
+        %input{type: "text",placeholder:"パスワード", class: "login_form_contents__input-password" } 
+        .login_form_contents__re-captcha
+          re-captcha仮置きのハコです。
+        %button{type: "submit", class: "login_form_contents__login-btn"}
+          ログイン
+        %a{ href: "", class: "login_form_contents__foget-password__text"}パスワードをお忘れの方
 
 =render 'users/copywrite-bottom'

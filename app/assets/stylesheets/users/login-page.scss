@@ -63,9 +63,50 @@
           &__text {
             display: inline;
             font-size: 20px;
+            }
           }
+        }
+      }
+    .login_form{
+      height: 406px;
+      background-color: white;
+      .login_form_contents{
+        margin: 0 64px;
+        &__input-email{
+          width: 328px;
+          height: 48px;
+          border-radius: 5px;
+          border: solid 1px #80808073;
+
+        }
+        &__input-password{
+          margin-top: 30px;
+          width: 328px;
+          height: 48px;
+          border-radius: 5px;
+          border: solid 1px #80808073;
+        }
+        &__re-captcha{
+          margin-top: 30px;
+          width: 328px;
+          height: 78px;
+          background-color:lightblue;
+        }
+        &__login-btn{
+          margin: 24px 0px 40px;
+          width: 328px;
+          height: 50px;
+          background-color: #EA352D;
+          color: white;
+          font-size: 13px;
+        }
+        &__foget-password__text{
+          margin-top: 40px;
+          color: #0099E8;
+
         }
       }
     }
   }
 }
+
