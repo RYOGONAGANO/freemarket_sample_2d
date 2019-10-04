@@ -39,7 +39,7 @@
         margin-top: 6px;
         .profile__upper__box__text--username{
           width: 220px;
-          height: 30px;
+          height: 48px;
           border: 1px solid #ccc;
           border-radius: 4px;
           line-height: 1.5;
@@ -52,8 +52,8 @@
   }
   &__text-area{
     background-color: white;
-    width: 668px;
-    height: 310px;
+    width: 700px;
+    height: 362px;
     margin: 0 auto;
     padding: 40px 16px;
     &__box{
@@ -61,7 +61,7 @@
       height: 100%;
       margin: 0 auto;
       .profile__text-area__box--profile--comment{
-        width:644px;
+        width:668px;
         height:216px;
         float:left;
         font-size: 16px;
