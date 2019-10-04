@@ -2,17 +2,16 @@
   width: 99vw;
   margin-left: -1px;
   &__top{
-    background-image: url("/images/スクリーンショット 2019-09-29 12.05.42.png");
-    height: 785px;
-    width: 2879px;
-    zoom: 0.5;
-    margin-left: -15px;
+    background-image: url("mercari-ad-toppage.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    height: 370px;
+    border-top: ridge;
+    margin-right: -15px;
   }
   &__title1{
     height: 171px;
-    width: 1440px;
-    margin-left: -7px;
-    margin-top: -2px;
+    width: 100vw;
     background-color: white;
     &__name{
       font-size: 27px;
@@ -944,11 +943,9 @@
    }
   }
   &__title2{
-      height: 171px;
-      width: 1440px;
-      margin-left: -7px;
-      margin-top: -2px;
-      background-color: white;
+    height: 171px;
+    width: 100vw;
+    background-color: white;
       &__name{
         font-size: 27px;
         font-weight: bold;
