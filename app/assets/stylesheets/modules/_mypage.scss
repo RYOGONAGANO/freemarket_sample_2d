@@ -8,7 +8,7 @@
     .mypage-user {
       @include chapter;
       &__header {
-        height: 120px;
+        height: 170px;
         background: image-url('user-bg.jpg');
         background-repeat: no-repeat;
         padding: 40px;
@@ -73,6 +73,11 @@
               &__time {
                 display: flex;
                 color: #888;
+                &--clock{
+                  -webkit-text-stroke: 1.3px #808080;
+                  color: white;
+                  margin-left: 1px;
+                }
                 &__date {
                   margin-left: 8px;
                 }
