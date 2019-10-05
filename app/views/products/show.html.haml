@@ -93,13 +93,13 @@
                 出品者名
               .table-user-ratings
                 .table-user-ratings__rating
-                  = icon('fas', 'laugh', class: "table-user-ratings__rating--good")
+                  = fa_icon 'laugh', class: "table-user-ratings__rating--good"
                   %span 100
                 .table-user-ratings__rating
-                  = icon('fas', 'meh', class: "table-user-ratings__rating--nomal")
+                  = fa_icon 'meh', class: "table-user-ratings__rating--nomal"
                   %span 50
                 .table-user-ratings__rating
-                  = icon('fas', 'frown', class: "table-user-ratings__rating--bad")
+                  = fa_icon 'frown', class: "table-user-ratings__rating--bad"
                   %span 0
           %tr
             %th カテゴリー
@@ -107,10 +107,10 @@
               = link_to root_path, class: "table-category" do
                 メンズ
               = link_to root_path, class: "table-category" do
-                = icon('fas', 'chevron-right')
+                = fa_icon 'chevron-right'
                 ジャケット/アウター
               = link_to root_path, class: "table-category" do
-                = icon('fas', 'chevron-right')
+                = fa_icon 'chevron-right'
                 ダウンジャケット
           %tr
             %th ブランド
@@ -169,16 +169,16 @@
       .product-details__buttons__left
         %button{type: 'button', class: 'product-details__buttons__left__like'}
           .product-details__buttons__left__like--heart
-            = icon('far', 'heart')
+            = fa_icon 'heart'
           %span いいね！
           %span.product-details__buttons__left__like__count
             100
         = link_to root_path, class: 'product-details__buttons__left__report' do
-          = icon('far', 'flag')
+          = fa_icon 'flag'
           %span 不適切な商品の報告
       .product-details__buttons__right
         = link_to root_path, class: 'product-details__buttons__right__safety-effort' do
-          = icon('fas', 'lock')
+          = fa_icon 'lock'
           %span 安心・安全への取り組み
   .product-messages
     .product-messages__form
@@ -189,25 +189,25 @@
         コメントする
   .links-prev-next
     = link_to root_path, class: 'links-prev-next__prev' do
-      = icon('fas', 'chevron-left')
+      = fa_icon 'chevron-left'
       %span 前の商品
     = link_to root_path, class: 'links-prev-next__next' do
       %span 次の商品
-      = icon('fas', 'chevron-right')
+      = fa_icon 'chevron-right'
   .social-medias
     .social-medias__icons
       = link_to root_path, class: 'social-medias__icons__icon' do
         .social-medias__icons__icon--facebook
-          = icon('fab', 'facebook-square')
+          = fa_icon 'facebook-square'
       = link_to root_path, class: 'social-medias__icons__icon' do
         .social-medias__icons__icon--twitter
-          = icon('fab', 'twitter-square')
+          = fa_icon 'twitter-square'
       = link_to root_path, class: 'social-medias__icons__icon' do
         .social-medias__icons__icon--line
-          = icon('fab', 'line')
+          = fa_icon 'line'
       = link_to root_path, class: 'social-medias__icons__icon' do
         .social-medias__icons__icon--line
-          = icon('fab', 'pinterest-square')
+          = fa_icon 'pinterest-square'
   .other-products
     %h2.other-products__username
       出品者 さんのその他の出品
@@ -221,7 +221,7 @@
             .other-products__products__product__index__price-like__price
               ¥15,000
             .other-products__products__product__index__price-like__like
-              = icon('far', 'heart')
+              = fa_icon 'heart'
               %span 15
       .other-products__product
       = link_to root_path,class: 'other-products__products__product' do
@@ -233,7 +233,7 @@
             .other-products__products__product__index__price-like__price
               ¥15,000
             .other-products__products__product__index__price-like__like
-              = icon('far', 'heart')
+              = fa_icon 'heart'
               %span 15
       .other-products__product
       = link_to root_path,class: 'other-products__products__product' do
@@ -245,7 +245,7 @@
             .other-products__products__product__index__price-like__price
               ¥15,000
             .other-products__products__product__index__price-like__like
-              = icon('far', 'heart')
+              = fa_icon 'heart'
               %span 15
       .other-products__product
       = link_to root_path,class: 'other-products__products__product' do
@@ -257,7 +257,7 @@
             .other-products__products__product__index__price-like__price
               ¥15,000
             .other-products__products__product__index__price-like__like
-              = icon('far', 'heart')
+              = fa_icon 'heart'
               %span 15
       .other-products__product
       = link_to root_path,class: 'other-products__products__product' do
@@ -269,7 +269,7 @@
             .other-products__products__product__index__price-like__price
               ¥15,000
             .other-products__products__product__index__price-like__like
-              = icon('far', 'heart')
+              = fa_icon 'heart'
               %span 15
       .other-products__product
       = link_to root_path,class: 'other-products__products__product' do
@@ -281,7 +281,7 @@
             .other-products__products__product__index__price-like__price
               ¥15,000
             .other-products__products__product__index__price-like__like
-              = icon('far', 'heart')
+              = fa_icon 'heart'
               %span 15
   .other-products
     %h2.other-products__brand
@@ -296,7 +296,7 @@
             .other-products__products__product__index__price-like__price
               ¥15,000
             .other-products__products__product__index__price-like__like
-              = icon('far', 'heart')
+              = fa_icon 'heart'
               %span 15
       .other-products__product
       = link_to root_path,class: 'other-products__products__product' do
@@ -308,7 +308,7 @@
             .other-products__products__product__index__price-like__price
               ¥15,000
             .other-products__products__product__index__price-like__like
-              = icon('far', 'heart')
+              = fa_icon 'heart'
               %span 15
       .other-products__product
       = link_to root_path,class: 'other-products__products__product' do
@@ -320,7 +320,7 @@
             .other-products__products__product__index__price-like__price
               ¥15,000
             .other-products__products__product__index__price-like__like
-              = icon('far', 'heart')
+              = fa_icon 'heart'
               %span 15
       .other-products__product
       = link_to root_path,class: 'other-products__products__product' do
@@ -332,7 +332,7 @@
             .other-products__products__product__index__price-like__price
               ¥15,000
             .other-products__products__product__index__price-like__like
-              = icon('far', 'heart')
+              = fa_icon 'heart'
               %span 15
       .other-products__product
       = link_to root_path,class: 'other-products__products__product' do
@@ -344,7 +344,7 @@
             .other-products__products__product__index__price-like__price
               ¥15,000
             .other-products__products__product__index__price-like__like
-              = icon('far', 'heart')
+              = fa_icon 'heart'
               %span 15
       .other-products__product
       = link_to root_path,class: 'other-products__products__product' do
@@ -356,13 +356,13 @@
             .other-products__products__product__index__price-like__price
               ¥15,000
             .other-products__products__product__index__price-like__like
-              = icon('far', 'heart')
+              = fa_icon 'heart'
               %span 15
   %ul.nav-crumb-list
     %li{itemscope: "", itemtype: "”http://data-vocabulary.org/Breadcrumb”"}
       = link_to root_path, class: 'nav-product__toppage', itemprop: "url" do
         %span メルカリ
-        = icon('fas', 'chevron-right')
+        = fa_icon 'chevron-right'
     %li{itemscope: "", itemtype: "”http://data-vocabulary.org/Breadcrumb”"}
       %span{itemprop: "title"}
         商品名

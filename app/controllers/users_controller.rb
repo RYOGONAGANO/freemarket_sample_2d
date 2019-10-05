@@ -5,7 +5,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    render partial: "users/profile"
   end
 
 
