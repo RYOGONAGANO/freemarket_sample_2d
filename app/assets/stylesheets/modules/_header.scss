@@ -124,16 +124,19 @@
       width: 127px;
       display: flex;
       &__icon{
-        background-image: url("mypage-icon.png");
-        height: 70px;
-        width: 70px;
+        img{
+        height: 65px;
+        width: 65px;
         zoom: 0.5;
-        margin-top: -20px;
+        margin-top: -15px;
         margin-left: 20px;
+        border-radius: 50%;
+        }
       }
       &__tag{
         font-size: 14px;
         margin-left: 10px;
+        margin-top: 3px;
       }
     }
   }

@@ -3,13 +3,14 @@
   bottom: -48px;
   margin-left: 8px;
   &__ad{
-    background-image: url("mercari-ad.png");
+    img{
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 247px;
     width: 100vw;
     margin-left: -8px;
-
+    margin-bottom: -2px;
+    }
   }
   &__box{
     background-color: rgb(34, 34, 34);;
@@ -41,13 +42,11 @@
           position: relative;
           right: 8px;
           &__twitter{
-            background-image: url("twitter-icon.png");
             height: 70px;
             width: 80px;
             zoom: 0.5;
           }
           &__facebook{
-            background-image: url("facebook-icon.png");
             height: 70px;
             width: 80px;
             zoom: 0.5;
@@ -118,19 +117,19 @@
     }
   }
 }
-   }
+   } 
     &__bottom{
-      background-image: url("mercari-logo-black.png");
       height: 70px;
       width: 275px;
       zoom: 0.5;
       margin-top: 35px;
-      margin-left: 346px;
+      padding: 0 13%;
       &__text{
         color: white;
         width: 50vw;
         margin-left: 960px;
         line-height: 80px;
+        margin-top: -80px;
         display: flex;
         &__icon{
           font-size: 25px;
