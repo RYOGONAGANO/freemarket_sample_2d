@@ -4,4 +4,9 @@ class UsersController < ApplicationController
     render partial: "users/login-page"
   end
 
+  def show
+    render partial: "users/profile"
+  end
+
+
 end
