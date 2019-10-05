@@ -1,0 +1,370 @@
+= render 'shared/header'
+.detail-contents
+  .product-details
+    .product-details__name
+      %h1 商品名
+    .product-detail
+      .product-photo
+        .product-photo__carousel
+          .product-photo__carousel__stage-outer
+            .product-photo__carousel__stage-outer__stage
+              .product-photo__carousel__stage-outer__stage__image#active
+                .product-photo__carousel__stage-outer__stage__image__inner
+                  = image_tag "test_product.jpg",class: "product-photo__carousel__stage-outer__stage__image__inner__lazy"
+              .product-photo__carousel__stage-outer__stage__image
+                .product-photo__carousel__stage-outer__stage__image__inner
+                  = image_tag "test_product.jpg",class: "product-photo__carousel__stage-outer__stage__image__inner__lazy"
+              .product-photo__carousel__stage-outer__stage__image
+                .product-photo__carousel__stage-outer__stage__image__inner
+                  = image_tag "test_product.jpg",class: "product-photo__carousel__stage-outer__stage__image__inner__lazy"
+              .product-photo__carousel__stage-outer__stage__image
+                .product-photo__carousel__stage-outer__stage__image__inner
+                  = image_tag "test_product.jpg",class: "product-photo__carousel__stage-outer__stage__image__inner__lazy"
+              .product-photo__carousel__stage-outer__stage__image#active
+                .product-photo__carousel__stage-outer__stage__image__inner
+                  = image_tag "test_product.jpg",class: "product-photo__carousel__stage-outer__stage__image__inner__lazy"
+              .product-photo__carousel__stage-outer__stage__image
+                .product-photo__carousel__stage-outer__stage__image__inner
+                  = image_tag "test_product.jpg",class: "product-photo__carousel__stage-outer__stage__image__inner__lazy"
+              .product-photo__carousel__stage-outer__stage__image
+                .product-photo__carousel__stage-outer__stage__image__inner
+                  = image_tag "test_product.jpg",class: "product-photo__carousel__stage-outer__stage__image__inner__lazy"
+              .product-photo__carousel__stage-outer__stage__image
+                .product-photo__carousel__stage-outer__stage__image__inner
+                  = image_tag "test_product.jpg",class: "product-photo__carousel__stage-outer__stage__image__inner__lazy"
+              .product-photo__carousel__stage-outer__stage__image
+                .product-photo__carousel__stage-outer__stage__image__inner
+                  = image_tag "test_product.jpg",class: "product-photo__carousel__stage-outer__stage__image__inner__lazy"
+              .product-photo__carousel__stage-outer__stage__image
+                .product-photo__carousel__stage-outer__stage__image__inner
+                  = image_tag "test_product.jpg",class: "product-photo__carousel__stage-outer__stage__image__inner__lazy"
+        .product-photo__nav
+          .product-photo__nav__prev
+            prev
+          .product-photo__nav__next
+            next
+        .product-photo__dots
+          .product-photo__dots__dot#active
+            %span
+            .product-photo__dots__dot__inner
+              = image_tag "test_product.jpg"
+          .product-photo__dots__dot
+            %span
+            .product-photo__dots__dot__inner
+              = image_tag "test_product.jpg"
+          .product-photo__dots__dot
+            %span
+            .product-photo__dots__dot__inner
+              = image_tag "test_product.jpg"
+          .product-photo__dots__dot
+            %span
+            .product-photo__dots__dot__inner
+              = image_tag "test_product.jpg"
+          .product-photo__dots__dot
+            %span
+            .product-photo__dots__dot__inner
+              = image_tag "test_product.jpg"
+          .product-photo__dots__dot
+            %span
+            .product-photo__dots__dot__inner
+              = image_tag "test_product.jpg"
+          .product-photo__dots__dot
+            %span
+            .product-photo__dots__dot__inner
+              = image_tag "test_product.jpg"
+          .product-photo__dots__dot
+            %span
+            .product-photo__dots__dot__inner
+              = image_tag "test_product.jpg"
+          .product-photo__dots__dot
+            %span
+            .product-photo__dots__dot__inner
+              = image_tag "test_product.jpg"
+          .product-photo__dots__dot
+            %span
+            .product-photo__dots__dot__inner
+              = image_tag "test_product.jpg"
+      .product-detail__table
+        %table
+          %tbody
+            %tr
+              %th 出品者
+              %td
+                = link_to root_path do
+                  出品者名
+                .table-user-ratings
+                  .table-user-ratings--good
+                    = icon('fas', 'laugh')
+                    %span 100
+                  .table-user-ratings--nomal
+                    = icon('fas', 'meh')
+                    %span 50
+                  .table-user-ratings--bad
+                    = icon('fas', 'frown')
+                    %span 0
+            %tr
+              %th カテゴリー
+              %td
+                = link_to root_path, class: "table__category-first" do
+                  メンズ
+                = link_to root_path, class: "table__category-second" do
+                  = icon('fas', 'chevron-right')
+                  ジャケット/アウター
+                = link_to root_path, class: "table__category-last" do
+                  = icon('fas', 'chevron-right')
+                  ダウンジャケット
+            %tr
+              %th ブランド
+              %td
+                = link_to root_path do
+                  ウール リッチ
+            %tr
+              %th 商品のサイズ
+              %td
+                M
+            %tr
+              %th 商品の状態
+              %td
+                目立った傷や汚れなし
+            %tr
+              %th 配送料の負担
+              %td
+                送料込み(出品者負担)
+            %tr
+              %th 配送の方法
+              %td
+                らくらくメルカリ便
+            %tr
+              %th 発送元地域
+              %td
+                = link_to root_path do
+                  東京
+            %tr
+              %th 発送日の目安
+              %td
+                2~3日で発送
+      .price-box
+        .price-box--price
+          %span ¥12,500
+        .price-box--tax
+          %span (税込)
+        .price-box--shipping-free
+          %span 送料込み
+    = link_to root_path, class: "product-details__buy-btn" do
+      購入画面に進む
+    .product-details__description
+      %P
+        商品の説明
+        %br
+        %br
+        アピールポイントなどが記述される。
+        %br
+        %br
+        検索用の単語
+        %br
+        検索用の単語
+        %br
+        検索用の単語
+        %br
+    .product-details__buttons
+      .product-details__buttons__left
+        %button{type: 'button', class: 'product-details__buttons__left__like'}
+          .product-details__buttons__left__like--heart
+            = icon('far', 'heart')
+          %span いいね！
+          %span.product-details__buttons__left__like__count
+            100
+        = link_to root_path, class: 'product-details__buttons__left__report' do
+          = icon('far', 'flag')
+          %span 不適切な商品の報告
+      .product-details__buttons__right
+        = link_to root_path, class: 'product-details__buttons__right__safety-effort' do
+          = icon('fas', 'lock')
+          %span 安心・安全への取り組み
+  .product-messages
+    .product-messages__form
+      %p
+        相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      %textarea{type: 'text', class: 'product-messages__form__textarea'}
+      %button{type: 'submit', class: 'product-messages__form__submit-btn'}
+        コメントする
+  .links-prev-next
+    = link_to root_path, class: 'links-prev-next__prev' do
+      = icon('fas', 'chevron-left')
+      %span 前の商品
+    = link_to root_path, class: 'links-prev-next__next' do
+      %span 次の商品
+      = icon('fas', 'chevron-right')
+  .social-medias
+    .social-medias__icons
+      = link_to root_path, class: 'social-medias__icons__icon' do
+        .social-medias__icons__icon--facebook
+          = icon('fab', 'facebook-square')
+      = link_to root_path, class: 'social-medias__icons__icon' do
+        .social-medias__icons__icon--twitter
+          = icon('fab', 'twitter-square')
+      = link_to root_path, class: 'social-medias__icons__icon' do
+        .social-medias__icons__icon--line
+          = icon('fab', 'line')
+      = link_to root_path, class: 'social-medias__icons__icon' do
+        .social-medias__icons__icon--line
+          = icon('fab', 'pinterest-square')
+  .other-products
+    %h2.other-products__username
+      出品者 さんのその他の出品
+    .other-products__product
+      = link_to root_path,class: 'other-products__products__product' do
+        .other-products__products__product__image
+        .other-products__products__product__index
+          .other-products__products__product__index__name
+            他の商品名
+          .other-products__products__product__index__price-like
+            .other-products__products__product__index__price-like__price
+              ¥15,000
+            .other-products__products__product__index__price-like__like
+              = icon('far', 'heart')
+              %span 15
+      .other-products__product
+      = link_to root_path,class: 'other-products__products__product' do
+        .other-products__products__product__image
+        .other-products__products__product__index
+          .other-products__products__product__index__name
+            他の商品名
+          .other-products__products__product__index__price-like
+            .other-products__products__product__index__price-like__price
+              ¥15,000
+            .other-products__products__product__index__price-like__like
+              = icon('far', 'heart')
+              %span 15
+      .other-products__product
+      = link_to root_path,class: 'other-products__products__product' do
+        .other-products__products__product__image
+        .other-products__products__product__index
+          .other-products__products__product__index__name
+            他の商品名
+          .other-products__products__product__index__price-like
+            .other-products__products__product__index__price-like__price
+              ¥15,000
+            .other-products__products__product__index__price-like__like
+              = icon('far', 'heart')
+              %span 15
+      .other-products__product
+      = link_to root_path,class: 'other-products__products__product' do
+        .other-products__products__product__image
+        .other-products__products__product__index
+          .other-products__products__product__index__name
+            他の商品名
+          .other-products__products__product__index__price-like
+            .other-products__products__product__index__price-like__price
+              ¥15,000
+            .other-products__products__product__index__price-like__like
+              = icon('far', 'heart')
+              %span 15
+      .other-products__product
+      = link_to root_path,class: 'other-products__products__product' do
+        .other-products__products__product__image
+        .other-products__products__product__index
+          .other-products__products__product__index__name
+            他の商品名
+          .other-products__products__product__index__price-like
+            .other-products__products__product__index__price-like__price
+              ¥15,000
+            .other-products__products__product__index__price-like__like
+              = icon('far', 'heart')
+              %span 15
+      .other-products__product
+      = link_to root_path,class: 'other-products__products__product' do
+        .other-products__products__product__image
+        .other-products__products__product__index
+          .other-products__products__product__index__name
+            他の商品名
+          .other-products__products__product__index__price-like
+            .other-products__products__product__index__price-like__price
+              ¥15,000
+            .other-products__products__product__index__price-like__like
+              = icon('far', 'heart')
+              %span 15
+  .other-products
+    %h2.other-products__brand
+      ウール リッチのダウンジャケット その他の商品
+    .other-products__product
+      = link_to root_path,class: 'other-products__products__product' do
+        .other-products__products__product__image
+        .other-products__products__product__index
+          .other-products__products__product__index__name
+            他の商品名
+          .other-products__products__product__index__price-like
+            .other-products__products__product__index__price-like__price
+              ¥15,000
+            .other-products__products__product__index__price-like__like
+              = icon('far', 'heart')
+              %span 15
+      .other-products__product
+      = link_to root_path,class: 'other-products__products__product' do
+        .other-products__products__product__image
+        .other-products__products__product__index
+          .other-products__products__product__index__name
+            他の商品名
+          .other-products__products__product__index__price-like
+            .other-products__products__product__index__price-like__price
+              ¥15,000
+            .other-products__products__product__index__price-like__like
+              = icon('far', 'heart')
+              %span 15
+      .other-products__product
+      = link_to root_path,class: 'other-products__products__product' do
+        .other-products__products__product__image
+        .other-products__products__product__index
+          .other-products__products__product__index__name
+            他の商品名
+          .other-products__products__product__index__price-like
+            .other-products__products__product__index__price-like__price
+              ¥15,000
+            .other-products__products__product__index__price-like__like
+              = icon('far', 'heart')
+              %span 15
+      .other-products__product
+      = link_to root_path,class: 'other-products__products__product' do
+        .other-products__products__product__image
+        .other-products__products__product__index
+          .other-products__products__product__index__name
+            他の商品名
+          .other-products__products__product__index__price-like
+            .other-products__products__product__index__price-like__price
+              ¥15,000
+            .other-products__products__product__index__price-like__like
+              = icon('far', 'heart')
+              %span 15
+      .other-products__product
+      = link_to root_path,class: 'other-products__products__product' do
+        .other-products__products__product__image
+        .other-products__products__product__index
+          .other-products__products__product__index__name
+            他の商品名
+          .other-products__products__product__index__price-like
+            .other-products__products__product__index__price-like__price
+              ¥15,000
+            .other-products__products__product__index__price-like__like
+              = icon('far', 'heart')
+              %span 15
+      .other-products__product
+      = link_to root_path,class: 'other-products__products__product' do
+        .other-products__products__product__image
+        .other-products__products__product__index
+          .other-products__products__product__index__name
+            他の商品名
+          .other-products__products__product__index__price-like
+            .other-products__products__product__index__price-like__price
+              ¥15,000
+            .other-products__products__product__index__price-like__like
+              = icon('far', 'heart')
+              %span 15
+  %ul.nav-crumb-list
+    %li{itemscope: "", itemtype: "”http://data-vocabulary.org/Breadcrumb”"}
+      = link_to root_path, class: 'nav-product__toppage', itemprop: "url" do
+        %span メルカリ
+        = icon('fas', 'chevron-right')
+    %li{itemscope: "", itemtype: "”http://data-vocabulary.org/Breadcrumb”"}
+      %span{itemprop: "title"}
+        商品名
+= render 'shared/footer'
