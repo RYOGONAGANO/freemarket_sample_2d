@@ -67,3 +67,7 @@
     width: 188px;
   }
 }
+
+@mixin clearfix{
+  clear: both;
+}

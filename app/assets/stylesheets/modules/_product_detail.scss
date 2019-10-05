@@ -95,6 +95,9 @@
           }
         }
       }
+      table {
+        border-spacing: 0;
+      }
       &__table {
         float: right;
         max-width: 300px;
@@ -103,47 +106,61 @@
         margin: 0 auto;
         border-collapse: collapse;
         border: 1px solid #f5f5f5;
-        table {
-          border-spacing: 0;
-          tbody {
-            tr {
-              th {
-                padding: 8px;
-                width: 39%;
-                text-align: left;
-                font-weight: 400;
-                background: #fafafa;
+        tbody {
+          tr {
+            th {
+              padding: 8px;
+              width: 39%;
+              text-align: left;
+              font-weight: 400;
+              background: #fafafa;
+              border-collapse: collapse;
+              border: 1px solid #f5f5f5;
+            }
+            td {
+              width: 61%;
+              background: #fff;
+              padding: 8px;
+              border-collapse: collapse;
+              border: 1px solid #f5f5f5;
+              a {
+                color: colors(blue);
               }
-              td {
-                width: 61%;
-                background: #fff;
-                padding: 8px;
-                .table-user-ratings {
-                  display: flex;
-                  &__rating:first-child {
-                    margin: 8px 0 0;
+              a:hover {
+                text-decoration: underline;
+              }
+              .table-user-ratings {
+                display: flex;
+                &__rating:first-child {
+                  margin: 8px 0 0;
+                }
+                &__rating {
+                  margin: 8px 0 0 16px;
+                  i {
+                    font-size: 16px;
+                    vertical-align: middle;
                   }
-                  &__rating {
-                    margin: 8px 0 0 16px;
-                    i {
-                      font-size: 16px;
-                      vertical-align: middle;
-                    }
-                    &--good {
-                      color: #ef5185;
-                    }
-                    &--nomal {
-                      color: #fba933;
-                    }
-                    &--bad {
-                      color: #6ab5d8;
-                    }
+                  &--good {
+                    color: #ef5185;
+                  }
+                  &--nomal {
+                    color: #fba933;
+                  }
+                  &--bad {
+                    color: #6ab5d8;
                   }
                 }
+              }
+              .table-category {
+                display: block;
               }
             }
           }
         }
+      }
+      .price-box {
+        width: 100%;
+        @include clearfix
       }
     }
   }

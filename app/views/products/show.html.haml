@@ -84,65 +84,64 @@
             %span
             .product-photo__dots__dot__inner
               = image_tag "test_product.jpg"
-      .product-detail__table
-        %table
-          %tbody
-            %tr
-              %th 出品者
-              %td
-                = link_to root_path do
-                  出品者名
-                .table-user-ratings
-                  .table-user-ratings__rating
-                    = icon('fas', 'laugh', class: "table-user-ratings__rating--good")
-                    %span 100
-                  .table-user-ratings__rating
-                    = icon('fas', 'meh', class: "table-user-ratings__rating--nomal")
-                    %span 50
-                  .table-user-ratings__rating
-                    = icon('fas', 'frown', class: "table-user-ratings__rating--bad")
-                    %span 0
-            %tr
-              %th カテゴリー
-              %td
-                = link_to root_path, class: "table__category-first" do
-                  メンズ
-                = link_to root_path, class: "table__category-second" do
-                  = icon('fas', 'chevron-right')
-                  ジャケット/アウター
-                = link_to root_path, class: "table__category-last" do
-                  = icon('fas', 'chevron-right')
-                  ダウンジャケット
-            %tr
-              %th ブランド
-              %td
-                = link_to root_path do
-                  ウール リッチ
-            %tr
-              %th 商品のサイズ
-              %td
-                M
-            %tr
-              %th 商品の状態
-              %td
-                目立った傷や汚れなし
-            %tr
-              %th 配送料の負担
-              %td
-                送料込み(出品者負担)
-            %tr
-              %th 配送の方法
-              %td
-                らくらくメルカリ便
-            %tr
-              %th 発送元地域
-              %td
-                = link_to root_path do
-                  東京
-            %tr
-              %th 発送日の目安
-              %td
-                2~3日で発送
+      %table.product-detail__table
+        %tbody
+          %tr
+            %th 出品者
+            %td
+              = link_to root_path do
+                出品者名
+              .table-user-ratings
+                .table-user-ratings__rating
+                  = icon('fas', 'laugh', class: "table-user-ratings__rating--good")
+                  %span 100
+                .table-user-ratings__rating
+                  = icon('fas', 'meh', class: "table-user-ratings__rating--nomal")
+                  %span 50
+                .table-user-ratings__rating
+                  = icon('fas', 'frown', class: "table-user-ratings__rating--bad")
+                  %span 0
+          %tr
+            %th カテゴリー
+            %td
+              = link_to root_path, class: "table-category" do
+                メンズ
+              = link_to root_path, class: "table-category" do
+                = icon('fas', 'chevron-right')
+                ジャケット/アウター
+              = link_to root_path, class: "table-category" do
+                = icon('fas', 'chevron-right')
+                ダウンジャケット
+          %tr
+            %th ブランド
+            %td
+              = link_to root_path do
+                ウール リッチ
+          %tr
+            %th 商品のサイズ
+            %td
+              M
+          %tr
+            %th 商品の状態
+            %td
+              目立った傷や汚れなし
+          %tr
+            %th 配送料の負担
+            %td
+              送料込み(出品者負担)
+          %tr
+            %th 配送の方法
+            %td
+              らくらくメルカリ便
+          %tr
+            %th 発送元地域
+            %td
+              = link_to root_path do
+                東京
+          %tr
+            %th 発送日の目安
+            %td
+              2~3日で発送
       .price-box
         .price-box--price
           %span ¥12,500
