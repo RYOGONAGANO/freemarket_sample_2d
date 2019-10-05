@@ -93,14 +93,14 @@
                 = link_to root_path do
                   出品者名
                 .table-user-ratings
-                  .table-user-ratings--good
-                    = icon('fas', 'laugh')
+                  .table-user-ratings__rating
+                    = icon('fas', 'laugh', class: "table-user-ratings__rating--good")
                     %span 100
-                  .table-user-ratings--nomal
-                    = icon('fas', 'meh')
+                  .table-user-ratings__rating
+                    = icon('fas', 'meh', class: "table-user-ratings__rating--nomal")
                     %span 50
-                  .table-user-ratings--bad
-                    = icon('fas', 'frown')
+                  .table-user-ratings__rating
+                    = icon('fas', 'frown', class: "table-user-ratings__rating--bad")
                     %span 0
             %tr
               %th カテゴリー

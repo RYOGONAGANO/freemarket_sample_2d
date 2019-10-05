@@ -120,6 +120,25 @@
                 padding: 8px;
                 .table-user-ratings {
                   display: flex;
+                  &__rating:first-child {
+                    margin: 8px 0 0;
+                  }
+                  &__rating {
+                    margin: 8px 0 0 16px;
+                    i {
+                      font-size: 16px;
+                      vertical-align: middle;
+                    }
+                    &--good {
+                      color: #ef5185;
+                    }
+                    &--nomal {
+                      color: #fba933;
+                    }
+                    &--bad {
+                      color: #6ab5d8;
+                    }
+                  }
                 }
               }
             }
