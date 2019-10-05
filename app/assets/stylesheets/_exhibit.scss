@@ -1,0 +1,15 @@
+.exhibit{
+  height: 100vh;
+  width: 100vw;
+  &__box{
+    background-color: white;
+    height: 100%;
+    width: 48.5%;
+    margin: auto;
+    &__title{
+      height: 20%;
+      width: 100%;
+      
+    }
+  }
+}
