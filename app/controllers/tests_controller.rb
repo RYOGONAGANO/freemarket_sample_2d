@@ -4,7 +4,6 @@ class TestsController < ApplicationController
   end
 
   def new
-    @test = Test.new
   end
 
   def create
