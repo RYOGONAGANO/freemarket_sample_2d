@@ -2,4 +2,22 @@
 .exhibit
   .exhibit__box
     .exhibit__box__title
-= render "users/copywrite-bottom"
+      商品の情報を入力
+    .exhibit__box__image
+      .exhibit__box__image__in
+        .exhibit__box__image__in__title
+          .exhibit__box__image__in__title__name
+            出品画像
+          .exhibit__box__image__in__title__required
+            必須
+        .exhibit__box__image__in__message
+          最大10枚までアップロードできます
+        .exhibit__box__image__in__upload
+          = form_with(model: @test, local: true) do |f|
+            = f.file_field :image
+    .exhibit__box__itemname
+    .exhibit__box__detail
+    .exhibit__box__delivery
+    .exhibit__box__price
+    .exhibit__box__confirmation
+= render "users/copywrite-bottom" 
