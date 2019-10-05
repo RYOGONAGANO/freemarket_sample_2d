@@ -1,0 +1,27 @@
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}/
+    %title FreemarketSample2d
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+
+.userRegist-smsPhone-confirm-body
+  .userRegist-smsPhone-confirm-header
+    .userRegist-smsPhone-confirm-header__headers
+      .userRegist-smsPhone-confirm-header__headers__logo
+        = image_tag 'logomercari.svg', id:'assets', class:'image', size:'185x45' 
+      .userRegist-smsPhone-confirm-header__headers__bar
+        = render 'users/new-user-progress'
+  .userRegist-smsPhone-confirm-content
+    .userRegist-smsPhone-confirm-content__header
+    %p電話番号の確認
+    .userRegist-smsPhone-confirm-content__body
+      .userRegist-smsPhone-confirm-content__body__contents
+      
+
+
+
+
