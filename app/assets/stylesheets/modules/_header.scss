@@ -12,6 +12,7 @@
    padding-top: 8px;
    &__logo{
     background-image: url("https://web-jp-assets.mercdn.net/_next/static/images/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg");
+    background-repeat: no-repeat;
     height: 36px;
     width: 133px;
     margin-left: 1px;
@@ -42,6 +43,8 @@
   height: 50%;
   width: 70vw;
   margin: auto;
+  margin-top: 9px;
+  justify-content: space-between;
   &__left{
     display: flex;
     height: 44px;
@@ -62,7 +65,7 @@
     margin-left: 10px;
     display: flex;
     &__icon{
-    background-image: url("/images/スクリーンショット 2019-09-29 8.07.10.png");
+    background-image: url("brand-tag.png");
     height: 35px;
     width: 40px;
     margin-top: -5px;
@@ -78,7 +81,7 @@
   &__right{
     height: 44px;
     width: 520.31px;
-    margin-left: 187px;
+    
     margin-top: 5px;
     display: flex;
     &__like{
@@ -97,10 +100,11 @@
       width: 127px;
       font-size: 14px;
       margin-left: 15px;
-      .far{
-        color: #80808061;
+      .fa{
+        color: #80808000;
         font-size: 17px;
         padding-right: 6px;
+        -webkit-text-stroke: 2px #80808061;
       }
     }
     &__todo{
@@ -120,7 +124,7 @@
       width: 127px;
       display: flex;
       &__icon{
-        background-image: url("/images/スクリーンショット 2019-09-29 8.56.22.png");
+        background-image: url("mypage-icon.png");
         height: 70px;
         width: 70px;
         zoom: 0.5;
