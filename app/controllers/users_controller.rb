@@ -4,4 +4,8 @@ class UsersController < ApplicationController
     render partial: "users/login-page"
   end
 
+  def edit
+    
+  end
+
 end
