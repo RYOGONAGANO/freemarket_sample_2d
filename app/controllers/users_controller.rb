@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
-  
+
+  def index
+  end
+
   def new
-    render partial: "users/login-page"
   end
 
   def show
