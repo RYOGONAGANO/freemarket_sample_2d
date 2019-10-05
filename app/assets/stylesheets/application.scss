@@ -5,13 +5,14 @@
 @import 'mixin/mixins';
 @import "modules/header";
 @import 'modules/sidemenu';
-@import 'modules/profile';
-@import 'modules/mypage';
 @import 'modules/footer';
 @import 'modules/buy';
 @import 'modules/mypage';
 @import 'modules/logout';
 @import 'toppage-content';
+@import 'users/new';
+@import 'users/new-user-progress';
 @import 'users/logo-onlyheader';
 @import 'users/authentication';
 @import 'users/copywrite-bottom';
+@import 'users/login-page';
