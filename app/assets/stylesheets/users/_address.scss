@@ -130,22 +130,300 @@
 }
 
 .address-registration-item{
+  padding-top: 40px; 
   margin: auto;
   background-color: white;
   width: 700px;
+  text-align: center;
+  
 
   &__name{
+    display: inline-grid;
     &__text{
       display: flex;
+      margin-bottom: 5px;
       &__title{
         font-weight: 600;
       }
       &__required{
-        
+        background-color: #EA352D;
+        color: white;
+        width: 32px;
+        height: 19px;
+        display: inline-block;
+        font-size: 13px;
+        border-radius: 2px;
+        padding: 2px;
+        margin-left: 5px;
+      }
+    }
+
+    &__input-form{
+      display: inline-block;
+      &__lastname{
+        display: block;
+        width: 343px;
+        height: 48px;
+        border-radius: 5px;
+        border: solid 1px #80808073;
+        margin-bottom: 8px;
+
+      }
+      &__firstname{
+        width: 343px;
+        height: 48px;
+        border-radius: 5px;
+        border: solid 1px #80808073;
 
       }
     }
   }
 
+  &__kananame{
+    display: block;
 
+    &__text{
+      display: flex;
+      margin-bottom: 5px;
+      padding-left: 180px;
+      margin-top: 30px;
+      &__title{
+        font-weight: 600;
+      }
+      &__required{
+        background-color: #EA352D;
+        color: white;
+        width: 32px;
+        height: 19px;
+        display: inline-block;
+        font-size: 13px;
+        border-radius: 2px;
+        padding: 2px;
+        margin-left: 5px;
+
+      }
+    }
+    &__input-form{
+      display: inline-block;
+      &__lastname{
+        display: block;
+        width: 343px;
+        height: 48px;
+        border-radius: 5px;
+        border: solid 1px #80808073;
+        margin-bottom: 8px;
+
+      }
+      &__firstname{
+        width: 343px;
+        height: 48px;
+        border-radius: 5px;
+        border: solid 1px #80808073;
+
+      }
+    }
+  }
+
+  &__postalcode{
+    &__text{
+      display: flex;
+      margin-bottom: 5px;
+      padding-left: 180px;
+      margin-top: 30px;
+      &__title{
+        font-weight: 600;
+
+      }
+      &__required{
+        background-color: #EA352D;
+        color: white;
+        width: 32px;
+        height: 19px;
+        display: inline-block;
+        font-size: 13px;
+        border-radius: 2px;
+        padding: 2px;
+        margin-left: 5px;
+      }
+    }
+    &__input-form{
+      display: inline-block;
+      &__nomber{
+        width: 343px;
+        height: 48px;
+        border-radius: 5px;
+        border: solid 1px #80808073;
+      }
+    }
+  }
+
+  &__prefectures{
+    &__text{
+      display: flex;
+      margin-bottom: 5px;
+      padding-left: 180px;
+      margin-top: 30px;
+      &__title{
+        font-weight: 600;
+
+      }
+      &__required{
+        background-color: #EA352D;
+        color: white;
+        width: 32px;
+        height: 19px;
+        display: inline-block;
+        font-size: 13px;
+        border-radius: 2px;
+        padding: 2px;
+        margin-left: 5px;
+      }
+    }
+
+    &__form{
+      &__prefectures{
+        width: 343px;
+        height: 48px;
+        border-radius: 5px;
+        border: solid 1px #80808073;
+      }
+
+    }
+  }
+
+  &__city{
+    &__text{
+      display: flex;
+      margin-bottom: 5px;
+      padding-left: 180px;
+      margin-top: 30px;
+      &__title{
+        font-weight: 600;
+
+      }
+      &__required{
+        background-color: #EA352D;
+        color: white;
+        width: 32px;
+        height: 19px;
+        display: inline-block;
+        font-size: 13px;
+        border-radius: 2px;
+        padding: 2px;
+        margin-left: 5px;
+      }
+    }
+
+    &__input-form{
+      &__town{
+        width: 343px;
+        height: 48px;
+        border-radius: 5px;
+        border: solid 1px #80808073;
+      }
+    }
+  }
+
+  &__address{
+    &__text{
+      display: flex;
+      margin-bottom: 5px;
+      padding-left: 180px;
+      margin-top: 30px;
+      &__title{
+        font-weight: 600;
+      }
+      &__required{
+        background-color: #EA352D;
+        color: white;
+        width: 32px;
+        height: 19px;
+        display: inline-block;
+        font-size: 13px;
+        border-radius: 2px;
+        padding: 2px;
+        margin-left: 5px;
+      }
+    }
+    &__input-form{
+      width: 343px;
+      height: 48px;
+      border-radius: 5px;
+      border: solid 1px #80808073;
+    }
+  }
+
+  &__building{
+    &__text{
+      display: flex;
+      margin-bottom: 5px;
+      padding-left: 180px;
+      margin-top: 30px;
+      &__title{
+        font-weight: 600;
+      }
+      &__required{
+        background-color: #ccc;
+        color: white;
+        width: 32px;
+        height: 19px;
+        display: inline-block;
+        font-size: 13px;
+        border-radius: 2px;
+        padding: 2px;
+        margin-left: 5px;
+      }
+    }
+
+    &__input-form{
+      width: 343px;
+      height: 48px;
+      border-radius: 5px;
+      border: solid 1px #80808073;
+    }
+  }
+
+  &__tel{
+    &__text{
+      display: flex;
+      margin-bottom: 5px;
+      padding-left: 180px;
+      margin-top: 30px;
+      &__title{
+        font-weight: 600;
+      }
+      &__required{
+        background-color: #ccc;
+        color: white;
+        width: 32px;
+        height: 19px;
+        display: inline-block;
+        font-size: 13px;
+        border-radius: 2px;
+        padding: 2px;
+        margin-left: 5px;
+
+      }
+    }
+    &__input-form{
+      width: 343px;
+      height: 48px;
+      border-radius: 5px;
+      border: solid 1px #80808073;
+      margin-bottom: 40px;
+    }
+  }
+  &__next-btn{
+    padding-bottom: 80px;
+    padding-top: 30px;
+    &__submit{
+    margin: auto;
+    background-color: #EA352D;
+    height: 50px;  
+    width: 320px;
+    display: grid; 
+    color: white;
+    font-size: 14px;
+    }
+  }
 }
