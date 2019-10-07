@@ -18,7 +18,7 @@
   &__text-area{
     background-color: white;
     width: 700px;
-    height: 1035px;
+    height: 1105px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -72,8 +72,9 @@
           margin-top: 4px;
         }
         &__label-nini-postal{
-          height:15px;
-          width:28px;
+          height:19px;
+          width:32px;
+          font-size: 12px;
           background-color:#cccccc;
           color:#FFFFFF;
           margin-left: 8px;
@@ -87,7 +88,7 @@
         margin-top: 8px;
         .mydata-registration__text-area__box__text__postal-code-input{
           width: 572px;
-          height: 24px;
+          height: 48px;
           border: 1px solid #ccc;
           border-radius: 4px;
           line-height: 1.5;
@@ -106,8 +107,9 @@
           margin-top: 4px;
         }
         &__label-nini-todouhuken{
-          height:15px;
-          width:28px;
+          height:19px;
+          width:32px;
+          font-size: 12px;
           background-color:#cccccc;
           color:#FFFFFF;
           margin-left: 8px;
@@ -122,8 +124,8 @@
         
         .mydata-registration__text-area__box__text__todouhuken-code-input{
           -webkit-appearance: none;
-          width: 606px;
-          height: 44px;
+          width: 572px;
+          height: 48px;
           box-sizing: border-box;
           border: 1px solid #ccc;
           border-radius: 4px;
@@ -136,8 +138,10 @@
           cursor: pointer;
         }
         &__icon-yajirushi-down{
+          width: 15px;
+          height: 15px;
           top:-27px;
-          left:570px;
+          left:540px;
           position: relative;
           pointer-events: none;
         }
@@ -151,8 +155,9 @@
           margin-top: 4px;
         }
         &__label-nini-shikucyouson{
-          height:15px;
-          width:28px;
+          height:19px;
+          width:32px;
+          font-size: 12px;
           background-color:#cccccc;
           color:#FFFFFF;
           margin-left: 8px;
@@ -166,7 +171,7 @@
         margin-top: 8px;
         .mydata-registration__text-area__box__text__shikucyouson-code-input{
           width: 572px;
-          height: 24px;
+          height: 48px;
           border: 1px solid #ccc;
           border-radius: 4px;
           line-height: 1.5;
@@ -185,8 +190,9 @@
           margin-top: 4px;
         }
         &__label-nini-banchi{
-          height:15px;
-          width:28px;
+          height:19px;
+          width:32px;
+          font-size: 12px;
           background-color:#cccccc;
           color:#FFFFFF;
           margin-left: 8px;
@@ -200,7 +206,7 @@
         margin-top: 8px;
         .mydata-registration__text-area__box__text__banchi-code-input{
           width: 572px;
-          height: 24px;
+          height: 48px;
           border: 1px solid #ccc;
           border-radius: 4px;
           line-height: 1.5;
@@ -219,8 +225,9 @@
           margin-top: 4px;
         }
         &__label-nini-tatemonomei{
-          height:15px;
-          width:28px;
+          height:19px;
+          width:32px;
+          font-size: 12px;
           background-color:#cccccc;
           color:#FFFFFF;
           margin-left: 8px;
@@ -234,7 +241,7 @@
         margin-top: 8px;
         .mydata-registration__text-area__box__text__tatemonomei-code-input{
           width: 572px;
-          height: 24px;
+          height: 48px;
           border: 1px solid #ccc;
           border-radius: 4px;
           line-height: 1.5;
@@ -246,7 +253,7 @@
       }
       .submit{
         background-color:#EA352D;
-        width: 605px;
+        width: 572px;
         height: 50px;
         float: left;
         font-size: 14px;
