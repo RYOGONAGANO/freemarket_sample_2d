@@ -314,13 +314,15 @@
               width: 76px;
               height: 48px;
               &__text{
+                margin-top: 30px;
 
               }
             }
             &__month{
               width: 76px;
               height: 48px;
-              &__year{
+              &__text{
+                margin-top: 30px;
               }
             }
 
@@ -328,7 +330,7 @@
               width: 76px;
               height: 48px;
               &__text{
-
+                margin-top: 30px;
               }
             }
           }
@@ -338,13 +340,39 @@
           color: #888888;
           margin-top: 8px;
         }
-      
-
-
-
-
+    
+    .member-information_other{
+      display: contents;
+      background-color: white;
+      margin-top: 14px;
+      text-align: center;
+      &__recaptcha{
+        margin-top: 40px;
+        width: 343px;
+        height: 78px;
+        background-color: darkgray;
+      }
+      &__terms{
+        text-align: center;
+        margin: 40px 0px;
+        &__btn{
+          color: #0099E8;
+          float: right;
+        }
+      }
+      &__nextbtn{
+        @include btn;
+        width: 345px;
+        background-color: #EA352D;
+      }
+      &__about-personal-information{
+        color: #0099E8;
+        float: right;
+        margin: 40px 0px 60px;
 
       }
+    }
+    }
     }
   }
 }
