@@ -1,103 +1,101 @@
-.authentication-contents{
+.authentication-contents {
   width: 100vw;
 
-  .main-items{
+  .main-items {
     width: 700px;
     height: 986px;
-    background-color: rgb(245,245,245);
-    text-align:center;
+    background-color: colors(white);
+    text-align: center;
     margin: 0 auto;
 
-    .title{
+    .title {
       text-align: center;
-      background-color: white;
+      background-color: colors(white);
       width: 700px;
       height: 95px;
       line-height: 95px;
       font-size: 22px;
       font-weight: 550;
-      margin-bottom:  2px;
+      margin-bottom: 2px;
     }
-    .input-screen{
-      background-color: white;
+    .input-screen {
+      background-color: colors(white);
       width: 700px;
       height: 350px;
-      margin-bottom:  2px;
+      margin-bottom: 2px;
 
-      .content{
+      .content {
         padding-top: 40px;
         margin: 0px 145px;
         padding: 45px;
         text-align: left;
 
-        &__text{
+        &__text {
           font-size: 13px;
-
         }
-        &__authentication{
+        &__authentication {
           margin: 40px 0px;
-          &__text{
+          &__text {
             padding-bottom: 10px;
             font-size: 14px;
             font-weight: 600;
           }
-          &__input{
+          &__input {
             height: 40px;
             width: 320px;
             border-radius: 5px;
             border: solid 1px #80808073;
           }
         }
-        &__submit-btn{
+        &__submit-btn {
           @include btn;
           margin-top: 40px;
-          background-color: #EA352D;
+          background-color: colors(btn-red);
         }
       }
     }
   }
 
-  .no-reach{
-    background-color: white;
+  .no-reach {
+    background-color: colors(white);
     height: 545px;
     width: 700px;
-    .no-reach-content{
+    .no-reach-content {
       margin: 0px 190px;
       padding: 40px 0px;
       text-align: left;
-      &__guide{
+      &__guide {
         font-weight: 600;
       }
-      &__tel{
+      &__tel {
         padding-top: 35px;
-        &__btn{
+        &__btn {
           @include btn;
         }
       }
-      &__resend{
+      &__resend {
         padding-top: 35px;
-        &__btn{
-          @include btn; 
+        &__btn {
+          @include btn;
         }
       }
-      &__email{
+      &__email {
         padding-top: 35px;
-        &__btn{
-          @include btn; 
+        &__btn {
+          @include btn;
         }
       }
-      &__sms-guide{
+      &__sms-guide {
         line-height: normal;
         padding-top: 34px;
         letter-spacing: -1px;
-        
-        &__a{
-          color: #0099e8;
 
+        &__a {
+          color: colors(blue);
         }
         &__a:hover {
-          text-decoration:underline;
-          }
+          text-decoration: underline;
+        }
       }
     }
   }
