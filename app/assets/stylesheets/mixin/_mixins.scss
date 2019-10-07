@@ -30,6 +30,7 @@
 @mixin chapter($top: 8px, $landr: 36.5px) {
   margin: $top $landr 0;
   width: 700px;
+  background-color: colors(white);
 }
 
 @mixin price{

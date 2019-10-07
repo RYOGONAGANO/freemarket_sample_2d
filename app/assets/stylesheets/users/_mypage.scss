@@ -111,7 +111,6 @@
     }
     .mypage-transaction {
       @include chapter(40px);
-      background-color: colors(white);
       &__header {
         background-color: colors(gray);
         padding: 0 16px;
