@@ -1,0 +1,350 @@
+.member-information_input{
+  width: 100vw;
+
+  .member-information_header{
+    margin-left: 350px;
+    display: inline-block;
+    padding-top: 40px;
+    height: 128px;
+    text-align:  center;  
+    
+    &__logo{
+      margin-right: 50px;
+      display: inline-block;
+      width: 185px;
+      height: 49px;
+      
+    }
+    .userRegist-complete-progress-bar{
+      float: right;
+      height: 72px;
+      background-color:rgb(245, 245, 245);
+      width: 552px;
+
+      &__text{
+        background-color:rgb(245, 245, 245);
+        height: 16px;
+        width: 508px;
+        display: flex;
+
+        &__member-info{
+          font-size: 12px;
+          font-weight: 600;
+          color:  #EA352D;
+        }
+        &__phone-confirmation{
+          margin-left: 50px;
+          font-size: 12px;
+          color: #888;
+        }
+        &__adress{
+          margin-left: 35px;
+          font-size: 12px;
+          color: #888;
+        }
+        &__payment{
+          margin-left: 40px;
+          font-size: 12px;
+          color: #888;
+        }
+        &__complete{
+          margin-left: 70px;
+          font-size: 12px;
+          color:#888;
+        }
+      }
+      &__lines{
+        background-color:rgb(245, 245, 245);
+        height: 16px;
+        width: 490px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__member-info{
+          height: 12px;
+          width: 12px;
+          background-color: #EA352D;
+          border-radius: 50%;
+        }
+        &__member-info-to-phone{
+          height: 2px;
+          width: 105px;
+          background-color: #ccc;
+        }
+        &__phone-confirmation{
+          height: 12px;
+          width: 12px;
+          background-color:#ccc;
+          border-radius: 50%;
+        }
+        &__phone-confirmation-to-adress{
+          height: 2px;
+          width: 105px;
+          background-color: #ccc;
+        }
+        &__adress{
+          height: 12px;
+          width: 12px;
+          background-color: #ccc;
+          border-radius: 50%;
+        }
+        &__adress-to-payment{
+          height: 2px;
+          width: 105px;
+          background-color:#ccc;
+        }
+        &__payment{
+          height: 12px;
+          width: 12px;
+          background-color: #ccc;
+          border-radius: 50%;
+        }
+        &__payment-to-complete{
+          height: 2px;
+          width: 105px;
+          background-color:#ccc;
+        }
+        &__complete{
+          height: 12px;
+          width: 12px;
+          background-color:#ccc;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+
+  .member-information_input-entire{
+    margin: 0 auto;
+    width: 700px;
+
+    .member-information_input-title{
+      background-color: white;
+      font-size: 22px;
+      font-weight: 600;
+      height: 97px;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .member-information_input-form{
+      background-color: white;
+      margin-top: 2px;
+      text-align: center;
+
+      .member-information-input_contents{
+        display: inline-block; 
+        &__nickname{
+          margin-top: 40px;
+          width: 343px;
+          height: 70px;
+
+          &__form{
+            float: left;
+            display: inline;
+            &__text{
+              font-weight: 600;
+              display: inline-block;
+
+            }
+            &__required{
+              @include required;
+            }
+          }
+          &__input-form{
+            @include input-form;
+          }
+        }
+
+        &__email{
+          margin-top: 32px;
+          width: 343px;
+          height: 70px;
+
+          &__form{
+            margin-bottom: 5px;
+            float: left;
+            display: inline;
+            &__text{
+              font-weight: 600;
+              display: inline-block;
+            }
+            &__required{
+              @include required;
+            }
+          }
+          &__input-form{
+            @include input-form;
+          }
+        }
+
+        &__password{
+          margin-top: 32px;
+          width: 343px;
+          height: 70px;
+          &__form{
+            margin-bottom: 5px;
+            display: inline;
+            float: left;
+
+            &__text{
+              font-weight: 600;
+              display: inline-block;
+            }
+            &__required{
+              @include required;
+            }
+          }
+          &__input-form{
+            @include input-form;
+          }
+          }
+
+        &__password-again{
+          margin-top: 32px;
+          width: 343px;
+          height: 70px;
+          &__form{
+            margin-bottom: 5px;
+            display: inline;
+            float: left;
+
+            &__text{
+              font-weight: 600;
+              display: inline-block;
+            }
+            &__required{
+              @include required;
+            }
+          }
+          &__input-form{
+            @include input-form;
+          }
+        }
+      
+        .member-information_identification{
+          height: 87px;
+          text-align: initial;
+          margin-top: 32px;
+          line-height: initial;
+          &__title{
+            font-weight: 600;
+            font-size: 16px;
+          }
+          &__text{
+            float: left;
+          }
+        }
+
+        .member-information-name{
+          margin-top: 32px;
+          display: inline-block;
+          &__text{
+            display: flex;
+            &__name{
+              font-weight: 600;
+              display: flex;
+            }
+            &__required{
+              @include required;
+            }
+          }
+
+          &__form{
+            display: block;
+            &__last-name{
+              @include input-form;
+              width: 165px;
+              height: 48px;
+            }
+            &__name{
+              @include input-form;
+              width: 165px;
+              height: 48px;
+            }
+          }
+        }
+
+        .member-information-namekatakana{
+          margin-top: 32px;
+          &__text{
+            display: flex;
+
+            &__name{
+              font-weight: 600;
+              display: flex;
+            }
+              &__reqired{
+                @include required;
+              }
+            }
+
+          &__form{
+            &__last-name{
+              @include input-form;
+              width: 165px;
+              height: 48px;
+            }
+            &__name{
+              @include input-form;
+              width: 165px;
+              height: 48px;
+
+            }
+          }
+        }
+
+        .member-information-birthday{
+
+          margin-top: 32px;
+          &__text{
+            display: flex;
+            &__title{
+              font-weight: 600;
+              display: flex;
+            }
+            &__required{
+              @include required;
+            }
+          }
+          &__form{
+            background-color: white;
+            display: flex;
+            &__year{
+              width: 76px;
+              height: 48px;
+              &__text{
+
+              }
+            }
+            &__month{
+              width: 76px;
+              height: 48px;
+              &__year{
+              }
+            }
+
+            &__day{
+              width: 76px;
+              height: 48px;
+              &__text{
+
+              }
+            }
+          }
+        }
+
+        .member-information_caution{
+          color: #888888;
+          margin-top: 8px;
+        }
+      
+
+
+
+
+
+      }
+    }
+  }
+}

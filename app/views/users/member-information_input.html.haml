@@ -26,5 +26,112 @@
         .userRegist-complete-progress-bar__lines__payment
         .userRegist-complete-progress-bar__lines__payment-to-complete
         .userRegist-complete-progress-bar__lines__complete
+
+  .member-information_input-entire
     /コンテンツ全体
+    .member-information_input-title
+      会員情報入力
+
+    .member-information_input-form
+      /formの全体
+      .member-information-input_contents
+        /コンテンツ
+        .member-information-input_contents__nickname
+          .member-information-input_contents__nickname__form
+            .member-information-input_contents__nickname__form__text
+              ニックネーム
+            .member-information-input_contents__nickname__form__required
+              必須
+          %input{ type: "text",placeholder:"ニックネーム", class: "member-information-input_contents__nickname__input-form" } 
+
+        .member-information-input_contents__email
+          .member-information-input_contents__email__form
+            .member-information-input_contents__email__form__text
+              メールアドレス
+            .member-information-input_contents__email__form__required
+              必須
+          %input{ type: "text",placeholder:"PC・携帯どちらでも可", class: "member-information-input_contents__email__input-form" } 
+
+
+        .member-information-input_contents__password
+          .member-information-input_contents__password__form
+            .member-information-input_contents__password__form__text
+              パスワード
+            .member-information-input_contents__password__form__required
+              必須
+          %input{ type: "text",placeholder:"7文字以上", class: "member-information-input_contents__password__input-form" } 
+
+        .member-information-input_contents__password-again
+          .member-information-input_contents__password-again__form
+            .member-information-input_contents__password-again__form__text
+              パスワード(確認)
+            .member-information-input_contents__password-again__form__required
+              必須
+          %input{ type: "text",placeholder:"7文字以上", class: "member-information-input_contents__password-again__input-form" } 
+          
+        .member-information_identification
+          .member-information_identification__title
+            本人確認
+          .member-information_identification__text
+            安心・安全にご利用いただくために、お客様の本人
+            %p 情報の登録にご協力ください。他のお客様に公開さ
+            %p れることはありません。
+
+        .member-information-name
+          .member-information-name__text
+            .member-information-name__text__name
+              お名前(全角)
+            .member-information-name__text__required
+              必須
+          .member-information-name__form
+            %input{ type: "text",placeholder:"例)山田", class: "member-information-name__form__last-name" } 
+            %input{ type: "text",placeholder:"例)彩", class: "member-information-name__form__name" } 
+
+        .member-information-namekatakana
+          .member-information-namekatakana__text
+            .member-information-namekatakana__text__name
+              お名前カナ(全角)
+            .member-information-namekatakana__text__reqired
+              必須
+          .member-information-namekatakana__form
+            %input{ type: "text",placeholder:"例)ヤマダ", class: "member-information-namekatakana__form__last-name" } 
+            %input{ type: "text",placeholder:"例)アヤ", class: "member-information-namekatakana__form__name" } 
+
+        .member-information-birthday
+          .member-information-birthday__text
+            .member-information-birthday__text__title
+              生年月日
+            .member-information-birthday__text__required
+              必須
+          .member-information-birthday__form
+            %select{ type: "text", class: "member-information-birthday__form__year" } 
+            .member-information-birthday__form__year__text
+              年
+            %select{ type: "text", class: "member-information-birthday__form__month" }
+            .member-information-birthday__form__month__text 
+              月
+            %select{ type: "text", class: "member-information-birthday__form__day" }
+            .member-information-birthday__form__day__text
+              日
+
+        .member-information_caution
+          ＊本人情報は正しく入力してください。会員登録後、
+          %p 修正するにはお時間をいただく場合があります。
+
+
+            
+
+
+        
+
+
+
+
+    .member-information_input-other
+
+
+
+
+
+
   = render 'copywrite-bottom'
