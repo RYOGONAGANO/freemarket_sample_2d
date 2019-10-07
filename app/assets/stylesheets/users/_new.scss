@@ -1,6 +1,6 @@
 .userRegist-complete-body {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: colors(gray);
   position: relative;
 }
@@ -10,15 +10,14 @@
   background-color: colors(gray);
   .userRegist-complete-header-headers {
     height: 100%;
-    width: 1000px;
+    width: 700px;
     background-color: colors(gray);
     display: flex;
-    margin-left: 300px;
+    margin: 0 auto;
+    align-items: center;
     &__mercarilogo {
-      height: 100px;
       width: 200px;
       background-color: colors(gray);
-      padding: 45px 0px 0px 50px;
     }
     &__status {
       height: 100%;
@@ -35,14 +34,12 @@
   }
 }
 .userRegist-complete-contents {
-  margin: 0 auto;
-  width: 700px;
+  @include chapter(0, auto);
   height: 550px;
   .userRegist-complete-uppercontent {
     margin: 0 auto;
     height: 80px;
     width: 100%;
-    background-color: colors(white);
     text-align: center;
     line-height: 80px;
     border-bottom: solid 1px colors(gray);
@@ -52,13 +49,11 @@
     margin: 0 auto;
     height: 220px;
     width: 100%;
-    background-color: colors(white);
     text-align: center;
     position: relative;
     &__text {
       height: 60px;
       width: 60%;
-      background-color: colors(white);
       margin: 0px 40px 40px 140px;
       padding: 20px;
       font-size: 15px;
@@ -79,27 +74,4 @@
     background-color: colors(black);
   }
 }
-.userRegist-complete-footer {
-  width: 100vw;
-  height: 70px;
-  background-color: colors(gray);
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &__policy {
-    display: inline-block;
-    margin-right: 20px;
-    font-size: 12px;
-  }
-  &__rule {
-    display: inline-block;
-    font-size: 12px;
-  }
-  &__comarce {
-    display: inline-block;
-    margin-left: 20px;
-    font-size: 12px;
-  }
-}
+
