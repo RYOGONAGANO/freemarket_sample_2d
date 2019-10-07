@@ -128,3 +128,24 @@
     }
   }
 }
+
+.address-registration-item{
+  margin: auto;
+  background-color: white;
+  width: 700px;
+
+  &__name{
+    &__text{
+      display: flex;
+      &__title{
+        font-weight: 600;
+      }
+      &__required{
+        
+
+      }
+    }
+  }
+
+
+}

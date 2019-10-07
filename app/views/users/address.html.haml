@@ -30,4 +30,17 @@
     .address-registration-entire
       .address-registration-entire__title
         発送元・お届け先住所入力
-      
+    .address-registration-item
+      /住所入力全体
+      .address-registration-item__name
+        /名前入力全体
+        .address-registration-item__name__text
+          .address-registration-item__name__text__title
+            お名前
+          .address-registration-item__name__text__required
+            必須
+        .address-registration-item__name__text__input-form
+        %input{type: "text",placeholder: "例）山田" , class: "address-registration-item__name__text__input-form__lastname"}
+        %input{type: "text",placeholder: "例）彩" , class: "address-registration-item__name__text__input-form__firstname"}
+
+
