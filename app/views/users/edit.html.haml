@@ -13,7 +13,9 @@
             %br>/
             登録されたお客様・生年月日を変行為する場合、本人確認書類の提出が必要になります。
           .mydata-registration__text-area__box__kakunin
-            本人確認書類のアップロードについて＞
+            本人確認書類のアップロードについて
+            = fa_icon 'angle-right'
+
           .mydata-registration__text-area__box__username
             お名前
           .mydata-registration__text-area__box__username-data
@@ -45,9 +47,8 @@
               %option 東京
               %option 高知
               %option 福岡
-          .mydata-registration__text-area__box__text__icon-yajirushi-down
+          .mydata-registration__text-area__box__text__icon-chevron-down
             = fa_icon 'chevron-down'
-            -# .mydata-registration__text-area__box__text__text-select-downbutton
           .mydata-registration__text-area__box__home-address-box-shikucyouson
             .mydata-registration__text-area__box__home-address-box-shikucyouson__home-address-shikucyouson-code
               市区町村
@@ -73,6 +74,7 @@
           %button{type: "submit", class: "submit"}
             変更する
           .mydata-registration__text-area__box__kakunin
-            本人情報の登録について＞
+            本人情報の登録について
+            = fa_icon 'angle-right'
 = render 'shared/footer'
 = render 'shared/buy'
