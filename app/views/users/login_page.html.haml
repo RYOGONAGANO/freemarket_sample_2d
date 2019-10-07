@@ -1,15 +1,4 @@
-!!!
-%html
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title FreemarketSample2d
-    = csrf_meta_tags
-    = csp_meta_tag
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-  %body
-
-=render 'users/logo-onlyheader'
+=render 'shared/logo-onlyheader'
 .login_outline
   .login_contents
     .login_no_account
@@ -21,7 +10,7 @@
       .login-type
         %button{type: "submit", class: "login-type__facebook"}
           .login-type__facebook__icon
-            = fa_icon "facebook-square"
+            %i{class: "fab fa-facebook-square"}
           .login-type__facebook__text
             Facebookでログイン
         %button{type: "submit", class: "login-type__google"}
@@ -30,12 +19,12 @@
             Googleでログイン
     .login_form
       .login_form_contents
-        %input{type: "text",placeholder:"メールアドレス", class: "login_form_contents__input-email" } 
-        %input{type: "text",placeholder:"パスワード", class: "login_form_contents__input-password" } 
+        %input{type: "text",placeholder:"メールアドレス", class: "login_form_contents__input-email" }
+        %input{type: "text",placeholder:"パスワード", class: "login_form_contents__input-password" }
         .login_form_contents__re-captcha
           re-captcha仮置きのハコです。
         %button{type: "submit", class: "login_form_contents__login-btn"}
           ログイン
         = link_to  '', class: 'login_form_contents__foget-password__text' do
           パスワードをお忘れの方
-=render 'users/copywrite-bottom'
+=render 'shared/copywrite-bottom'

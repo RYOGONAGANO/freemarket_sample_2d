@@ -9,18 +9,18 @@
     margin: 0 0 0 auto;
     .mypage-menu-list {
       margin-top: 8px;
-      #active{
-      background: colors(gray);
-      font-weight: 600;
+      #active {
+        background: colors(gray);
+        font-weight: 600;
       }
       .mypage-menu-list__line {
         display: block;
-        background-color: #fff;
+        background-color: colors(white);
         padding: 16px;
         font-size: 14px;
         display: flex;
         justify-content: space-between;
-        color: #333;
+        color: colors(black);
         border-top: 1px solid colors(gray);
       }
     }
