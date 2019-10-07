@@ -98,7 +98,7 @@
             .member-information-birthday__text__required
               必須
           .member-information-birthday__form
-            %select{ type: "text", class: "member-information-birthday__form__year" } 
+            %select{ type: "text", class: "member-information-birthday__form__year" }
             .member-information-birthday__form__year__text
               年
             %select{ type: "text", class: "member-information-birthday__form__month" }
@@ -117,10 +117,12 @@
             recaptcha仮置き
           .member-information_other__terms
             「次へ進む」のボタンを押すことにより、
-            %a{ href: "", class: "member-information_other__terms__btn"}利用規約
+            = link_to  '', class: 'member-information_other__terms__btn' do
+              利用規約 
             %p に同意したものとみなします。
           %button{type: "submit", class: "member-information_other__nextbtn"}
             次へ進む
-          %a{ href: "", class: "member-information_other__about-personal-information"}本人情報の登録について ＞
+          = link_to  '', class: 'member-information_other__about-personal-information' do
+            本人情報の登録について <i class="fas fa-angle-right"></i>
     
-  = render 'copywrite-bottom'
+  = render 'shared/copywrite-bottom'

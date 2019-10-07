@@ -1,124 +1,123 @@
-.member-information_input{
+.member-information_input {
   width: 100vw;
 
-  .member-information_header{
+  .member-information_header {
     margin-left: 350px;
     display: inline-block;
     padding-top: 40px;
     height: 128px;
-    text-align:  center;  
-    
-    &__logo{
+    text-align: center;
+
+    &__logo {
       margin-right: 50px;
       display: inline-block;
       width: 185px;
       height: 49px;
-      
     }
-    .userRegist-complete-progress-bar{
+    .userRegist-complete-progress-bar {
       float: right;
       height: 72px;
-      background-color:rgb(245, 245, 245);
+      background-color: rgb(245, 245, 245);
       width: 552px;
 
-      &__text{
-        background-color:rgb(245, 245, 245);
+      &__text {
+        background-color: rgb(245, 245, 245);
         height: 16px;
         width: 508px;
         display: flex;
 
-        &__member-info{
+        &__member-info {
           font-size: 12px;
           font-weight: 600;
-          color:  #EA352D;
+          color: #ea352d;
         }
-        &__phone-confirmation{
+        &__phone-confirmation {
           margin-left: 50px;
           font-size: 12px;
           color: #888;
         }
-        &__adress{
+        &__adress {
           margin-left: 35px;
           font-size: 12px;
           color: #888;
         }
-        &__payment{
+        &__payment {
           margin-left: 40px;
           font-size: 12px;
           color: #888;
         }
-        &__complete{
+        &__complete {
           margin-left: 70px;
           font-size: 12px;
-          color:#888;
+          color: #888;
         }
       }
-      &__lines{
-        background-color:rgb(245, 245, 245);
+      &__lines {
+        background-color: rgb(245, 245, 245);
         height: 16px;
         width: 490px;
         display: flex;
         justify-content: center;
         align-items: center;
-        &__member-info{
+        &__member-info {
           height: 12px;
           width: 12px;
-          background-color: #EA352D;
+          background-color: #ea352d;
           border-radius: 50%;
         }
-        &__member-info-to-phone{
+        &__member-info-to-phone {
           height: 2px;
           width: 105px;
           background-color: #ccc;
         }
-        &__phone-confirmation{
-          height: 12px;
-          width: 12px;
-          background-color:#ccc;
-          border-radius: 50%;
-        }
-        &__phone-confirmation-to-adress{
-          height: 2px;
-          width: 105px;
-          background-color: #ccc;
-        }
-        &__adress{
+        &__phone-confirmation {
           height: 12px;
           width: 12px;
           background-color: #ccc;
           border-radius: 50%;
         }
-        &__adress-to-payment{
+        &__phone-confirmation-to-adress {
           height: 2px;
           width: 105px;
-          background-color:#ccc;
+          background-color: #ccc;
         }
-        &__payment{
+        &__adress {
           height: 12px;
           width: 12px;
           background-color: #ccc;
           border-radius: 50%;
         }
-        &__payment-to-complete{
+        &__adress-to-payment {
           height: 2px;
           width: 105px;
-          background-color:#ccc;
+          background-color: #ccc;
         }
-        &__complete{
+        &__payment {
           height: 12px;
           width: 12px;
-          background-color:#ccc;
+          background-color: #ccc;
+          border-radius: 50%;
+        }
+        &__payment-to-complete {
+          height: 2px;
+          width: 105px;
+          background-color: #ccc;
+        }
+        &__complete {
+          height: 12px;
+          width: 12px;
+          background-color: #ccc;
           border-radius: 50%;
         }
       }
     }
   }
 
-  .member-information_input-entire{
+  .member-information_input-entire {
     margin: 0 auto;
     width: 700px;
 
-    .member-information_input-title{
+    .member-information_input-title {
       background-color: white;
       font-size: 22px;
       font-weight: 600;
@@ -127,137 +126,136 @@
       padding: 40px;
     }
 
-    .member-information_input-form{
+    .member-information_input-form {
       background-color: white;
       margin-top: 2px;
       text-align: center;
 
-      .member-information-input_contents{
-        display: inline-block; 
-        &__nickname{
+      .member-information-input_contents {
+        display: inline-block;
+        &__nickname {
           margin-top: 40px;
           width: 343px;
           height: 70px;
 
-          &__form{
+          &__form {
             float: left;
             display: inline;
-            &__text{
+            &__text {
               font-weight: 600;
               display: inline-block;
-
             }
-            &__required{
+            &__required {
               @include required;
             }
           }
-          &__input-form{
+          &__input-form {
             @include input-form;
           }
         }
 
-        &__email{
+        &__email {
           margin-top: 32px;
           width: 343px;
           height: 70px;
 
-          &__form{
+          &__form {
             margin-bottom: 5px;
             float: left;
             display: inline;
-            &__text{
+            &__text {
               font-weight: 600;
               display: inline-block;
             }
-            &__required{
+            &__required {
               @include required;
             }
           }
-          &__input-form{
+          &__input-form {
             @include input-form;
           }
         }
 
-        &__password{
+        &__password {
           margin-top: 32px;
           width: 343px;
           height: 70px;
-          &__form{
+          &__form {
             margin-bottom: 5px;
             display: inline;
             float: left;
 
-            &__text{
+            &__text {
               font-weight: 600;
               display: inline-block;
             }
-            &__required{
+            &__required {
               @include required;
             }
           }
-          &__input-form{
-            @include input-form;
-          }
-          }
-
-        &__password-again{
-          margin-top: 32px;
-          width: 343px;
-          height: 70px;
-          &__form{
-            margin-bottom: 5px;
-            display: inline;
-            float: left;
-
-            &__text{
-              font-weight: 600;
-              display: inline-block;
-            }
-            &__required{
-              @include required;
-            }
-          }
-          &__input-form{
+          &__input-form {
             @include input-form;
           }
         }
-      
-        .member-information_identification{
+
+        &__password-again {
+          margin-top: 32px;
+          width: 343px;
+          height: 70px;
+          &__form {
+            margin-bottom: 5px;
+            display: inline;
+            float: left;
+
+            &__text {
+              font-weight: 600;
+              display: inline-block;
+            }
+            &__required {
+              @include required;
+            }
+          }
+          &__input-form {
+            @include input-form;
+          }
+        }
+
+        .member-information_identification {
           height: 87px;
           text-align: initial;
           margin-top: 32px;
           line-height: initial;
-          &__title{
+          &__title {
             font-weight: 600;
             font-size: 16px;
           }
-          &__text{
+          &__text {
             float: left;
           }
         }
 
-        .member-information-name{
+        .member-information-name {
           margin-top: 32px;
           display: inline-block;
-          &__text{
+          &__text {
             display: flex;
-            &__name{
+            &__name {
               font-weight: 600;
               display: flex;
             }
-            &__required{
+            &__required {
               @include required;
             }
           }
 
-          &__form{
+          &__form {
             display: block;
-            &__last-name{
+            &__last-name {
               @include input-form;
               width: 165px;
               height: 48px;
             }
-            &__name{
+            &__name {
               @include input-form;
               width: 165px;
               height: 48px;
@@ -265,115 +263,119 @@
           }
         }
 
-        .member-information-namekatakana{
+        .member-information-namekatakana {
           margin-top: 32px;
-          &__text{
+          &__text {
             display: flex;
 
-            &__name{
+            &__name {
               font-weight: 600;
               display: flex;
             }
-              &__reqired{
-                @include required;
-              }
-            }
-
-          &__form{
-            &__last-name{
-              @include input-form;
-              width: 165px;
-              height: 48px;
-            }
-            &__name{
-              @include input-form;
-              width: 165px;
-              height: 48px;
-
-            }
-          }
-        }
-
-        .member-information-birthday{
-
-          margin-top: 32px;
-          &__text{
-            display: flex;
-            &__title{
-              font-weight: 600;
-              display: flex;
-            }
-            &__required{
+            &__reqired {
               @include required;
             }
           }
-          &__form{
+
+          &__form {
+            &__last-name {
+              @include input-form;
+              width: 165px;
+              height: 48px;
+            }
+            &__name {
+              @include input-form;
+              width: 165px;
+              height: 48px;
+            }
+          }
+        }
+
+        .member-information-birthday {
+          margin-top: 32px;
+          &__text {
+            display: flex;
+            &__title {
+              font-weight: 600;
+              display: flex;
+            }
+            &__required {
+              @include required;
+            }
+          }
+          &__form {
             background-color: white;
             display: flex;
-            &__year{
+            select {
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+            }
+            select::-ms-expand {
+              display: none;
+            }
+            &__year {
               width: 76px;
               height: 48px;
-              &__text{
+              &__text {
                 margin-top: 18px;
-
               }
             }
-            &__month{
+            &__month {
               width: 76px;
               height: 48px;
-              &__text{
+              &__text {
                 margin-top: 18px;
               }
             }
 
-            &__day{
+            &__day {
               width: 76px;
               height: 48px;
-              &__text{
+              &__text {
                 margin-top: 18px;
               }
             }
           }
         }
 
-        .member-information_caution{
+        .member-information_caution {
           color: #888888;
           margin-top: 8px;
         }
-    
-    .member-information_other{
-      display: contents;
-      background-color: white;
-      margin-top: 14px;
-      text-align: center;
-      &__recaptcha{
-        margin-top: 40px;
-        width: 343px;
-        height: 78px;
-        background-color: darkgray;
-      }
-      &__terms{
-        text-align: center;
-        margin: 40px 0px;
-        &__btn{
-          color: #0099E8;
-          float: right;
-          margin-left: -30px;
+
+        .member-information_other {
+          display: contents;
+          background-color: white;
+          margin-top: 14px;
+          text-align: center;
+          &__recaptcha {
+            margin-top: 40px;
+            width: 343px;
+            height: 78px;
+            background-color: darkgray;
+          }
+          &__terms {
+            text-align: center;
+            margin: 40px 0px;
+            &__btn {
+              color: #0099e8;
+              float: right;
+              margin-left: -30px;
+            }
+          }
+          &__nextbtn {
+            @include btn;
+            width: 345px;
+            background-color: #ea352d;
+          }
+          &__about-personal-information {
+            color: #0099e8;
+            float: right;
+            margin: 40px 0px 60px;
+          }
         }
       }
-      &__nextbtn{
-        @include btn;
-        width: 345px;
-        background-color: #EA352D;
-      }
-      &__about-personal-information{
-        color: #0099E8;
-        float: right;
-        margin: 40px 0px 60px;
-
-      }
-    }
-    }
     }
   }
 }
