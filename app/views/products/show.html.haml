@@ -142,13 +142,10 @@
             %th 発送日の目安
             %td
               2~3日で発送
-      .price-box
-        .price-box--price
-          %span ¥12,500
-        .price-box--tax
-          %span (税込)
-        .price-box--shipping-free
-          %span 送料込み
+    .price-box
+      %span.price-box--price ¥12,500
+      %span.price-box--tax (税込)
+      %span.price-box--shipping-free 送料込み
     = link_to root_path, class: "product-details__buy-btn" do
       購入画面に進む
     .product-details__description
@@ -168,25 +165,24 @@
     .product-details__buttons
       .product-details__buttons__left
         %button{type: 'button', class: 'product-details__buttons__left__like'}
-          .product-details__buttons__left__like--heart
-            = fa_icon 'heart'
+          = fa_icon 'heart', class: 'product-details__buttons__left__like--heart'
           %span いいね！
           %span.product-details__buttons__left__like__count
             100
         = link_to root_path, class: 'product-details__buttons__left__report' do
-          = fa_icon 'flag'
+          = fa_icon 'flag', class: 'product-details_buttons__left__report--flag'
           %span 不適切な商品の報告
       .product-details__buttons__right
         = link_to root_path, class: 'product-details__buttons__right__safety-effort' do
           = fa_icon 'lock'
-          %span 安心・安全への取り組み
+          %span あんしん・あんぜんへの取り組み
   .product-messages
     .product-messages__form
       %p
         相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
       %textarea{type: 'text', class: 'product-messages__form__textarea'}
       %button{type: 'submit', class: 'product-messages__form__submit-btn'}
-        コメントする
+        %span コメントする
   .links-prev-next
     = link_to root_path, class: 'links-prev-next__prev' do
       = fa_icon 'chevron-left'
@@ -198,172 +194,173 @@
     .social-medias__icons
       = link_to root_path, class: 'social-medias__icons__icon' do
         .social-medias__icons__icon--facebook
-          = fa_icon 'facebook-square'
+          %i{class: 'fab fa-facebook-square'}
       = link_to root_path, class: 'social-medias__icons__icon' do
         .social-medias__icons__icon--twitter
-          = fa_icon 'twitter-square'
+          %i{class: 'fab fa-twitter-square'}
       = link_to root_path, class: 'social-medias__icons__icon' do
         .social-medias__icons__icon--line
-          = fa_icon 'line'
+          %i{class: 'fab fa-line'}
       = link_to root_path, class: 'social-medias__icons__icon' do
-        .social-medias__icons__icon--line
-          = fa_icon 'pinterest-square'
+        .social-medias__icons__icon--pinterest
+          %i{class: 'fab fa-pinterest-square'}
   .other-products
     %h2.other-products__username
       出品者 さんのその他の出品
-    .other-products__product
-      = link_to root_path,class: 'other-products__products__product' do
-        .other-products__products__product__image
-        .other-products__products__product__index
-          .other-products__products__product__index__name
-            他の商品名
-          .other-products__products__product__index__price-like
-            .other-products__products__product__index__price-like__price
-              ¥15,000
-            .other-products__products__product__index__price-like__like
-              = fa_icon 'heart'
-              %span 15
-      .other-products__product
-      = link_to root_path,class: 'other-products__products__product' do
-        .other-products__products__product__image
-        .other-products__products__product__index
-          .other-products__products__product__index__name
-            他の商品名
-          .other-products__products__product__index__price-like
-            .other-products__products__product__index__price-like__price
-              ¥15,000
-            .other-products__products__product__index__price-like__like
-              = fa_icon 'heart'
-              %span 15
-      .other-products__product
-      = link_to root_path,class: 'other-products__products__product' do
-        .other-products__products__product__image
-        .other-products__products__product__index
-          .other-products__products__product__index__name
-            他の商品名
-          .other-products__products__product__index__price-like
-            .other-products__products__product__index__price-like__price
-              ¥15,000
-            .other-products__products__product__index__price-like__like
-              = fa_icon 'heart'
-              %span 15
-      .other-products__product
-      = link_to root_path,class: 'other-products__products__product' do
-        .other-products__products__product__image
-        .other-products__products__product__index
-          .other-products__products__product__index__name
-            他の商品名
-          .other-products__products__product__index__price-like
-            .other-products__products__product__index__price-like__price
-              ¥15,000
-            .other-products__products__product__index__price-like__like
-              = fa_icon 'heart'
-              %span 15
-      .other-products__product
-      = link_to root_path,class: 'other-products__products__product' do
-        .other-products__products__product__image
-        .other-products__products__product__index
-          .other-products__products__product__index__name
-            他の商品名
-          .other-products__products__product__index__price-like
-            .other-products__products__product__index__price-like__price
-              ¥15,000
-            .other-products__products__product__index__price-like__like
-              = fa_icon 'heart'
-              %span 15
-      .other-products__product
-      = link_to root_path,class: 'other-products__products__product' do
-        .other-products__products__product__image
-        .other-products__products__product__index
-          .other-products__products__product__index__name
-            他の商品名
-          .other-products__products__product__index__price-like
-            .other-products__products__product__index__price-like__price
-              ¥15,000
-            .other-products__products__product__index__price-like__like
-              = fa_icon 'heart'
-              %span 15
-  .other-products
+    .other-products__box
+      .other-products__box__product
+        = link_to root_path do
+          =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
+          .other-products__box__product__index
+            .other-products__box__product__index__name
+              商品名　右下　テスト　もやもや　テスト　サンプル
+            .other-products__box__product__index__price-like
+              .other-products__box__product__index__price-like__price
+                ¥15,000
+              .other-products__box__product__index__price-like__like
+                = fa_icon 'heart'
+                %span 15
+      .other-products__box__product
+        = link_to root_path do
+          =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
+          .other-products__box__product__index
+            .other-products__box__product__index__name
+              他の商品名
+            .other-products__box__product__index__price-like
+              .other-products__box__product__index__price-like__price
+                ¥15,000
+              .other-products__box__product__index__price-like__like
+                = fa_icon 'heart'
+                %span 15
+      .other-products__box__product
+        = link_to root_path do
+          =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
+          .other-products__box__product__index
+            .other-products__box__product__index__name
+              他の商品名
+            .other-products__box__product__index__price-like
+              .other-products__box__product__index__price-like__price
+                ¥15,000
+              .other-products__box__product__index__price-like__like
+                = fa_icon 'heart'
+                %span 15
+      .other-products__box__product
+        = link_to root_path do
+          =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
+          .other-products__box__product__index
+            .other-products__box__product__index__name
+              他の商品名
+            .other-products__box__product__index__price-like
+              .other-products__box__product__index__price-like__price
+                ¥15,000
+              .other-products__box__product__index__price-like__like
+                = fa_icon 'heart'
+                %span 15
+      .other-products__box__product
+        = link_to root_path do
+          =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
+          .other-products__box__product__index
+            .other-products__box__product__index__name
+              他の商品名
+            .other-products__box__product__index__price-like
+              .other-products__box__product__index__price-like__price
+                ¥15,000
+              .other-products__box__product__index__price-like__like
+                = fa_icon 'heart'
+                %span 15
+      .other-products__box__product
+        = link_to root_path do
+          =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
+          .other-products__box__product__index
+            .other-products__box__product__index__name
+              他の商品名
+            .other-products__box__product__index__price-like
+              .other-products__box__product__index__price-like__price
+                ¥15,000
+              .other-products__box__product__index__price-like__like
+                = fa_icon 'heart'
+                %span 15
     %h2.other-products__brand
       ウール リッチのダウンジャケット その他の商品
-    .other-products__product
-      = link_to root_path,class: 'other-products__products__product' do
-        .other-products__products__product__image
-        .other-products__products__product__index
-          .other-products__products__product__index__name
-            他の商品名
-          .other-products__products__product__index__price-like
-            .other-products__products__product__index__price-like__price
-              ¥15,000
-            .other-products__products__product__index__price-like__like
-              = fa_icon 'heart'
-              %span 15
-      .other-products__product
-      = link_to root_path,class: 'other-products__products__product' do
-        .other-products__products__product__image
-        .other-products__products__product__index
-          .other-products__products__product__index__name
-            他の商品名
-          .other-products__products__product__index__price-like
-            .other-products__products__product__index__price-like__price
-              ¥15,000
-            .other-products__products__product__index__price-like__like
-              = fa_icon 'heart'
-              %span 15
-      .other-products__product
-      = link_to root_path,class: 'other-products__products__product' do
-        .other-products__products__product__image
-        .other-products__products__product__index
-          .other-products__products__product__index__name
-            他の商品名
-          .other-products__products__product__index__price-like
-            .other-products__products__product__index__price-like__price
-              ¥15,000
-            .other-products__products__product__index__price-like__like
-              = fa_icon 'heart'
-              %span 15
-      .other-products__product
-      = link_to root_path,class: 'other-products__products__product' do
-        .other-products__products__product__image
-        .other-products__products__product__index
-          .other-products__products__product__index__name
-            他の商品名
-          .other-products__products__product__index__price-like
-            .other-products__products__product__index__price-like__price
-              ¥15,000
-            .other-products__products__product__index__price-like__like
-              = fa_icon 'heart'
-              %span 15
-      .other-products__product
-      = link_to root_path,class: 'other-products__products__product' do
-        .other-products__products__product__image
-        .other-products__products__product__index
-          .other-products__products__product__index__name
-            他の商品名
-          .other-products__products__product__index__price-like
-            .other-products__products__product__index__price-like__price
-              ¥15,000
-            .other-products__products__product__index__price-like__like
-              = fa_icon 'heart'
-              %span 15
-      .other-products__product
-      = link_to root_path,class: 'other-products__products__product' do
-        .other-products__products__product__image
-        .other-products__products__product__index
-          .other-products__products__product__index__name
-            他の商品名
-          .other-products__products__product__index__price-like
-            .other-products__products__product__index__price-like__price
-              ¥15,000
-            .other-products__products__product__index__price-like__like
-              = fa_icon 'heart'
-              %span 15
-  %ul.nav-crumb-list
-    %li{itemscope: "", itemtype: "”http://data-vocabulary.org/Breadcrumb”"}
-      = link_to root_path, class: 'nav-product__toppage', itemprop: "url" do
-        %span メルカリ
-        = fa_icon 'chevron-right'
-    %li{itemscope: "", itemtype: "”http://data-vocabulary.org/Breadcrumb”"}
-      %span{itemprop: "title"}
-        商品名
+    .other-products__box
+      .other-products__box__product
+        = link_to root_path do
+          =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
+          .other-products__box__product__index
+            .other-products__box__product__index__name
+              他の商品名
+            .other-products__box__product__index__price-like
+              .other-products__box__product__index__price-like__price
+                ¥15,000
+              .other-products__box__product__index__price-like__like
+                = fa_icon 'heart'
+                %span 15
+      .other-products__box__product
+        = link_to root_path do
+          =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
+          .other-products__box__product__index
+            .other-products__box__product__index__name
+              他の商品名
+            .other-products__box__product__index__price-like
+              .other-products__box__product__index__price-like__price
+                ¥15,000
+              .other-products__box__product__index__price-like__like
+                = fa_icon 'heart'
+                %span 15
+      .other-products__box__product
+        = link_to root_path do
+          =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
+          .other-products__box__product__index
+            .other-products__box__product__index__name
+              他の商品名
+            .other-products__box__product__index__price-like
+              .other-products__box__product__index__price-like__price
+                ¥15,000
+              .other-products__box__product__index__price-like__like
+                = fa_icon 'heart'
+                %span 15
+      .other-products__box__product
+        = link_to root_path do
+          =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
+          .other-products__box__product__index
+            .other-products__box__product__index__name
+              他の商品名
+            .other-products__box__product__index__price-like
+              .other-products__box__product__index__price-like__price
+                ¥15,000
+              .other-products__box__product__index__price-like__like
+                = fa_icon 'heart'
+                %span 15
+      .other-products__box__product
+        = link_to root_path do
+          =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
+          .other-products__box__product__index
+            .other-products__box__product__index__name
+              他の商品名
+            .other-products__box__product__index__price-like
+              .other-products__box__product__index__price-like__price
+                ¥15,000
+              .other-products__box__product__index__price-like__like
+                = fa_icon 'heart'
+                %span 15
+      .other-products__box__product
+        = link_to root_path do
+          =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
+          .other-products__box__product__index
+            .other-products__box__product__index__name
+              他の商品名
+            .other-products__box__product__index__price-like
+              .other-products__box__product__index__price-like__price
+                ¥15,000
+              .other-products__box__product__index__price-like__like
+                = fa_icon 'heart'
+                %span 15
+%ul.nav-crumb-list
+  %li{itemscope: "", itemtype: "”http://data-vocabulary.org/Breadcrumb”"}
+    = link_to root_path, class: 'nav-product__toppage', itemprop: "url" do
+      %span メルカリ
+      = fa_icon 'chevron-right'
+  %li{itemscope: "", itemtype: "”http://data-vocabulary.org/Breadcrumb”"}
+    %span{itemprop: "title"}
+      商品名
 = render 'shared/footer'
