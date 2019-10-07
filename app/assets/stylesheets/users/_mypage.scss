@@ -44,7 +44,7 @@
       }
       .notice-todo {
         width: 100%;
-        background-color: #fff;
+        background-color: colors(white);
         .mypage-menu-tabs {
           @include tabs;
           .mypage-menu-tab{
@@ -75,7 +75,7 @@
                 color: #888;
                 &--clock{
                   -webkit-text-stroke: 1.3px #808080;
-                  color: white;
+                  color: colors(white);
                   margin-left: 1px;
                 }
                 &__date {
@@ -111,9 +111,9 @@
     }
     .mypage-transaction {
       @include chapter(40px);
-      background-color: #fff;
+      background-color: colors(white);
       &__header {
-        background-color: #fafafa;
+        background-color: colors(gray);
         padding: 0 16px;
         font-size: 16px;
         font-weight: bold;

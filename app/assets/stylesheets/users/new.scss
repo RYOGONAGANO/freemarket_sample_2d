@@ -1,32 +1,32 @@
-.userRegist-complete-body{
+.userRegist-complete-body {
   width: 100vw;
   height: 100vh;
-  background-color: #eee;
+  background-color: colors(gray);
   position: relative;
 }
-.userRegist-complete-header{
+.userRegist-complete-header {
   width: 100vw;
   height: 150px;
-  background-color: #eee;
-  .userRegist-complete-header-headers{
+  background-color: colors(gray);
+  .userRegist-complete-header-headers {
     height: 100%;
     width: 1000px;
-    background-color: #eee;
+    background-color: colors(gray);
     display: flex;
     margin-left: 300px;
-    &__mercarilogo{
+    &__mercarilogo {
       height: 100px;
       width: 200px;
-      background-color: #eee;
+      background-color: colors(gray);
       padding: 45px 0px 0px 50px;
-    }   
-    &__status{
+    }
+    &__status {
       height: 100%;
       width: 508px;
-      background-color: #eee;
+      background-color: colors(gray);
       display: flex;
       align-items: center;
-      &__statusbar{
+      &__statusbar {
         height: 32px;
         width: 508px;
         background-color: yellow;
@@ -34,70 +34,70 @@
     }
   }
 }
-.userRegist-complete-contents{
+.userRegist-complete-contents {
   margin: 0 auto;
   width: 700px;
   height: 550px;
-.userRegist-complete-uppercontent{
-  margin: 0 auto;
-  height: 80px;
-  width: 100%;
-  background-color:rgb(255, 255, 255);
-  text-align: center;
-  line-height: 80px;
-  border-bottom: solid 1px #eee;
-  font-size: 14px;
-}
-.userRegist-complete-rowercontent{
-  margin: 0 auto;
-  height: 220px;
-  width: 100%;
-  background-color:rgb(255, 255, 255);
-  text-align: center;
-  position: relative;
-  &__text{
-    height: 60px;
-    width: 60%;
-    background-color: rgb(255, 255, 255);
-    margin: 0px 40px 40px 140px;
-    padding: 20px;
-    font-size: 15px;
-  }
-  &__box{
-    height: 50px;
-    width: 55%;
-    background-color: #ea352d;
-    color: white;
-    text-align: center;
-    line-height: 50px;
+  .userRegist-complete-uppercontent {
     margin: 0 auto;
+    height: 80px;
+    width: 100%;
+    background-color: colors(white);
+    text-align: center;
+    line-height: 80px;
+    border-bottom: solid 1px colors(gray);
+    font-size: 14px;
+  }
+  .userRegist-complete-rowercontent {
+    margin: 0 auto;
+    height: 220px;
+    width: 100%;
+    background-color: colors(white);
+    text-align: center;
+    position: relative;
+    &__text {
+      height: 60px;
+      width: 60%;
+      background-color: colors(white);
+      margin: 0px 40px 40px 140px;
+      padding: 20px;
+      font-size: 15px;
+    }
+    &__box {
+      height: 50px;
+      width: 55%;
+      background-color: colors(btn-red);
+      color: colors(white);
+      text-align: center;
+      line-height: 50px;
+      margin: 0 auto;
+    }
+  }
+  .userRegist-complete-advertisement {
+    width: 700px;
+    height: 250px;
+    background-color: colors(black);
   }
 }
-.userRegist-complete-advertisement{
-  width: 700px;
-  height: 250px;
-  background-color: black;
-}
-}
-.userRegist-complete-footer{
+.userRegist-complete-footer {
   width: 100vw;
   height: 70px;
-  background-color: #eee;
+  background-color: colors(gray);
   position: absolute;
   bottom: 0;
   display: flex;
-  justify-content:center;
-  align-items:center;
-  &__policy{
+  justify-content: center;
+  align-items: center;
+  &__policy {
     display: inline-block;
     margin-right: 20px;
     font-size: 12px;
   }
-  &__rule{
+  &__rule {
     display: inline-block;
     font-size: 12px;
   }
-  &__comarce{
+  &__comarce {
     display: inline-block;
     margin-left: 20px;
     font-size: 12px;

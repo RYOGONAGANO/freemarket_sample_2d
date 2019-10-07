@@ -4,7 +4,7 @@
     width: 456px;
 
     .login_no_account {
-      background-color: white;
+      background-color: colors(white);
       text-align: center;
       height: 144px;
 
@@ -16,13 +16,13 @@
         @include btn;
         width: 328px;
         height: 42px;
-        background-color: #0099e8;
+        background-color: colors(blue);
         margin: 0px auto;
       }
     }
 
     .login_otherways {
-      background-color: white;
+      background-color: colors(white);
       margin-top: 2px;
       height: 181px;
 
@@ -33,7 +33,7 @@
           width: 328px;
           height: 50px;
           background-color: #385185;
-          color: white;
+          color: colors(white);
           font-size: 13px;
           &__icon {
             display: inline;
@@ -69,7 +69,7 @@
       }
     .login_form{
       height: 406px;
-      background-color: white;
+      background-color: colors(white);
       .login_form_contents{
         margin: 0 64px;
         padding-top: 24px;
@@ -97,13 +97,13 @@
           margin: 24px 0px 40px;
           width: 328px;
           height: 50px;
-          background-color: #EA352D;
-          color: white;
+          background-color: colors(btn-red);
+          color: colors(white);
           font-size: 13px;
         }
         &__foget-password__text{
           margin-top: 40px;
-          color: #0099E8;
+          color: colors(blue);
         }
         &__foget-password__text:hover{
           text-decoration:underline;
