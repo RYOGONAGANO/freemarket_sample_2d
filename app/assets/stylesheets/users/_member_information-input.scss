@@ -304,8 +304,10 @@
             }
           }
           &__form {
+            
             background-color: white;
             display: flex;
+            position: relative;
             select {
               -webkit-appearance: none;
               -moz-appearance: none;
@@ -315,25 +317,56 @@
               display: none;
             }
             &__year {
+              background-color: white;
               width: 76px;
               height: 48px;
+              position: relative;
+              padding-left: 15px;
+              &--angle {
+                position: absolute;
+                top: 25%;
+                left: 15%;
+                font-size: 25px;
+                color: #888;
+              }
               &__text {
-                margin-top: 18px;
+                margin: 18px 5px;
+                
               }
             }
             &__month {
+              background-color: white;
+              padding-left: 15px;
               width: 76px;
               height: 48px;
+              position: relative;
+              &--angle {
+                position: absolute;
+                top: 25%;
+                left: 42%;
+                font-size: 25px;
+                color: #888;
+              }
               &__text {
-                margin-top: 18px;
+                margin: 18px 5px;
               }
             }
 
             &__day {
+              background-color: white;
+              padding-left: 15px;
               width: 76px;
               height: 48px;
+              position: relative;
+              &--angle {
+                position: absolute;
+                top: 25%;
+                left: 68%;
+                font-size: 25px;
+                color: #888;
+              }
               &__text {
-                margin-top: 18px;
+                margin: 18px 5px;
               }
             }
           }

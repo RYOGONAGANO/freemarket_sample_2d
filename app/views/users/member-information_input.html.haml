@@ -99,12 +99,18 @@
               必須
           .member-information-birthday__form
             %select{ type: "text", class: "member-information-birthday__form__year" }
+              %option --
+            = fa_icon 'angle-down', class: 'member-information-birthday__form__year--angle'
             .member-information-birthday__form__year__text
               年
             %select{ type: "text", class: "member-information-birthday__form__month" }
+              %option --
+            = fa_icon 'angle-down', class: 'member-information-birthday__form__month--angle'
             .member-information-birthday__form__month__text 
               月
             %select{ type: "text", class: "member-information-birthday__form__day"}
+              %option --
+            = fa_icon 'angle-down', class: 'member-information-birthday__form__day--angle'
             .member-information-birthday__form__day__text
               日
 
@@ -123,6 +129,7 @@
           %button{type: "submit", class: "member-information_other__nextbtn"}
             次へ進む
           = link_to  '', class: 'member-information_other__about-personal-information' do
-            本人情報の登録について <i class="fas fa-angle-right"></i>
+            本人情報の登録について
+            %i.fas.fa-angle-right
     
   = render 'shared/copywrite-bottom'
