@@ -1,8 +1,15 @@
 $colors: (
   gray: #eee,
   black: #333,
-  blue: #0099e8
-
+  blue: #0099e8,
+  ash: #f5f5f5,
+  white: #fff,
+  good: #ef5185,
+  nomal: #fba933,
+  bad: #6ab5d8,
+  btn-red: #ea352d,
+  title-gray: #888,
+  ber-gray:#ccc,
 );
 
 @function colors($key) {
