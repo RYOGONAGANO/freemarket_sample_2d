@@ -15,43 +15,43 @@
   .userRegist-complete-progress-bar{
     float: right;
     height: 72px;
-    background-color:rgb(245, 245, 245);
+    background-color:colors(ash);
     width: 552px;
 
     &__text{
-      background-color:rgb(245, 245, 245);
+      background-color:colors(ash);
       height: 16px;
       width: 508px;
       display: flex;
 
       &__member-info{
         font-size: 12px;
-        color:#888;
+        color:colors(title-gray);
       }
       &__phone-confirmation{
         margin-left: 50px;
         font-size: 12px;
-        color: #888;
+        color: colors(title-gray);
       }
       &__adress{
         margin-left: 35px;
         font-size: 12px;
         font-weight: 600;
-        color:  #EA352D;
+        color: colors(btn-red);
       }
       &__payment{
         margin-left: 40px;
         font-size: 12px;
-        color: #888;
+        color: colors(title-gray);
       }
       &__complete{
         margin-left: 70px;
         font-size: 12px;
-        color:#888;
+        color:colors(title-gray);
       }
     }
     &__lines{
-      background-color:rgb(245, 245, 245);
+      background-color:colors(ash);
       height: 16px;
       width: 490px;
       display: flex;
@@ -60,51 +60,51 @@
       &__member-info{
         height: 12px;
         width: 12px;
-        background-color: #EA352D;
+        background-color: colors(btn-red);
         border-radius: 50%;
       }
       &__member-info-to-phone{
         height: 2px;
         width: 105px;
-        background-color:#EA352D;
+        background-color: colors(btn-red);
       }
       &__phone-confirmation{
         height: 12px;
         width: 12px;
-        background-color:#EA352D;
+        background-color: colors(btn-red);
         border-radius: 50%;
       }
       &__phone-confirmation-to-adress{
         height: 2px;
         width: 105px;
-        background-color: #EA352D;
+        background-color: colors(btn-red);
       }
       &__adress{
         height: 12px;
         width: 12px;
-        background-color:  #EA352D;
+        background-color: colors(btn-red);
         border-radius: 50%;
       }
       &__adress-to-payment{
         height: 2px;
         width: 105px;
-        background-color:#ccc;
+        background-color: colors(ber-gray);
       }
       &__payment{
         height: 12px;
         width: 12px;
-        background-color: #ccc;
+        background-color: colors(ber-gray);
         border-radius: 50%;
       }
       &__payment-to-complete{
         height: 2px;
         width: 105px;
-        background-color:#ccc;
+        background-color:colors(ber-gray);
       }
       &__complete{
         height: 12px;
         width: 12px;
-        background-color:#ccc;
+        background-color:colors(ber-gray);
         border-radius: 50%;
       }
     }
@@ -117,7 +117,7 @@
     &__title{
       margin: auto;
       text-align: center;
-      background-color: white;
+      background-color: colors(white);
       width: 700px;
       height: 95px;
       line-height: 95px;
@@ -132,7 +132,7 @@
 .address-registration-item{
   padding-top: 40px; 
   margin: auto;
-  background-color: white;
+  background-color: colors(white);
   width: 700px;
   text-align: center;
   
@@ -146,15 +146,7 @@
         font-weight: 600;
       }
       &__required{
-        background-color: #EA352D;
-        color: white;
-        width: 32px;
-        height: 19px;
-        display: inline-block;
-        font-size: 13px;
-        border-radius: 2px;
-        padding: 2px;
-        margin-left: 5px;
+        @include required;
       }
     }
 
@@ -162,18 +154,12 @@
       display: inline-block;
       &__lastname{
         display: block;
-        width: 343px;
-        height: 48px;
-        border-radius: 5px;
-        border: solid 1px #80808073;
+        @include input-form;
         margin-bottom: 8px;
 
       }
       &__firstname{
-        width: 343px;
-        height: 48px;
-        border-radius: 5px;
-        border: solid 1px #80808073;
+        @include input-form;
 
       }
     }
@@ -191,35 +177,19 @@
         font-weight: 600;
       }
       &__required{
-        background-color: #EA352D;
-        color: white;
-        width: 32px;
-        height: 19px;
-        display: inline-block;
-        font-size: 13px;
-        border-radius: 2px;
-        padding: 2px;
-        margin-left: 5px;
-
+        @include required;
       }
     }
     &__input-form{
       display: inline-block;
       &__lastname{
         display: block;
-        width: 343px;
-        height: 48px;
-        border-radius: 5px;
-        border: solid 1px #80808073;
+        @include input-form;
         margin-bottom: 8px;
 
       }
       &__firstname{
-        width: 343px;
-        height: 48px;
-        border-radius: 5px;
-        border: solid 1px #80808073;
-
+        @include input-form;
       }
     }
   }
@@ -235,24 +205,13 @@
 
       }
       &__required{
-        background-color: #EA352D;
-        color: white;
-        width: 32px;
-        height: 19px;
-        display: inline-block;
-        font-size: 13px;
-        border-radius: 2px;
-        padding: 2px;
-        margin-left: 5px;
+        @include required;
       }
     }
     &__input-form{
       display: inline-block;
       &__nomber{
-        width: 343px;
-        height: 48px;
-        border-radius: 5px;
-        border: solid 1px #80808073;
+        @include input-form;
       }
     }
   }
@@ -268,29 +227,34 @@
 
       }
       &__required{
-        background-color: #EA352D;
-        color: white;
-        width: 32px;
-        height: 19px;
-        display: inline-block;
-        font-size: 13px;
-        border-radius: 2px;
-        padding: 2px;
-        margin-left: 5px;
+        @include required;
       }
     }
 
     &__form{
-      &__prefectures{
-        width: 343px;
-        height: 48px;
-        border-radius: 5px;
-        border: solid 1px #80808073;
+      select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
       }
-
+      select::-ms-expand {
+        display: none;
+      }
+      &__select{
+        @include input-form;
+        padding-left: 18px;
+        position: relative;
+        background-color: colors(white); 
+        &--angle{
+          position: absolute;
+          top: 720px;
+          left: 61%;
+          font-size: 25px;
+          color: colors(title-gray);
+          }
+      }
     }
   }
-
   &__city{
     &__text{
       display: flex;
@@ -302,24 +266,13 @@
 
       }
       &__required{
-        background-color: #EA352D;
-        color: white;
-        width: 32px;
-        height: 19px;
-        display: inline-block;
-        font-size: 13px;
-        border-radius: 2px;
-        padding: 2px;
-        margin-left: 5px;
+        @include required;
       }
     }
 
     &__input-form{
       &__town{
-        width: 343px;
-        height: 48px;
-        border-radius: 5px;
-        border: solid 1px #80808073;
+        @include input-form;
       }
     }
   }
@@ -334,22 +287,11 @@
         font-weight: 600;
       }
       &__required{
-        background-color: #EA352D;
-        color: white;
-        width: 32px;
-        height: 19px;
-        display: inline-block;
-        font-size: 13px;
-        border-radius: 2px;
-        padding: 2px;
-        margin-left: 5px;
+        @include required;
       }
     }
     &__input-form{
-      width: 343px;
-      height: 48px;
-      border-radius: 5px;
-      border: solid 1px #80808073;
+      @include input-form;
     }
   }
 
@@ -363,23 +305,13 @@
         font-weight: 600;
       }
       &__required{
-        background-color: #ccc;
-        color: white;
-        width: 32px;
-        height: 19px;
-        display: inline-block;
-        font-size: 13px;
-        border-radius: 2px;
-        padding: 2px;
-        margin-left: 5px;
+        @include required;
+        background-color: colors(ber-gray);
       }
     }
 
     &__input-form{
-      width: 343px;
-      height: 48px;
-      border-radius: 5px;
-      border: solid 1px #80808073;
+      @include input-form
     }
   }
 
@@ -393,23 +325,13 @@
         font-weight: 600;
       }
       &__required{
-        background-color: #ccc;
-        color: white;
-        width: 32px;
-        height: 19px;
-        display: inline-block;
-        font-size: 13px;
-        border-radius: 2px;
-        padding: 2px;
-        margin-left: 5px;
+        @include required;
+        background-color: colors(ber-gray);
 
       }
     }
     &__input-form{
-      width: 343px;
-      height: 48px;
-      border-radius: 5px;
-      border: solid 1px #80808073;
+      @include input-form;
       margin-bottom: 40px;
     }
   }
@@ -417,13 +339,10 @@
     padding-bottom: 80px;
     padding-top: 30px;
     &__submit{
-    margin: auto;
-    background-color: #EA352D;
-    height: 50px;  
-    width: 320px;
-    display: grid; 
-    color: white;
-    font-size: 14px;
+      @include btn;
+      margin: auto;
+      background-color: colors(btn-red);
+
     }
   }
 }
