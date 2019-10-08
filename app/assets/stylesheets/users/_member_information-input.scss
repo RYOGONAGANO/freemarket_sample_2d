@@ -331,7 +331,7 @@
               }
               &__text {
                 margin: 18px 5px;
-                
+
               }
             }
             &__month {
@@ -372,21 +372,18 @@
           }
         }
 
-        .member-information_caution {
+        .member-information-caution {
           color: #888888;
           margin-top: 8px;
         }
 
-        .member-information_other {
+        .member-information-other {
           display: contents;
           background-color: colors(white);
           margin-top: 14px;
           text-align: center;
           &__recaptcha {
             margin-top: 40px;
-            width: 343px;
-            height: 78px;
-            background-color: darkgray;
           }
           &__terms {
             text-align: center;

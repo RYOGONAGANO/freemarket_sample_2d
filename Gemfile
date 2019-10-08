@@ -75,3 +75,5 @@ gem 'font-awesome-rails'
 gem 'aws-sdk-s3', require: false
 gem 'haml-rails'
 gem 'devise'
+gem 'recaptcha', require: "recaptcha/rails"
+gem 'dotenv-rails'
