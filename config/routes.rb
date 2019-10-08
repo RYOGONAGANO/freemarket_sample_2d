@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     collection do
       get :profile
       get :authentication
-      get :login_page
+      get :login
       get :logout
     end
   end
