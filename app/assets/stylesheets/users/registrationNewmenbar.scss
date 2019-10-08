@@ -1,0 +1,113 @@
+.registrationNewmenbar-body{
+  height: 100vh;
+  width: 100vw;
+  background: colors(gray);
+}
+.registrationNewmenbar-header{
+  width: 1440px;
+  height: 128px;
+  background: colors(gray);
+}
+.registrationNewmenbar-maincontent{
+  width: 1440px;
+  height: 384px;
+  background: colors(gray);
+  &__contents{
+  width: 700px;
+  height: 384px;
+  margin: 0 auto;
+  background-color: rgb(245, 245, 245);
+    &__header{
+    width: 700px;
+    height: 97px;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px #eee;
+    }
+    &__box{
+    width: 700px;
+    height: 287px;
+    background-color: rgb(245, 245, 245);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      &__boxs{
+      width: 343px;
+      height: 182px;
+      background-color: rgb(255, 249, 249);
+        &__mail{
+        width: 343px;
+        height: 50px;
+        background-color: rgb(245, 245, 245);
+        text-align: center;
+        }
+        .mailaddress{
+          width: 328px;
+          height: 50px;
+          background-color:  #ea352d;
+          color: white;
+          font-size: 13px;
+          &__icon{
+            display: inline;
+            float: left;
+            font-size: 20px;
+            margin: 15px;
+          }
+          &__text{
+            margin: 16px 40px;
+          }
+        }
+        &__facebook{
+          width: 343px;
+          height: 50px;
+          background-color: rgb(245, 245, 245);
+          margin: 16px 0px 0px
+        }
+        .facebook{
+          width: 328px;
+          height: 50px;
+          background-color:  #385185;
+          color: white;
+          font-size: 13px;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          &__icon{
+            font-size: 30px;
+            margin-left: 15px
+          }
+          &__text{
+            margin: 16px 60px;
+          }
+        }
+        &__google{
+          width: 343px;
+          height: 50px;
+          background-color: rgb(255, 249, 249);
+          margin: 16px 0px 0px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .google{
+          width: 328px;
+          height: 50px;
+          background-color: rgb(255, 249, 249);
+          font-size: 13px;
+          background: url('google.icon.png');
+          background-size: 17px;
+          background-repeat: no-repeat;
+          background-position-x: 20px;
+          background-position-y: 15px;
+
+          &__text{
+            display: inline;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
