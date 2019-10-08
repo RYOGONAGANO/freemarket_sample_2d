@@ -1,0 +1,191 @@
+.mydata-registration{
+  width: 700px;
+  height: 50px;
+  margin: 8px 0 0 36.5px;
+  &__top{
+    background-color: colors(white);
+    width: 700px;
+    height: 50px;
+    color: colors(black);
+    font-size: 24px;
+    font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  &__text-area{
+    background-color: colors(white);
+    width: 700px;
+    height: 1158px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 72px;
+    margin-top: 2px;
+    font-size: 14px;
+    line-height: 1;
+    color: colors(black);
+    &__box{
+      &__kakunin{
+        background-color: colors(white);
+        margin-top: 8px;
+        line-height: 1.5;
+        color: colors(blue);
+        text-decoration: none;
+        text-align: right;
+      }
+      &__username{
+        margin-top: 40px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      &__username-data{
+        margin-top: 8px;
+        font-size: 14px
+      }
+      &__username-kana{
+        margin-top: 40px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      &__username-kana-data{
+        margin-top: 8px;
+        font-size: 14px
+      }
+      &__birthday{
+        margin-top: 40px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      &__birthday-data{
+        margin-top: 8px;
+        font-size: 14px
+      }
+      &__postal-box{
+        margin-top: 40px;
+        display:flex;
+        &__postal-code{
+          font-size: 14px;
+          font-weight: bold;
+          margin-top: 4px;
+        }
+        &__label-nini-postal{
+          @include label-nini-gray;
+        }
+      }
+      &__text{
+        margin-top: 8px;
+        .mydata-registration__text-area__box__text__postal-code-input{
+          @include textfield;
+        }
+      }
+      &__home-address-box-todouhuken{
+        margin-top: 40px;
+        display:flex;
+        &__home-address-todouhuken-code{
+          font-size: 14px;
+          font-weight: bold;
+          margin-top: 4px;
+        }
+        &__label-nini-todouhuken{
+          @include label-nini-gray;
+        }
+      }
+      &__text{
+        margin-top: 8px;
+        .mydata-registration__text-area__box__text__todouhuken-code-input{
+          @include textfield;
+          -webkit-appearance: none;
+          box-sizing: border-box;
+          padding-left:15px;
+          cursor: pointer;
+        }
+        &__icon-chevron-down{
+          width: 15px;
+          height: 15px;
+          top:-27px;
+          left:540px;
+          position: relative;
+          pointer-events: none;
+        }
+      }
+      &__home-address-box-shikucyouson{
+        margin-top: 30px;
+        display:flex;
+        &__home-address-shikucyouson-code{
+          font-size: 14px;
+          font-weight: bold;
+          margin-top: 4px;
+        }
+        &__label-nini-shikucyouson{
+          @include label-nini-gray;
+        }
+      }
+      &__text{
+        margin-top: 8px;
+        .mydata-registration__text-area__box__text__shikucyouson-code-input{
+          @include textfield;
+        }
+      }
+      &__home-address-box-banchi{
+        margin-top: 40px;
+        display:flex;
+        &__home-address-banchi-code{
+          font-size: 14px;
+          font-weight: bold;
+          margin-top: 4px;
+        }
+        &__label-nini-banchi{
+          @include label-nini-gray;
+        }
+      }
+      &__text{
+        margin-top: 8px;
+        .mydata-registration__text-area__box__text__banchi-code-input{
+          @include textfield;
+        }
+      }
+      &__home-address-box-tatemonomei{
+        margin-top: 40px;
+        display:flex;
+        &__home-address-tatemonomei-code{
+          font-size: 14px;
+          font-weight: bold;
+          margin-top: 4px;
+        }
+        &__label-nini-tatemonomei{
+          @include label-nini-gray;
+        }
+      }
+      &__text{
+        margin-top: 8px;
+        .mydata-registration__text-area__box__text__tatemonomei-code-input{
+          @include textfield;
+        }
+      }
+      .submit{
+        background-color: colors(btn-red);
+        width: 572px;
+        height: 50px;
+        float: left;
+        font-size: 14px;
+        color: colors(white);
+        margin: 0 auto;
+        margin-top:40px;
+        margin-bottom:40px;
+        cursor: pointer;
+      }
+      &__kakunin{
+        background-color: colors(white);
+        margin-top: 8px;
+        line-height: 1.5;
+        color: colors(blue);
+        text-decoration: none;
+        text-align: right;
+        cursor: pointer;
+      }
+    }
+  }
+}
