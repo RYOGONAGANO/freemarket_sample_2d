@@ -13,11 +13,9 @@
         margin-bottom: 8px;
       }
       &__btn {
-        @include btn;
-        width: 328px;
-        height: 42px;
-        background-color: colors(blue);
+        @include btn($background-color: colors(blue));
         margin: 0px auto;
+        line-height: 50px;
       }
     }
 
