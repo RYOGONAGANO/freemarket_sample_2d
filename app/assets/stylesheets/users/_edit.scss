@@ -3,10 +3,10 @@
   height: 50px;
   margin: 8px 0 0 36.5px;
   &__top{
-    background-color: white;
+    background-color: colors(white);
     width: 700px;
     height: 50px;
-    color: #333333;
+    color: colors(black);
     font-size: 24px;
     font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
     font-weight: bold;
@@ -16,7 +16,7 @@
     margin: 0 auto;
   }
   &__text-area{
-    background-color: white;
+    background-color: colors(white);
     width: 700px;
     height: 1158px;
     margin: 0 auto;
@@ -26,13 +26,13 @@
     margin-top: 2px;
     font-size: 14px;
     line-height: 1;
-    color:#333;
+    color: colors(black);
     &__box{
       &__kakunin{
-        background-color: white;
+        background-color: colors(white);
         margin-top: 8px;
         line-height: 1.5;
-        color: #0099e8;
+        color: colors(blue);
         text-decoration: none;
         text-align: right;
       }
@@ -72,30 +72,13 @@
           margin-top: 4px;
         }
         &__label-nini-postal{
-          height:19px;
-          width:32px;
-          font-size: 12px;
-          background-color:#cccccc;
-          color:#FFFFFF;
-          margin-left: 8px;
-          border-radius: 2px;
-          align-items: center;
-          justify-content: center;
-          padding: 2px 4px;
+          @include label-nini-gray;
         }
       }
       &__text{
         margin-top: 8px;
         .mydata-registration__text-area__box__text__postal-code-input{
-          width: 572px;
-          height: 48px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          line-height: 1.5;
-          background: #FFFFFF;
-          padding:10px 16px 8px;
-          font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
-          font-size: 16px;
+          @include textfield;
         }
       }
       &__home-address-box-todouhuken{
@@ -107,34 +90,16 @@
           margin-top: 4px;
         }
         &__label-nini-todouhuken{
-          height:19px;
-          width:32px;
-          font-size: 12px;
-          background-color:#cccccc;
-          color:#FFFFFF;
-          margin-left: 8px;
-          border-radius: 2px;
-          align-items: center;
-          justify-content: center;
-          padding: 2px 4px;
+          @include label-nini-gray;
         }
       }
       &__text{
         margin-top: 8px;
-        
         .mydata-registration__text-area__box__text__todouhuken-code-input{
+          @include textfield;
           -webkit-appearance: none;
-          width: 572px;
-          height: 48px;
           box-sizing: border-box;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          line-height: 1.5;
-          background: #FFFFFF;
-          padding-left:10px;
-          padding:10px 16px 8px;
-          font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
-          font-size: 16px;
+          padding-left:15px;
           cursor: pointer;
         }
         &__icon-chevron-down{
@@ -155,30 +120,13 @@
           margin-top: 4px;
         }
         &__label-nini-shikucyouson{
-          height:19px;
-          width:32px;
-          font-size: 12px;
-          background-color:#cccccc;
-          color:#FFFFFF;
-          margin-left: 8px;
-          border-radius: 2px;
-          align-items: center;
-          justify-content: center;
-          padding: 2px 4px;
+          @include label-nini-gray;
         }
       }
       &__text{
         margin-top: 8px;
         .mydata-registration__text-area__box__text__shikucyouson-code-input{
-          width: 572px;
-          height: 48px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          line-height: 1.5;
-          background: #FFFFFF;
-          padding:10px 16px 8px;
-          font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
-          font-size: 16px;
+          @include textfield;
         }
       }
       &__home-address-box-banchi{
@@ -190,30 +138,13 @@
           margin-top: 4px;
         }
         &__label-nini-banchi{
-          height:19px;
-          width:32px;
-          font-size: 12px;
-          background-color:#cccccc;
-          color:#FFFFFF;
-          margin-left: 8px;
-          border-radius: 2px;
-          align-items: center;
-          justify-content: center;
-          padding: 2px 4px;
+          @include label-nini-gray;
         }
       }
       &__text{
         margin-top: 8px;
         .mydata-registration__text-area__box__text__banchi-code-input{
-          width: 572px;
-          height: 48px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          line-height: 1.5;
-          background: #FFFFFF;
-          padding:10px 16px 8px;
-          font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
-          font-size: 16px;
+          @include textfield;
         }
       }
       &__home-address-box-tatemonomei{
@@ -225,49 +156,32 @@
           margin-top: 4px;
         }
         &__label-nini-tatemonomei{
-          height:19px;
-          width:32px;
-          font-size: 12px;
-          background-color:#cccccc;
-          color:#FFFFFF;
-          margin-left: 8px;
-          border-radius: 2px;
-          align-items: center;
-          justify-content: center;
-          padding: 2px 4px;
+          @include label-nini-gray;
         }
       }
       &__text{
         margin-top: 8px;
         .mydata-registration__text-area__box__text__tatemonomei-code-input{
-          width: 572px;
-          height: 48px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          line-height: 1.5;
-          background: #FFFFFF;
-          padding:10px 16px 8px;
-          font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
-          font-size: 16px;
+          @include textfield;
         }
       }
       .submit{
-        background-color:#EA352D;
+        background-color: colors(btn-red);
         width: 572px;
         height: 50px;
         float: left;
         font-size: 14px;
-        color:#FFFFFF;
+        color: colors(white);
         margin: 0 auto;
         margin-top:40px;
         margin-bottom:40px;
         cursor: pointer;
       }
       &__kakunin{
-        background-color: white;
+        background-color: colors(white);
         margin-top: 8px;
         line-height: 1.5;
-        color: #0099e8;
+        color: colors(blue);
         text-decoration: none;
         text-align: right;
         cursor: pointer;
