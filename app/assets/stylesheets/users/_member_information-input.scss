@@ -29,27 +29,27 @@
         &__member-info {
           font-size: 12px;
           font-weight: 600;
-          color: #ea352d;
+          color: colors(btn-red);
         }
         &__phone-confirmation {
           margin-left: 50px;
           font-size: 12px;
-          color: #888;
+          color:colors(title-gray);
         }
         &__adress {
           margin-left: 35px;
           font-size: 12px;
-          color: #888;
+          color:colors(title-gray);
         }
         &__payment {
           margin-left: 40px;
           font-size: 12px;
-          color: #888;
+          color: colors(title-gray);
         }
         &__complete {
           margin-left: 70px;
           font-size: 12px;
-          color: #888;
+          color: colors(title-gray);
         }
       }
       &__lines {
@@ -62,51 +62,51 @@
         &__member-info {
           height: 12px;
           width: 12px;
-          background-color: #ea352d;
+          background-color: colors(btn-red);
           border-radius: 50%;
         }
         &__member-info-to-phone {
           height: 2px;
           width: 105px;
-          background-color: #ccc;
+          background-color: colors(ber-gray);
         }
         &__phone-confirmation {
           height: 12px;
           width: 12px;
-          background-color: #ccc;
+          background-color: colors(ber-gray);
           border-radius: 50%;
         }
         &__phone-confirmation-to-adress {
           height: 2px;
           width: 105px;
-          background-color: #ccc;
+          background-color: colors(ber-gray);
         }
         &__adress {
           height: 12px;
           width: 12px;
-          background-color: #ccc;
+          background-color: colors(ber-gray);
           border-radius: 50%;
         }
         &__adress-to-payment {
           height: 2px;
           width: 105px;
-          background-color: #ccc;
+          background-color: colors(ber-gray);
         }
         &__payment {
           height: 12px;
           width: 12px;
-          background-color: #ccc;
+          background-color: colors(ber-gray);
           border-radius: 50%;
         }
         &__payment-to-complete {
           height: 2px;
           width: 105px;
-          background-color: #ccc;
+          background-color: colors(ber-gray);
         }
         &__complete {
           height: 12px;
           width: 12px;
-          background-color: #ccc;
+          background-color: colors(ber-gray);
           border-radius: 50%;
         }
       }
@@ -118,7 +118,7 @@
     width: 700px;
 
     .member-information_input-title {
-      background-color: white;
+      background-color: colors(white);
       font-size: 22px;
       font-weight: 600;
       height: 97px;
@@ -127,7 +127,7 @@
     }
 
     .member-information_input-form {
-      background-color: white;
+      background-color: colors(white);
       margin-top: 2px;
       text-align: center;
 
@@ -305,7 +305,7 @@
           }
           &__form {
             
-            background-color: white;
+            background-color: colors(white);
             display: flex;
             position: relative;
             select {
@@ -317,7 +317,7 @@
               display: none;
             }
             &__year {
-              background-color: white;
+              background-color: colors(white);
               width: 76px;
               height: 48px;
               position: relative;
@@ -335,7 +335,7 @@
               }
             }
             &__month {
-              background-color: white;
+              background-color: colors(white);
               padding-left: 15px;
               width: 76px;
               height: 48px;
@@ -353,7 +353,7 @@
             }
 
             &__day {
-              background-color: white;
+              background-color:colors(white);
               padding-left: 15px;
               width: 76px;
               height: 48px;
@@ -379,7 +379,7 @@
 
         .member-information_other {
           display: contents;
-          background-color: white;
+          background-color: colors(white);
           margin-top: 14px;
           text-align: center;
           &__recaptcha {
@@ -392,7 +392,7 @@
             text-align: center;
             margin: 40px 0px;
             &__btn {
-              color: #0099e8;
+              color: colors(blue);
               float: right;
               margin-left: -30px;
             }
@@ -400,10 +400,10 @@
           &__nextbtn {
             @include btn;
             width: 345px;
-            background-color: #ea352d;
+            background-color: colors(btn-red);
           }
           &__about-personal-information {
-            color: #0099e8;
+            color: colors(blue);
             float: right;
             margin: 40px 0px 60px;
           }
