@@ -69,6 +69,24 @@
   }
 }
 
+@mixin required{
+  background-color: #EA352D;
+  color: white;
+  width: 32px;
+  height: 19px;
+  display: inline-block;
+  font-size: 13px;
+  border-radius: 2px;
+  padding: 2px;
+  margin-left: 5px;
+}
+
+@mixin input-form {
+  width: 343px;
+  height: 48px;
+  border-radius: 5px;
+  border: solid 1px #80808073;
+}
 @mixin clearfix{
   clear: both;
   display: block;

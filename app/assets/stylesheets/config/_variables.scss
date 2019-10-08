@@ -7,7 +7,9 @@ $colors: (
   good: #ef5185,
   nomal: #fba933,
   bad: #6ab5d8,
-  btn-red: #ea352d
+  btn-red: #ea352d,
+  title-gray: #888,
+  ber-gray:#ccc,
 );
 
 @function colors($key) {
