@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       get :login
       get :logout
       get :member_information_input
+      get :registrationNewmenbar
       get :address
     end
   end
