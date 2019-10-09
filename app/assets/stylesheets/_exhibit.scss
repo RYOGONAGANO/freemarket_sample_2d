@@ -12,12 +12,12 @@
      line-height: 100px;
      font-size: 22px;
      font-weight: bold;
-     border-bottom: solid 1px #8080803b; 
+     border-bottom: solid 1px colors(bottom-gray); 
     }
     &__image{
       height: 303px;
       width: 100%;
-      border-bottom: solid 1px #8080803b; 
+      border-bottom: solid 1px colors(bottom-gray); 
       &__in{
         height: 100%;
         width: 100%;
@@ -39,9 +39,9 @@
         &__upload{
           height: 162px;
           width: 100%;
-          background-color: #F5F5F5;
+          background-color: colors(gray-white);
           margin-top: 20px;
-          border: dotted 1.5px #a9a9a985;
+          border: dotted 1.5px colors(gray2);
           cursor: pointer;
           #image{
             display: none;
@@ -60,7 +60,7 @@
     &__itemname{
       height: 355px;
       width: 100%;
-      border-bottom: solid 1px #8080803b;
+      border-bottom: solid 1px colors(bottom-gray);
       padding: 40px;
       &__topbox{
         &__title{
@@ -78,7 +78,7 @@
           width: 100%;
           margin-top: 8px;
           border-radius: 5px;
-          border: solid 1px #80808059;
+          border: solid 1px colors(gray2);
           font-size: 16px;
           padding-left: 15px;
           padding-top: 2px;
@@ -101,7 +101,7 @@
           height: 142px;
           width: 100%;
           margin-top: 8px;
-          border: solid 1px #80808059;
+          border: solid 1px colors(gray2);
           padding: 10px;
           font-size: 15.8px;
           @include focus;
@@ -111,7 +111,7 @@
     &__detail{
       height: 261px;
       width: 100%;
-      border-bottom: solid 1px #8080803b;
+      border-bottom: solid 1px colors(bottom-gray);
       display: flex;
       &__leftbox{
         padding: 40px;
@@ -148,7 +148,7 @@
           float: right;
           height: 48px;
           width: 95%;
-          background-color: #ffffff00;
+          background-color: colors(gray-trans);
           text-indent: 15px;
           -webkit-appearance: none;
           position: absolute;
@@ -182,7 +182,7 @@
         float: right;
         height: 48px;
         width: 95%;
-        background-color: #ffffff00;
+        background-color: colors(gray-trans);
         text-indent: 15px;
         -webkit-appearance: button;
         position: absolute;
@@ -196,7 +196,7 @@
     &__delivery{
       height: 371px;
       width: 100%;
-      border-bottom: solid 1px #8080803b;
+      border-bottom: solid 1px colors(bottom-gray);
       display: flex;
       &__leftbox{
         padding: 40px 0 40px 40px;
@@ -237,7 +237,7 @@
           float: right;
           height: 48px;
           width: 95%;
-          background-color: #ffffff00;
+          background-color: colors(gray-trans);
           text-indent: 15px;
           -webkit-appearance: none;
           position: absolute;
@@ -271,7 +271,7 @@
         float: right;
         height: 48px;
         width: 95%;
-        background-color: #ffffff00;
+        background-color: colors(gray-trans);
         text-indent: 15px;
         -webkit-appearance: button;
         position: absolute;
@@ -305,7 +305,7 @@
       float: right;
       height: 48px;
       width: 95%;
-      background-color: #ffffff00;
+      background-color: colors(gray-trans);
       text-indent: 15px;
       -webkit-appearance: button;
       position: absolute;
@@ -319,7 +319,7 @@
     &__price{
       height: 299px;
       width: 100%;
-      border-bottom: solid 1px #8080803b;
+      border-bottom: solid 1px colors(bottom-gray);
       display: flex;
       &__leftbox{
         padding: 45px 0 40px 40px;
@@ -371,7 +371,7 @@
             bottom: 4px;
             height: 48px;
             border-radius: 5px;
-            border: solid 1px #80808059;
+            border: solid 1px colors(gray2);
             right: 20px;
             width: 160px;
             font-size: 15.4px;
@@ -381,8 +381,8 @@
           }
         }
         &__fee{
-          border-top: solid 1px #ccc;
-          border-bottom: solid 1px #ccc;
+          border-top: solid 1px colors(bottom-gray);
+          border-bottom: solid 1px colors(bottom-gray);
           width: 99%;
           height: 65px;
           clear: both;
@@ -455,7 +455,7 @@
           .exhibit-submit{
             height: 50px;
             width: 100%;
-            background: #ea352d;
+            background: colors(red);
             color: white;
             cursor: pointer;
             outline: none;
@@ -469,7 +469,7 @@
           .return-link{
             height: 50px;
             width: 45%;
-            background: #AAA;
+            background: colors(gray3);
             color: white;
             cursor: pointer;
             outline: none;
