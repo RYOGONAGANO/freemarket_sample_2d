@@ -1,0 +1,33 @@
+= render 'shared/header'
+.mypage-contents
+  = render 'shared/sidemenu'
+  .mypage-main
+    .mydata-registration-creditcard
+      .mydata-registration-creditcard__top
+        支払い方法
+      .mydata-registration-creditcard__information
+        .mydata-registration-creditcard__information__box
+          .mydata-registration-creditcard__information__box__card-ichiran
+            クレジットカード一覧
+          .mydata-registration-creditcard__information__box__card-companys
+            .mydata-registration-creditcard__information__box__card-companys__box
+              .mydata-registration-creditcard__information__box__card-companys__box__card-company
+                VISA
+              .mydata-registration-creditcard__information__box__card-companys__box__card-delete
+                削除する
+
+            .mydata-registration-creditcard__information__box__card-companys__card-number
+              ************4351
+            .mydata-registration-creditcard__information__box__card-companys__card-yearmonth
+              08 / 26
+        .mydata-registration-creditcard__information__box-payment
+          .mydata-registration-creditcard__information__box-payment__payment-link
+            支払い方法について
+            = fa_icon 'angle-right'
+
+
+
+
+
+= render 'shared/footer'
+= render 'shared/buy'

@@ -81,7 +81,7 @@
           発送元・お届け先住所変更
           = fa_icon "chevron-right"
       %li
-        = link_to root_path, class: "mypage-menu-list__line" do
+        = link_to root_path, class: "mypage-menu-list__line", id: "active" do
           支払い方法
           = fa_icon "chevron-right"
       %li
@@ -97,6 +97,6 @@
           電話番号の確認
           = fa_icon "chevron-right"
       %li
-        = link_to root_path, class: "mypage-menu-list__line", id: "active" do
+        = link_to root_path, class: "mypage-menu-list__line" do
           ログアウト
           = fa_icon "chevron-right"
