@@ -304,10 +304,31 @@
             }
           }
           &__form {
-            
             background-color: colors(white);
             display: flex;
             position: relative;
+            line-height: 48px;
+            &--year-angle {
+              position: absolute;
+              top: 25%;
+              left: 15%;
+              font-size: 25px;
+              color: #888;
+            }
+            &--month-angle {
+              position: absolute;
+              top: 25%;
+              left: 42%;
+              font-size: 25px;
+              color: #888;
+            }
+            &--day-angle {
+              position: absolute;
+              top: 25%;
+              left: 72%;
+              font-size: 25px;
+              color: #888;
+            }
             select {
               -webkit-appearance: none;
               -moz-appearance: none;
@@ -316,58 +337,30 @@
             select::-ms-expand {
               display: none;
             }
-            &__year {
+            .year {
               background-color: colors(white);
               width: 76px;
               height: 48px;
               position: relative;
               padding-left: 15px;
-              &--angle {
-                position: absolute;
-                top: 25%;
-                left: 15%;
-                font-size: 25px;
-                color: #888;
-              }
-              &__text {
-                margin: 18px 5px;
-
-              }
+              margin-right: 5px;
             }
-            &__month {
+            .month {
               background-color: colors(white);
               padding-left: 15px;
               width: 76px;
               height: 48px;
               position: relative;
-              &--angle {
-                position: absolute;
-                top: 25%;
-                left: 42%;
-                font-size: 25px;
-                color: #888;
-              }
-              &__text {
-                margin: 18px 5px;
-              }
+              margin: 0 5px;
             }
 
-            &__day {
+            .day {
               background-color:colors(white);
               padding-left: 15px;
               width: 76px;
               height: 48px;
               position: relative;
-              &--angle {
-                position: absolute;
-                top: 25%;
-                left: 68%;
-                font-size: 25px;
-                color: #888;
-              }
-              &__text {
-                margin: 18px 5px;
-              }
+              margin: 0 5px;
             }
           }
         }

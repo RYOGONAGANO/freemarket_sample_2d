@@ -1,4 +1,4 @@
-.member-information_input 
+.member-information_input
   .member-information_header
     .member-information_header__logo
       = link_to image_tag( 'logo (1).svg')
@@ -28,7 +28,7 @@
   .member-information_input-entire
     .member-information_input-title
       会員情報入力
-    .member-information_input-form
+    = form_with(model: @user, local: true, class: 'member-information_input-form') do |form|
       .member-information-input_contents
         .member-information-input_contents__nickname
           .member-information-input_contents__nickname__form
@@ -36,7 +36,7 @@
               ニックネーム
             .member-information-input_contents__nickname__form__required
               必須
-          %input{ type: "text",placeholder:"ニックネーム", class: "member-information-input_contents__nickname__input-form" } 
+          = form.text_field :nickname, placeholder:"ニックネーム", class: "member-information-input_contents__nickname__input-form"
 
         .member-information-input_contents__email
           .member-information-input_contents__email__form
@@ -44,7 +44,7 @@
               メールアドレス
             .member-information-input_contents__email__form__required
               必須
-          %input{ type: "text",placeholder:"PC・携帯どちらでも可", class: "member-information-input_contents__email__input-form" } 
+          = form.text_field :email, placeholder:"PC・携帯どちらでも可", class: "member-information-input_contents__email__input-form"
 
 
         .member-information-input_contents__password
@@ -53,7 +53,7 @@
               パスワード
             .member-information-input_contents__password__form__required
               必須
-          %input{ type: "text",placeholder:"7文字以上", class: "member-information-input_contents__password__input-form" } 
+          = form.text_field :password, placeholder:"7文字以上", autocomplete: "new-password", class: "member-information-input_contents__password__input-form"
 
         .member-information-input_contents__password-again
           .member-information-input_contents__password-again__form
@@ -61,8 +61,8 @@
               パスワード(確認)
             .member-information-input_contents__password-again__form__required
               必須
-          %input{ type: "text",placeholder:"7文字以上", class: "member-information-input_contents__password-again__input-form" } 
-          
+          = form.text_field :password_confirmation, placeholder:"7文字以上",autocomplete: "new-password", class: "member-information-input_contents__password-again__input-form"
+
         .member-information_identification
           .member-information_identification__title
             本人確認
@@ -71,65 +71,54 @@
             %p 情報の登録にご協力ください。他のお客様に公開さ
             %p れることはありません。
 
-        .member-information-name
-          .member-information-name__text
-            .member-information-name__text__name
-              お名前(全角)
-            .member-information-name__text__required
-              必須
-          .member-information-name__form
-            %input{ type: "text",placeholder:"例)山田", class: "member-information-name__form__last-name" } 
-            %input{ type: "text",placeholder:"例)彩", class: "member-information-name__form__name" } 
+        = form.fields_for :user_detail do |f|
+          .member-information-name
+            .member-information-name__text
+              .member-information-name__text__name
+                お名前(全角)
+              .member-information-name__text__required
+                必須
+            .member-information-name__form
+              = f.text_field :first_name, placeholder:"例)山田", class: "member-information-name__form__last-name"
+              = f.text_field :last_name, placeholder:"例)彩", class: "member-information-name__form__name"
 
-        .member-information-namekatakana
-          .member-information-namekatakana__text
-            .member-information-namekatakana__text__name
-              お名前カナ(全角)
-            .member-information-namekatakana__text__reqired
-              必須
-          .member-information-namekatakana__form
-            %input{ type: "text",placeholder:"例)ヤマダ", class: "member-information-namekatakana__form__last-name" } 
-            %input{ type: "text",placeholder:"例)アヤ", class: "member-information-namekatakana__form__name" } 
+          .member-information-namekatakana
+            .member-information-namekatakana__text
+              .member-information-namekatakana__text__name
+                お名前カナ(全角)
+              .member-information-namekatakana__text__reqired
+                必須
+            .member-information-namekatakana__form
+              = f.text_field :first_name_kana,placeholder:"例)ヤマダ", class: "member-information-namekatakana__form__last-name"
+              = f.text_field :last_name_kana ,placeholder:"例)アヤ", class: "member-information-namekatakana__form__name"
 
-        .member-information-birthday
-          .member-information-birthday__text
-            .member-information-birthday__text__title
-              生年月日
-            .member-information-birthday__text__required
-              必須
-          .member-information-birthday__form
-            %select{ type: "text", class: "member-information-birthday__form__year" }
-              %option --
-            = fa_icon 'angle-down', class: 'member-information-birthday__form__year--angle'
-            .member-information-birthday__form__year__text
-              年
-            %select{ type: "text", class: "member-information-birthday__form__month" }
-              %option --
-            = fa_icon 'angle-down', class: 'member-information-birthday__form__month--angle'
-            .member-information-birthday__form__month__text 
-              月
-            %select{ type: "text", class: "member-information-birthday__form__day"}
-              %option --
-            = fa_icon 'angle-down', class: 'member-information-birthday__form__day--angle'
-            .member-information-birthday__form__day__text
-              日
+          .member-information-birthday
+            .member-information-birthday__text
+              .member-information-birthday__text__title
+                生年月日
+              .member-information-birthday__text__required
+                必須
+            .member-information-birthday__form
+              != sprintf(f.date_select(:birthday, prefix:'birthday', with_css_classes:'', prompt:"--",use_month_numbers:true, start_year:Time.now.year, end_year:1900, date_separator:'%s'),'年','月')+'日'
+              = fa_icon 'angle-down', class: 'member-information-birthday__form--year-angle'
+              = fa_icon 'angle-down', class: 'member-information-birthday__form--month-angle'
+              = fa_icon 'angle-down', class: 'member-information-birthday__form--day-angle'
 
-        .member-information_caution
+        .member-information-caution
           ＊本人情報は正しく入力してください。会員登録後、
           %p 修正するにはお時間をいただく場合があります。
 
-        .member-information_other
-          .member-information_other__recaptcha
-            recaptcha仮置き
-          .member-information_other__terms
+        .member-information-other
+          .member-information-other__recaptcha
+            = recaptcha_tags
+          .member-information-other__terms
             「次へ進む」のボタンを押すことにより、
-            = link_to  '', class: 'member-information_other__terms__btn' do
-              利用規約 
+            = link_to  '', class: 'member-information-other__terms__btn' do
+              利用規約
             %p に同意したものとみなします。
-          %button{type: "submit", class: "member-information_other__nextbtn"}
+          %button{type: "submit", class: "member-information-other__nextbtn"}
             次へ進む
-          = link_to  '', class: 'member-information_other__about-personal-information' do
+          = link_to  '', class: 'member-information-other__about-personal-information' do
             本人情報の登録について
             %i.fas.fa-angle-right
-    
   = render 'shared/copywrite-bottom'

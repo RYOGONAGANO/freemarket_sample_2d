@@ -15,8 +15,9 @@ class User < ApplicationRecord
   # end
 
 
-  has_one :user_detail
-  has_one :address
+  has_one :user_detail, dependent: :destroy
+  accepts_nested_attributes_for :user_detail
+  has_one :address, dependent: :destroy
   has_one :evaluate
   has_many :evaluate_comments
   has_many :sales
