@@ -84,20 +84,12 @@
 
       margin-top: 5px;
       display: flex;
-      &__icon{
-        img{
-        height: 65px;
-        width: 65px;
-        zoom: 0.5;
-        margin-top: -15px;
-        margin-left: 20px;
-        border-radius: 50%;
       &__like {
         height: 44px;
         width: 127px;
         font-size: 14px;
         .fa {
-          -webkit-text-stroke: 2px #80808061; 
+          -webkit-text-stroke: 2px #80808061;
           color: colors(white);
           font-size: 17px;
           padding-right: 6px;
@@ -107,8 +99,6 @@
         height: 44px;
         width: 127px;
         font-size: 14px;
-        margin-left: 10px;
-        margin-top: 3px;
         margin-left: 15px;
         .fa {
           color: #80808000;
@@ -134,12 +124,14 @@
         width: 127px;
         display: flex;
         &__icon {
-          background: image-url("mypage-icon.png");
-          height: 70px;
-          width: 70px;
+          img{
+          height: 65px;
+          width: 65px;
           zoom: 0.5;
           margin-top: -20px;
           margin-left: 20px;
+          border-radius: 50%;
+          }
         }
         &__tag {
           font-size: 14px;
@@ -147,7 +139,5 @@
         }
       }
     }
-  }
-}
   }
 }

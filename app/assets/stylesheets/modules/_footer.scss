@@ -22,6 +22,8 @@
       padding-top: 21px;
       display: flex;
       &__mercari {
+        position: relative;
+        left: 18px;
         &__title {
           color: colors(white);
           font-weight: bold;
@@ -55,7 +57,8 @@
         }
       }
       &__help {
-        margin-left: 40px;
+        position: relative;
+        left: 58px;
         &__title {
           color: colors(white);
           font-weight: bold;
@@ -66,13 +69,15 @@
           font-size: 12px;
           color: #afafaf;
           margin-bottom: 25px;
+          line-height: 15px;
           p {
             margin-top: 18px;
           }
         }
       }
       &__privacy1 {
-        margin-left: 55px;
+        position: relative;
+        left: 100px;
         &__title {
           color: colors(white);
           font-weight: bold;
@@ -85,11 +90,13 @@
           margin-bottom: 25px;
           p {
             margin-top: 18px;
+            margin-bottom: 5px;
           }
         }
       }
       &__privacy2 {
-        margin-left: 35px;
+        position: relative;
+        left: 130px;
         margin-top: 20px;
         &__text {
           font-size: 12px;
@@ -97,11 +104,13 @@
           margin-bottom: 25px;
           p {
             margin-top: 18px;
+            margin-bottom: 5px;
           }
         }
       }
       &__country {
-        margin-left: 50px;
+        position: relative;
+        left: 180px;
         &__title {
           color: colors(white);
           font-weight: bold;
@@ -118,7 +127,6 @@
         }
       }
     }
- }
  &__country{
   margin-left: 50px;
   &__title{
@@ -137,26 +145,32 @@
   }
 }
     &__bottom{
-      height: 70px;
+      height: 45px;
       width: 275px;
+      img{
       zoom: 0.5;
-      margin-top: 35px;
+      margin-top: -10px;
       padding: 0 13%;
+      position: absolute;
+      left: 15px;
+      }
       &__text{
-        color: white;
-        width: 50vw;
-        margin-left: 960px;
-        line-height: 80px;
-        margin-top: -80px;
+        color: colors(white);
+        width: 100px;
+        height: 50px;
+        line-height: 30px;
+        position: absolute;
+        left: 675px;
         display: flex;
         &__icon {
-          font-size: 25px;
-          margin-right: 6px;
+          font-size: 12px;
+          margin-right: 3px;
         }
         &__main {
-          font-size: 24px;
+          font-size: 12px;
         }
       }
-    }
+     }
+  }
   }
 
