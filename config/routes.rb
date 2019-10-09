@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       get :authentication
       get :login_page
       get :logout
+      get :registrationNewmenbar
       get :address
     end
   end
