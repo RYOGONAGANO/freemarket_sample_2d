@@ -4,7 +4,7 @@
       .userRegist-complete-header-headers__mercarilogo
         = image_tag 'logomercari.svg', id:'assets', class:'image', size:'185x45'
       .userRegist-complete-header-headers__status
-        = render 'users/new-user-progress'
+        = render 'shared/new_user_progress'
   .userRegist-complete-contents
     .userRegist-complete-uppercontent
       %h2会員登録完了
@@ -16,10 +16,4 @@
         %pメルカリをはじめる
     .userRegist-complete-advertisement
       = image_tag 'user_rejister_complete_commerce.png', size: "700x250"
-  .userRegist-complete-footer
-    .userRegist-complete-footer__policy
-      %pプライバシーポリシー
-    .userRegist-complete-footer__rule
-      %pメルカリ利用規約
-    .userRegist-complete-footer__comarce
-      %p特定商取引に関する表記ーー
+  =render 'shared/copywrite-bottom'

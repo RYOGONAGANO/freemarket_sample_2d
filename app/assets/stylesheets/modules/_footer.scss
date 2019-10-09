@@ -1,4 +1,4 @@
-.footer{
+.footer {
   position: relative;
   bottom: -48px;
   margin-left: 8px;
@@ -12,31 +12,31 @@
     margin-bottom: -2px;
     }
   }
-  &__box{
-    background-color: rgb(34, 34, 34);;
+  &__box {
+    background-color: rgb(34, 34, 34);
     height: 389px;
     width: 100vw;
     margin-left: -8px;
-    &__top{
+    &__top {
       margin: 0 13.5vw;
       padding-top: 21px;
       display: flex;
-      &__mercari{
-        &__title{
-          color: white;
+      &__mercari {
+        &__title {
+          color: colors(white);
           font-weight: bold;
           font-size: 16px;
           padding-bottom: 3px;
         }
-        &__text{
+        &__text {
           font-size: 12px;
           color: #afafaf;
           margin-bottom: 25px;
-          p{
+          p {
             margin-top: 19px;
           }
         }
-        &__icon{
+        &__icon {
           display: flex;
           width: 100px;
           position: relative;
@@ -54,49 +54,68 @@
           }
         }
       }
-      &__help{
+      &__help {
         margin-left: 40px;
-        &__title{
-          color: white;
+        &__title {
+          color: colors(white);
           font-weight: bold;
           font-size: 16px;
           padding-bottom: 3px;
         }
-        &__text{
+        &__text {
           font-size: 12px;
           color: #afafaf;
           margin-bottom: 25px;
-          p{
+          p {
             margin-top: 18px;
           }
         }
-     }
-     &__privacy1{
-      margin-left: 55px;
-      &__title{
-        color: white;
-        font-weight: bold;
-        font-size: 16px;
-        padding-bottom: 3px;
       }
-      &__text{
-        font-size: 12px;
-        color: #afafaf;
-        margin-bottom: 25px;
-        p{
-          margin-top: 18px;
+      &__privacy1 {
+        margin-left: 55px;
+        &__title {
+          color: colors(white);
+          font-weight: bold;
+          font-size: 16px;
+          padding-bottom: 3px;
+        }
+        &__text {
+          font-size: 12px;
+          color: #afafaf;
+          margin-bottom: 25px;
+          p {
+            margin-top: 18px;
+          }
         }
       }
-   }
-   &__privacy2{
-    margin-left: 35px;
-    margin-top: 20px;
-    &__text{
-      font-size: 12px;
-      color: #afafaf;
-      margin-bottom: 25px;
-      p{
-        margin-top: 18px;
+      &__privacy2 {
+        margin-left: 35px;
+        margin-top: 20px;
+        &__text {
+          font-size: 12px;
+          color: #afafaf;
+          margin-bottom: 25px;
+          p {
+            margin-top: 18px;
+          }
+        }
+      }
+      &__country {
+        margin-left: 50px;
+        &__title {
+          color: colors(white);
+          font-weight: bold;
+          font-size: 16px;
+          padding-bottom: 3px;
+        }
+        &__text {
+          font-size: 12px;
+          color: #afafaf;
+          margin-bottom: 25px;
+          p {
+            margin-top: 18px;
+          }
+        }
       }
     }
  }
@@ -117,7 +136,6 @@
     }
   }
 }
-   } 
     &__bottom{
       height: 70px;
       width: 275px;
@@ -131,15 +149,14 @@
         line-height: 80px;
         margin-top: -80px;
         display: flex;
-        &__icon{
+        &__icon {
           font-size: 25px;
           margin-right: 6px;
         }
-        &__main{
-        font-size: 24px;
+        &__main {
+          font-size: 24px;
         }
       }
     }
   }
 
-}

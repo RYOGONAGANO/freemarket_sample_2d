@@ -1,126 +1,88 @@
-.header{
+.header {
   height: 100px;
   width: 100vw;
-  background-color: #fff;
+  background-color: colors(white);
   font-family: Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
- &__title{
-   display: flex;
-   position: relative;
-   height: 50%;
-   width: 71vw;
-   margin: auto;
-   padding-top: 8px;
-   &__logo{
-    background-image: url("https://web-jp-assets.mercdn.net/_next/static/images/logo-acdd90ac4f472d5a6f7a330d33ab1225.svg");
-    background-repeat: no-repeat;
-    height: 36px;
-    width: 133px;
-    margin-left: 1px;
-    margin-top: 2px;
-   }
-   &__search{
-     background-color: #80808014;
-     width: 830px;
-     height: 38px;
-     margin-left: 45px;
-     border-radius: 5px;
-     border: solid 1px #80808073;
-     line-height: 36px;
-     padding-left: 11px;
-     color: gray;
-     .fa{
-      float: right;
-      margin-right: 12px;
-      margin-top: 13px;
-      font-size: 14px;
-      color: black;
-     }
-   }
- }
- &__menu{
-  position: relative;
-  display: flex;
-  height: 50%;
-  width: 70vw;
-  margin: auto;
-  margin-top: 9px;
-  justify-content: space-between;
-  &__left{
+  &__title {
     display: flex;
-    height: 44px;
-    width: 308.45px;
-    padding-top: 6px;
-   &__category{
-     height: 36px;
-     width: 149.45px;
-     font-size: 14px;
-     font-weight: 600;
-     .fa{
-       color: red;
-     }
-   }
-   &__brand{
-    height: 36px;
-    width: 149.45px;
-    margin-left: 10px;
-    display: flex;
-    &__icon{
-    height: 35px;
-    width: 40px;
-    margin-top: -9px;
-    zoom: 0.5;
+    position: relative;
+    height: 50%;
+    width: 71vw;
+    margin: auto;
+    padding-top: 8px;
+    &__logo {
+      background-image: url("logo (1).svg");
+      background-repeat: no-repeat;
+      height: 36px;
+      width: 133px;
+      margin-left: 1px;
+      margin-top: 2px;
     }
-    &__tag{
-      font-size: 14px;
-      font-weight: 600;
-      margin-left: 5px;
+    &__search {
+      background-color: #80808014;
+      width: 830px;
+      height: 38px;
+      margin-left: 45px;
+      border-radius: 5px;
+      border: solid 1px #80808073;
+      line-height: 36px;
+      padding-left: 11px;
+      color: #808080;
+      .fa {
+        float: right;
+        margin-right: 12px;
+        margin-top: 13px;
+        font-size: 14px;
+        color: colors(black);
+      }
     }
-   }
   }
-  &__right{
-    height: 44px;
-    width: 520.31px;
-    
-    margin-top: 5px;
+  &__menu {
+    position: relative;
     display: flex;
-    &__like{
+    height: 50%;
+    width: 70vw;
+    margin: auto;
+    margin-top: 9px;
+    justify-content: space-between;
+    &__left {
+      display: flex;
       height: 44px;
-      width: 127px;
-      font-size: 14px;
-      .fa{
-        -webkit-text-stroke: 2px #80808061;
-        color: white;
-        font-size: 17px;
-        padding-right: 6px;
+      width: 308.45px;
+      padding-top: 6px;
+      &__category {
+        height: 36px;
+        width: 149.45px;
+        font-size: 14px;
+        font-weight: 600;
+        .fa {
+          color: red;
+        }
+      }
+      &__brand {
+        height: 36px;
+        width: 149.45px;
+        margin-left: 10px;
+        display: flex;
+        &__icon {
+          background: image-url("brand-tag.png");
+          height: 35px;
+          width: 40px;
+          margin-top: -5px;
+          zoom: 0.5;
+        }
+        &__tag {
+          font-size: 14px;
+          font-weight: 600;
+          margin-left: 5px;
+        }
       }
     }
-    &__news{
+    &__right {
       height: 44px;
-      width: 127px;
-      font-size: 14px;
-      margin-left: 15px;
-      .fa{
-        color: #80808000;
-        font-size: 17px;
-        padding-right: 6px;
-        -webkit-text-stroke: 2px #80808061;
-      }
-    }
-    &__todo{
-      height: 44px;
-      width: 127px;
-      font-size: 14px;
-      margin-left: -20px;
-      margin-right: 24px;
-      .fa{
-        color: #80808061;
-        font-size: 17px;
-        padding-right: 6px;
-      }
-    }
-    &__mypage{
-      height: 44px;
-      width: 127px;
+      width: 520.31px;
+
+      margin-top: 5px;
       display: flex;
       &__icon{
         img{
@@ -130,14 +92,62 @@
         margin-top: -15px;
         margin-left: 20px;
         border-radius: 50%;
+      &__like {
+        height: 44px;
+        width: 127px;
+        font-size: 14px;
+        .fa {
+          -webkit-text-stroke: 2px #80808061;
+          color: colors(white);
+          font-size: 17px;
+          padding-right: 6px;
         }
       }
-      &__tag{
+      &__news {
+        height: 44px;
+        width: 127px;
         font-size: 14px;
         margin-left: 10px;
         margin-top: 3px;
+        margin-left: 15px;
+        .fa {
+          color: #80808000;
+          font-size: 17px;
+          padding-right: 6px;
+          -webkit-text-stroke: 2px #80808061;
+        }
+      }
+      &__todo {
+        height: 44px;
+        width: 127px;
+        font-size: 14px;
+        margin-left: -20px;
+        margin-right: 24px;
+        .fa {
+          color: #80808061;
+          font-size: 17px;
+          padding-right: 6px;
+        }
+      }
+      &__mypage {
+        height: 44px;
+        width: 127px;
+        display: flex;
+        &__icon {
+          background: image-url("mypage-icon.png");
+          height: 70px;
+          width: 70px;
+          zoom: 0.5;
+          margin-top: -20px;
+          margin-left: 20px;
+        }
+        &__tag {
+          font-size: 14px;
+          margin-left: 10px;
+        }
       }
     }
   }
- }
+}
+  }
 }

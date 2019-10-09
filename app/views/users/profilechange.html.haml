@@ -1,0 +1,79 @@
+= render 'shared/header'
+.mypage-contents
+  = render 'shared/sidemenu'
+  .mypage-main
+    .mydata-registration
+      .mydata-registration__top
+        本人情報の登録
+      .mydata-registration__text-area
+        .mydata-registration__text-area__box
+          .mydata-registration__text-area__box__information
+            %p.text
+              お客さまの本人情報をご登録ください。
+            %br>/
+            登録されたお客様・生年月日を変行為する場合、本人確認書類の提出が必要になります。
+          .mydata-registration__text-area__box__kakunin
+            本人確認書類のアップロードについて
+            = fa_icon 'angle-right'
+          .mydata-registration__text-area__box__username
+            お名前
+          .mydata-registration__text-area__box__username-data
+            苗字 名前
+          .mydata-registration__text-area__box__username-kana
+            お名前カナ
+          .mydata-registration__text-area__box__username-kana-data
+            苗字カナ 名前カナ
+          .mydata-registration__text-area__box__birthday
+            生年月日
+          .mydata-registration__text-area__box__birthday-data
+            2019/12/31
+          .mydata-registration__text-area__box__postal-box
+            .mydata-registration__text-area__box__postal-box__postal-code
+              郵便番号
+            .mydata-registration__text-area__box__postal-box__label-nini-postal
+              任意
+          .mydata-registration__text-area__box__text
+            %input{type: "text", class: "mydata-registration__text-area__box__text__postal-code-input",placeholder: "例）1234567"}
+          .mydata-registration__text-area__box__home-address-box-todouhuken
+            .mydata-registration__text-area__box__home-address-box-todouhuken__home-address-todouhuken-code
+              都道府県
+            .mydata-registration__text-area__box__home-address-box-todouhuken__label-nini-todouhuken
+              任意
+          .mydata-registration__text-area__box__text
+            %select{class: "mydata-registration__text-area__box__text__todouhuken-code-input"}
+              %option --
+              %option 北海道
+              %option 東京
+              %option 高知
+              %option 福岡
+          .mydata-registration__text-area__box__text__icon-chevron-down
+            = fa_icon 'chevron-down'
+          .mydata-registration__text-area__box__home-address-box-shikucyouson
+            .mydata-registration__text-area__box__home-address-box-shikucyouson__home-address-shikucyouson-code
+              市区町村
+            .mydata-registration__text-area__box__home-address-box-shikucyouson__label-nini-shikucyouson
+              任意
+          .mydata-registration__text-area__box__text
+            %input{type: "text", class: "mydata-registration__text-area__box__text__shikucyouson-code-input",placeholder: "例) 横浜市緑区"}
+          .mydata-registration__text-area__box__home-address-box-banchi
+            .mydata-registration__text-area__box__home-address-box-banchi__home-address-banchi-code
+              番地
+            .mydata-registration__text-area__box__home-address-box-banchi__label-nini-banchi
+              任意
+          .mydata-registration__text-area__box__text
+            %input{type: "text", class: "mydata-registration__text-area__box__text__banchi-code-input",placeholder: "例) 青山1−1−1"}
+          .mydata-registration__text-area__box__home-address-box-tatemonomei
+            .mydata-registration__text-area__box__home-address-box-tatemonomei__home-address-tatemonomei-code
+              建物名
+            .mydata-registration__text-area__box__home-address-box-tatemonomei__label-nini-tatemonomei
+              任意
+          .mydata-registration__text-area__box__text
+            %input{type: "text", class: "mydata-registration__text-area__box__text__tatemonomei-code-input",placeholder: "例) 柳ビル103"}
+            %form
+          %button{type: "submit", class: "submit"}
+            変更する
+          .mydata-registration__text-area__box__kakunin
+            本人情報の登録について
+            = fa_icon 'angle-right'
+= render 'shared/footer'
+= render 'shared/buy'

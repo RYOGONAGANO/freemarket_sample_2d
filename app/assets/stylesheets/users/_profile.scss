@@ -1,13 +1,11 @@
 .profile{
-  width: 700px;
+  @include chapter;
   height: 568px;
-  margin: 8px 0 0 36.5px;
   &__top{
-    background-color: white;
     width: 700px;
     height: 50px;
     padding:8px,24px;
-    color: #333333;
+    color: colors(black);
     font-size: 24px;
     font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
     font-weight: bold;
@@ -43,7 +41,6 @@
           border: 1px solid #ccc;
           border-radius: 4px;
           line-height: 1.5;
-          background: #FFFFFF;
           padding:10px 16px 8px;
           font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
         }
@@ -51,7 +48,6 @@
     }
   }
   &__text-area{
-    background-color: white;
     width: 700px;
     height: 362px;
     margin: 0 auto;
@@ -66,18 +62,17 @@
         float:left;
         font-size: 16px;
         line-height: 1.5;
-        background: #fff;
         overflow: scroll;
         padding: 10px;
         font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
       }
       .submit{
-        background-color:#EA352D;
+        background-color: colors(btn-red);
         width: 668px;
         height: 50px;
         float: left;
         font-size: 14px;
-        color:#FFFFFF;
+        color: colors(white);
         margin: 0 auto;
         margin-top:16px;
         cursor: pointer;

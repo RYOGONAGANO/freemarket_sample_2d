@@ -6,10 +6,16 @@ $colors: (
   gray-white: #F5F5F5,
   gray2: #a9a9a985,
   gray-trans: #ffffff00,
-  red: #ea352d,
-  gray3: #aaa
-
-
+  gray3: #aaa,
+  ash: #f5f5f5,
+  white: #fff,
+  good: #ef5185,
+  nomal: #fba933,
+  bad: #6ab5d8,
+  btn-red: #ea352d,
+  title-gray: #888,
+  ber-gray:#ccc,
+  facebook-blue: #385185
 );
 
 @function colors($key) {

@@ -2,9 +2,9 @@
 @mixin btn ($background-color:#AAAAAA,$margin-top:15px){
   font-size: 14px;
   color: white;
-  height: 50px;  
+  height: 50px;
   width: 320px;
-  display: grid; 
+  display: grid;
   margin-top: $margin-top;
   background-color: $background-color;
 }
@@ -27,9 +27,10 @@
   font-size: 16px;
 }
 
-@mixin chapter() {
-  margin: 8px 36.5px 0;
+@mixin chapter($top: 8px, $landr: 36.5px) {
+  margin: $top $landr 0;
   width: 700px;
+  background-color: colors(white);
 }
 
 @mixin price{
@@ -100,4 +101,54 @@
     right: 40px;
     color: #888;
  }
+}
+@mixin required{
+  background-color: #EA352D;
+  color: white;
+  width: 32px;
+  height: 19px;
+  display: inline-block;
+  font-size: 13px;
+  border-radius: 2px;
+  padding: 2px;
+  margin-left: 5px;
+}
+
+@mixin input-form {
+  width: 343px;
+  height: 48px;
+  border-radius: 5px;
+  border: solid 1px #80808073;
+}
+@mixin clearfix{
+  clear: both;
+  display: block;
+  content: '';
+}
+
+@mixin textfield{
+  width: 572px;
+  height: 48px;
+  border: 1px solid colors(ber-gray);
+  border-radius: 4px;
+  line-height: 1.5;
+  background-color: colors(white);
+  padding:10px 16px 8px;
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  font-size: 16px;
+}
+
+@mixin label-nini-gray{
+  height:19px;
+  width:32px;
+  font-size: 12px;
+  background-color: colors(ber-gray);
+  color: colors(white);
+  margin-left: 8px;
+  margin-top: 1px;
+  border-radius: 2px;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 4px;
+
 }
