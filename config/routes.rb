@@ -5,10 +5,12 @@ Rails.application.routes.draw do
   resources :users do
     collection do
       get :profile
+      get :profilechange
       get :authentication
       get :login
       get :logout
       get :member_information_input
+      get :address
     end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

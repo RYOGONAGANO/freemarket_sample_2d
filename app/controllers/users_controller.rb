@@ -8,6 +8,9 @@ class UsersController < ApplicationController
     @user.user_detail.build
   end
 
+  def edit
+  end
+
   def show
   end
 
