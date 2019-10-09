@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       get :profile
       get :profilechange
       get :card_data_delete
+      get :card_data_input
       get :authentication
       get :login_page
       get :logout
