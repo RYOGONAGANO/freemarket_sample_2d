@@ -24,14 +24,15 @@
         .content__main1__category1__next__icon
           = fa_icon "angle-right"
       .content__main1__category1__box
-        .content__main1__category1__box__item1
-          .content__main1__category1__box__item1__image
-            = image_tag "item-interim.jpg"
-            .content__main1__category1__box__item1__image__price
-              ¥2,100
-          .content__main1__category1__box__item1__name
-            テスト商品名-test-test-test-test-test-test-tes
-            .content__main1__category1__box__item1__name__opacity
+        = link_to product_path(id: [1]) do
+          .content__main1__category1__box__item1
+            .content__main1__category1__box__item1__image
+              = image_tag "test_product.jpg"
+              .content__main1__category1__box__item1__image__price
+                ¥12,500
+            .content__main1__category1__box__item1__name
+              テスト商品名-test-test-test-test-test-test-tes
+              .content__main1__category1__box__item1__name__opacity
         .content__main1__category1__box__item2
           .content__main1__category1__box__item2__image
             = image_tag "item-interim.jpg"

@@ -96,7 +96,7 @@
     .exhibit__box__price
       .exhibit__box__price__leftbox
         .exhibit__box__price__leftbox__title
-          販売価格(300〜9,999,999)
+          販売価格(300〜9,999,999) 
           %i.fas.fa-question-circle
       .exhibit__box__price__rightbox
         .exhibit__box__price__rightbox__value
@@ -139,5 +139,5 @@
           = form_with(model: @test, local: true) do |f|
             = f.submit "出品する",  class: "exhibit-submit"
         .exhibit__box__confirmation__box__return-btn
-          = link_to "もどる", new_test_path, class: "return-link"
+          = link_to "もどる", tests_path, class: "return-link"
 = render "shared/copywrite-bottom" 
