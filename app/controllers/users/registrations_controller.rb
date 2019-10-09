@@ -9,7 +9,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
   # def new
   #   super
   # end
-
+  def new
+    @user = User.new
+    @user_detail = @user.build_user_detail
+  end
   # POST /resource
   private
     def check_captcha

@@ -89,8 +89,8 @@
               .member-information-namekatakana__text__reqired
                 必須
             .member-information-namekatakana__form
-              = f.text_field :first_name_kana,placeholder:"例)ヤマダ", class: "member-information-namekatakana__form__last-name"
-              = f.text_field :last_name_kana ,placeholder:"例)アヤ", class: "member-information-namekatakana__form__name"
+              = f.text_field :first_name_kata,placeholder:"例)ヤマダ", class: "member-information-namekatakana__form__last-name"
+              = f.text_field :last_name_kata ,placeholder:"例)アヤ", class: "member-information-namekatakana__form__name"
 
           .member-information-birthday
             .member-information-birthday__text
@@ -116,9 +116,8 @@
             = link_to  '', class: 'member-information-other__terms__btn' do
               利用規約
             %p に同意したものとみなします。
-          %button{type: "submit", class: "member-information-other__nextbtn"}
-            次へ進む
+          = form.submit '次へ進む', class: "member-information-other__nextbtn"
           = link_to  '', class: 'member-information-other__about-personal-information' do
             本人情報の登録について
-            %i.fas.fa-angle-right
+            = fa_icon 'angle-right'
   = render 'shared/copywrite-bottom'
