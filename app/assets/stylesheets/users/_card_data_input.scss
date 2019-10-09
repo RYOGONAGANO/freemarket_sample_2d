@@ -1,0 +1,123 @@
+.card-data-input{
+  width: 700px;
+  height: 50px;
+  margin: 8px 0 0 36.5px;
+  &__top{
+    width: 700px;
+    height: 50px;
+    padding: 8px 24px;
+    background-color: colors(white);
+    color: colors(black);
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  &__information{
+    width: 700px;
+    height: 512px;
+    padding: 40px 40px 64px;
+    background-color: colors(white);
+    color: colors(black);
+    font-size: 14px;
+    font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 2px;
+    &__box{
+      width: 343px;
+      color: colors(black);
+      font-size: 14px;
+      margin: 0 138.5px;
+      &__card-number-box{
+        // margin-top: 40px;
+        display:flex;
+        &__card-number{
+          width: 70px;
+          height: 14px;
+          color: colors(black);      
+          font-size: 14px;
+          font-weight: bold;
+        }
+        &__label-hisu{
+          width: 32px;
+          height: 19px;
+          color: colors(white);      
+          font-size: 12px;
+          background-color: colors(btn-red);
+          margin-left:8px;
+          padding:2px 4px;
+          border-radius: 2px
+          include label
+
+
+
+
+
+        }
+      }
+
+      // height: 407px;
+      // border-bottom: 1px solid colors(gray);
+    //   &__card-ichiran{
+    //     font-size: 16px;
+    //     font-weight: bold;
+    //     padding-left:125px;
+    //   }
+    //   &__card-companys{
+    //     width: 320px;
+    //     height: 64.09px;
+    //     padding:24px 0;
+    //     padding-left:125px;
+    //     &__box{
+    //       width: 320px;
+    //       height: 16.09px;
+    //       justify-content:space-between;
+    //       display:flex;
+    //       &__card-company{
+    //       }
+    //       &__card-delete{
+    //         color:colors(btn-red);
+    //         padding:4px 6px;
+    //         border-radius: 3px;
+    //         border: 1px solid colors(btn-red);
+    //         width: 70px;
+    //         height: 24px;
+    //         font-size:14px;
+    //         font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+    //         background-color: colors(white);
+    //         cursor: pointer;
+    //       }
+    //     }
+    //     &__card-number{
+    //       width: 320px;
+    //       height: 16px;
+    //       margin-top:8px;
+    //       font-size: 16px;
+    //     }
+    //     &__card-yearmonth{
+    //       width: 320px;
+    //       height: 16px;
+    //       margin-top:8px;
+    //       font-size: 16px;
+    //     }
+    //   }
+    // }
+    // &__box-payment{
+    //   width: 572px;
+    //   height: 185.11px;
+    //   margin-top:40px;
+    //   text-align:right;
+    //   &__payment-link{
+    //     color:colors(blue);
+    //     font-size:14px;
+    //     text-decoration: none;
+    //     cursor: pointer;
+    //   }
+    }
+  }
+}
