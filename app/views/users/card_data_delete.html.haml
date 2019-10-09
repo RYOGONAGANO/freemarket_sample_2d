@@ -2,25 +2,25 @@
 .mypage-contents
   = render 'shared/sidemenu'
   .mypage-main
-    .mydata-registration-creditcard
-      .mydata-registration-creditcard__top
+    .card-data-delete
+      .card-data-delete__top
         支払い方法
-      .mydata-registration-creditcard__information
-        .mydata-registration-creditcard__information__box
-          .mydata-registration-creditcard__information__box__card-ichiran
+      .card-data-delete__information
+        .card-data-delete__information__box
+          .card-data-delete__information__box__card-ichiran
             クレジットカード一覧
-          .mydata-registration-creditcard__information__box__card-companys
-            .mydata-registration-creditcard__information__box__card-companys__box
-              .mydata-registration-creditcard__information__box__card-companys__box__card-company
-                = image_tag "card-visa.svg", id: "mydata-registration-creditcard__information__box__card-companys__box__card-company__icon--visa", class: "mydata-registration-creditcard__information__box__card-companys__box__card-company__icon--visa", size: "49x15"
-              .mydata-registration-creditcard__information__box__card-companys__box__card-delete
+          .card-data-delete__information__box__card-companys
+            .card-data-delete__information__box__card-companys__box
+              .card-data-delete__information__box__card-companys__box__card-company
+                = image_tag "card-visa.svg", id: "card-data-delete__information__box__card-companys__box__card-company__icon--visa", class: "card-data-delete__information__box__card-companys__box__card-company__icon--visa", size: "49x15"
+              .card-data-delete__information__box__card-companys__box__card-delete
                 削除する
-            .mydata-registration-creditcard__information__box__card-companys__card-number
+            .card-data-delete__information__box__card-companys__card-number
               ************4351
-            .mydata-registration-creditcard__information__box__card-companys__card-yearmonth
+            .card-data-delete__information__box__card-companys__card-yearmonth
               08 / 26
-        .mydata-registration-creditcard__information__box-payment
-          .mydata-registration-creditcard__information__box-payment__payment-link
+        .card-data-delete__information__box-payment
+          .card-data-delete__information__box-payment__payment-link
             支払い方法について
             = fa_icon 'angle-right'
 = render 'shared/footer'
