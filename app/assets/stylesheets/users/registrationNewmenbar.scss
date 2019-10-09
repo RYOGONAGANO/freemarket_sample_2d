@@ -16,12 +16,12 @@
   width: 700px;
   height: 384px;
   margin: 0 auto;
-  background: colors(ash);
+  background: colors(white);
 
     &__header{
     width: 700px;
     height: 97px;
-    background: colors(ash);
+    background: colors(white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,18 +30,18 @@
     &__box{
     width: 700px;
     height: 287px;
-    background: colors(ash);
+    background: colors(white);
     display: flex;
     justify-content: center;
     align-items: center;
       &__boxs{
       width: 343px;
       height: 182px;
-      background: colors(ash);
+      background: colors(white);
         &__mail{
         width: 343px;
         height: 50px;
-        background: colors(ash);
+        background: colors(white);
         text-align: center;
         }
         .mailaddress{
@@ -63,7 +63,7 @@
         &__facebook{
           width: 343px;
           height: 50px;
-          background: colors(ash);
+          background: colors(white);
           margin: 16px 0px 0px
         }
         .facebook{
@@ -86,7 +86,7 @@
         &__google{
           width: 343px;
           height: 50px;
-          background: colors(ash);
+          background: colors(white);
           margin: 16px 0px 0px;
           display: flex;
           justify-content: center;
@@ -95,7 +95,7 @@
         .google{
           width: 328px;
           height: 50px;
-          background: colors(ash);
+          background: colors(white);
           font-size: 13px;
           background: url('google.icon.png');
           background-size: 17px;
