@@ -2,7 +2,6 @@
   width: 700px;
   height: 50px;
   margin: 8px 0 0 36.5px;
-
   &__top{
     width: 700px;
     height: 50px;
@@ -25,7 +24,6 @@
     color: colors(black);
     font-size: 14px;
     font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
-    // display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
@@ -33,38 +31,25 @@
     &__box{
       width: 572px;
       height: 129.09px;
-      // color: colors(black);
-      // font-size: 14px;
-      // font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
-      // display: flex;
-      // align-items: center;
-      // justify-content: center;
-      // margin: 0 auto;
-      // padding: 24px 0;
       border-bottom: 1px solid colors(gray);
-
       &__card-ichiran{
         font-size: 16px;
         font-weight: bold;
         padding-left:125px;
-        // text-align: center;
       }
       &__card-companys{
         width: 320px;
         height: 64.09px;
         padding:24px 0;
         padding-left:125px;
-
         &__box{
           width: 320px;
           height: 16.09px;
           justify-content:space-between;
           display:flex;
           &__card-company{
-            // margin-top:10px;
           }
           &__card-delete{
-            // margin-top:10px;
             color:colors(btn-red);
             padding:4px 6px;
             border-radius: 3px;
@@ -75,13 +60,12 @@
             font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
             background-color: colors(white);
             cursor: pointer;
-
           }
         }
         &__card-number{
           width: 320px;
           height: 16px;
-          margin-top:16px;
+          margin-top:8px;
           font-size: 16px;
         }
         &__card-yearmonth{

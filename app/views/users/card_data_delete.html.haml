@@ -12,10 +12,9 @@
           .mydata-registration-creditcard__information__box__card-companys
             .mydata-registration-creditcard__information__box__card-companys__box
               .mydata-registration-creditcard__information__box__card-companys__box__card-company
-                VISA
+                = image_tag "card-visa.svg", id: "mydata-registration-creditcard__information__box__card-companys__box__card-company__icon--visa", class: "mydata-registration-creditcard__information__box__card-companys__box__card-company__icon--visa", size: "49x15"
               .mydata-registration-creditcard__information__box__card-companys__box__card-delete
                 削除する
-
             .mydata-registration-creditcard__information__box__card-companys__card-number
               ************4351
             .mydata-registration-creditcard__information__box__card-companys__card-yearmonth
@@ -24,10 +23,5 @@
           .mydata-registration-creditcard__information__box-payment__payment-link
             支払い方法について
             = fa_icon 'angle-right'
-
-
-
-
-
 = render 'shared/footer'
 = render 'shared/buy'
