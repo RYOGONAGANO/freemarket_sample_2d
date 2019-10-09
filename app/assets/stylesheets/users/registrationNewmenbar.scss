@@ -1,27 +1,20 @@
 .registrationNewmenbar-body{
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background: colors(gray);
 }
-.registrationNewmenbar-header{
-  width: 1440px;
-  height: 128px;
-  background: colors(gray);
-}
+
 .registrationNewmenbar-maincontent{
-  width: 1440px;
+  width: 100%;
   height: 384px;
   background: colors(gray);
   &__contents{
-  width: 700px;
+  @include chapter(0, auto);
   height: 384px;
-  margin: 0 auto;
-  background: colors(white);
 
     &__header{
     width: 700px;
     height: 97px;
-    background: colors(white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,18 +23,15 @@
     &__box{
     width: 700px;
     height: 287px;
-    background: colors(white);
     display: flex;
     justify-content: center;
     align-items: center;
       &__boxs{
       width: 343px;
       height: 182px;
-      background: colors(white);
         &__mail{
         width: 343px;
         height: 50px;
-        background: colors(white);
         text-align: center;
         }
         .mailaddress{
@@ -51,7 +41,6 @@
           color: white;
           font-size: 13px;
           &__icon{
-            display: inline;
             float: left;
             font-size: 20px;
             margin: 15px;
@@ -63,14 +52,13 @@
         &__facebook{
           width: 343px;
           height: 50px;
-          background: colors(white);
           margin: 16px 0px 0px
         }
         .facebook{
           width: 328px;
           height: 50px;
           background: colors(facebook-blue);
-          color: white;
+          color: colors(white);
           font-size: 13px;
           margin: 0 auto;
           display: flex;
@@ -86,7 +74,6 @@
         &__google{
           width: 343px;
           height: 50px;
-          background: colors(white);
           margin: 16px 0px 0px;
           display: flex;
           justify-content: center;
@@ -95,7 +82,6 @@
         .google{
           width: 328px;
           height: 50px;
-          background: colors(white);
           font-size: 13px;
           background: url('google.icon.png');
           background-size: 17px;
