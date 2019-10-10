@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       get :registrationNewmenbar
       get :address
       get :mypage
+      get :member_information_input
     end
   end
   resources :products
