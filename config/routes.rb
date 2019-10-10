@@ -2,6 +2,11 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'users#index'
   resources :tests
+  resources :products do
+    collection do
+      get :show
+    end
+  end
   resources :users do
     collection do
       get :profile
