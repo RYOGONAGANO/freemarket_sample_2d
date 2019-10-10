@@ -5,9 +5,8 @@ class CreateUserDetails < ActiveRecord::Migration[5.2]
       t.string      :last_name,        null: false
       t.string      :first_name_kata,  null: false
       t.string      :last_name_kata,   null: false
-      t.integer     :birthday,       null: false, defalut: "0"
-      t.string      :sms_phone,        null: false, unique: true
-      t.string      :postal_code,      null: false
+      t.date        :birthday,         null: false, defalut: "0"
+      t.string      :sms_phone
       t.string      :phone
       t.text        :profile
       t.references  :user,             null: false, foreign_key: true

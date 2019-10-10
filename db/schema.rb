@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2019_10_08_020013) do
   end
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "postal_code", null: false
     t.integer "prefectures", default: 0, null: false
     t.string "city", null: false
     t.string "address", null: false
@@ -54,9 +55,8 @@ ActiveRecord::Schema.define(version: 2019_10_08_020013) do
     t.string "last_name", null: false
     t.string "first_name_kata", null: false
     t.string "last_name_kata", null: false
-    t.integer "birthday", null: false
-    t.string "sms_phone", null: false
-    t.string "postal_code", null: false
+    t.date "birthday", null: false
+    t.string "sms_phone"
     t.string "phone"
     t.text "profile"
     t.bigint "user_id", null: false
