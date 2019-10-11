@@ -18,6 +18,7 @@ Rails.application.routes.draw do
       get :authentication
       get :address
       get :regist_complete # 登録完了後のページ
+      get :member_information_input
     end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
