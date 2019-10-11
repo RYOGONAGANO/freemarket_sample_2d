@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'users#index'
+  root to: 'tests#index'
   resources :tests
   resources :users do
     collection do

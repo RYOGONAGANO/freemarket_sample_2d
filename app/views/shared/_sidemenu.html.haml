@@ -2,7 +2,7 @@
   .mypage-menu-lists
     %ul.mypage-menu-list
       %li
-        = link_to root_path, class: "mypage-menu-list__line" do
+        = link_to mypage_users_path, class: "mypage-menu-list__line" do
           マイページ
           .mypage-menu-list__line--arrow
             = fa_icon "chevron-right"
@@ -73,7 +73,7 @@
       設定
     %ul.mypage-menu-list
       %li
-        = link_to root_path, class: "mypage-menu-list__line" do
+        = link_to profile_users_path, class: "mypage-menu-list__line" do
           プロフィール
           = fa_icon "chevron-right"
       %li
@@ -89,7 +89,7 @@
           メール/パスワード
           = fa_icon "chevron-right"
       %li
-        = link_to root_path, class: "mypage-menu-list__line" do
+        = link_to profilechange_users_path, class: "mypage-menu-list__line" do
           本人情報
           = fa_icon "chevron-right"
       %li
@@ -97,6 +97,6 @@
           電話番号の確認
           = fa_icon "chevron-right"
       %li
-        = link_to root_path, class: "mypage-menu-list__line", id: "active" do
+        = link_to logout_users_path, class: "mypage-menu-list__line", id: "active" do
           ログアウト
           = fa_icon "chevron-right"
