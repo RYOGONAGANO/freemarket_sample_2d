@@ -1,21 +1,21 @@
 = render 'shared/logo-onlyheader'
 .authentication-contents
-  .main-items
-    .title
+  .authentication-mainitems
+    .authentication-mainitems__title
       認証番号の確認
-    .input-screen
-      .content
-        .content__text
+    .authentication-input-screen
+      .authentication-input-screen__maincontent
+        .authentication-input-screen__maincontent__text
           ***-****-1234にSMSでお送りした6桁の認証番号を入力してください。
-        .content__authentication
-          .content__authentication__text
+        .authentication-input-screen__maincontent__authentication
+          .authentication-input-screen__maincontent__authentication__text
             認証番号
-          .content__authentication__inputs
-            %input{type: "text", placeholder:"6桁の暗証番号を入力", class: "content__authentication__input"}
+            
+          %input{type: "text", placeholder:"6桁の暗証番号を入力", class: "authentication-input-screen__maincontent__authentication__input"}
 
-            %button{type: "submit", class: "content__submit-btn"}
-              認証して完了
-    .no-reach
+          %button{type: "submit", class: "authentication-input-screen__maincontent__authentication__submit-btn"}
+            認証して完了
+    .no-reachnumber
       .no-reach-content
         .no-reach-content__guide
           60秒たっても認証番号が届かない方へ
