@@ -34,7 +34,6 @@
       font-size: 14px;
       margin: 0 138.5px;
       &__card-number-box{
-        // margin-top: 40px;
         display:flex;
         &__card-number{
           width: 70px;
@@ -45,16 +44,8 @@
           margin-top:2px;
         }
         &__label-hisu{
-          width: 32px;
-          height: 19px;
-          color: colors(white);      
-          font-size: 12px;
+          @include label-nini-gray;
           background-color: colors(btn-red);
-          margin-left:8px;
-          padding:2px 4px;
-          border-radius: 2px;
-          align-items: center;
-          justify-content: center;
         }
       }
       &__text{
@@ -69,9 +60,28 @@
         height: 20px;
         color: colors(black);      
         margin-top:8px;
-
         &__card-name{
-
+          display:flex;
+          &__visa{
+            margin-right:8px;
+          }
+          &__master{
+            margin-right:8px;
+          }
+          &__saison{
+            margin-right:8px;
+          }
+          &__jcb{
+            margin-right:8px;
+          }
+          &__american{
+            margin-right:8px;
+          }
+          &__dinersclub{
+            margin-right:8px;
+          }
+          &__discover{
+          }
         }
       }
       &__expiration-date-box{
@@ -89,16 +99,8 @@
           margin-top:2px;
         }
         &__label-hisu{
-          width: 32px;
-          height: 19px;
-          color: colors(white);      
-          font-size: 12px;
+          @include label-nini-gray;
           background-color: colors(btn-red);
-          margin-left:8px;
-          padding:2px 4px;
-          border-radius: 2px;
-          align-items: center;
-          justify-content: center;
         }
       }
       &__expiration-yearmonth-box{
@@ -133,7 +135,6 @@
             align-items: center;
             justify-content: center;
             margin:17px 13px 0 0;
-
           }
         }
         &__expiration-year-box{
@@ -170,7 +171,6 @@
       }
       &__security-date-box{
         width: 343px;
-        // height: 70px;
         color: colors(black);
         font-size:14px;
         margin-top: 24px;
@@ -184,16 +184,8 @@
           margin-top:2px;
         }
         &__label-hisu{
-          width: 32px;
-          height: 19px;
-          color: colors(white);      
-          font-size: 12px;
+          @include label-nini-gray;
           background-color: colors(btn-red);
-          margin-left:8px;
-          padding:2px 4px;
-          border-radius: 2px;
-          align-items: center;
-          justify-content: center;
         }
       }
       &__text{
@@ -203,81 +195,27 @@
           width: 343px;
         }
       }
+      &__secret-code{
+        width:343px;
+        height:15px;
+        color: colors(blue);
+        font-size: 14px;
+        padding-top:8px;
+        text-align: right;
+        &__text{
+        }
+      }
+      &__text-area{
+        .submit{
+          margin-top:39px;
+          width:343px;
+          height:50px;
+          color: colors(white);
+          background-color: colors(btn-red);
+          font-size:14px;
+          cursor: pointer;
+        }
+      }
     }
   }
 }
-
-
-          // &__expiration-month-box{
-          //   width: 169.5px;
-          //   height: 48px;
-          //   color: colors(black);
-          //   font-size: 14px;
-          //   background-color: colors(white);
-          //   margin-top:8px;
-          // }
-  
-
-
-
-
-
-
-
-      // height: 407px;
-      // border-bottom: 1px solid colors(gray);
-    //   &__card-ichiran{
-    //     font-size: 16px;
-    //     font-weight: bold;
-    //     padding-left:125px;
-    //   }
-    //   &__card-companys{
-    //     width: 320px;
-    //     height: 64.09px;
-    //     padding:24px 0;
-    //     padding-left:125px;
-    //     &__box{
-    //       width: 320px;
-    //       height: 16.09px;
-    //       justify-content:space-between;
-    //       display:flex;
-    //       &__card-company{
-    //       }
-    //       &__card-delete{
-    //         color:colors(btn-red);
-    //         padding:4px 6px;
-    //         border-radius: 3px;
-    //         border: 1px solid colors(btn-red);
-    //         width: 70px;
-    //         height: 24px;
-    //         font-size:14px;
-    //         font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
-    //         background-color: colors(white);
-    //         cursor: pointer;
-    //       }
-    //     }
-    //     &__card-number{
-    //       width: 320px;
-    //       height: 16px;
-    //       margin-top:8px;
-    //       font-size: 16px;
-    //     }
-    //     &__card-yearmonth{
-    //       width: 320px;
-    //       height: 16px;
-    //       margin-top:8px;
-    //       font-size: 16px;
-    //     }
-    //   }
-    // }
-    // &__box-payment{
-    //   width: 572px;
-    //   height: 185.11px;
-    //   margin-top:40px;
-    //   text-align:right;
-    //   &__payment-link{
-    //     color:colors(blue);
-    //     font-size:14px;
-    //     text-decoration: none;
-    //     cursor: pointer;
-    //   }

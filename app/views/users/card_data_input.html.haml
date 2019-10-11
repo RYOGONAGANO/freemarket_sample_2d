@@ -13,16 +13,23 @@
             .card-data-input__information__box__card-number-box__label-hisu
               必須
           .card-data-input__information__box__text
-            %input{type: "text", class: "card-data-input__information__box__text__card-number-input",placeholder: "例）半角数字のみ"}
+            %input{type: "text", class: "card-data-input__information__box__text__card-number-input",placeholder: "半角数字のみ"}
           .card-data-input__information__box__card-list-box
             .card-data-input__information__box__card-list-box__card-name
-              = image_tag "card-visa.svg", id: "card-data-input__information__box__card-list-box__card-name__icon-visa", class: "card-data-input__information__box__card-list-box__card-name__icon-visa", size: "49x20"
-              = image_tag "card-master.svg", id: "card-data-input__information__box__card-list-box__card-name__icon-master", class: "card-data-input__information__box__card-list-box__card-name__icon-master", size: "34x20"
-              = image_tag "card-saison.svg", id: "card-data-input__information__box__card-list-box__card-name__icon-saison", class: "card-data-input__information__box__card-list-box__card-name__icon-saison", size: "30x20"
-              = image_tag "card-jcb.svg", id: "card-data-input__information__box__card-list-box__card-name__icon-jcb", class: "card-data-input__information__box__card-list-box__card-name__icon-jcb", size: "32x20"
-              = image_tag "card-american.svg", id: "card-data-input__information__box__card-list-box__card-name__icon-american", class: "card-data-input__information__box__card-list-box__card-name__icon-american", size: "21x20"
-              = image_tag "card-dinersclub.svg", id: "card-data-input__information__box__card-list-box__card-name__icon-dinersclub", class: "card-data-input__information__box__card-list-box__card-name__icon-dinersclub", size: "32x20"
-              = image_tag "card-discover.svg", id: "card-data-input__information__box__card-list-box__card-name__icon-discover", class: "card-data-input__information__box__card-list-box__card-name__icon-discover", size: "32x20"
+              .card-data-input__information__box__card-list-box__card-name__visa
+                = image_tag "card-visa.svg", id: "card-data-input__information__box__card-list-box__card-name__icon-visa", class: "card-data-input__information__box__card-list-box__card-name__icon-visa", size: "49x20"
+              .card-data-input__information__box__card-list-box__card-name__master
+                = image_tag "card-master.svg", id: "card-data-input__information__box__card-list-box__card-name__icon-master", class: "card-data-input__information__box__card-list-box__card-name__icon-master", size: "34x20"
+              .card-data-input__information__box__card-list-box__card-name__saison
+                = image_tag "card-saison.svg", id: "card-data-input__information__box__card-list-box__card-name__icon-saison", class: "card-data-input__information__box__card-list-box__card-name__icon-saison", size: "30x20"
+              .card-data-input__information__box__card-list-box__card-name__jcb
+                = image_tag "card-jcb.svg", id: "card-data-input__information__box__card-list-box__card-name__icon-jcb", class: "card-data-input__information__box__card-list-box__card-name__icon-jcb", size: "32x20"
+              .card-data-input__information__box__card-list-box__card-name__american
+                = image_tag "card-american.svg", id: "card-data-input__information__box__card-list-box__card-name__icon-american", class: "card-data-input__information__box__card-list-box__card-name__icon-american", size: "21x20"
+              .card-data-input__information__box__card-list-box__card-name__dinersclub
+                = image_tag "card-dinersclub.svg", id: "card-data-input__information__box__card-list-box__card-name__icon-dinersclub", class: "card-data-input__information__box__card-list-box__card-name__icon-dinersclub", size: "32x20"
+              .card-data-input__information__box__card-list-box__card-name__discover
+                = image_tag "card-discover.svg", id: "card-data-input__information__box__card-list-box__card-name__icon-discover", class: "card-data-input__information__box__card-list-box__card-name__icon-discover", size: "32x20"
           .card-data-input__information__box__expiration-date-box
             .card-data-input__information__box__expiration-date-box__expiration-date
               有効期限
@@ -71,24 +78,13 @@
               必須
           .card-data-input__information__box__text
             %input{type: "text", class: "card-data-input__information__box__text__card-number-input",placeholder: "カード背面4桁もしくは3桁の番号"}
-
-
-
-          -# .card-data-input__information__box__card-ichiran
-          -#   クレジットカード一覧
-        -#   .card-data-input__information__box__card-companys
-        -#     .card-data-input__information__box__card-companys__box
-        -#       .card-data-input__information__box__card-companys__box__card-company
-        -#         = image_tag "card-visa.svg", id: "card-data-input__information__box__card-companys__box__card-company__icon--visa", class: "card-data-input__information__box__card-companys__box__card-company__icon--visa", size: "49x15"
-        -#       .card-data-input__information__box__card-companys__box__card-delete
-        -#         削除する
-        -#     .card-data-input__information__box__card-companys__card-number
-        -#       ************4351
-        -#     .card-data-input__information__box__card-companys__card-yearmonth
-        -#       08 / 26
-        -# .card-data-input__information__box-payment
-        -#   .card-data-input__information__box-payment__payment-link
-        -#     支払い方法について
-        -#     = fa_icon 'angle-right'
+          .card-data-input__information__box__secret-code
+            .card-data-input__information__box__secret-code__image-quesution
+              = fa_icon 'question-circle'
+              カード裏面の番号とは？
+          .card-data-input__information__box__text-area
+            %form
+              %button{type: "submit", class: "submit"}
+                追加する
 = render 'shared/footer'
 = render 'shared/buy'
