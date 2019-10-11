@@ -28,11 +28,49 @@
               有効期限
             .card-data-input__information__box__expiration-date-box__label-hisu
               必須
-          .card-data-input__information__box__expiration-month-box__text
-            %input{type: "text", class: "card-data-input__information__box__expiration-month-box__text",placeholder: "例）半角数字のみ"}
-          .card-data-input__information__box__expiration-month-box__text-month
-            月
-
+          .card-data-input__information__box__expiration-yearmonth-box
+            .card-data-input__information__box__expiration-yearmonth-box__expiration-month-box__text
+              %select{class: "card-data-input__information__box__expiration-yearmonth-box__expiration-month-box__text"}
+                %option 01
+                %option 02
+                %option 03
+                %option 04
+                %option 05
+                %option 06
+                %option 07
+                %option 08
+                %option 09
+                %option 10
+                %option 11
+                %option 12
+            .card-data-input__information__box__expiration-yearmonth-box__expiration-month-box__text__icon-chevron-down
+              = fa_icon 'chevron-down'
+            .card-data-input__information__box__expiration-yearmonth-box__expiration-month-box__text-month
+              月
+            .card-data-input__information__box__expiration-yearmonth-box__expiration-year-box__text
+              %select{class: "card-data-input__information__box__expiration-yearmonth-box__expiration-year-box__text"}
+                %option 19
+                %option 20
+                %option 21
+                %option 22
+                %option 23
+                %option 24
+                %option 25
+                %option 26
+                %option 27
+                %option 28
+                %option 29
+            .card-data-input__information__box__expiration-yearmonth-box__expiration-year-box__text__icon-chevron-down
+              = fa_icon 'chevron-down'
+            .card-data-input__information__box__expiration-yearmonth-box__expiration-year-box__text-year
+              日
+          .card-data-input__information__box__security-date-box
+            .card-data-input__information__box__security-date-box__security-date
+              セキュリティコード
+            .card-data-input__information__box__security-date-box__label-hisu
+              必須
+          .card-data-input__information__box__text
+            %input{type: "text", class: "card-data-input__information__box__text__card-number-input",placeholder: "カード背面4桁もしくは3桁の番号"}
 
 
 

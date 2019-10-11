@@ -76,7 +76,6 @@
       }
       &__expiration-date-box{
         width: 343px;
-        // height: 70px;
         color: colors(black);
         font-size:14px;
         margin-top: 24px;
@@ -102,25 +101,106 @@
           justify-content: center;
         }
       }
-      &__expiration-month-box{
-        width: 343px;
-        height: 56px;
-        &__text{
-          .card-data-input__information__box__expiration-month-box__text{
-            margin-top: 8px;
-            @include textfield;
-            width: 131.5px;
-            height: 48px;
+      &__expiration-yearmonth-box{
+        display:flex;
+        margin-top: 8px;
+        &__expiration-month-box{
+          width: 343px;
+          height: 56px;
+          &__text{
+            .card-data-input__information__box__expiration-yearmonth-box__expiration-month-box__text{
+              @include textfield;
+              width: 131.5px;
+              height: 48px;
+              cursor: pointer;
+              -webkit-appearance: none;
+              box-sizing: border-box;
+            }
+            &__icon-chevron-down{
+              width: 15px;
+              height: 15px;
+              top:18px;
+              left:-25px;
+              position: relative;
+              pointer-events: none;
+            }
+          }
+          &__text-month{
+            width: 14px;
+            height: 18px;
+            color: colors(black);
+            font-size:14px;
+            align-items: center;
+            justify-content: center;
+            margin:17px 13px 0 0;
+
           }
         }
-        &__text-month{
-          width: 14px;
-          height: 18px;
+        &__expiration-year-box{
+          width: 343px;
+          height: 56px;
+          &__text{
+            .card-data-input__information__box__expiration-yearmonth-box__expiration-year-box__text{
+              @include textfield;
+              width: 131.5px;
+              height: 48px;
+              cursor: pointer;
+              -webkit-appearance: none;
+              box-sizing: border-box;
+            }
+            &__icon-chevron-down{
+              width: 15px;
+              height: 15px;
+              top:18px;
+              left:-25px;
+              position: relative;
+              pointer-events: none;
+            }
+          }
+          &__text-year{
+            width: 14px;
+            height: 18px;
+            color: colors(black);
+            font-size:14px;
+            align-items: center;
+            justify-content: center;
+            margin:17px 13px 0 0;
+          }
+        }
+      }
+      &__security-date-box{
+        width: 343px;
+        // height: 70px;
+        color: colors(black);
+        font-size:14px;
+        margin-top: 24px;
+        display:flex;
+        &__security-date{
+          width: 125.59px;
+          height: 14px;
           color: colors(black);
-          font-size:14px;
+          font-size: 14px;
+          font-weight: bold;
+          margin-top:2px;
+        }
+        &__label-hisu{
+          width: 32px;
+          height: 19px;
+          color: colors(white);      
+          font-size: 12px;
+          background-color: colors(btn-red);
+          margin-left:8px;
+          padding:2px 4px;
+          border-radius: 2px;
           align-items: center;
           justify-content: center;
-          display:flex;
+        }
+      }
+      &__text{
+        margin-top: 8px;
+        .card-data-input__information__box__text__card-number-input{
+          @include textfield;
+          width: 343px;
         }
       }
     }
