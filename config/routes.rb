@@ -6,7 +6,11 @@ Rails.application.routes.draw do
     collection do
       get :profile
       get :profilechange
-      get :login
+      get :card_data_delete
+      get :card_data_input
+      get :card_data_create
+      get :authentication
+      get :login_page
       get :logout
       get :registrationNewmenbar
     end
