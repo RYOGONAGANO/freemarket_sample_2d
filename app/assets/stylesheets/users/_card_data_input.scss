@@ -36,32 +36,14 @@
         }
       }
       &__card-list-box{
-        width: 343px;
+        // width: 343px;
+        width: 278px;
         height: 20px;
         color: colors(black);      
         margin-top:8px;
         &__card-name{
           display:flex;
-          &__visa{
-            margin-right:8px;
-          }
-          &__master{
-            margin-right:8px;
-          }
-          &__saison{
-            margin-right:8px;
-          }
-          &__jcb{
-            margin-right:8px;
-          }
-          &__american{
-            margin-right:8px;
-          }
-          &__dinersclub{
-            margin-right:8px;
-          }
-          &__discover{
-          }
+          justify-content: space-between;
         }
       }
       &__expiration-date-box{
