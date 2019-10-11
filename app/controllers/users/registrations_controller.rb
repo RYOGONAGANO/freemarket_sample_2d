@@ -13,16 +13,37 @@ class Users::RegistrationsController < Devise::RegistrationsController
     @user = User.new
     @user_detail = @user.build_user_detail
   end
-  # POST /resource
+
+  def create
+    params[:user][:user_detail_attributes][:birthday] = birthday_join
+    @user = User.create(user_params)
+    redirect_to ''
+  end
+
   private
-    def check_captcha
-      unless verify_recaptcha
-        self.resource = resource_class.new sign_up_params
-        resource.validate # Look for any other validation errors besides Recaptcha
-        set_minimum_password_length
-        respond_with resource
-      end
+
+  def user_params
+    params.require(:user).permit(:nickname, :email, :password, :password_confirmation, user_detail_attributes: [:first_name, :last_name, :first_name_kata, :last_name_kata, :birthday ])
+  end
+
+  def birthday_join
+    date = params[:birthday]
+
+    if date["birthday(1i)"].empty? && date["birthday(2i)"].empty? && date["birthday(3i)"].empty?
+      return
     end
+
+    return date["birthday(1i)"].to_s + "-" + date["birthday(2i)"].to_s + "-" + date["birthday(3i)"].to_s
+  end
+
+  def check_captcha
+    unless verify_recaptcha
+      self.resource = resource_class.new sign_up_params
+      resource.validate # Look for any other validation errors besides Recaptcha
+      set_minimum_password_length
+      respond_with resource
+    end
+  end
 
   # GET /resource/edit
   # def edit
