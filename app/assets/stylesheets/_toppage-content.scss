@@ -1,22 +1,20 @@
 .content {
   width: 99vw;
   margin-left: -1px;
-  &__top {
-    background: image-url("mercari-ad-toppage");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 785px;
-    width: 100%;
-    zoom: 0.5;
-    margin-left: -15px;
+  &__top{
+    img{
+      height: 370px;
+      border-top: ridge;
+      margin-right: -15px;
+      background-size: 100% 100%;
+      width: 100vw;
+    }
   }
   &__title1 {
     height: 171px;
-    margin-left: -7px;
-    margin-top: -2px;
+    width: 100vw;
     background-color: colors(white);
-    &__name {
+    &__name{
       font-size: 27px;
       font-weight: bold;
       text-align: center;

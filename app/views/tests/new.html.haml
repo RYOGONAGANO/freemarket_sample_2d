@@ -1,0 +1,134 @@
+= form_with(model: @test, local: true) do |f|
+  = render "shared/logo-onlyheader"
+  .exhibit
+    .exhibit__box
+      .exhibit__box__title
+        商品の情報を入力
+      .exhibit__box__image
+        .exhibit__box__image__in
+          .exhibit__box__image__in__title
+            .exhibit__box__image__in__title__name
+              出品画像
+            .exhibit__box__image__in__title__required
+              必須
+          .exhibit__box__image__in__message
+            最大10枚までアップロードできます
+          %label
+            .exhibit__box__image__in__upload
+              .exhibit__box__image__in__upload__message
+                = f.file_field :image, class: :img_upload
+                ドラッグアンドドロップ
+                %br
+                またはクリックしてファイルをアップロード
+      .exhibit__box__itemname
+        .exhibit__box__itemname__topbox
+          .exhibit__box__itemname__topbox__title
+            .exhibit__box__itemname__topbox__title__name
+              商品名
+            .exhibit__box__itemname__topbox__title__required
+              必須
+          = f.text_field :text, class: :product_name, placeholder: "商品名  (必須40文字まで)"
+        .exhibit__box__itemname__bottombox
+          .exhibit__box__itemname__bottombox__title
+            .exhibit__box__itemname__bottombox__title__name
+              商品の説明
+            .exhibit__box__itemname__bottombox__title__required
+              必須
+          = f.text_area :text, class: :product_detail, placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+      .exhibit__box__detail
+        .exhibit__box__detail__leftbox
+          .exhibit__box__detail__leftbox__title
+            商品の詳細
+        .exhibit__box__detail__rightbox
+          .exhibit__box__detail__rightbox__categorybox
+            .exhibit__box__detail__rightbox__categorybox__categorytitle
+              .exhibit__box__detail__rightbox__categorybox__categorytitle__name
+                カテゴリー
+              .exhibit__box__detail__rightbox__categorybox__categorytitle__required
+                必須
+            = f.select :category, [["レディース"],["メンズ"],["ベビー・キッズ"],["インテリア・住まい・小物"],["本・音楽・ゲーム"],["おもちゃ・ホビー・グッズ"],["コスメ・香水・美容"],["家電・スマホ・カメラ"],["スポーツ・レジャー"],["ハンドメイド"],["チケット"],["自転車・オートバイ"],["その他"]], prompt: "---"
+            %i.fas.fa-angle-down
+          .exhibit__box__detail__rightbox__statusbox
+            .exhibit__box__detail__rightbox__statusbox__statustitle
+              .exhibit__box__detail__rightbox__statusbox__statustitle__name
+                商品の状態
+              .exhibit__box__detail__rightbox__statusbox__statustitle__required
+                必須
+            = f.select :status, [["新品、未使用"],["未使用に近い"],["目立った傷や汚れなし"],["やや傷や汚れあり"],["傷や汚れあり"],["全体的に状態が悪い"]], prompt: "---"
+            %i.fas.fa-angle-down
+      .exhibit__box__delivery
+        .exhibit__box__delivery__leftbox
+          .exhibit__box__delivery__leftbox__title
+            配送について
+            %i.fas.fa-question-circle
+        .exhibit__box__delivery__rightbox
+          .exhibit__box__delivery__rightbox__deliverymoney
+            .exhibit__box__delivery__rightbox__deliverymoney__deliverytitle
+              .exhibit__box__delivery__rightbox__deliverymoney__deliverytitle__name
+                配送量の負担
+              .exhibit__box__delivery__rightbox__deliverymoney__deliverytitle__required
+                必須
+            = f.select :price, [], prompt: "---"
+            %i.fas.fa-angle-down
+          .exhibit__box__delivery__rightbox__deliveryarea
+            .exhibit__box__delivery__rightbox__deliveryarea__areatitle
+              .exhibit__box__delivery__rightbox__deliveryarea__areatitle__name
+                発送元の地域
+              .exhibit__box__delivery__rightbox__deliveryarea__areatitle__required
+                必須
+            = f.select :area, [], prompt: "---"
+            %i.fas.fa-angle-down
+          .exhibit__box__delivery__rightbox__deliveryday
+            .exhibit__box__delivery__rightbox__deliveryday__daytitle
+              .exhibit__box__delivery__rightbox__deliveryday__daytitle__name
+                発送までの日数
+              .exhibit__box__delivery__rightbox__deliveryday__daytitle__required
+                必須
+            = f.select :day, [], prompt: "---"
+            %i.fas.fa-angle-down
+      .exhibit__box__price
+        .exhibit__box__price__leftbox
+          .exhibit__box__price__leftbox__title
+            販売価格(300〜9,999,999) 
+            %i.fas.fa-question-circle
+        .exhibit__box__price__rightbox
+          .exhibit__box__price__rightbox__value
+            .exhibit__box__price__rightbox__value__valuetitle
+              .exhibit__box__price__rightbox__value__valuetitle__name
+                価格
+              .exhibit__box__price__rightbox__value__valuetitle__required
+                必須
+            .exhibit__box__price__rightbox__value__yenmark
+              %i.fas.fa-yen-sign
+            = f.text_field :value, class: :product_value, placeholder: "例）300"
+          .exhibit__box__price__rightbox__fee
+            .exhibit__box__price__rightbox__fee__title
+              販売手数料 (10%)
+            .exhibit__box__price__rightbox__fee__display
+              ー
+          .exhibit__box__price__rightbox__profit
+            .exhibit__box__price__rightbox__profit__title
+              販売利益
+            .exhibit__box__price__rightbox__profit__display
+              ー
+      .exhibit__box__confirmation
+        .exhibit__box__confirmation__box
+          .exhibit__box__confirmation__box__consenttext
+            .exhibit__box__confirmation__box__consenttext__1
+              = link_to "禁止されている出品", new_test_path, class: "consent1"
+              、
+              = link_to "行為", new_test_path, class: "consent2"
+              を必ずご確認ください。
+            .exhibit__box__confirmation__box__consenttext__2
+              またブランド品でシリアルナンバー等がある場合はご記載ください。
+              = link_to "偽ブランドの販売", new_test_path, class: "consent3"
+              は犯罪であり処罰される可能性があります。
+            .exhibit__box__confirmation__box__consenttext__3
+              また、出品をもちまして
+              = link_to "加盟店規約", new_test_path, class: "consent4"
+              に同意したことになります。
+          .exhibit__box__confirmation__box__exhibit-btn
+            = f.submit "出品する",  class: "exhibit-submit"
+          .exhibit__box__confirmation__box__return-btn
+            = link_to "もどる", tests_path, class: "return-link"
+  = render "shared/copywrite-bottom" 

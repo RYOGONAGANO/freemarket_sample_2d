@@ -69,6 +69,39 @@
   }
 }
 
+@mixin requiredname{
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background-color: colors(btn-red);
+  width: 32px;
+  height: 19px;
+  text-align: center;
+  line-height: 20px; 
+  border-radius: 10%;
+  margin-left: 10px;
+  margin-top: -4px;
+}
+
+@mixin focus{
+  &:focus{
+    border-color: rgb(0, 153, 255);
+    outline: 0;
+  }
+}
+
+
+@mixin fas-arrow{
+  .fas{
+    font-weight: 900;
+    float: right;
+    position: relative;
+    font-size: 25px;
+    top: 12px;
+    right: 40px;
+    color: #888;
+ }
+}
 @mixin required{
   background-color: #EA352D;
   color: white;
