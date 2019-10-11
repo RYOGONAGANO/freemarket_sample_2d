@@ -33,15 +33,16 @@
       height: 129.09px;
       border-bottom: 1px solid colors(gray);
       &__card-ichiran{
+        width: 320px;
         font-size: 16px;
         font-weight: bold;
-        padding-left:125px;
+        margin:0 auto;
       }
       &__card-companys{
         width: 320px;
         height: 64.09px;
         padding:24px 0;
-        padding-left:125px;
+        margin:0 auto;
         &__box{
           width: 320px;
           height: 16.09px;
