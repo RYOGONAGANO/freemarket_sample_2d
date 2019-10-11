@@ -28,7 +28,7 @@
   .member-information_input-entire
     .member-information_input-title
       会員情報入力
-    = form_with(model: @user, local: true, class: 'member-information_input-form') do |form|
+    = form_with(model: @user, local: true, url: authentication_signups_path, method: :get, class: 'member-information_input-form') do |form|
       .member-information-input_contents
         .member-information-input_contents__nickname
           .member-information-input_contents__nickname__form
@@ -53,7 +53,7 @@
               パスワード
             .member-information-input_contents__password__form__required
               必須
-          = form.text_field :password, placeholder:"7文字以上", autocomplete: "new-password", class: "member-information-input_contents__password__input-form"
+          = form.password_field :password, placeholder:"7文字以上", autocomplete: "new-password", class: "member-information-input_contents__password__input-form"
 
         .member-information-input_contents__password-again
           .member-information-input_contents__password-again__form
@@ -61,7 +61,7 @@
               パスワード(確認)
             .member-information-input_contents__password-again__form__required
               必須
-          = form.text_field :password_confirmation, placeholder:"7文字以上",autocomplete: "new-password", class: "member-information-input_contents__password-again__input-form"
+          = form.password_field :password_confirmation, placeholder:"7文字以上",autocomplete: "new-password", class: "member-information-input_contents__password-again__input-form"
 
         .member-information_identification
           .member-information_identification__title

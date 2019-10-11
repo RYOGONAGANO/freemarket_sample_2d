@@ -6,12 +6,18 @@ Rails.application.routes.draw do
     collection do
       get :profile
       get :profilechange
-      get :authentication
       get :login
       get :logout
-      get :member_information_input
       get :registrationNewmenbar
+    end
+  end
+
+  resources :signups do
+    collection do
+      get :member_information_input
+      get :authentication
       get :address
+      get :regist_complete # 登録完了後のページ
     end
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
