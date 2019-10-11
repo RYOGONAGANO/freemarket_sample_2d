@@ -6,20 +6,14 @@ class User < ApplicationRecord
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
-  validates :nickname, presence: true, length: { maximum:20 }
-  validates :email,    presence: true,uniqueness: true, format: { with: VALID_EMAIL_REGEX }
-  validates :password, presence: true, length: { minimum:7 , maximum: 128 }
-
-
-  # def password_complexity
-  #   if password.blank? || password =~ /^(?=.*?[a-zA-Z])(?=.*?[0-9]).{7,128}$/
-  #   end
-  # end
-
+  validates :nickname, presence: true, length: { maximum: 20 }
+  validates :email,    presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEX }
+  validates :password, presence: true, length: { minimum: 7, maximum: 128 }
 
   has_one :user_detail, dependent: :destroy
   accepts_nested_attributes_for :user_detail
   has_one :address, dependent: :destroy
+  accepts_nested_attributes_for :address
   has_one :evaluate
   has_many :evaluate_comments
   has_many :sales
@@ -31,4 +25,3 @@ class User < ApplicationRecord
   has_many :liked_products, through: :likes, source: :product
 
 end
-
