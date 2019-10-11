@@ -34,7 +34,6 @@
           color: colors(white);
           font-size: 13px;
           &__icon {
-            display: inline;
             float: left;
             font-size: 30px;
             margin: 7px;
@@ -55,9 +54,6 @@
           background-repeat: no-repeat;
           background-position-x: 15px;
           background-position-y: 15px;
-
-          &__icon {
-          }
           &__text {
             display: inline;
             font-size: 20px;
