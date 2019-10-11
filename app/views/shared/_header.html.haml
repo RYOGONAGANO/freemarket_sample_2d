@@ -1,6 +1,7 @@
 .header
   .header__title
-    .header__title__logo
+    = link_to tests_path do
+      .header__title__logo
     .header__title__search
       何かお探しですか ?
       = fa_icon "search"
@@ -11,6 +12,7 @@
         %span カテゴリーから探す
       .header__menu__left__brand
         .header__menu__left__brand__icon
+          = image_tag "brand-tag.png"
         .header__menu__left__brand__tag
           %span ブランドから探す
     .header__menu__right

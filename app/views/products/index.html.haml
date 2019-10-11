@@ -1,6 +1,7 @@
 = render "shared/header"
 .content
   .content__top
+    = image_tag "mercari-ad-toppage.png"
   .content__title1
     .content__title1__name
       -# 人気のカテゴリー
@@ -24,17 +25,18 @@
         .content__main1__category1__next__icon
           = fa_icon "angle-right"
       .content__main1__category1__box
-        .content__main1__category1__box__item1
-          .content__main1__category1__box__item1__image
-            = image_tag 'item-interim.jpg'
-            .content__main1__category1__box__item1__image__price
-              ¥2,100
-          .content__main1__category1__box__item1__name
-            テスト商品名-test-test-test-test-test-test-tes
-            .content__main1__category1__box__item1__name__opacity
+        = link_to product_path(id: [1]) do
+          .content__main1__category1__box__item1
+            .content__main1__category1__box__item1__image
+              = image_tag "test_product.jpg"
+              .content__main1__category1__box__item1__image__price
+                ¥12,500
+            .content__main1__category1__box__item1__name
+              テスト商品名-test-test-test-test-test-test-tes
+              .content__main1__category1__box__item1__name__opacity
         .content__main1__category1__box__item2
           .content__main1__category1__box__item2__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category1__box__item2__image__price
               ¥2,100
           .content__main1__category1__box__item2__name
@@ -42,23 +44,23 @@
             .content__main1__category1__box__item2__name__opacity
         .content__main1__category1__box__item3
           .content__main1__category1__box__item3__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category1__box__item3__image__price
               ¥2,100
           .content__main1__category1__box__item3__name
             テスト商品名-test-test-test-test-test-test-tes
             .content__main1__category1__box__item3__name__opacity
-        .content__main1__category1__box__item1
-          .content__main1__category1__box__item1__image
-            = image_tag 'item-interim.jpg'
-            .content__main1__category1__box__item1__image__price
+        .content__main1__category1__box__item4
+          .content__main1__category1__box__item4__image
+            = image_tag "item-interim.jpg"
+            .content__main1__category1__box__item4__image__price
               ¥2,100
-          .content__main1__category1__box__item1__name
+          .content__main1__category1__box__item3__name
             テスト商品名-test-test-test-test-test-test-tes
-            .content__main1__category1__box__item1__name__opacity
+            .content__main1__category1__box__item4__name__opacity
         .content__main1__category1__box__item5
           .content__main1__category1__box__item5__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category1__box__item5__image__price
               ¥2,100
           .content__main1__category1__box__item5__name
@@ -66,7 +68,7 @@
             .content__main1__category1__box__item5__name__opacity
         .content__main1__category1__box__item6
           .content__main1__category1__box__item6__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category1__box__item6__image__price
               ¥2,100
           .content__main1__category1__box__item6__name
@@ -74,7 +76,7 @@
             .content__main1__category1__box__item6__name__opacity
         .content__main1__category1__box__item7
           .content__main1__category1__box__item7__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category1__box__item7__image__price
               ¥2,100
           .content__main1__category1__box__item7__name
@@ -82,7 +84,7 @@
             .content__main1__category1__box__item7__name__opacity
         .content__main1__category1__box__item8
           .content__main1__category1__box__item8__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category1__box__item8__image__price
               ¥2,100
           .content__main1__category1__box__item8__name
@@ -90,7 +92,7 @@
             .content__main1__category1__box__item8__name__opacity
         .content__main1__category1__box__item9
           .content__main1__category1__box__item9__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category1__box__item9__image__price
               ¥2,100
           .content__main1__category1__box__item9__name
@@ -98,7 +100,7 @@
             .content__main1__category1__box__item9__name__opacity
         .content__main1__category1__box__item10
           .content__main1__category1__box__item10__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category1__box__item10__image__price
               ¥2,100
           .content__main1__category1__box__item10__name
@@ -115,7 +117,7 @@
       .content__main1__category2__box
         .content__main1__category2__box__item1
           .content__main1__category2__box__item1__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category2__box__item1__image__price
               ¥2,100
           .content__main1__category2__box__item1__name
@@ -123,7 +125,7 @@
             .content__main1__category2__box__item1__name__opacity
         .content__main1__category2__box__item2
           .content__main1__category2__box__item2__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category2__box__item2__image__price
               ¥2,100
           .content__main1__category2__box__item2__name
@@ -131,7 +133,7 @@
             .content__main1__category2__box__item2__name__opacity
         .content__main1__category2__box__item3
           .content__main1__category2__box__item3__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category2__box__item3__image__price
               ¥2,100
           .content__main1__category2__box__item3__name
@@ -139,7 +141,7 @@
             .content__main1__category2__box__item3__name__opacity
         .content__main1__category2__box__item4
           .content__main1__category2__box__item4__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category2__box__item4__image__price
               ¥2,100
           .content__main1__category2__box__item4__name
@@ -147,7 +149,7 @@
             .content__main1__category2__box__item4__name__opacity
         .content__main1__category2__box__item5
           .content__main1__category2__box__item5__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category2__box__item5__image__price
               ¥2,100
           .content__main1__category2__box__item5__name
@@ -155,7 +157,7 @@
             .content__main1__category2__box__item5__name__opacity
         .content__main1__category2__box__item6
           .content__main1__category2__box__item6__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category2__box__item6__image__price
               ¥2,100
           .content__main1__category2__box__item6__name
@@ -163,7 +165,7 @@
             .content__main1__category2__box__item6__name__opacity
         .content__main1__category2__box__item7
           .content__main1__category2__box__item7__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category2__box__item7__image__price
               ¥2,100
           .content__main1__category2__box__item7__name
@@ -171,7 +173,7 @@
             .content__main1__category2__box__item7__name__opacity
         .content__main1__category2__box__item8
           .content__main1__category2__box__item8__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category2__box__item8__image__price
               ¥2,100
           .content__main1__category2__box__item8__name
@@ -179,7 +181,7 @@
             .content__main1__category2__box__item8__name__opacity
         .content__main1__category2__box__item9
           .content__main1__category2__box__item9__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category2__box__item9__image__price
               ¥2,100
           .content__main1__category2__box__item9__name
@@ -187,7 +189,7 @@
             .content__main1__category2__box__item9__name__opacity
         .content__main1__category2__box__item10
           .content__main1__category2__box__item10__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category2__box__item10__image__price
               ¥2,100
           .content__main1__category2__box__item10__name
@@ -204,7 +206,7 @@
       .content__main1__category3__box
         .content__main1__category3__box__item1
           .content__main1__category3__box__item1__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category3__box__item1__image__price
               ¥2,100
           .content__main1__category3__box__item1__name
@@ -212,7 +214,7 @@
             .content__main1__category3__box__item1__name__opacity
         .content__main1__category3__box__item2
           .content__main1__category3__box__item2__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category3__box__item2__image__price
               ¥2,100
           .content__main1__category3__box__item2__name
@@ -220,7 +222,7 @@
             .content__main1__category3__box__item2__name__opacity
         .content__main1__category3__box__item3
           .content__main1__category3__box__item3__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category3__box__item3__image__price
               ¥2,100
           .content__main1__category3__box__item3__name
@@ -228,7 +230,7 @@
             .content__main1__category3__box__item3__name__opacity
         .content__main1__category3__box__item4
           .content__main1__category3__box__item4__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category3__box__item4__image__price
               ¥2,100
           .content__main1__category3__box__item4__name
@@ -236,7 +238,7 @@
             .content__main1__category3__box__item4__name__opacity
         .content__main1__category3__box__item5
           .content__main1__category3__box__item5__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category3__box__item5__image__price
               ¥2,100
           .content__main1__category3__box__item5__name
@@ -244,7 +246,7 @@
             .content__main1__category3__box__item5__name__opacity
         .content__main1__category3__box__item6
           .content__main1__category3__box__item6__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category3__box__item6__image__price
               ¥2,100
           .content__main1__category3__box__item6__name
@@ -252,7 +254,7 @@
             .content__main1__category3__box__item6__name__opacity
         .content__main1__category3__box__item7
           .content__main1__category3__box__item7__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category3__box__item7__image__price
               ¥2,100
           .content__main1__category3__box__item7__name
@@ -260,7 +262,7 @@
             .content__main1__category3__box__item7__name__opacity
         .content__main1__category3__box__item8
           .content__main1__category3__box__item8__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category3__box__item8__image__price
               ¥2,100
           .content__main1__category3__box__item8__name
@@ -268,7 +270,7 @@
             .content__main1__category3__box__item8__name__opacity
         .content__main1__category3__box__item9
           .content__main1__category3__box__item9__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category3__box__item9__image__price
               ¥2,100
           .content__main1__category3__box__item9__name
@@ -276,7 +278,7 @@
             .content__main1__category3__box__item9__name__opacity
         .content__main1__category3__box__item10
           .content__main1__category3__box__item10__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category3__box__item10__image__price
               ¥2,100
           .content__main1__category3__box__item10__name
@@ -293,7 +295,7 @@
       .content__main1__category4__box
         .content__main1__category4__box__item1
           .content__main1__category4__box__item1__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category4__box__item1__image__price
               ¥2,100
           .content__main1__category4__box__item1__name
@@ -301,7 +303,7 @@
             .content__main1__category4__box__item1__name__opacity
         .content__main1__category4__box__item2
           .content__main1__category4__box__item2__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category4__box__item2__image__price
               ¥2,100
           .content__main1__category4__box__item2__name
@@ -309,7 +311,7 @@
             .content__main1__category4__box__item2__name__opacity
         .content__main1__category4__box__item3
           .content__main1__category4__box__item3__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category4__box__item3__image__price
               ¥2,100
           .content__main1__category4__box__item3__name
@@ -317,7 +319,7 @@
             .content__main1__category4__box__item3__name__opacity
         .content__main1__category4__box__item4
           .content__main1__category4__box__item4__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category4__box__item4__image__price
               ¥2,100
           .content__main1__category4__box__item4__name
@@ -325,7 +327,7 @@
             .content__main1__category4__box__item4__name__opacity
         .content__main1__category4__box__item5
           .content__main1__category4__box__item5__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category4__box__item5__image__price
               ¥2,100
           .content__main1__category4__box__item5__name
@@ -333,7 +335,7 @@
             .content__main1__category4__box__item5__name__opacity
         .content__main1__category4__box__item6
           .content__main1__category4__box__item6__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category4__box__item6__image__price
               ¥2,100
           .content__main1__category4__box__item6__name
@@ -341,7 +343,7 @@
             .content__main1__category4__box__item6__name__opacity
         .content__main1__category4__box__item7
           .content__main1__category4__box__item7__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category4__box__item7__image__price
               ¥2,100
           .content__main1__category4__box__item7__name
@@ -349,7 +351,7 @@
             .content__main1__category4__box__item7__name__opacity
         .content__main1__category4__box__item8
           .content__main1__category4__box__item8__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category4__box__item8__image__price
               ¥2,100
           .content__main1__category4__box__item8__name
@@ -357,7 +359,7 @@
             .content__main1__category4__box__item8__name__opacity
         .content__main1__category4__box__item9
           .content__main1__category4__box__item9__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category4__box__item9__image__price
               ¥2,100
           .content__main1__category4__box__item9__name
@@ -365,7 +367,7 @@
             .content__main1__category4__box__item9__name__opacity
         .content__main1__category4__box__item10
           .content__main1__category4__box__item10__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main1__category4__box__item10__image__price
               ¥2,100
           .content__main1__category4__box__item10__name
@@ -396,7 +398,7 @@
       .content__main2__category1__box
         .content__main2__category1__box__item1
           .content__main2__category1__box__item1__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category1__box__item1__image__price
               ¥2,100
           .content__main2__category1__box__item1__name
@@ -404,7 +406,7 @@
             .content__main2__category1__box__item1__name__opacity
         .content__main2__category1__box__item2
           .content__main2__category1__box__item2__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category1__box__item2__image__price
               ¥2,100
           .content__main2__category1__box__item2__name
@@ -412,7 +414,7 @@
             .content__main2__category1__box__item2__name__opacity
         .content__main2__category1__box__item3
           .content__main2__category1__box__item3__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category1__box__item3__image__price
               ¥2,100
           .content__main2__category1__box__item3__name
@@ -420,7 +422,7 @@
             .content__main2__category1__box__item3__name__opacity
         .content__main2__category1__box__item4
           .content__main2__category1__box__item4__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category1__box__item4__image__price
               ¥2,100
           .content__main2__category1__box__item4__name
@@ -428,7 +430,7 @@
             .content__main2__category1__box__item4__name__opacity
         .content__main2__category1__box__item5
           .content__main2__category1__box__item5__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category1__box__item5__image__price
               ¥2,100
           .content__main2__category1__box__item5__name
@@ -436,7 +438,7 @@
             .content__main2__category1__box__item5__name__opacity
         .content__main2__category1__box__item6
           .content__main2__category1__box__item6__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category1__box__item6__image__price
               ¥2,100
           .content__main2__category1__box__item6__name
@@ -444,7 +446,7 @@
             .content__main2__category1__box__item6__name__opacity
         .content__main2__category1__box__item7
           .content__main2__category1__box__item7__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category1__box__item7__image__price
               ¥2,100
           .content__main2__category1__box__item7__name
@@ -452,7 +454,7 @@
             .content__main2__category1__box__item7__name__opacity
         .content__main2__category1__box__item8
           .content__main2__category1__box__item8__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category1__box__item8__image__price
               ¥2,100
           .content__main2__category1__box__item8__name
@@ -460,7 +462,7 @@
             .content__main2__category1__box__item8__name__opacity
         .content__main2__category1__box__item9
           .content__main2__category1__box__item9__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category1__box__item9__image__price
               ¥2,100
           .content__main2__category1__box__item9__name
@@ -468,7 +470,7 @@
             .content__main2__category1__box__item9__name__opacity
         .content__main2__category1__box__item10
           .content__main2__category1__box__item10__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category1__box__item10__image__price
               ¥2,100
           .content__main2__category1__box__item10__name
@@ -485,7 +487,7 @@
       .content__main2__category2__box
         .content__main2__category2__box__item1
           .content__main2__category2__box__item1__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category2__box__item1__image__price
               ¥2,100
           .content__main2__category2__box__item1__name
@@ -493,7 +495,7 @@
             .content__main2__category2__box__item1__name__opacity
         .content__main2__category2__box__item2
           .content__main2__category2__box__item2__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category2__box__item2__image__price
               ¥2,100
           .content__main2__category2__box__item2__name
@@ -501,7 +503,7 @@
             .content__main2__category2__box__item2__name__opacity
         .content__main2__category2__box__item3
           .content__main2__category2__box__item3__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category2__box__item3__image__price
               ¥2,100
           .content__main2__category2__box__item3__name
@@ -509,7 +511,7 @@
             .content__main2__category2__box__item3__name__opacity
         .content__main2__category2__box__item4
           .content__main2__category2__box__item4__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category2__box__item4__image__price
               ¥2,100
           .content__main2__category2__box__item4__name
@@ -517,7 +519,7 @@
             .content__main2__category2__box__item4__name__opacity
         .content__main2__category2__box__item5
           .content__main2__category2__box__item5__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category2__box__item5__image__price
               ¥2,100
           .content__main2__category2__box__item5__name
@@ -525,7 +527,7 @@
             .content__main2__category2__box__item5__name__opacity
         .content__main2__category2__box__item6
           .content__main2__category2__box__item6__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category2__box__item6__image__price
               ¥2,100
           .content__main2__category2__box__item6__name
@@ -533,7 +535,7 @@
             .content__main2__category2__box__item6__name__opacity
         .content__main2__category2__box__item7
           .content__main2__category2__box__item7__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category2__box__item7__image__price
               ¥2,100
           .content__main2__category2__box__item7__name
@@ -541,7 +543,7 @@
             .content__main2__category2__box__item7__name__opacity
         .content__main2__category2__box__item8
           .content__main2__category2__box__item8__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category2__box__item8__image__price
               ¥2,100
           .content__main2__category2__box__item8__name
@@ -549,7 +551,7 @@
             .content__main2__category2__box__item8__name__opacity
         .content__main2__category2__box__item9
           .content__main2__category2__box__item9__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category2__box__item9__image__price
               ¥2,100
           .content__main2__category2__box__item9__name
@@ -557,7 +559,7 @@
             .content__main2__category2__box__item9__name__opacity
         .content__main2__category2__box__item10
           .content__main2__category2__box__item10__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category2__box__item10__image__price
               ¥2,100
           .content__main2__category2__box__item10__name
@@ -574,7 +576,7 @@
       .content__main2__category3__box
         .content__main2__category3__box__item1
           .content__main2__category3__box__item1__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category3__box__item1__image__price
               ¥2,100
           .content__main2__category3__box__item1__name
@@ -582,7 +584,7 @@
             .content__main2__category3__box__item1__name__opacity
         .content__main2__category3__box__item2
           .content__main2__category3__box__item2__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category3__box__item2__image__price
               ¥2,100
           .content__main2__category3__box__item2__name
@@ -590,7 +592,7 @@
             .content__main2__category3__box__item2__name__opacity
         .content__main2__category3__box__item3
           .content__main2__category3__box__item3__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category3__box__item3__image__price
               ¥2,100
           .content__main2__category3__box__item3__name
@@ -598,7 +600,7 @@
             .content__main2__category3__box__item3__name__opacity
         .content__main2__category3__box__item4
           .content__main2__category3__box__item4__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category3__box__item4__image__price
               ¥2,100
           .content__main2__category3__box__item4__name
@@ -606,7 +608,7 @@
             .content__main2__category3__box__item4__name__opacity
         .content__main2__category3__box__item5
           .content__main2__category3__box__item5__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category3__box__item5__image__price
               ¥2,100
           .content__main2__category3__box__item5__name
@@ -614,7 +616,7 @@
             .content__main2__category3__box__item5__name__opacity
         .content__main2__category3__box__item6
           .content__main2__category3__box__item6__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category3__box__item6__image__price
               ¥2,100
           .content__main2__category3__box__item6__name
@@ -622,7 +624,7 @@
             .content__main2__category3__box__item6__name__opacity
         .content__main2__category3__box__item7
           .content__main2__category3__box__item7__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category3__box__item7__image__price
               ¥2,100
           .content__main2__category3__box__item7__name
@@ -630,7 +632,7 @@
             .content__main2__category3__box__item7__name__opacity
         .content__main2__category3__box__item8
           .content__main2__category3__box__item8__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category3__box__item8__image__price
               ¥2,100
           .content__main2__category3__box__item8__name
@@ -638,7 +640,7 @@
             .content__main2__category3__box__item8__name__opacity
         .content__main2__category3__box__item9
           .content__main2__category3__box__item9__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category3__box__item9__image__price
               ¥2,100
           .content__main2__category3__box__item9__name
@@ -646,7 +648,7 @@
             .content__main2__category3__box__item9__name__opacity
         .content__main2__category3__box__item10
           .content__main2__category3__box__item10__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category3__box__item10__image__price
               ¥2,100
           .content__main2__category3__box__item10__name
@@ -663,7 +665,7 @@
       .content__main2__category4__box
         .content__main2__category4__box__item1
           .content__main2__category4__box__item1__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category4__box__item1__image__price
               ¥2,100
           .content__main2__category4__box__item1__name
@@ -671,7 +673,7 @@
             .content__main2__category4__box__item1__name__opacity
         .content__main2__category4__box__item2
           .content__main2__category4__box__item2__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category4__box__item2__image__price
               ¥2,100
           .content__main2__category4__box__item2__name
@@ -679,7 +681,7 @@
             .content__main2__category4__box__item2__name__opacity
         .content__main2__category4__box__item3
           .content__main2__category4__box__item3__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category4__box__item3__image__price
               ¥2,100
           .content__main2__category4__box__item3__name
@@ -687,7 +689,7 @@
             .content__main2__category4__box__item3__name__opacity
         .content__main2__category4__box__item4
           .content__main2__category4__box__item4__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category4__box__item4__image__price
               ¥2,100
           .content__main2__category4__box__item4__name
@@ -695,7 +697,7 @@
             .content__main2__category4__box__item4__name__opacity
         .content__main2__category4__box__item5
           .content__main2__category4__box__item5__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category4__box__item5__image__price
               ¥2,100
           .content__main2__category4__box__item5__name
@@ -703,7 +705,7 @@
             .content__main2__category4__box__item5__name__opacity
         .content__main2__category4__box__item6
           .content__main2__category4__box__item6__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category4__box__item6__image__price
               ¥2,100
           .content__main2__category4__box__item6__name
@@ -711,7 +713,7 @@
             .content__main2__category4__box__item6__name__opacity
         .content__main2__category4__box__item7
           .content__main2__category4__box__item7__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category4__box__item7__image__price
               ¥2,100
           .content__main2__category4__box__item7__name
@@ -719,7 +721,7 @@
             .content__main2__category4__box__item7__name__opacity
         .content__main2__category4__box__item8
           .content__main2__category4__box__item8__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category4__box__item8__image__price
               ¥2,100
           .content__main2__category4__box__item8__name
@@ -727,7 +729,7 @@
             .content__main2__category4__box__item8__name__opacity
         .content__main2__category4__box__item9
           .content__main2__category4__box__item9__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category4__box__item9__image__price
               ¥2,100
           .content__main2__category4__box__item9__name
@@ -735,7 +737,7 @@
             .content__main2__category4__box__item9__name__opacity
         .content__main2__category4__box__item10
           .content__main2__category4__box__item10__image
-            = image_tag 'item-interim.jpg'
+            = image_tag "item-interim.jpg"
             .content__main2__category4__box__item10__image__price
               ¥2,100
           .content__main2__category4__box__item10__name
