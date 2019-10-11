@@ -22,7 +22,6 @@ class ApplicationController < ActionController::Base
                                       keys: [
                                         :nickname,
                                         user_detail_attributes: [
-                                        :id,
                                         :first_name,
                                         :last_name,
                                         :first_name_kata,
