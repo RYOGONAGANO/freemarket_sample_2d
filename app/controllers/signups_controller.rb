@@ -14,7 +14,7 @@ class SignupsController < ApplicationController
 
   def address
     @user = User.new
-    @address = @user.build_address
+    @user.build_address
   end
 
   private
@@ -35,6 +35,14 @@ class SignupsController < ApplicationController
         :sms_phone,
         :phone,
         :profile
+      ]
+      address_attributes: [
+        :id,
+        :postal_code,
+        :prefectures,
+        :city,
+        :address,
+        :building
       ]
     )
   end
