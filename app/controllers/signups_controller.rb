@@ -15,6 +15,7 @@ class SignupsController < ApplicationController
   def address
     @user = User.new
     @user.build_address
+    @user.build_user_detail
   end
 
   private

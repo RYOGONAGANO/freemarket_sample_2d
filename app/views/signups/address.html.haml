@@ -67,9 +67,8 @@
             .address-registration-item__prefectures__text__required
               必須
           .address-registration-item__prefectures__form
-            %select{ type: "text", class: "address-registration-item__prefectures__form__select" }
-              %option 北海道
-            .address-registration-item__prefectures__form__select--angle
+            = f.collection_select :prefecture_id, Prefecture.all, :id, :name
+            .address-registration-item__prefectures__form--angle
               = fa_icon 'angle-down'
 
         .address-registration-item__city
@@ -79,7 +78,7 @@
             .address-registration-item__city__text__required
               必須
           .address-registration-item__city__input-form
-            %input{type: "text",placeholder: "　例）横浜市緑区" , class: "address-registration-item__city__input-form__town"}
+            = f.text_field :city, placeholder: "　例）横浜市緑区", class: "address-registration-item__city__input-form__town"
 
         .address-registration-item__address
           .address-registration-item__address__text
@@ -87,7 +86,7 @@
               番地
             .address-registration-item__address__text__required
               必須
-          %input{type: "text",placeholder: "　例）青山1-1-1" , class: "address-registration-item__address__input-form"}
+          = f.text_field :address, placeholder: "　例）青山1-1-1", class: "address-registration-item__address__input-form"
 
         .address-registration-item__building
           .address-registration-item__building__text
@@ -95,20 +94,19 @@
               建物名
             .address-registration-item__building__text__required
               任意
-          %input{type: "text",placeholder: "　例）柳ビル103" , class: "address-registration-item__building__input-form"}
+          = f.text_field :building, placeholder: "　例）柳ビル103", class: "address-registration-item__building__input-form"
 
-        .address-registration-item__tel
-          .address-registration-item__tel__text
-            .address-registration-item__tel__text__title
-              電話
-            .address-registration-item__tel__text__required
-              任意
-          %input{type: "text",placeholder: "　例）09012345678" , class: "address-registration-item__building__input-form"}
+        = form.fields_for :user_detail do |f|
+          .address-registration-item__tel
+            .address-registration-item__tel__text
+              .address-registration-item__tel__text__title
+                電話
+              .address-registration-item__tel__text__required
+                任意
+            = f.text_field :phone, placeholder: "　例）09012345678", class: "address-registration-item__building__input-form"
 
-        .address-registration-item__next-btn
-          %button{type: "submit", class: "address-registration-item__next-btn__submit"}
-            次に進む
-
+          .address-registration-item__next-btn
+            = f.submit "次に進む", class: "address-registration-item__next-btn__submit"
 =render 'shared/copywrite-bottom'
 
 

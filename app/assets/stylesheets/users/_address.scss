@@ -236,23 +236,21 @@
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
+        @include input-form;
+        padding-left: 18px;
+        position: relative;
+        background-color: colors(white);
       }
       select::-ms-expand {
         display: none;
       }
-      &__select{
-        @include input-form;
-        padding-left: 18px;
-        position: relative;
-        background-color: colors(white); 
-        &--angle{
+      &--angle{
           position: absolute;
           top: 720px;
           left: 60%;
           font-size: 25px;
           color: colors(title-gray);
           }
-      }
     }
   }
   &__city{
