@@ -13,7 +13,7 @@
             .card-data-delete__information__box__card-companys__box
               .card-data-delete__information__box__card-companys__box__card-company
                 = image_tag "card-visa.svg", id: "card-data-delete__information__box__card-companys__box__card-company__icon--visa", class: "card-data-delete__information__box__card-companys__box__card-company__icon--visa", size: "49x15"
-              .card-data-delete__information__box__card-companys__box__card-delete
+              = link_to card_data_create_users_path, class: "card-data-delete__information__box__card-companys__box__card-delete-button" do
                 削除する
             .card-data-delete__information__box__card-companys__card-number
               ************4351

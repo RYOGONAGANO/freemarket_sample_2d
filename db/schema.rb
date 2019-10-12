@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_08_020013) do
+ActiveRecord::Schema.define(version: 2019_10_12_084557) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -43,6 +43,24 @@ ActiveRecord::Schema.define(version: 2019_10_08_020013) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_addresses_on_user_id"
+    end
+
+  create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.text "name", null: false
+    t.integer "price", null: false
+    t.text "description", null: false
+    t.integer "status", null: false
+    t.string "charge", null: false
+    t.string "shipping_method", null: false
+    t.string "shipping_area", null: false
+    t.string "shipping_date", null: false
+    t.string "size"
+    t.bigint "buyer_id"
+    t.bigint "exhibitor_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["buyer_id"], name: "index_products_on_buyer_id"
+    t.index ["exhibitor_id"], name: "index_products_on_exhibitor_id"
   end
 
   create_table "tests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -66,7 +84,7 @@ ActiveRecord::Schema.define(version: 2019_10_08_020013) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "nickname", default: "", null: false
+    t.string "nickname", null: false
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -81,4 +99,6 @@ ActiveRecord::Schema.define(version: 2019_10_08_020013) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "addresses", "users"
   add_foreign_key "user_details", "users"
+  add_foreign_key "products", "users", column: "buyer_id"
+  add_foreign_key "products", "users", column: "exhibitor_id"
 end

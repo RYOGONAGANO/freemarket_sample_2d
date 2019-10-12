@@ -115,7 +115,7 @@
 .address-registration{
   .address-registration-entire{
     &__title{
-      margin: auto;
+      margin: 0 auto 2px;
       text-align: center;
       background-color: colors(white);
       width: 700px;
@@ -123,8 +123,6 @@
       line-height: 95px;
       font-size: 22px;
       font-weight: 550;
-      margin-bottom:  2px;
-
     }
   }
 }
@@ -247,7 +245,7 @@
       &--angle{
           position: absolute;
           top: 720px;
-          left: 60%;
+          left: 58%;
           font-size: 25px;
           color: colors(title-gray);
           }

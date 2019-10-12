@@ -138,7 +138,6 @@
         margin-top: 24px;
         display:flex;
         &__security-date{
-          width: 125.59px;
           height: 14px;
           color: colors(black);
           font-size: 14px;
@@ -168,7 +167,7 @@
         }
       }
       &__text-area{
-        .submit{
+        .card-delete-button{
           margin-top:39px;
           width:343px;
           height:50px;

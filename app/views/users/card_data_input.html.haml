@@ -84,7 +84,8 @@
               カード裏面の番号とは？
           .card-data-input__information__box__text-area
             %form
-              %button{type: "submit", class: "submit"}
+            = link_to card_data_delete_users_path, class: "card-delete-button" do
+              %button{type: "submit", class: "card-delete-button"}
                 追加する
 = render 'shared/footer'
 = render 'shared/buy'
