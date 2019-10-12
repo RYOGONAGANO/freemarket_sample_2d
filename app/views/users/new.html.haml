@@ -1,19 +1,19 @@
-.userRegist-complete-body
-  .userRegist-complete-header
-    .userRegist-complete-header-headers
-      .userRegist-complete-header-headers__mercarilogo
-        = image_tag 'logomercari.svg', id:'assets', class:'image', size:'185x45'
-      .userRegist-complete-header-headers__status
-        = render 'shared/new_user_progress'
-  .userRegist-complete-contents
-    .userRegist-complete-uppercontent
-      %h2会員登録完了
-    .userRegist-complete-rowercontent
-      .userRegist-complete-rowercontent__text
-        %pありがとうございます。
-        %p会員登録が完了しました。
-      .userRegist-complete-rowercontent__box
-        %pメルカリをはじめる
-    .userRegist-complete-advertisement
-      = image_tag 'user_rejister_complete_commerce.png', size: "700x250"
-  =render 'shared/copywrite-bottom'
+
+.userRegist-complete-header
+  .userRegist-complete-header-headers
+    .userRegist-complete-header-headers__mercarilogo
+      = image_tag 'logomercari.svg', id:'assets', class:'image', size:'185x45'
+    .userRegist-complete-header-headers__status
+      = render 'shared/new_user_progress'
+.userRegist-complete-contents
+  .userRegist-complete-uppercontent
+    %h2会員登録完了
+  .userRegist-complete-rowercontent
+    .userRegist-complete-rowercontent__text
+      %pありがとうございます。
+      %p会員登録が完了しました。
+    .userRegist-complete-rowercontent__box
+      %pメルカリをはじめる
+  .userRegist-complete-advertisement
+    = image_tag 'user_rejister_complete_commerce.png', size: "700x250"
+=render 'shared/copywrite-bottom'

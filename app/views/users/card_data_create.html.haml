@@ -11,9 +11,10 @@
             クレジットカード一覧
         .card-data-create__information__text-area
           %form
-            %button{type: "submit", class: "submit"}
-              = fa_icon 'credit-card'
-              クレジットカードを追加する
+            = link_to card_data_input_users_path, class: "card-input-button" do
+              %button{type: "submit", class: "card-input-button"}
+                = fa_icon 'credit-card'
+                クレジットカードを追加する
         .card-data-delete__information__box-payment
           .card-data-delete__information__box-payment__payment-link
             支払い方法について
