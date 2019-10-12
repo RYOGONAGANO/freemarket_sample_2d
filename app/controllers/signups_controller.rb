@@ -35,7 +35,7 @@ class SignupsController < ApplicationController
         :sms_phone,
         :phone,
         :profile
-      ]
+      ],
       address_attributes: [
         :id,
         :postal_code,

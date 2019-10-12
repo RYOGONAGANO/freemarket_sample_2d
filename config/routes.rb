@@ -10,7 +10,7 @@ Rails.application.routes.draw do
       get :card_data_input
       get :card_data_create
       get :authentication
-      get :login_page
+      get :login
       get :logout
       get :registrationNewmenbar
     end
