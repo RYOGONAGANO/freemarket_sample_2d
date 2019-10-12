@@ -75,3 +75,4 @@ gem 'font-awesome-rails'
 gem 'aws-sdk-s3', require: false
 gem 'haml-rails'
 gem 'devise'
+gem 'active_hash'
