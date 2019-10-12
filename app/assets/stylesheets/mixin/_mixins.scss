@@ -69,6 +69,39 @@
   }
 }
 
+@mixin requiredname{
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background-color: colors(btn-red);
+  width: 32px;
+  height: 19px;
+  text-align: center;
+  line-height: 20px; 
+  border-radius: 10%;
+  margin-left: 10px;
+  margin-top: -4px;
+}
+
+@mixin focus{
+  &:focus{
+    border-color: rgb(0, 153, 255);
+    outline: 0;
+  }
+}
+
+
+@mixin fas-arrow{
+  .fas{
+    font-weight: 900;
+    float: right;
+    position: relative;
+    font-size: 25px;
+    top: 12px;
+    right: 40px;
+    color: #888;
+ }
+}
 @mixin required{
   background-color: #EA352D;
   color: white;
@@ -84,6 +117,7 @@
 @mixin input-form {
   width: 343px;
   height: 48px;
+  padding: 10px 16px 8px;
   border-radius: 5px;
   border: solid 1px #80808073;
 }
@@ -117,5 +151,31 @@
   align-items: center;
   justify-content: center;
   padding: 4px 4px;
+}
 
+@mixin card-view-top{
+  width: 700px;
+  height: 50px;
+  padding: 8px 24px;
+  background-color: colors(white);
+  color: colors(black);
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+@mixin card-view-information{
+ width: 700px;
+  background-color: colors(white);
+  color: colors(black);
+  font-size: 14px;
+  font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 2px;
 }

@@ -1,0 +1,182 @@
+.card-data-input{
+  @include chapter;
+  height: 50px;
+  &__top{
+    @include card-view-top;
+  }
+  &__information{
+    @include card-view-information;
+    height: 512px;
+    padding: 40px 40px 64px;
+    &__box{
+      width: 343px;
+      color: colors(black);
+      font-size: 14px;
+      margin: 0 138.5px;
+      &__card-number-box{
+        display:flex;
+        &__card-number{
+          width: 70px;
+          height: 14px;
+          color: colors(black);      
+          font-size: 14px;
+          font-weight: bold;
+          margin-top:2px;
+        }
+        &__label-hisu{
+          @include label-nini-gray;
+          background-color: colors(btn-red);
+        }
+      }
+      &__text{
+        margin-top: 8px;
+        .card-data-input__information__box__text__card-number-input{
+          @include textfield;
+          width: 343px;
+        }
+      }
+      &__card-list-box{
+        // width: 343px;
+        width: 278px;
+        height: 20px;
+        color: colors(black);      
+        margin-top:8px;
+        &__card-name{
+          display:flex;
+          justify-content: space-between;
+        }
+      }
+      &__expiration-date-box{
+        width: 343px;
+        color: colors(black);
+        font-size:14px;
+        margin-top: 24px;
+        display:flex;
+        &__expiration-date{
+          width: 56px;
+          height: 14px;
+          color: colors(black);
+          font-size: 14px;
+          font-weight: bold;
+          margin-top:2px;
+        }
+        &__label-hisu{
+          @include label-nini-gray;
+          background-color: colors(btn-red);
+        }
+      }
+      &__expiration-yearmonth-box{
+        display:flex;
+        margin-top: 8px;
+        &__expiration-month-box{
+          width: 343px;
+          height: 56px;
+          &__text{
+            .card-data-input__information__box__expiration-yearmonth-box__expiration-month-box__text{
+              @include textfield;
+              width: 131.5px;
+              height: 48px;
+              cursor: pointer;
+              -webkit-appearance: none;
+              box-sizing: border-box;
+            }
+            &__icon-chevron-down{
+              width: 15px;
+              height: 15px;
+              top:18px;
+              left:-25px;
+              position: relative;
+              pointer-events: none;
+            }
+          }
+          &__text-month{
+            width: 14px;
+            height: 18px;
+            color: colors(black);
+            font-size:14px;
+            align-items: center;
+            justify-content: center;
+            margin:17px 13px 0 0;
+          }
+        }
+        &__expiration-year-box{
+          width: 343px;
+          height: 56px;
+          &__text{
+            .card-data-input__information__box__expiration-yearmonth-box__expiration-year-box__text{
+              @include textfield;
+              width: 131.5px;
+              height: 48px;
+              cursor: pointer;
+              -webkit-appearance: none;
+              box-sizing: border-box;
+            }
+            &__icon-chevron-down{
+              width: 15px;
+              height: 15px;
+              top:18px;
+              left:-25px;
+              position: relative;
+              pointer-events: none;
+            }
+          }
+          &__text-year{
+            width: 14px;
+            height: 18px;
+            color: colors(black);
+            font-size:14px;
+            align-items: center;
+            justify-content: center;
+            margin:17px 13px 0 0;
+          }
+        }
+      }
+      &__security-date-box{
+        width: 343px;
+        color: colors(black);
+        font-size:14px;
+        margin-top: 24px;
+        display:flex;
+        &__security-date{
+          height: 14px;
+          color: colors(black);
+          font-size: 14px;
+          font-weight: bold;
+          margin-top:2px;
+        }
+        &__label-hisu{
+          @include label-nini-gray;
+          background-color: colors(btn-red);
+        }
+      }
+      &__text{
+        margin-top: 8px;
+        .card-data-input__information__box__text__card-number-input{
+          @include textfield;
+          width: 343px;
+        }
+      }
+      &__secret-code{
+        width:343px;
+        height:15px;
+        color: colors(blue);
+        font-size: 14px;
+        padding-top:8px;
+        text-align: right;
+        &__text{
+        }
+      }
+      &__text-area{
+        .card-delete-button{
+          margin-top:39px;
+          width:343px;
+          height:50px;
+          color: colors(white);
+          background-color: colors(btn-red);
+          font-size:14px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

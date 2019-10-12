@@ -1,14 +1,11 @@
 .authentication-contents {
-  width: 100vw;
-
-  .main-items {
+  .authentication-mainitems{
     width: 700px;
     height: 986px;
-    background-color: colors(white);
     text-align: center;
     margin: 0 auto;
 
-    .title {
+    &__title {
       text-align: center;
       background-color: colors(white);
       width: 700px;
@@ -18,45 +15,50 @@
       font-weight: 550;
       margin-bottom: 2px;
     }
-    .input-screen {
-      background-color: colors(white);
-      width: 700px;
-      height: 350px;
-      margin-bottom: 2px;
+  }
 
-      .content {
-        padding-top: 40px;
-        margin: 0px 145px;
-        padding: 45px;
-        text-align: left;
+  .authentication-input-screen{
+    background-color: colors(white);
+    width: 700px;
+    height: 350px;
+    margin-bottom: 2px;
 
+    &__maincontent {
+      padding-top: 40px;
+      margin: 0px 145px;
+      padding: 45px;
+      text-align: left;
+
+      &__text {
+        font-size: 13px;
+      }
+      &__authentication {
+        margin: 40px 0px;
         &__text {
-          font-size: 13px;
+          padding-bottom: 10px;
+          font-size: 14px;
+          font-weight: 600;
         }
-        &__authentication {
-          margin: 40px 0px;
-          &__text {
-            padding-bottom: 10px;
-            font-size: 14px;
-            font-weight: 600;
-          }
-          &__input {
-            height: 40px;
-            width: 320px;
-            border-radius: 5px;
-            border: solid 1px #80808073;
-          }
+        
+        &__input {
+          height: 40px;
+          width: 320px;
+          padding: 10px 16px 8px;
+          border-radius: 5px;
+          border: solid 1px #80808073;
         }
         &__submit-btn {
           @include btn;
           margin-top: 40px;
           background-color: colors(btn-red);
-        }
+        
       }
     }
   }
+}
+}
 
-  .no-reach {
+  .no-reachnumber {
     background-color: colors(white);
     height: 545px;
     width: 700px;
@@ -98,5 +100,5 @@
         }
       }
     }
-  }
+  
 }

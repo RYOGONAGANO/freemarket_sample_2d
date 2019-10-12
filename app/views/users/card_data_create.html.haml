@@ -1,0 +1,23 @@
+= render 'shared/header'
+.mypage-contents
+  = render 'shared/sidemenu'
+  .mypage-main
+    .card-data-create
+      .card-data-create__top
+        支払い方法
+      .card-data-create__information
+        .card-data-create__information__box
+          .card-data-create__information__box__card-ichiran
+            クレジットカード一覧
+        .card-data-create__information__text-area
+          %form
+            = link_to card_data_input_users_path, class: "card-input-button" do
+              %button{type: "submit", class: "card-input-button"}
+                = fa_icon 'credit-card'
+                クレジットカードを追加する
+        .card-data-delete__information__box-payment
+          .card-data-delete__information__box-payment__payment-link
+            支払い方法について
+            = fa_icon 'angle-right'
+= render 'shared/footer'
+= render 'shared/buy'
