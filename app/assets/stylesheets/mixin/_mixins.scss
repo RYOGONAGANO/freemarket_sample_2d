@@ -117,6 +117,7 @@
 @mixin input-form {
   width: 343px;
   height: 48px;
+  padding: 10px 16px 8px;
   border-radius: 5px;
   border: solid 1px #80808073;
 }
@@ -150,5 +151,31 @@
   align-items: center;
   justify-content: center;
   padding: 4px 4px;
+}
 
+@mixin card-view-top{
+  width: 700px;
+  height: 50px;
+  padding: 8px 24px;
+  background-color: colors(white);
+  color: colors(black);
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+@mixin card-view-information{
+ width: 700px;
+  background-color: colors(white);
+  color: colors(black);
+  font-size: 14px;
+  font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 2px;
 }

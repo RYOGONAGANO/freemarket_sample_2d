@@ -1,0 +1,91 @@
+= render 'shared/header'
+.mypage-contents
+  = render 'shared/sidemenu'
+  .mypage-main
+    .card-data-input
+      .card-data-input__top
+        クレジットカード情報入力
+      .card-data-input__information
+        .card-data-input__information__box
+          .card-data-input__information__box__card-number-box
+            .card-data-input__information__box__card-number-box__card-number
+              カード番号
+            .card-data-input__information__box__card-number-box__label-hisu
+              必須
+          .card-data-input__information__box__text
+            %input{type: "text", class: "card-data-input__information__box__text__card-number-input",placeholder: "半角数字のみ"}
+          .card-data-input__information__box__card-list-box
+            .card-data-input__information__box__card-list-box__card-name
+              .card-data-input__information__box__card-list-box__card-name__visa
+                = image_tag "card-visa.svg", id: "card-data-input__information__box__card-list-box__card-name__icon-visa", class: "card-data-input__information__box__card-list-box__card-name__icon-visa", size: "49x20"
+              .card-data-input__information__box__card-list-box__card-name__master
+                = image_tag "card-master.svg", id: "card-data-input__information__box__card-list-box__card-name__icon-master", class: "card-data-input__information__box__card-list-box__card-name__icon-master", size: "34x20"
+              .card-data-input__information__box__card-list-box__card-name__saison
+                = image_tag "card-saison.svg", id: "card-data-input__information__box__card-list-box__card-name__icon-saison", class: "card-data-input__information__box__card-list-box__card-name__icon-saison", size: "30x20"
+              .card-data-input__information__box__card-list-box__card-name__jcb
+                = image_tag "card-jcb.svg", id: "card-data-input__information__box__card-list-box__card-name__icon-jcb", class: "card-data-input__information__box__card-list-box__card-name__icon-jcb", size: "32x20"
+              .card-data-input__information__box__card-list-box__card-name__american
+                = image_tag "card-american.svg", id: "card-data-input__information__box__card-list-box__card-name__icon-american", class: "card-data-input__information__box__card-list-box__card-name__icon-american", size: "21x20"
+              .card-data-input__information__box__card-list-box__card-name__dinersclub
+                = image_tag "card-dinersclub.svg", id: "card-data-input__information__box__card-list-box__card-name__icon-dinersclub", class: "card-data-input__information__box__card-list-box__card-name__icon-dinersclub", size: "32x20"
+              .card-data-input__information__box__card-list-box__card-name__discover
+                = image_tag "card-discover.svg", id: "card-data-input__information__box__card-list-box__card-name__icon-discover", class: "card-data-input__information__box__card-list-box__card-name__icon-discover", size: "32x20"
+          .card-data-input__information__box__expiration-date-box
+            .card-data-input__information__box__expiration-date-box__expiration-date
+              有効期限
+            .card-data-input__information__box__expiration-date-box__label-hisu
+              必須
+          .card-data-input__information__box__expiration-yearmonth-box
+            .card-data-input__information__box__expiration-yearmonth-box__expiration-month-box__text
+              %select{class: "card-data-input__information__box__expiration-yearmonth-box__expiration-month-box__text"}
+                %option 01
+                %option 02
+                %option 03
+                %option 04
+                %option 05
+                %option 06
+                %option 07
+                %option 08
+                %option 09
+                %option 10
+                %option 11
+                %option 12
+            .card-data-input__information__box__expiration-yearmonth-box__expiration-month-box__text__icon-chevron-down
+              = fa_icon 'chevron-down'
+            .card-data-input__information__box__expiration-yearmonth-box__expiration-month-box__text-month
+              月
+            .card-data-input__information__box__expiration-yearmonth-box__expiration-year-box__text
+              %select{class: "card-data-input__information__box__expiration-yearmonth-box__expiration-year-box__text"}
+                %option 19
+                %option 20
+                %option 21
+                %option 22
+                %option 23
+                %option 24
+                %option 25
+                %option 26
+                %option 27
+                %option 28
+                %option 29
+            .card-data-input__information__box__expiration-yearmonth-box__expiration-year-box__text__icon-chevron-down
+              = fa_icon 'chevron-down'
+            .card-data-input__information__box__expiration-yearmonth-box__expiration-year-box__text-year
+              日
+          .card-data-input__information__box__security-date-box
+            .card-data-input__information__box__security-date-box__security-date
+              セキュリティコード
+            .card-data-input__information__box__security-date-box__label-hisu
+              必須
+          .card-data-input__information__box__text
+            %input{type: "text", class: "card-data-input__information__box__text__card-number-input",placeholder: "カード背面4桁もしくは3桁の番号"}
+          .card-data-input__information__box__secret-code
+            .card-data-input__information__box__secret-code__image-quesution
+              = fa_icon 'question-circle'
+              カード裏面の番号とは？
+          .card-data-input__information__box__text-area
+            %form
+            = link_to card_data_delete_users_path, class: "card-delete-button" do
+              %button{type: "submit", class: "card-delete-button"}
+                追加する
+= render 'shared/footer'
+= render 'shared/buy'
