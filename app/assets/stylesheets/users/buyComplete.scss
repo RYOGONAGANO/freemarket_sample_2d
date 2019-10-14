@@ -1,7 +1,6 @@
 .buyComplete-content {
   width: 100vw;
   height: 754px;
-  background: colors(gray);
   &__maincontent {
     width: 700px;
     height: 100%;
@@ -115,70 +114,87 @@
       border-bottom: solid 1px colors(gray);
       display: flex;
       justify-content: center;
-      &__inner{
+      &__inner {
         width: 320px;
         height: 100%;
         display: flex;
         align-items: center;
-        &__boxs{
+        &__boxs {
           width: 100%;
           height: 103px;
-          &__text{
+          &__text {
             width: 100%;
             height: 14px;
             font-weight: bold;
           }
-          &__ditail{
+          &__ditail {
             width: 100%;
             height: 60px;
             margin-top: 8px;
             display: flex;
             align-items: center;
-            &__text{
+            &__text {
               width: 100%;
               height: 80%;
+              line-height: 18px;
             }
           }
-          &__change{
+          &__change {
             width: 100%;
             height: 16px;
-            color: #0099E8;
+            color: #0099e8;
             text-align: right;
+            a {
+              color: colors(blue);
+            }
+            a:hover {
+              text-decoration: underline;
+            }
           }
         }
       }
     }
-    &__payment{
+    &__payment {
       width: 100%;
       height: 184px;
       display: flex;
       justify-content: center;
-      &__inner{
+      &__inner {
         width: 320px;
         height: 100%;
         display: flex;
         align-items: center;
-        &__boxs{
+        &__boxs {
           width: 100%;
           height: 100px;
-          &__text{
+          &__text {
             width: 100%;
             height: 14px;
             font-weight: bold;
           }
-          &__cardinfo{
+          &__cardinfo {
             width: 100%;
-            height: 60px;
+            height: 64px;
             margin-top: 8px;
-            &__number{
+            &__number {
               width: 100%;
-              height: 70%;
+              height: 43px;
             }
-            &__change{
+            &__brand {
+              width: 26px;
+              height: 20px;
+            }
+            &__change {
               width: 100%;
               height: 16px;
-              color: #0099E8;
+              color: #0099e8;
               text-align: right;
+              a {
+                color: colors(blue);
+              }
+              a:hover {
+                text-decoration: underline;
+              }
             }
           }
         }

@@ -38,8 +38,9 @@
               %p高知県高知市1234
               %p高知太郎
           .buyComplete-content__maincontent__adress__inner__boxs__change
-            %a変更する
-            = fa_icon 'angle-right'
+            = link_to root_path do
+              %span 変更する
+              = fa_icon 'angle-right'
     .buyComplete-content__maincontent__payment
       .buyComplete-content__maincontent__payment__inner
         .buyComplete-content__maincontent__payment__inner__boxs
@@ -49,8 +50,9 @@
             .buyComplete-content__maincontent__payment__inner__boxs__cardinfo__number
               %p************1234
               01/21
-            %i{class: 'fab fa-cc-mastercard'}
+            = image_tag 'card-jcb.svg',size: "26x20", class: "buyComplete-content__maincontent__payment__inner__boxs__cardinfo__brand"
             .buyComplete-content__maincontent__payment__inner__boxs__cardinfo__change
-              %a変更する
-              = fa_icon 'angle-right'
+              = link_to root_path do
+                %span 変更する
+                = fa_icon 'angle-right'
 = render 'shared/copywrite-bottom'
