@@ -64,7 +64,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          border: solid 1px #ccc;
+          border: solid 1px colors(ber-gray);
           &__text {
             width: 100px;
             height: 18px;
@@ -142,7 +142,7 @@
           &__change {
             width: 100%;
             height: 16px;
-            color: #0099e8;
+            color: colors(bule);
             text-align: right;
             a {
               color: colors(blue);
@@ -187,7 +187,7 @@
             &__change {
               width: 100%;
               height: 16px;
-              color: #0099e8;
+              color: colors(bule);
               text-align: right;
               a {
                 color: colors(blue);
