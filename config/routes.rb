@@ -14,6 +14,7 @@ Rails.application.routes.draw do
       get :logout
       get :registrationNewmenbar
       get :address
+      get :buyComplete
       get :mypage
       get :member_information_input
     end
