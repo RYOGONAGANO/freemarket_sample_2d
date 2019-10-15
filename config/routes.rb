@@ -22,6 +22,7 @@ Rails.application.routes.draw do
       get :authentication
       get :address
       get :regist_complete # 登録完了後のページ
+      get :buyComplete
       get :mypage
       get :member_information_input
     end
