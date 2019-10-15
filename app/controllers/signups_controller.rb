@@ -1,6 +1,8 @@
 class SignupsController < ApplicationController
   before_action :validates_member_information_input, only: :authentication
   before_action :validates_authentication, only: :address
+  before_action :validates_address, only: :create
+
 
   def member_information_input
     @user = User.new
@@ -17,6 +19,28 @@ class SignupsController < ApplicationController
     @user.build_address
     @user.build_user_detail
   end
+
+  def create
+    @user = User.new(
+      nickname: session[:nickname],
+      email: session[:email],
+      password: session[:password],
+      password_confirmation: session[:password_confirmation]
+    )
+    @user.build_user_detail(session[:user_detail_attributes])
+    @user.build_address(session[:address_attributes])
+    if @user.save
+            session[:id] = @user.id
+            redirect_to regist_complete_signups_path
+          else
+            render '/signups/member_information_input'
+          end
+  end
+
+  def regist_complete
+    sign_in User.find(session[:id]) unless user_signed_in?
+  end
+
 
   private
 
@@ -40,7 +64,7 @@ class SignupsController < ApplicationController
       address_attributes: [
         :id,
         :postal_code,
-        :prefectures,
+        :prefectures_id,
         :city,
         :address,
         :building
@@ -75,6 +99,19 @@ class SignupsController < ApplicationController
     )
     @user.build_user_detail(session[:user_detail_attributes])
     render authentication_signups_path unless @user.valid?
+  end
+
+  def validates_address
+    session[:address_attributes] = user_params[:address_attributes]
+    @user = User.new(
+      nickname: session[:nickname],
+      email: session[:email],
+      password: session[:password],
+      password_confirmation: session[:password_confirmation]
+    )
+    @user.build_user_detail(session[:user_detail_attributes])
+    @user.build_address(session[:address_attributes])
+    render address_signups_path unless @user.valid?
   end
 
   def birthday_join
