@@ -2,7 +2,7 @@
 .shipping-origin-address
   .member-information-header
     .member-information-header__logo
-      = link_to image_tag( 'logomercari.svg')
+      = link_to image_tag( 'logomercari.svg'), root_path
     .userRegist-complete-progress-bar
       .userRegist-complete-progress-bar__text
         .userRegist-complete-progress-bar__text__member-info
@@ -38,8 +38,8 @@
           .address-registration-item__name__text__required
             必須
         .address-registration-item__name__input-form
-          = form.text_field :first_name, placeholder: "例）山田", value: session[:user_detail_attributes][:first_name], class: "address-registration-item__name__input-form__lastname"
-          = form.text_field :last_name,  placeholder: "例）彩" , value: "", class: "address-registration-item__name__input-form__firstname"
+          = form.text_field :first_name, placeholder: "例）山田", value: @first_name, class: "address-registration-item__name__input-form__lastname"
+          = form.text_field :last_name,  placeholder: "例）彩" , value: @last_name, class: "address-registration-item__name__input-form__firstname"
 
       .address-registration-item__kananame
         .address-registration-item__kananame__text
@@ -48,8 +48,8 @@
           .address-registration-item__kananame__text__required
             必須
         .address-registration-item__kananame__input-form
-          = form.text_field :first_name_kata, placeholder: "例）ヤマダ", value: "", class: "address-registration-item__kananame__input-form__lastname"
-          = form.text_field :last_name_kata, placeholder: "例）アヤ", value: "", class: "address-registration-item__kananame__input-form__firstname"
+          = form.text_field :first_name_kata, placeholder: "例）ヤマダ", value: @first_name_kata, class: "address-registration-item__kananame__input-form__lastname"
+          = form.text_field :last_name_kata, placeholder: "例）アヤ", value: @last_name_kata, class: "address-registration-item__kananame__input-form__firstname"
       = form.fields_for :address do |f|
         .address-registration-item__postalcode
           .address-registration-item__postalcode__text

@@ -6,7 +6,8 @@
     .mypage-logout
       %form.mypage-logout__form
         .mypage-logout__form__btn
-          %button.mypage-logout__form__btn--logout
-            ログアウト
+          = link_to destroy_user_session_path, method: "delete" do
+            %button.mypage-logout__form__btn--logout
+              ログアウト
 = render 'shared/buy'
 = render 'shared/footer'

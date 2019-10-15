@@ -13,6 +13,8 @@ Rails.application.routes.draw do
       get :login
       get :logout
       get :registrationNewmenbar
+      get :buyComplete
+      get :mypage
     end
   end
 
@@ -22,9 +24,6 @@ Rails.application.routes.draw do
       get :authentication
       get :address
       get :regist_complete # 登録完了後のページ
-      get :buyComplete
-      get :mypage
-      get :member_information_input
     end
   end
   resources :products 
