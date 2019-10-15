@@ -4,7 +4,6 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-    @user.user_detail.build
   end
 
   def edit
