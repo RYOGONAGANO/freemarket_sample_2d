@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     collection do
       get :profile
       get :profilechange
+      get :carddata
       get :card_data_delete
       get :card_data_input
       get :card_data_create
