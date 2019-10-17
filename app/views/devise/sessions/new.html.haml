@@ -1,17 +1,36 @@
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+=render 'shared/logo-onlyheader'
+.login_outline
+  .login_contents
+    .login_no_account
+      .login_no_account__text
+        アカウントをお持ちでない方はこちら
+      = link_to registrationNewmenbar_users_path, class: "login_no_account__btn" do
+        新規会員登録
+    .login_otherways
+      .login-type
+        %button{type: "submit", class: "login-type__facebook"}
+          .login-type__facebook__icon
+            %i.fab.fa-facebook-square
+          .login-type__facebook__text
+            Facebookでログイン
+        %button{type: "submit", class: "login-type__google"}
+          .login_type__google__icon
+          .login_type__google__text
+            Googleでログイン
+    = form_with model: @user, url: user_session_path, class: 'login_form', local: true do |form|
+      .login_form_contents
+        = form.text_field :email, placeholder:"メールアドレス", class: "login_form_contents__input-email"
+        = render partial: 'shared/errors', locals: {table: @user, column: "email"}
+        = form.text_field :password, placeholder:"パスワード", class: "login_form_contents__input-password"
+        = render partial: 'shared/errors', locals: {table: @user, column: "password"}
+        .login_form_contents__re-captcha
+          = recaptcha_tags
+          - if @user.errors.any?
+            - if @error.present?
+              %ul.errors-text
+                - @error.each do |error|
+                  %li=error
+        = form.submit "ログイン", class: "login_form_contents__login-btn"
+        = link_to  '', class: 'login_form_contents__foget-password__text' do
+          パスワードをお忘れの方
+=render 'shared/copywrite-bottom'
