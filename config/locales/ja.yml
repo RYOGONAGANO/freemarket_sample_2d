@@ -1,5 +1,9 @@
 ---
+
 ja:
+  recaptcha:
+    errors:
+      verification_failed: '選択してください'
   activerecord:
     errors:
       messages:

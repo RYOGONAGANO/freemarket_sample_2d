@@ -1,0 +1,22 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+      user_detail: ユーザー詳細
+      address: 住所
+    attributes:
+      user:
+        nickname: ニックネーム
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード（確認）
+      user_detail:
+        first_name: 姓
+        last_name: 名
+        first_name_kata: 姓カナ
+        last_name_kata: 名カナ
+        birthday: 生年月日
+      address:
+        postal_code: 郵便番号
+        city: 市区町村
+        address: 番地
