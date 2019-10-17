@@ -139,7 +139,7 @@
       }
       &__text{
         margin-top: 8px;
-        .card-data-inputpay__information__box__text__card-number-input{
+        &__card-number-input{
           @include textfield;
           width: 343px;
         }
@@ -180,7 +180,7 @@
           width: 343px;
           height: 56px;
           &__text{
-            .card-data-inputpay__information__box__expiration-months-box__expiration-month-box__text{
+            &__box{
               @include textfield;
               width: 131.5px;
               height: 48px;
@@ -215,7 +215,7 @@
           width: 343px;
           height: 56px;
           &__text{
-            .card-data-inputpay__information__box__expiration-years-box__expiration-year-box__text{
+            &__box{
               @include textfield;
               width: 131.5px;
               height: 48px;
@@ -263,7 +263,7 @@
       }
       &__text{
         margin-top: 8px;
-        .card-data-inputpay__information__box__text__card-number-input{
+        &__card-number-input{
           @include textfield;
           width: 343px;
         }
