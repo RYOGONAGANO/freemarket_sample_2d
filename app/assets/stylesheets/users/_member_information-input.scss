@@ -139,6 +139,7 @@
           height: 70px;
 
           &__form {
+            margin-bottom: 5px;
             float: left;
             &__text {
               font-weight: 600;
@@ -232,8 +233,8 @@
 
         .member-information-name {
           margin-top: 32px;
-          display: inline-block;
           &__text {
+            margin-bottom: 5px;
             display: flex;
             &__name {
               font-weight: 600;
@@ -245,16 +246,12 @@
           }
 
           &__form {
-            display: block;
+            display: flex;
             &__last-name {
-              @include input-form;
-              width: 165px;
-              height: 48px;
+              @include input-form(165px, 48px);
             }
             &__name {
-              @include input-form;
-              width: 165px;
-              height: 48px;
+              @include input-form(165px, 48px);
             }
           }
         }
@@ -263,7 +260,7 @@
           margin-top: 32px;
           &__text {
             display: flex;
-
+            margin-bottom: 5px;
             &__name {
               font-weight: 600;
               display: flex;
@@ -274,15 +271,13 @@
           }
 
           &__form {
+            margin-bottom: 5px;
+            display: flex;
             &__last-name {
-              @include input-form;
-              width: 165px;
-              height: 48px;
+              @include input-form(165px, 48px);
             }
             &__name {
-              @include input-form;
-              width: 165px;
-              height: 48px;
+              @include input-form(165px, 48px);
             }
           }
         }
@@ -291,6 +286,7 @@
           margin-top: 32px;
           &__text {
             display: flex;
+            margin-bottom: 5px;
             &__title {
               font-weight: 600;
               display: flex;

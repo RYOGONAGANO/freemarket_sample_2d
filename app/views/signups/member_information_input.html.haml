@@ -37,7 +37,7 @@
             .member-information-input_contents__nickname__form__required
               必須
           = form.text_field :nickname, placeholder:"ニックネーム", class: "member-information-input_contents__nickname__input-form"
-
+        = render partial: 'shared/errors', locals: {table: @user, column: "nickname"}
         .member-information-input_contents__email
           .member-information-input_contents__email__form
             .member-information-input_contents__email__form__text
@@ -45,8 +45,7 @@
             .member-information-input_contents__email__form__required
               必須
           = form.text_field :email, placeholder:"PC・携帯どちらでも可", class: "member-information-input_contents__email__input-form"
-
-
+        = render partial: 'shared/errors', locals: {table: @user, column: "email"}
         .member-information-input_contents__password
           .member-information-input_contents__password__form
             .member-information-input_contents__password__form__text
@@ -54,7 +53,7 @@
             .member-information-input_contents__password__form__required
               必須
           = form.password_field :password, placeholder:"7文字以上", autocomplete: "new-password", class: "member-information-input_contents__password__input-form"
-
+        = render partial: 'shared/errors', locals: {table: @user, column: "password"}
         .member-information-input_contents__password-again
           .member-information-input_contents__password-again__form
             .member-information-input_contents__password-again__form__text
@@ -62,7 +61,7 @@
             .member-information-input_contents__password-again__form__required
               必須
           = form.password_field :password_confirmation, placeholder:"7文字以上",autocomplete: "new-password", class: "member-information-input_contents__password-again__input-form"
-
+        = render partial: 'shared/errors', locals: {table: @user, column: "password_confirmation"}
         .member-information_identification
           .member-information_identification__title
             本人確認
@@ -70,7 +69,6 @@
             安心・安全にご利用いただくために、お客様の本人
             %p 情報の登録にご協力ください。他のお客様に公開さ
             %p れることはありません。
-
         = form.fields_for :user_detail do |f|
           .member-information-name
             .member-information-name__text
@@ -79,9 +77,10 @@
               .member-information-name__text__required
                 必須
             .member-information-name__form
-              = f.text_field :first_name, placeholder:"例)山田", class: "member-information-name__form__last-name"
-              = f.text_field :last_name, placeholder:"例)彩", class: "member-information-name__form__name"
-
+              = f.text_field :last_name, placeholder:"例)山田", class: "member-information-name__form__last-name"
+              = f.text_field :first_name, placeholder:"例)彩", class: "member-information-name__form__name"
+            = render partial: 'shared/errors', locals: {table: @user.user_detail, column: "last_name"}
+            = render partial: 'shared/errors', locals: {table: @user.user_detail, column: "first_name"}
           .member-information-namekatakana
             .member-information-namekatakana__text
               .member-information-namekatakana__text__name
@@ -89,9 +88,10 @@
               .member-information-namekatakana__text__reqired
                 必須
             .member-information-namekatakana__form
-              = f.text_field :first_name_kata,placeholder:"例)ヤマダ", class: "member-information-namekatakana__form__last-name"
-              = f.text_field :last_name_kata ,placeholder:"例)アヤ", class: "member-information-namekatakana__form__name"
-
+              = f.text_field :last_name_kata,placeholder:"例)ヤマダ", class: "member-information-namekatakana__form__last-name"
+              = f.text_field :first_name_kata ,placeholder:"例)アヤ", class: "member-information-namekatakana__form__name"
+            = render partial: 'shared/errors', locals: {table: @user.user_detail, column: "last_name_kata"}
+            = render partial: 'shared/errors', locals: {table: @user.user_detail, column: "first_name_kata"}
           .member-information-birthday
             .member-information-birthday__text
               .member-information-birthday__text__title
@@ -103,7 +103,7 @@
               = fa_icon 'angle-down', class: 'member-information-birthday__form--year-angle'
               = fa_icon 'angle-down', class: 'member-information-birthday__form--month-angle'
               = fa_icon 'angle-down', class: 'member-information-birthday__form--day-angle'
-
+            = render partial: 'shared/errors', locals: {table: @user.user_detail, column: "birthday"}
         .member-information-caution
           ＊本人情報は正しく入力してください。会員登録後、
           %p 修正するにはお時間をいただく場合があります。
@@ -111,6 +111,11 @@
         .member-information-other
           .member-information-other__recaptcha
             = recaptcha_tags
+            - if @user.errors.any?
+              - if @error.present?
+                %ul.errors-text
+                  - @error.each do |error|
+                    %li=error
           .member-information-other__terms
             「次へ進む」のボタンを押すことにより、
             = link_to  '', class: 'member-information-other__terms__btn' do
