@@ -16,6 +16,10 @@ class SignupsController < ApplicationController
 
   def address
     @user = User.new
+    @first_name = session[:user_detail_attributes]["first_name"]
+    @last_name = session[:user_detail_attributes]["last_name"]
+    @first_name_kata = session[:user_detail_attributes]["first_name_kata"]
+    @last_name_kata = session[:user_detail_attributes]["last_name_kata"]
     @user.build_address
     @user.build_user_detail
   end
@@ -30,11 +34,11 @@ class SignupsController < ApplicationController
     @user.build_user_detail(session[:user_detail_attributes])
     @user.build_address(session[:address_attributes])
     if @user.save
-            session[:id] = @user.id
-            redirect_to regist_complete_signups_path
-          else
-            render '/signups/member_information_input'
-          end
+      session[:id] = @user.id
+      redirect_to regist_complete_signups_path
+    else
+      render '/signups/member_information_input'
+    end
   end
 
   def regist_complete
@@ -86,7 +90,23 @@ class SignupsController < ApplicationController
       password_confirmation: session[:password_confirmation]
     )
     @user.build_user_detail(session[:user_detail_attributes])
-    render member_information_input_signups_path unless @user.valid?
+    # unless (@user.valid?) or (verify_recaptcha(model: @user))
+    #   @error = @user.errors.full_messages_for(:base)
+    #   render member_information_input_signups_path
+    # end
+    if @user.valid?
+      unless verify_recaptcha(model: @user)
+        @error = @user.errors.full_messages_for(:base)
+        render member_information_input_signups_path
+      end
+    else
+      unless verify_recaptcha(model: @user)
+        @error = @user.errors.full_messages_for(:base)
+        render member_information_input_signups_path
+      else
+        render member_information_input_signups_path
+      end
+    end
   end
 
   def validates_authentication
