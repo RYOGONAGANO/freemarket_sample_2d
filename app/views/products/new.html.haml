@@ -46,7 +46,7 @@
                 カテゴリー
               .exhibit__box__detail__rightbox__categorybox__categorytitle__required
                 必須
-            = f.select :category, [["レディース"],["メンズ"],["ベビー・キッズ"],["インテリア・住まい・小物"],["本・音楽・ゲーム"],["おもちゃ・ホビー・グッズ"],["コスメ・香水・美容"],["家電・スマホ・カメラ"],["スポーツ・レジャー"],["ハンドメイド"],["チケット"],["自転車・オートバイ"],["その他"]], prompt: "---"
+            = f.collection_select :category, Product_category.all, :id, :name , prompt: "---"
             %i.fas.fa-angle-down
           .exhibit__box__detail__rightbox__statusbox
             .exhibit__box__detail__rightbox__statusbox__statustitle
@@ -54,7 +54,7 @@
                 商品の状態
               .exhibit__box__detail__rightbox__statusbox__statustitle__required
                 必須
-            = f.select :status, [["新品、未使用"],["未使用に近い"],["目立った傷や汚れなし"],["やや傷や汚れあり"],["傷や汚れあり"],["全体的に状態が悪い"]], prompt: "---"
+            = f.collection_select :status, Product_status.all, :id, :name, prompt: "---"
             %i.fas.fa-angle-down
       .exhibit__box__delivery
         .exhibit__box__delivery__leftbox
@@ -68,7 +68,7 @@
                 配送量の負担
               .exhibit__box__delivery__rightbox__deliverymoney__deliverytitle__required
                 必須
-            = f.select :charge, [], prompt: "---"
+            = f.collection_select :charge, Delivery_fee.all, :id, :name, prompt: "---"
             %i.fas.fa-angle-down
           .exhibit__box__delivery__rightbox__deliveryarea
             .exhibit__box__delivery__rightbox__deliveryarea__areatitle
@@ -76,7 +76,7 @@
                 発送元の地域
               .exhibit__box__delivery__rightbox__deliveryarea__areatitle__required
                 必須
-            = f.select :shipping_area, [], prompt: "---"
+            = f.collection_select :shipping_area, Prefecture.all, :id, :name, prompt: "---"
             %i.fas.fa-angle-down
           .exhibit__box__delivery__rightbox__deliveryday
             .exhibit__box__delivery__rightbox__deliveryday__daytitle
@@ -84,7 +84,7 @@
                 発送までの日数
               .exhibit__box__delivery__rightbox__deliveryday__daytitle__required
                 必須
-            = f.select :shipping_date, [], prompt: "---"
+            = f.collection_select :shipping_date, Delivery_date.all, :id, :name, prompt: "---"
             %i.fas.fa-angle-down
       .exhibit__box__price
         .exhibit__box__price__leftbox
