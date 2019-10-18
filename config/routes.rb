@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { sessions: "users/sessions" }
   root to: 'products#index'
   resources :tests
   resources :users do
@@ -10,12 +10,21 @@ Rails.application.routes.draw do
       get :card_data_input
       get :card_data_create
       get :authentication
-      get :login_page
+      get :login
       get :logout
       get :registrationNewmenbar
-      get :address
+      get :buyComplete
       get :mypage
+    end
+  end
+
+  resources :signups do
+    collection do
       get :member_information_input
+      get :authentication
+      get :address
+      get :carddata
+      get :regist_complete # 登録完了後のページ
     end
   end
   resources :products 

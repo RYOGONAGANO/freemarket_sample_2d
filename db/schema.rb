@@ -33,6 +33,18 @@ ActiveRecord::Schema.define(version: 2019_10_12_084557) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "postal_code", null: false
+    t.integer "prefecture_id", default: 0, null: false
+    t.string "city", null: false
+    t.string "address", null: false
+    t.string "building"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_addresses_on_user_id"
+  end
+
   create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.text "name", null: false
     t.integer "price", null: false
@@ -56,6 +68,21 @@ ActiveRecord::Schema.define(version: 2019_10_12_084557) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "user_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "first_name_kata", null: false
+    t.string "last_name_kata", null: false
+    t.date "birthday", null: false
+    t.string "sms_phone"
+    t.string "phone"
+    t.text "profile"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_user_details_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nickname", default: "", null: false
     t.string "email", default: "", null: false
@@ -65,11 +92,13 @@ ActiveRecord::Schema.define(version: 2019_10_12_084557) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["email"], name: "index_users_on_email"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "addresses", "users"
   add_foreign_key "products", "users", column: "buyer_id"
   add_foreign_key "products", "users", column: "exhibitor_id"
+  add_foreign_key "user_details", "users"
 end

@@ -6,23 +6,23 @@
         %h2新規会員登録
       .registrationNewmenbar-maincontent__contents__box
         .registrationNewmenbar-maincontent__contents__box__boxs
-          .registrationNewmenbar-maincontent__contents__box__boxs__mail
-            %button{type: "submit",class: "mailaddress"}
+          = link_to member_information_input_signups_path, class: "registrationNewmenbar-maincontent__contents__box__boxs__mail" do
+            .mailaddress
               .mailaddress__icon
                 %i{class: 'far fa-envelope'}
               .mailaddress__text
                 メールアドレスで登録する
-          .registrationNewmenbar-maincontent__contents__box__boxs__facebook
-            %button{type: "submit",class: "facebook"}
+          = link_to root_path, class: 'registrationNewmenbar-maincontent__contents__box__boxs__facebook' do
+            .facebook
               .facebook__icon
                 %i{class: 'fab fa-facebook-square'}
               .facebook__text
                 Facebookで登録する
-          .registrationNewmenbar-maincontent__contents__box__boxs__google
-            %button{type: "submit",class: "google"}
+          = link_to root_path, class: 'registrationNewmenbar-maincontent__contents__box__boxs__google' do
+            .google
               .google__icon
               .google__text
-                googleで登録する
+                Googleで登録する
   = render 'shared/copywrite-bottom'
 
 

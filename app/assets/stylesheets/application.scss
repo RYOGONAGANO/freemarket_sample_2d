@@ -9,9 +9,10 @@
 @import 'modules/logo-onlyheader';
 @import 'modules/copywrite-bottom';
 @import 'modules/new-user-progress';
+@import 'modules/errors';
 @import 'toppage-content';
 @import 'users/mypage';
-@import 'users/new';
+@import 'users/regist_complete';
 @import 'users/profile';
 @import 'users/profilechange';
 @import 'users/authentication';
@@ -22,8 +23,10 @@
 @import 'users/member_information-input';
 @import 'users/logout';
 @import 'products/product_detail';
+@import 'users/carddata';
 @import 'users/card_data_delete';
 @import 'users/card_data_input';
 @import 'users/card_data_create';
 @import 'users/login-page';
 @import 'users/registrationNewmenbar';
+@import 'users/buyComplete';

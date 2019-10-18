@@ -48,6 +48,7 @@ group :development, :test do
   gem 'rails-controller-testing'
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'gimei'
 end
 
 group :development do
@@ -71,9 +72,12 @@ group :production do
   gem 'unicorn', '5.4.1'
 end
 
-gem 'pry-rails'
 gem 'font-awesome-rails'
 gem 'aws-sdk-s3', require: false
 gem 'haml-rails'
 gem 'devise'
+gem 'recaptcha', require: "recaptcha/rails"
+gem 'dotenv-rails'
+gem 'pry-rails'
+gem 'jquery-rails'
 gem 'active_hash'

@@ -49,10 +49,7 @@
       font-size: 15px;
     }
     &__box {
-      height: 50px;
-      width: 55%;
-      background-color: colors(btn-red);
-      color: colors(white);
+      @include btn(colors(btn-red));
       text-align: center;
       line-height: 50px;
       margin: 0 auto;
