@@ -1,4 +1,4 @@
-= form_with(model: @test, local: true) do |f|
+= form_with(model: @product, local: true) do |f|
   = render "shared/logo-onlyheader"
   .exhibit
     .exhibit__box
@@ -27,14 +27,14 @@
               商品名
             .exhibit__box__itemname__topbox__title__required
               必須
-          = f.text_field :text, class: :product_name, placeholder: "商品名  (必須40文字まで)"
+          = f.text_field :name, class: :product_name, placeholder: "商品名  (必須40文字まで)"
         .exhibit__box__itemname__bottombox
           .exhibit__box__itemname__bottombox__title
             .exhibit__box__itemname__bottombox__title__name
               商品の説明
             .exhibit__box__itemname__bottombox__title__required
               必須
-          = f.text_area :text, class: :product_detail, placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+          = f.text_area :description, class: :product_detail, placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
       .exhibit__box__detail
         .exhibit__box__detail__leftbox
           .exhibit__box__detail__leftbox__title
@@ -68,7 +68,7 @@
                 配送量の負担
               .exhibit__box__delivery__rightbox__deliverymoney__deliverytitle__required
                 必須
-            = f.select :price, [], prompt: "---"
+            = f.select :charge, [], prompt: "---"
             %i.fas.fa-angle-down
           .exhibit__box__delivery__rightbox__deliveryarea
             .exhibit__box__delivery__rightbox__deliveryarea__areatitle
@@ -76,7 +76,7 @@
                 発送元の地域
               .exhibit__box__delivery__rightbox__deliveryarea__areatitle__required
                 必須
-            = f.select :area, [], prompt: "---"
+            = f.select :shipping_area, [], prompt: "---"
             %i.fas.fa-angle-down
           .exhibit__box__delivery__rightbox__deliveryday
             .exhibit__box__delivery__rightbox__deliveryday__daytitle
@@ -84,7 +84,7 @@
                 発送までの日数
               .exhibit__box__delivery__rightbox__deliveryday__daytitle__required
                 必須
-            = f.select :day, [], prompt: "---"
+            = f.select :shipping_date, [], prompt: "---"
             %i.fas.fa-angle-down
       .exhibit__box__price
         .exhibit__box__price__leftbox
@@ -100,7 +100,7 @@
                 必須
             .exhibit__box__price__rightbox__value__yenmark
               %i.fas.fa-yen-sign
-            = f.text_field :value, class: :product_value, placeholder: "例）300"
+            = f.text_field :price, class: :product_price, placeholder: "例）300"
           .exhibit__box__price__rightbox__fee
             .exhibit__box__price__rightbox__fee__title
               販売手数料 (10%)
@@ -128,7 +128,7 @@
               = link_to "加盟店規約", new_test_path, class: "consent4"
               に同意したことになります。
           .exhibit__box__confirmation__box__exhibit-btn
-            = f.submit "出品する",  class: "exhibit-submit"
+            = f.submit "出品する", class: "exhibit-submit"
           .exhibit__box__confirmation__box__return-btn
-            = link_to "もどる", tests_path, class: "return-link"
+            = link_to "もどる", products_path, class: "return-link"
   = render "shared/copywrite-bottom" 

@@ -71,6 +71,7 @@ group :production do
   gem 'unicorn', '5.4.1'
 end
 
+gem 'pry-rails'
 gem 'font-awesome-rails'
 gem 'aws-sdk-s3', require: false
 gem 'haml-rails'
