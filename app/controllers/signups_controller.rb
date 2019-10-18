@@ -1,7 +1,7 @@
 class SignupsController < ApplicationController
   before_action :validates_member_information_input, only: :authentication
   before_action :validates_authentication, only: :address
-  before_action :validates_address, only: :create
+  before_action :validates_address, only: :carddata
 
 
   def member_information_input
@@ -20,6 +20,12 @@ class SignupsController < ApplicationController
     @last_name = session[:user_detail_attributes]["last_name"]
     @first_name_kata = session[:user_detail_attributes]["first_name_kata"]
     @last_name_kata = session[:user_detail_attributes]["last_name_kata"]
+    @user.build_address
+    @user.build_user_detail
+  end
+
+  def carddata
+    @user = User.new
     @user.build_address
     @user.build_user_detail
   end
@@ -90,22 +96,11 @@ class SignupsController < ApplicationController
       password_confirmation: session[:password_confirmation]
     )
     @user.build_user_detail(session[:user_detail_attributes])
-    # unless (@user.valid?) or (verify_recaptcha(model: @user))
-    #   @error = @user.errors.full_messages_for(:base)
-    #   render member_information_input_signups_path
-    # end
-    if @user.valid?
-      unless verify_recaptcha(model: @user)
-        @error = @user.errors.full_messages_for(:base)
+    @user.valid?
+    verify_recaptcha(model: @user)
+    if @user.errors.any?
+      @error = @user.errors.full_messages_for(:base)
         render member_information_input_signups_path
-      end
-    else
-      unless verify_recaptcha(model: @user)
-        @error = @user.errors.full_messages_for(:base)
-        render member_information_input_signups_path
-      else
-        render member_information_input_signups_path
-      end
     end
   end
 
