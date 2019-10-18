@@ -65,7 +65,7 @@ describe UserDetail do
       example "birthdayが空の場合、保存できない" do
         user_detail = build(:user_detail, birthday: nil)
         user_detail.valid?
-        expect(user_detail.errors[:birthday]).to include("を入力してください")
+        expect(user_detail.errors[:birthday]).to include("を正しく入力してください")
       end
     end
 
