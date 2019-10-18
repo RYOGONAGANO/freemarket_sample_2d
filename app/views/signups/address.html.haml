@@ -30,7 +30,7 @@
     .address-registration-entire
       .address-registration-entire__title
         発送元・お届け先住所入力
-    = form_with(model: @user, local: true, url: signups_path, method: "post", class: 'address-registration-item') do |form|
+    = form_with(model: @user, local: true, url: carddata_signups_path, method: "get", class: 'address-registration-item') do |form|
       = form.fields_for :user_detail do |detail|
         .address-registration-item__name
           .address-registration-item__name__text

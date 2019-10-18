@@ -21,7 +21,7 @@
       .login_form_contents
         = form.text_field :email, placeholder:"メールアドレス", class: "login_form_contents__input-email"
         = render partial: 'shared/errors', locals: {table: @user, column: "email"}
-        = form.text_field :password, placeholder:"パスワード", class: "login_form_contents__input-password"
+        = form.password_field :password, placeholder:"パスワード", class: "login_form_contents__input-password"
         = render partial: 'shared/errors', locals: {table: @user, column: "password"}
         .login_form_contents__re-captcha
           = recaptcha_tags

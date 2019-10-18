@@ -6,7 +6,6 @@ Rails.application.routes.draw do
     collection do
       get :profile
       get :profilechange
-      get :carddata
       get :card_data_delete
       get :card_data_input
       get :card_data_create
@@ -24,6 +23,7 @@ Rails.application.routes.draw do
       get :member_information_input
       get :authentication
       get :address
+      get :carddata
       get :regist_complete # 登録完了後のページ
     end
   end
