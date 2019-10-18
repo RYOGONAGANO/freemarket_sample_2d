@@ -26,7 +26,7 @@
 .card-data-inputpay
   .card-data-inputpay__top
     クレジットカード情報入力
-  .card-data-inputpay__information
+  = form_with(model: @user, local: true, url: signups_path, method: "post", class: "card-data-inputpay__information") do |form|
     .card-data-inputpay__information__box
       .card-data-inputpay__information__box__card-number-box
         .card-data-inputpay__information__box__card-number-box__card-number
@@ -105,8 +105,5 @@
           = fa_icon 'question-circle'
           カード裏面の番号とは？
       .card-data-inputpay__information__box__text-area
-        %form
-        = link_to card_data_delete_users_path, class: "card-delete-button" do
-          %button{type: "submit", class: "card-delete-button"}
-            次へ進む
+        = form.submit "次へ進む", class: "card-delete-button"
 =render 'shared/copywrite-bottom'

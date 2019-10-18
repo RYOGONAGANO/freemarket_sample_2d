@@ -1,120 +1,118 @@
-.member-information-header{
+.member-information-header {
   margin-left: 350px;
   display: inline-block;
   padding-top: 40px;
   height: 128px;
-  text-align:  center;  
-  
-  &__logo{
+  text-align: center;
+
+  &__logo {
     margin-right: 50px;
     display: inline-block;
     width: 185px;
     height: 49px;
-    
   }
-  .userRegist-complete-progress-bar{
+  .userRegist-complete-progress-bar {
     float: right;
     height: 72px;
-    background-color:colors(ash);
+    background-color: colors(ash);
     width: 552px;
 
-    &__text{
-      background-color:colors(ash);
+    &__text {
+      background-color: colors(ash);
       height: 16px;
       width: 508px;
       display: flex;
 
-      &__member-info{
+      &__member-info {
         font-size: 12px;
-        color:colors(title-gray);
+        color: colors(title-gray);
       }
-      &__phone-confirmation{
+      &__phone-confirmation {
         margin-left: 50px;
         font-size: 12px;
         color: colors(title-gray);
       }
-      &__adress{
+      &__adress {
         margin-left: 35px;
         font-size: 12px;
         font-weight: 600;
         color: colors(btn-red);
       }
-      &__payment{
+      &__payment {
         margin-left: 40px;
         font-size: 12px;
         color: colors(title-gray);
       }
-      &__complete{
+      &__complete {
         margin-left: 70px;
         font-size: 12px;
-        color:colors(title-gray);
+        color: colors(title-gray);
       }
     }
-    &__lines{
-      background-color:colors(ash);
+    &__lines {
+      background-color: colors(ash);
       height: 16px;
       width: 490px;
       display: flex;
       justify-content: center;
       align-items: center;
-      &__member-info{
+      &__member-info {
         height: 12px;
         width: 12px;
         background-color: colors(btn-red);
         border-radius: 50%;
       }
-      &__member-info-to-phone{
+      &__member-info-to-phone {
         height: 2px;
         width: 105px;
         background-color: colors(btn-red);
       }
-      &__phone-confirmation{
+      &__phone-confirmation {
         height: 12px;
         width: 12px;
         background-color: colors(btn-red);
         border-radius: 50%;
       }
-      &__phone-confirmation-to-adress{
+      &__phone-confirmation-to-adress {
         height: 2px;
         width: 105px;
         background-color: colors(btn-red);
       }
-      &__adress{
+      &__adress {
         height: 12px;
         width: 12px;
         background-color: colors(btn-red);
         border-radius: 50%;
       }
-      &__adress-to-payment{
+      &__adress-to-payment {
         height: 2px;
         width: 105px;
         background-color: colors(ber-gray);
       }
-      &__payment{
+      &__payment {
         height: 12px;
         width: 12px;
         background-color: colors(ber-gray);
         border-radius: 50%;
       }
-      &__payment-to-complete{
+      &__payment-to-complete {
         height: 2px;
         width: 105px;
-        background-color:colors(ber-gray);
+        background-color: colors(ber-gray);
       }
-      &__complete{
+      &__complete {
         height: 12px;
         width: 12px;
-        background-color:colors(ber-gray);
+        background-color: colors(ber-gray);
         border-radius: 50%;
       }
     }
   }
 }
 
-
-.address-registration{
-  .address-registration-entire{
-    &__title{
+.address-registration {
+  .address-registration-entire {
+    &__title {
       margin: 0 auto 2px;
       text-align: center;
       background-color: colors(white);
@@ -127,221 +125,193 @@
   }
 }
 
-.address-registration-item{
-  padding-top: 40px; 
+.address-registration-item {
+  padding-top: 40px;
   margin: auto;
   background-color: colors(white);
   width: 700px;
   text-align: center;
-  
 
-  &__name{
-    display: inline-grid;
-    &__text{
-      display: flex;
-      margin-bottom: 5px;
-      &__title{
+  &__name {
+    &__text {
+      @include label;
+      &__title {
         font-weight: 600;
       }
-      &__required{
+      &__required {
         @include required;
       }
     }
 
-    &__input-form{
+    &__input-form {
       display: inline-block;
-      &__lastname{
+      &__lastname {
         display: block;
         @include input-form;
         margin-bottom: 8px;
-
       }
-      &__firstname{
+      &__firstname {
         @include input-form;
-
       }
     }
   }
 
-  &__kananame{
+  &__kananame {
     display: block;
 
-    &__text{
-      display: flex;
-      margin-bottom: 5px;
-      padding-left: 180px;
-      margin-top: 30px;
-      &__title{
+    &__text {
+      @include label;
+      &__title {
         font-weight: 600;
       }
-      &__required{
+      &__required {
         @include required;
       }
     }
-    &__input-form{
+    &__input-form {
       display: inline-block;
-      &__lastname{
+      &__lastname {
         display: block;
         @include input-form;
         margin-bottom: 8px;
-
       }
-      &__firstname{
+      &__firstname {
         @include input-form;
       }
     }
   }
 
-  &__postalcode{
-    &__text{
-      display: flex;
-      margin-bottom: 5px;
-      padding-left: 180px;
-      margin-top: 30px;
-      &__title{
+  &__postalcode {
+    &__text {
+      @include label;
+      &__title {
         font-weight: 600;
-
       }
-      &__required{
+      &__required {
         @include required;
       }
     }
-    &__input-form{
+    &__input-form {
       display: inline-block;
-      &__nomber{
+      &__nomber {
         @include input-form;
       }
     }
   }
 
-  &__prefectures{
-    &__text{
-      display: flex;
-      margin-bottom: 5px;
-      padding-left: 180px;
-      margin-top: 30px;
-      &__title{
+  &__prefectures {
+    &__text {
+      @include label;
+      &__title {
         font-weight: 600;
-
       }
-      &__required{
+      &__required {
         @include required;
       }
     }
 
-    &__form{
+    &__form {
+      position: relative;
       select {
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
+        @include input-form;
+        padding-left: 18px;
+        position: relative;
+        background-color: colors(white);
       }
       select::-ms-expand {
         display: none;
       }
-      &__select{
-        @include input-form;
-        padding-left: 18px;
-        position: relative;
-        width: 343px;
-        background-color: colors(white); 
-        &--angle{
-          position: absolute;
-          top: 720px;
-          left: 58%;
-          font-size: 25px;
-          color: colors(title-gray);
-          }
+      &--angle {
+        position: absolute;
+        top: 10px;
+        right: 30%;
+        font-size: 25px;
+        color: colors(title-gray);
       }
     }
   }
-  &__city{
-    &__text{
+  &__city {
+    &__text {
       display: flex;
-      margin-bottom: 5px;
+      margin: 30px 0 5px;
       padding-left: 180px;
-      margin-top: 30px;
-      &__title{
+      &__title {
         font-weight: 600;
-
       }
-      &__required{
+      &__required {
         @include required;
       }
     }
 
-    &__input-form{
-      &__town{
+    &__input-form {
+      display: inline-block;
+      &__town {
         @include input-form;
       }
     }
   }
 
-  &__address{
-    &__text{
-      display: flex;
-      margin-bottom: 5px;
-      padding-left: 180px;
-      margin-top: 30px;
-      &__title{
+  &__address {
+    &__text {
+      @include label;
+      &__title {
         font-weight: 600;
       }
-      &__required{
+      &__required {
         @include required;
       }
     }
-    &__input-form{
+    &__input-form {
+      display: inline-block;
+      &__house-number {
+        @include input-form;
+      }
+    }
+  }
+
+  &__building {
+    &__text {
+      @include label;
+      &__title {
+        font-weight: 600;
+      }
+      &__required {
+        @include required;
+        background-color: colors(ber-gray);
+      }
+    }
+
+    &__input-form {
       @include input-form;
     }
   }
 
-  &__building{
-    &__text{
-      display: flex;
-      margin-bottom: 5px;
-      padding-left: 180px;
-      margin-top: 30px;
-      &__title{
+  &__tel {
+    &__text {
+      @include label;
+      &__title {
         font-weight: 600;
       }
-      &__required{
+      &__required {
         @include required;
         background-color: colors(ber-gray);
       }
     }
-
-    &__input-form{
-      @include input-form
-    }
-  }
-
-  &__tel{
-    &__text{
-      display: flex;
-      margin-bottom: 5px;
-      padding-left: 180px;
-      margin-top: 30px;
-      &__title{
-        font-weight: 600;
-      }
-      &__required{
-        @include required;
-        background-color: colors(ber-gray);
-
-      }
-    }
-    &__input-form{
+    &__input-form {
       @include input-form;
       margin-bottom: 40px;
     }
   }
-  &__next-btn{
+  &__next-btn {
     padding-bottom: 80px;
     padding-top: 30px;
-    &__submit{
+    &__submit {
       @include btn;
       margin: auto;
       background-color: colors(btn-red);
-
     }
   }
 }

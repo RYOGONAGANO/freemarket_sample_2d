@@ -3,18 +3,16 @@
   .authentication-mainitems
     .authentication-mainitems__title
       認証番号の確認
-    .authentication-input-screen
+    = form_with(model: @user, local: true, url: address_signups_path, method: :get, class: 'authentication-input-screen') do |form|
       .authentication-input-screen__maincontent
         .authentication-input-screen__maincontent__text
           ***-****-1234にSMSでお送りした6桁の認証番号を入力してください。
         .authentication-input-screen__maincontent__authentication
-          .authentication-input-screen__maincontent__authentication__text
-            認証番号
-            
-          %input{type: "text", placeholder:"6桁の暗証番号を入力", class: "authentication-input-screen__maincontent__authentication__input"}
-
-          %button{type: "submit", class: "authentication-input-screen__maincontent__authentication__submit-btn"}
-            認証して完了
+          = form.fields_for :user_detail do |f|
+            .authentication-input-screen__maincontent__authentication__text
+              認証番号
+            = f.text_field :sms_phone, placeholder:"6桁の暗証番号を入力", class: "authentication-input-screen__maincontent__authentication__input"
+            = f.submit "認証して完了", class: "authentication-input-screen__maincontent__authentication__submit-btn"
     .no-reachnumber
       .no-reach-content
         .no-reach-content__guide

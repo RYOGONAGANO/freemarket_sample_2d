@@ -139,6 +139,7 @@
           height: 70px;
 
           &__form {
+            margin-bottom: 5px;
             float: left;
             &__text {
               font-weight: 600;
@@ -161,7 +162,6 @@
           &__form {
             margin-bottom: 5px;
             float: left;
-            display: inline;
             &__text {
               font-weight: 600;
               display: inline-block;
@@ -181,7 +181,6 @@
           height: 70px;
           &__form {
             margin-bottom: 5px;
-            display: inline;
             float: left;
 
             &__text {
@@ -203,7 +202,6 @@
           height: 70px;
           &__form {
             margin-bottom: 5px;
-            display: inline;
             float: left;
 
             &__text {
@@ -235,8 +233,8 @@
 
         .member-information-name {
           margin-top: 32px;
-          display: inline-block;
           &__text {
+            margin-bottom: 5px;
             display: flex;
             &__name {
               font-weight: 600;
@@ -248,16 +246,12 @@
           }
 
           &__form {
-            display: block;
+            display: flex;
             &__last-name {
-              @include input-form;
-              width: 165px;
-              height: 48px;
+              @include input-form(165px, 48px);
             }
             &__name {
-              @include input-form;
-              width: 165px;
-              height: 48px;
+              @include input-form(165px, 48px);
             }
           }
         }
@@ -266,7 +260,7 @@
           margin-top: 32px;
           &__text {
             display: flex;
-
+            margin-bottom: 5px;
             &__name {
               font-weight: 600;
               display: flex;
@@ -277,15 +271,13 @@
           }
 
           &__form {
+            margin-bottom: 5px;
+            display: flex;
             &__last-name {
-              @include input-form;
-              width: 165px;
-              height: 48px;
+              @include input-form(165px, 48px);
             }
             &__name {
-              @include input-form;
-              width: 165px;
-              height: 48px;
+              @include input-form(165px, 48px);
             }
           }
         }
@@ -294,6 +286,7 @@
           margin-top: 32px;
           &__text {
             display: flex;
+            margin-bottom: 5px;
             &__title {
               font-weight: 600;
               display: flex;
@@ -303,10 +296,31 @@
             }
           }
           &__form {
-            
             background-color: colors(white);
             display: flex;
             position: relative;
+            line-height: 48px;
+            &--year-angle {
+              position: absolute;
+              top: 25%;
+              left: 15%;
+              font-size: 25px;
+              color: #888;
+            }
+            &--month-angle {
+              position: absolute;
+              top: 25%;
+              left: 42%;
+              font-size: 25px;
+              color: #888;
+            }
+            &--day-angle {
+              position: absolute;
+              top: 25%;
+              left: 72%;
+              font-size: 25px;
+              color: #888;
+            }
             select {
               -webkit-appearance: none;
               -moz-appearance: none;
@@ -315,77 +329,46 @@
             select::-ms-expand {
               display: none;
             }
-            &__year {
+            .year {
               background-color: colors(white);
               width: 76px;
               height: 48px;
               position: relative;
               padding-left: 15px;
-              &--angle {
-                position: absolute;
-                top: 25%;
-                left: 15%;
-                font-size: 25px;
-                color: #888;
-              }
-              &__text {
-                margin: 18px 5px;
-                
-              }
+              margin-right: 5px;
             }
-            &__month {
+            .month {
               background-color: colors(white);
               padding-left: 15px;
               width: 76px;
               height: 48px;
               position: relative;
-              &--angle {
-                position: absolute;
-                top: 25%;
-                left: 42%;
-                font-size: 25px;
-                color: #888;
-              }
-              &__text {
-                margin: 18px 5px;
-              }
+              margin: 0 5px;
             }
 
-            &__day {
+            .day {
               background-color:colors(white);
               padding-left: 15px;
               width: 76px;
               height: 48px;
               position: relative;
-              &--angle {
-                position: absolute;
-                top: 25%;
-                left: 68%;
-                font-size: 25px;
-                color: #888;
-              }
-              &__text {
-                margin: 18px 5px;
-              }
+              margin: 0 5px;
             }
           }
         }
 
-        .member-information_caution {
+        .member-information-caution {
           color: #888888;
           margin-top: 8px;
         }
 
-        .member-information_other {
+        .member-information-other {
           display: contents;
           background-color: colors(white);
           margin-top: 14px;
           text-align: center;
           &__recaptcha {
             margin-top: 40px;
-            width: 343px;
-            height: 78px;
-            background-color: darkgray;
           }
           &__terms {
             text-align: center;

@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   end
 
   def new
+    @user = User.new
   end
 
   def edit
@@ -10,6 +11,7 @@ class UsersController < ApplicationController
 
   def show
   end
+
 
 
 end

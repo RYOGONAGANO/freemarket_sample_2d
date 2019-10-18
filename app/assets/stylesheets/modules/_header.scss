@@ -14,9 +14,7 @@
       background: image-url("logomercari.svg");
       background-repeat: no-repeat;
       height: 36px;
-      width: 133px;
-      margin-left: 1px;
-      margin-top: 2px;
+      width: 134px;
     }
     &__search {
       background-color: #80808014;
@@ -55,6 +53,9 @@
         width: 149.45px;
         font-size: 14px;
         font-weight: 600;
+        span:hover {
+          color: colors(blue);
+        }
         .fa {
           color: red;
         }
@@ -75,15 +76,45 @@
           font-size: 14px;
           font-weight: 600;
           margin-left: 5px;
+          span:hover {
+            color: colors(blue);
+          }
         }
       }
     }
     &__right {
       height: 44px;
       width: 520.31px;
-
       margin-top: 5px;
       display: flex;
+      &__signup {
+        text-align: center;
+        margin-left: auto;
+        &--btn {
+          background-color: colors(btn-red);
+          color: colors(white);
+          font-size: 14px;
+          border: 1px solid colors(btn-red);
+          border-radius: 4px;
+          padding: 8px 10px;
+        }
+      }
+      &__login {
+        text-align: center;
+        margin-left: 10px;
+        &--btn {
+          background-color: colors(white);
+          color: colors(blue);
+          font-size: 14px;
+          border: 1px solid colors(blue);
+          border-radius: 4px;
+          padding: 8px 10px;
+        }
+        &--btn:hover {
+          color: colors(white);
+          background-color: colors(blue);
+        }
+      }
       &__like {
         height: 44px;
         width: 127px;

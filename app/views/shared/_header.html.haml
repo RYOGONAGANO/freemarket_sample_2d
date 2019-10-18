@@ -1,6 +1,6 @@
 .header
   .header__title
-    = link_to tests_path do
+    = link_to root_path do
       .header__title__logo
     .header__title__search
       何かお探しですか ?
@@ -9,28 +9,36 @@
     .header__menu__left
       .header__menu__left__category
         = fa_icon "list"
-        カテゴリーから探す
+        %span カテゴリーから探す
       .header__menu__left__brand
         .header__menu__left__brand__icon
           = image_tag "brand-tag.png"
         .header__menu__left__brand__tag
-          ブランドから探す
+          %span ブランドから探す
     .header__menu__right
-      = link_to tests_path do
-        .header__menu__right__like
-          %i.fa.fa-heart
-          いいね ! 一覧
-      = link_to tests_path do
-        .header__menu__right__news
-          = fa_icon "bell"
-          お知らせ
-      = link_to tests_path do  
-        .header__menu__right__todo
-          = fa_icon "check"
-          やることリスト
-      = link_to mypage_users_path do
-        .header__menu__right__mypage
-          .header__menu__right__mypage__icon
-            = image_tag "member_photo_noimage.png"
-          .header__menu__right__mypage__tag 
-            マイページ
+      - unless user_signed_in?
+        .header__menu__right__signup
+          = link_to registrationNewmenbar_users_path, class: 'header__menu__right__signup--btn' do
+            新規会員登録
+        .header__menu__right__login
+          = link_to new_user_session_path, class: 'header__menu__right__login--btn' do
+            ログイン
+      - else
+        = link_to root_path do
+          .header__menu__right__like
+            = fa_icon "heart"
+            いいね ! 一覧
+        = link_to root_path do
+          .header__menu__right__news
+            = fa_icon "bell"
+            お知らせ
+        = link_to root_path do
+          .header__menu__right__todo
+            = fa_icon "check"
+            やることリスト
+        = link_to users_path do
+          .header__menu__right__mypage
+            .header__menu__right__mypage__icon
+              = image_tag "member_photo_noimage.png"
+            .header__menu__right__mypage__tag
+              %span マイページ

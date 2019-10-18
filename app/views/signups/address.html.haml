@@ -1,0 +1,117 @@
+
+.shipping-origin-address
+  .member-information-header
+    .member-information-header__logo
+      = link_to image_tag( 'logomercari.svg'), root_path
+    .userRegist-complete-progress-bar
+      .userRegist-complete-progress-bar__text
+        .userRegist-complete-progress-bar__text__member-info
+          %p会員情報
+        .userRegist-complete-progress-bar__text__phone-confirmation
+          %p電話番号認証
+        .userRegist-complete-progress-bar__text__adress
+          %pお届け先住所入力
+        .userRegist-complete-progress-bar__text__payment
+          %p支払い方法
+        .userRegist-complete-progress-bar__text__complete
+          %p完了
+      .userRegist-complete-progress-bar__lines
+        .userRegist-complete-progress-bar__lines__member-info
+        .userRegist-complete-progress-bar__lines__member-info-to-phone
+        .userRegist-complete-progress-bar__lines__phone-confirmation
+        .userRegist-complete-progress-bar__lines__phone-confirmation-to-adress
+        .userRegist-complete-progress-bar__lines__adress
+        .userRegist-complete-progress-bar__lines__adress-to-payment
+        .userRegist-complete-progress-bar__lines__payment
+        .userRegist-complete-progress-bar__lines__payment-to-complete
+        .userRegist-complete-progress-bar__lines__complete
+
+  .address-registration
+    .address-registration-entire
+      .address-registration-entire__title
+        発送元・お届け先住所入力
+    = form_with(model: @user, local: true, url: carddata_signups_path, method: "get", class: 'address-registration-item') do |form|
+      = form.fields_for :user_detail do |detail|
+        .address-registration-item__name
+          .address-registration-item__name__text
+            .address-registration-item__name__text__title
+              お名前
+            .address-registration-item__name__text__required
+              必須
+          .address-registration-item__name__input-form
+            = detail.text_field :last_name, placeholder: "例）山田", value: @last_name, class: "address-registration-item__name__input-form__lastname"
+            = detail.text_field :first_name,  placeholder: "例）彩" , value: @first_name, class: "address-registration-item__name__input-form__firstname"
+            = render partial: 'shared/errors', locals: {table: @user.user_detail, column: "last_name"}
+            = render partial: 'shared/errors', locals: {table: @user.user_detail, column: "first_name"}
+        .address-registration-item__kananame
+          .address-registration-item__kananame__text
+            .address-registration-item__kananame__text__title
+              お名前カナ
+            .address-registration-item__kananame__text__required
+              必須
+          .address-registration-item__kananame__input-form
+            = detail.text_field :last_name_kata, placeholder: "例）ヤマダ", value: @last_name_kata, class: "address-registration-item__kananame__input-form__lastname"
+            = detail.text_field :first_name_kata, placeholder: "例）アヤ", value: @first_name_kata, class: "address-registration-item__kananame__input-form__firstname"
+          = render partial: 'shared/errors', locals: {table: @user.user_detail, column: "last_name_kata"}
+          = render partial: 'shared/errors', locals: {table: @user.user_detail, column: "first_name_kata"}
+      = form.fields_for :address do |address|
+        .address-registration-item__postalcode
+          .address-registration-item__postalcode__text
+            .address-registration-item__postalcode__text__title
+              郵便番号
+            .address-registration-item__postalcode__text__required
+              必須
+          .address-registration-item__postalcode__input-form
+            = address.text_field :postal_code, placeholder: "例）123-4567", value: "", class: "address-registration-item__postalcode__input-form__nomber", maxlength: '8'
+            = render partial: 'shared/errors', locals: {table: @user.address, column: "postal_code"}
+        .address-registration-item__prefectures
+          .address-registration-item__prefectures__text
+            .address-registration-item__prefectures__text__title
+              都道府県
+            .address-registration-item__prefectures__text__required
+              必須
+          .address-registration-item__prefectures__form
+            = address.collection_select :prefecture_id, Prefecture.all, :id, :name
+            .address-registration-item__prefectures__form--angle
+              = fa_icon 'angle-down'
+            = render partial: 'shared/errors', locals: {table: @user.address, column: "prefecture_id"}
+        .address-registration-item__city
+          .address-registration-item__city__text
+            .address-registration-item__city__text__title
+              市区町村
+            .address-registration-item__city__text__required
+              必須
+          .address-registration-item__city__input-form
+            = address.text_field :city, placeholder: "例）横浜市緑区", class: "address-registration-item__city__input-form__town"
+            = render partial: 'shared/errors', locals: {table: @user.address, column: "city"}
+        .address-registration-item__address
+          .address-registration-item__address__text
+            .address-registration-item__address__text__title
+              番地
+            .address-registration-item__address__text__required
+              必須
+          .address-registration-item__address__input-form
+            = address.text_field :address, placeholder: "例）青山1-1-1", class: "address-registration-item__address__input-form__house-number"
+            = render partial: 'shared/errors', locals: {table: @user.address, column: "address"}
+        .address-registration-item__building
+          .address-registration-item__building__text
+            .address-registration-item__building__text__title
+              建物名
+            .address-registration-item__building__text__required
+              任意
+          = address.text_field :building, placeholder: "例）柳ビル103", class: "address-registration-item__building__input-form"
+
+        = form.fields_for :user_detail do |detail|
+          .address-registration-item__tel
+            .address-registration-item__tel__text
+              .address-registration-item__tel__text__title
+                電話
+              .address-registration-item__tel__text__required
+                任意
+            = detail.text_field :phone, placeholder: "例）09012345678", class: "address-registration-item__building__input-form"
+
+          .address-registration-item__next-btn
+            = form.submit "次に進む", class: "address-registration-item__next-btn__submit"
+=render 'shared/copywrite-bottom'
+
+
