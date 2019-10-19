@@ -22,7 +22,7 @@ class Users::SessionsController < Devise::SessionsController
 
   def check_captcha
     self.resource = resource_class.new sign_in_params
-    resource.validate
+    resource.valid?(:signin)
     verify_recaptcha(model: resource)
     if resource.errors.any?
       @error = @user.errors.full_messages_for(:base)

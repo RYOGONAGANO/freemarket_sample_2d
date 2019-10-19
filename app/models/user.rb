@@ -6,15 +6,11 @@ class User < ApplicationRecord
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
-  validates :nickname, presence: true, length: { maximum: 20 }, unless: :check_url?
-  validates :email,    uniqueness: true, unless: :check_url?
+  validates :nickname, presence: true, length: { maximum: 20 }, unless: -> {validation_context == :signin}
+  validates :email,    uniqueness: true, unless: -> {validation_context == :signin}
   validates :email,    presence: true, format: { with: VALID_EMAIL_REGEX }
   validates :password, presence: true, length: { minimum: 7, maximum: 128 }
 
-  def check_url?
-    request = Thread.current[:request]
-    return request.original_fullpath == "/users/sign_in"
-  end
 
   has_one :user_detail, dependent: :destroy
   accepts_nested_attributes_for :user_detail
