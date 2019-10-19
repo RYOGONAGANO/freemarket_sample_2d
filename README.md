@@ -9,8 +9,10 @@
 |password|string|null: false|
 
 ### Assocation
-has_one :user_detail  
-has_one :address  
+has_one :user_detail, dependent: :destroy  
+accepts_nested_attributes_for :user_detail  
+has_one :address, dependent: :destroy  
+accepts_nested_attributes_for :address  
 has_one :evaluate  
 has_many :evaluate_comments  
 has_many :sales  
@@ -33,27 +35,28 @@ has_many :liked_products, through: :likes, source: :product
 |birth_year  |integer|null: false|
 |birth_month |integer|null: false|
 |birth_day   |integer|null: false|
-|sms_phone|string|null: false, unique: true|
-|postal_code|string|null: false|
+|sms_phone|string|  |
 |phone |string|     |
 |profile|text|      |
 |user|references|null: false, foreign_key: true|
 
 ### Assocation
-belongs_to :user, dependent: destroy
+belongs_to :user
 
 ## addressesテーブル
 
 |column|type|options|
 |------|----|-------|
-|prefectures|string|null: false|
+|postal_code|string|null: false|
+|prefecture_id|integer|null: false, default: "0"|
 |city  |string|null: false|
 |address|string|null: false|
 |building|string|   |
 |user  |reference|null: false, foreign_key: true|
 
 ### Assocation
-belongs_to :user, dependent: destroy
+belongs_to :user  
+belongs_to_active_hash :prefecture
 
 ## evaluatesテーブル
 
