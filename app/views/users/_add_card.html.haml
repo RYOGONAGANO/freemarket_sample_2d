@@ -1,0 +1,14 @@
+.card-data-create
+  .card-data-create__top
+    支払い方法
+  .card-data-create__information
+    .card-data-create__information__box
+      .card-data-create__information__box__card-ichiran
+        クレジットカード一覧
+    .card-data-create__information__text-area
+      .payment__list__content
+        = link_to edit_card_path(current_user), class: "card-input-button" do
+          %button{type: "submit", class: "card-input-button"}
+            = fa_icon 'credit-card'
+            クレジットカードを追加する
+
