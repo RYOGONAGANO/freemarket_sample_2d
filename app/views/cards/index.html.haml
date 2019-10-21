@@ -14,7 +14,7 @@
               = form_with(url: card_path(@card.id), method: :delete, local: true, id: 'charge-form') do |f|
                 .card-data-delete__information__box__card-companys__box
                   .card-data-delete__information__box__card-companys__box__card-company
-                    = image_tag "#{@card_src}", id: "card-data-delete__information__box__card-companys__box__card-company__icon--visa", class: "card-data-delete__information__box__card-companys__box__card-company__icon--visa", size: "49x15"
+                    = image_tag "#{@card_src}", id: "card-data-delete__information__box__card-companys__box__card-company__icon--visa", class: "card-data-delete__information__box__card-companys__box__card-company__icon--visa", size: "49x20"
                   = f.submit "削除する", class: "card-data-delete__information__box__card-companys__box__card-delete-button"
                 .card-data-delete__information__box__card-companys__card-number
                   = "************" + @card_information.last4
