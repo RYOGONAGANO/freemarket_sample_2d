@@ -23,7 +23,6 @@ document.addEventListener(
           $("#card-token").append(
             $('<input type="hidden" name="payjp-token">').val(response.id)
           ); //トークンを送信できるように隠しタグを生成
-          debugger;
           document.inputForm.submit();
           alert("登録が完了しました"); //確認用
         } else {
