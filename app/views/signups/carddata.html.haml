@@ -1,6 +1,6 @@
 .memberpay-information-header
   .memberpay-information-header__logopay
-    = link_to image_tag( 'logomercari.svg')
+    = link_to image_tag( 'logomercari.svg'), root_path
   .userRegistpay-complete-progress-bar
     .userRegistpay-complete-progress-bar__text
       .userRegistpay-complete-progress-bar__text__member-info
@@ -26,7 +26,7 @@
 .card-data-inputpay
   .card-data-inputpay__top
     クレジットカード情報入力
-  = form_with(model: @user, local: true, url: signups_path, method: "post", class: "card-data-inputpay__information") do |form|
+  = form_with(model: @user, local: true, url: signups_path, method: "post", class: "card-data-inputpay__information", html: { name: "inputForm" }) do |form|
     .card-data-inputpay__information__box
       .card-data-inputpay__information__box__card-number-box
         .card-data-inputpay__information__box__card-number-box__card-number
@@ -34,7 +34,7 @@
         .card-data-inputpay__information__box__card-number-box__label-hisu
           必須
       .card-data-inputpay__information__box__text
-        %input{type: "text", class: "card-data-inputpay__information__box__text__card-number-input",placeholder: "半角数字のみ"}
+        = form.text_field :card_number, class: "card-data-inputpay__information__box__text__card-number-input", id: "card_number", placeholder: "半角数字のみ", maxlength: "16"
       .card-data-inputpay__information__box__card-list-box
         .card-data-inputpay__information__box__card-list-box__card-name
           .card-data-inputpay__information__box__card-list-box__card-name__visa
@@ -58,37 +58,14 @@
           必須
       .card-data-inputpay__information__box__expiration-months-box
         .card-data-inputpay__information__box__expiration-months-box__expiration-month-box__text
-          %select{class: "card-data-inputpay__information__box__expiration-months-box__expiration-month-box__text__box"}
-            %option 01
-            %option 02
-            %option 03
-            %option 04
-            %option 05
-            %option 06
-            %option 07
-            %option 08
-            %option 09
-            %option 10
-            %option 11
-            %option 12
+          = form.select :exp_month, [["01",1],["02",2],["03",3],["04",4],["05",5],["06",6],["07",7],["08",8],["09",9],["10",10],["11",11],["12",12]],{} , class: "card-data-inputpay__information__box__expiration-months-box__expiration-month-box__text__box", id: "exp_month"
         .card-data-inputpay__information__box__expiration-months-box__expiration-month-box__text__icon-chevron-down
           = fa_icon 'chevron-down'
         .card-data-inputpay__information__box__expiration-months-box__expiration-month-box__text-month
           月
       .card-data-inputpay__information__box__expiration-years-box
         .card-data-inputpay__information__box__expiration-years-box__expiration-year-box__text
-          %select{class: "card-data-inputpay__information__box__expiration-years-box__expiration-year-box__text__box"}
-            %option 19
-            %option 20
-            %option 21
-            %option 22
-            %option 23
-            %option 24
-            %option 25
-            %option 26
-            %option 27
-            %option 28
-            %option 29
+          = form.select :exp_year, [["19",2019],["20",2020],["21",2021],["22",2022],["23",2023],["24",2024],["25",2025],["26",2026],["27",2027],["28",2028],["29",2029]],{} , class: "card-data-inputpay__information__box__expiration-years-box__expiration-year-box__text__box", id: "exp_year"
         .card-data-inputpay__information__box__expiration-years-box__expiration-year-box__text__icon-chevron-down
           = fa_icon 'chevron-down'
         .card-data-inputpay__information__box__expiration-years-box__expiration-year-box__text-year
@@ -99,11 +76,11 @@
         .card-data-inputpay__information__box__security-date-box__label-hisu
           必須
       .card-data-inputpay__information__box__text
-        %input{type: "text", class: "card-data-inputpay__information__box__text__card-number-input",placeholder: "カード背面4桁もしくは3桁の番号"}
+        = form.text_field :cvc, class: "card-data-inputpay__information__box__text__card-number-input", id: "cvc", placeholder: "カード背面4桁もしくは3桁の番号", maxlength: "4"
       .card-data-inputpay__information__box__secret-code
         .card-data-inputpay__information__box__secret-code__image-quesution
           = fa_icon 'question-circle'
           カード裏面の番号とは？
-      .card-data-inputpay__information__box__text-area
-        = form.submit "次へ進む", class: "card-delete-button"
+      .card-data-inputpay__information__box__text-area#card-token
+        = form.submit "次へ進む", class: "card-delete-button", id: "token-submit"
 =render 'shared/copywrite-bottom'
