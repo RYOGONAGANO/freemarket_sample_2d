@@ -13,7 +13,6 @@ Rails.application.routes.draw do
       get :login
       get :logout
       get :registrationNewmenbar
-      get :buyComplete
       get :mypage
     end
   end
@@ -27,6 +26,8 @@ Rails.application.routes.draw do
       get :regist_complete # 登録完了後のページ
     end
   end
-  resources :products 
+  resources :products do
+    resources :buys, only: [:new, :create]
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
