@@ -2,7 +2,8 @@
 .detail-contents
   .product-details
     .product-details__name
-      %h1 商品名
+      %h1
+        = @product.name
     .product-detail
       .product-photo
         .product-photo__carousel
@@ -90,7 +91,7 @@
             %th 出品者
             %td
               = link_to root_path do
-                出品者名
+                = @product.buyer.nickname
               .table-user-ratings
                 .table-user-ratings__rating
                   = fa_icon 'laugh', class: "table-user-ratings__rating--good"
@@ -143,25 +144,15 @@
             %td
               2~3日で発送
     .price-box
-      %span.price-box--price ¥12,500
+      %span.price-box--price
+        = number_to_currency(@product.price)
       %span.price-box--tax (税込)
       %span.price-box--shipping-free 送料込み
-    = link_to root_path, class: "product-details__buy-btn" do
+    = link_to new_product_buy_path(@product.id), class: "product-details__buy-btn" do
       購入画面に進む
     .product-details__description
       %P
-        商品の説明
-        %br
-        %br
-        アピールポイントなどが記述される。
-        %br
-        %br
-        検索用の単語
-        %br
-        検索用の単語
-        %br
-        検索用の単語
-        %br
+        = simple_format(@product.description)
     .product-details__buttons
       .product-details__buttons__left
         %button{type: 'button', class: 'product-details__buttons__left__like'}
@@ -184,12 +175,18 @@
       %button{type: 'submit', class: 'product-messages__form__submit-btn'}
         %span コメントする
   .links-prev-next
-    = link_to root_path, class: 'links-prev-next__prev' do
-      = fa_icon 'chevron-left'
-      %span 前の商品
-    = link_to root_path, class: 'links-prev-next__next' do
-      %span 次の商品
-      = fa_icon 'chevron-right'
+    .links-prev-next__prev
+      - if @previous
+        = link_to product_path(@previous.id) do
+          = fa_icon 'chevron-left'
+          %span
+            = @previous.name
+    .links-prev-next__next
+      - if @next
+        = link_to product_path(@next.id) do
+          %span
+            = @next.name
+          = fa_icon 'chevron-right'
   .social-medias
     .social-medias__icons
       = link_to root_path, class: 'social-medias__icons__icon' do
@@ -208,78 +205,19 @@
     %h2.other-products__username
       出品者 さんのその他の出品
     .other-products__box
-      .other-products__box__product
-        = link_to root_path do
-          =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
-          .other-products__box__product__index
-            .other-products__box__product__index__name
-              商品名　右下　テスト　もやもや　テスト　サンプル
-            .other-products__box__product__index__price-like
-              .other-products__box__product__index__price-like__price
-                ¥15,000
-              .other-products__box__product__index__price-like__like
-                = fa_icon 'heart'
-                %span 15
-      .other-products__box__product
-        = link_to root_path do
-          =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
-          .other-products__box__product__index
-            .other-products__box__product__index__name
-              他の商品名
-            .other-products__box__product__index__price-like
-              .other-products__box__product__index__price-like__price
-                ¥15,000
-              .other-products__box__product__index__price-like__like
-                = fa_icon 'heart'
-                %span 15
-      .other-products__box__product
-        = link_to root_path do
-          =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
-          .other-products__box__product__index
-            .other-products__box__product__index__name
-              他の商品名
-            .other-products__box__product__index__price-like
-              .other-products__box__product__index__price-like__price
-                ¥15,000
-              .other-products__box__product__index__price-like__like
-                = fa_icon 'heart'
-                %span 15
-      .other-products__box__product
-        = link_to root_path do
-          =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
-          .other-products__box__product__index
-            .other-products__box__product__index__name
-              他の商品名
-            .other-products__box__product__index__price-like
-              .other-products__box__product__index__price-like__price
-                ¥15,000
-              .other-products__box__product__index__price-like__like
-                = fa_icon 'heart'
-                %span 15
-      .other-products__box__product
-        = link_to root_path do
-          =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
-          .other-products__box__product__index
-            .other-products__box__product__index__name
-              他の商品名
-            .other-products__box__product__index__price-like
-              .other-products__box__product__index__price-like__price
-                ¥15,000
-              .other-products__box__product__index__price-like__like
-                = fa_icon 'heart'
-                %span 15
-      .other-products__box__product
-        = link_to root_path do
-          =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
-          .other-products__box__product__index
-            .other-products__box__product__index__name
-              他の商品名
-            .other-products__box__product__index__price-like
-              .other-products__box__product__index__price-like__price
-                ¥15,000
-              .other-products__box__product__index__price-like__like
-                = fa_icon 'heart'
-                %span 15
+      - @buyer_products.each do |buyer_product|
+        .other-products__box__product
+          = link_to product_path(buyer_product.id) do
+            =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
+            .other-products__box__product__index
+              .other-products__box__product__index__name
+                = buyer_product.name
+              .other-products__box__product__index__price-like
+                .other-products__box__product__index__price-like__price
+                  = number_to_currency(buyer_product.price)
+                .other-products__box__product__index__price-like__like
+                  = fa_icon 'heart'
+                  %span 15
     %h2.other-products__brand
       ウール リッチのダウンジャケット その他の商品
     .other-products__box

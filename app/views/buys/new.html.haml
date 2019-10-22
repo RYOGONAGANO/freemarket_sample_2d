@@ -9,10 +9,11 @@
           .buyComplete-content__maincontent__content-boxs__content-inner__image-title__image
             = image_tag 'test_product.jpg', size:'64x64'
           .buyComplete-content__maincontent__content-boxs__content-inner__image-title__title
-            ウール リッチのダウンジャケット
+            = @product.name
         .buyComplete-content__maincontent__content-boxs__content-inner__price
           .buyComplete-content__maincontent__content-boxs__content-inner__price__integer
-            %p¥1500
+            %p
+              = number_to_currency(@product.price)
           .buyComplete-content__maincontent__content-boxs__content-inner__price__string
             %span送料込み
         .buyComplete-content__maincontent__content-boxs__content-inner__point
