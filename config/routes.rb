@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { sessions: "users/sessions" }
   root to: 'products#index'
+  resources :tests
   resources :users do
     collection do
       get :profile
