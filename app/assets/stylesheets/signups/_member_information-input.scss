@@ -306,6 +306,7 @@
               left: 15%;
               font-size: 25px;
               color: #888;
+              pointer-events: none;
             }
             &--month-angle {
               position: absolute;
@@ -313,6 +314,7 @@
               left: 42%;
               font-size: 25px;
               color: #888;
+              pointer-events: none;
             }
             &--day-angle {
               position: absolute;
@@ -320,6 +322,7 @@
               left: 72%;
               font-size: 25px;
               color: #888;
+              pointer-events: none;
             }
             select {
               -webkit-appearance: none;

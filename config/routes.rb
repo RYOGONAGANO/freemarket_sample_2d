@@ -6,9 +6,6 @@ Rails.application.routes.draw do
     collection do
       get :profile
       get :profilechange
-      get :card_data_delete
-      get :card_data_input
-      get :card_data_create
       get :authentication
       get :login
       get :logout
@@ -30,4 +27,7 @@ Rails.application.routes.draw do
     resources :buys, only: [:new, :create]
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  resources :cards, only: [:index, :new, :create, :destroy]
+
 end
