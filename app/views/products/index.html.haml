@@ -1,0 +1,44 @@
+-# = form_with(model: @test, local: true) do |f|
+-#   = f.file_field :image
+-#   = f.submit
+
+= render "shared/header"
+.content
+  .content__top
+    = image_tag "mercari-ad-toppage.png"
+  .content__title1
+    .content__title1__name
+      -# 人気のカテゴリー
+      すべての商品一覧
+    .content__title1__category
+      -# .content__title1__category__rank1
+      -#   レディース
+      -# .content__title1__category__rank2
+      -#   メンズ
+      -# .content__title1__category__rank3
+      -#   家電・スマホ・カメラ
+      -# .content__title1__category__rank4
+      -#   おもちゃ・ホビー・グッズ
+  .content__main1
+    .content__main1__category1
+      .content__main1__category1__title
+        レディース新着アイテム
+      .content__main1__category1__next
+        .content__main1__category1__next__text
+          もっと見る
+        .content__main1__category1__next__icon
+          = fa_icon "angle-right"
+      .content__main1__category1__box
+        .content__main1__category1__box__grid
+          - @products.each do |product|
+            = link_to product_path(id: [1]) do
+              .content__main1__category1__box__grid__item1
+                .content__main1__category1__box__grid__item1__image
+                  = image_tag "test_product.jpg"
+                  .content__main1__category1__box__grid__item1__image__price
+                    %span=number_to_currency(product.price)
+                .content__main1__category1__box__grid__item1__name
+                  =product.name
+                  .content__main1__category1__box__grid__item1__name__opacity                 
+= render "shared/footer"
+= render "shared/buy"
