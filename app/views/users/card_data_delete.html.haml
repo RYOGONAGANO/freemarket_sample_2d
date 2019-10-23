@@ -16,9 +16,9 @@
               = link_to card_data_create_users_path, class: "card-data-delete__information__box__card-companys__box__card-delete-button" do
                 削除する
             .card-data-delete__information__box__card-companys__card-number
-              ************4351
+              = "************" + @default_card_information.last4
             .card-data-delete__information__box__card-companys__card-yearmonth
-              08 / 26
+              = @exp_data
         .card-data-delete__information__box-payment
           .card-data-delete__information__box-payment__payment-link
             支払い方法について

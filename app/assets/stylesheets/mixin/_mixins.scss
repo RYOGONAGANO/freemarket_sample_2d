@@ -1,5 +1,4 @@
-
-@mixin btn ($background-color:#AAAAAA,$margin-top:15px){
+@mixin btn($background-color: #aaaaaa, $margin-top: 15px) {
   font-size: 14px;
   color: white;
   height: 50px;
@@ -33,9 +32,9 @@
   background-color: colors(white);
 }
 
-@mixin price{
+@mixin price {
   border-radius: 0 14px 14px 0;
-  background-color: rgba(0,0,0,.4);
+  background-color: rgba(0, 0, 0, 0.4);
   height: 28px;
   width: 78px;
   text-align: center;
@@ -45,7 +44,7 @@
   margin-top: -42px;
 }
 
-@mixin name{
+@mixin name {
   height: 38px;
   width: 160px;
   margin: 20px 15px;
@@ -53,8 +52,8 @@
   font-size: 14px;
 }
 
-@mixin opacity{
-  background: linear-gradient(to right,#00000000,#fff 30%);
+@mixin opacity {
+  background: linear-gradient(to right, #00000000, #fff 30%);
   height: 15px;
   width: 55px;
   float: right;
@@ -62,14 +61,14 @@
   top: -13px;
 }
 
-@mixin image{
-  img{
+@mixin image {
+  img {
     height: 188px;
     width: 188px;
   }
 }
 
-@mixin requiredname{
+@mixin requiredname {
   font-size: 12px;
   font-weight: bold;
   color: white;
@@ -77,22 +76,21 @@
   width: 32px;
   height: 19px;
   text-align: center;
-  line-height: 20px; 
+  line-height: 20px;
   border-radius: 10%;
   margin-left: 10px;
   margin-top: -4px;
 }
 
-@mixin focus{
-  &:focus{
+@mixin focus {
+  &:focus {
     border-color: rgb(0, 153, 255);
     outline: 0;
   }
 }
 
-
-@mixin fas-arrow{
-  .fas{
+@mixin fas-arrow {
+  .fas {
     font-weight: 900;
     float: right;
     position: relative;
@@ -100,10 +98,10 @@
     top: 12px;
     right: 40px;
     color: #888;
- }
+  }
 }
-@mixin required{
-  background-color: #EA352D;
+@mixin required {
+  background-color: #ea352d;
   color: white;
   width: 32px;
   height: 19px;
@@ -114,34 +112,35 @@
   margin-left: 5px;
 }
 
-@mixin input-form {
-  width: 343px;
-  height: 48px;
+@mixin input-form($width: 343px, $height: 48px) {
+  width: $width;
+  height: $height;
   padding: 10px 16px 8px;
   border-radius: 5px;
   border: solid 1px #80808073;
 }
-@mixin clearfix{
+@mixin clearfix {
   clear: both;
   display: block;
-  content: '';
+  content: "";
 }
 
-@mixin textfield{
+@mixin textfield {
   width: 572px;
   height: 48px;
   border: 1px solid colors(ber-gray);
   border-radius: 4px;
   line-height: 1.5;
   background-color: colors(white);
-  padding:10px 16px 8px;
-  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
+  padding: 10px 16px 8px;
+  font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic,
+    メイリオ, Meiryo, sans-serif;
   font-size: 16px;
 }
 
-@mixin label-nini-gray{
-  height:19px;
-  width:32px;
+@mixin label-nini-gray {
+  height: 19px;
+  width: 32px;
   font-size: 12px;
   background-color: colors(ber-gray);
   color: colors(white);
@@ -153,7 +152,7 @@
   padding: 4px 4px;
 }
 
-@mixin card-view-top{
+@mixin card-view-top {
   width: 700px;
   height: 50px;
   padding: 8px 24px;
@@ -161,21 +160,48 @@
   color: colors(black);
   font-size: 24px;
   font-weight: bold;
-  font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic",
+    "メイリオ", "Meiryo", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
 }
 
-@mixin card-view-information{
- width: 700px;
+@mixin card-view-information {
+  width: 700px;
   background-color: colors(white);
   color: colors(black);
   font-size: 14px;
-  font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+  font-family: "Source Sans Pro", Helvetica, Arial, "游ゴシック体", "YuGothic",
+    "メイリオ", "Meiryo", sans-serif;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
   margin-top: 2px;
+}
+
+@mixin label() {
+  display: flex;
+  margin: 30px 0 5px;
+  padding-left: 180px;
+}
+
+@mixin slide-banner-owl-item-background($background-image) {
+  background: image_url($background-image);
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin slide-banner-owl-nav-btn($background-image) {
+  background-image: image_url($background-image) !important;
+  cursor: pointer;
+  height: 46px;
+  width: 31px;
+  position: absolute;
+  top: 50%;
+  outline: none;
+  -webkit-transform: translateY(-23px);
+  transform: translateY(-23px);
 }

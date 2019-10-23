@@ -1,11 +1,9 @@
--# = form_with(model: @test, local: true) do |f|
--#   = f.file_field :image
--#   = f.submit
-
 = render "shared/header"
 .content
-  .content__top
-    = image_tag "mercari-ad-toppage.png"
+  .content__slide-banner.owl-carousel
+    = link_to "", root_path, class: "content__slide-banner__link content__slide-banner__link--toppage-image"
+    = link_to "", root_path, class: "content__slide-banner__link content__slide-banner__link--camp"
+    = link_to "", root_path, class: "content__slide-banner__link content__slide-banner__link--cm"
   .content__title1
     .content__title1__name
       -# 人気のカテゴリー
@@ -22,7 +20,7 @@
   .content__main1
     .content__main1__category1
       .content__main1__category1__title
-        レディース新着アイテム
+        新着アイテム1
       .content__main1__category1__next
         .content__main1__category1__next__text
           もっと見る

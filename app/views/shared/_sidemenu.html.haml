@@ -2,7 +2,7 @@
   .mypage-menu-lists
     %ul.mypage-menu-list
       %li
-        = link_to mypage_users_path, class: "mypage-menu-list__line" do
+        = link_to users_path, class: "mypage-menu-list__line" do
           マイページ
           .mypage-menu-list__line--arrow
             = fa_icon "chevron-right"
@@ -81,7 +81,7 @@
           発送元・お届け先住所変更
           = fa_icon "chevron-right"
       %li
-        = link_to card_data_delete_users_path, class: "mypage-menu-list__line" do
+        = link_to cards_path, class: "mypage-menu-list__line" do
           支払い方法
           = fa_icon "chevron-right"
       %li

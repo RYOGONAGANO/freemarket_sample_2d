@@ -1,0 +1,86 @@
+.memberpay-information-header
+  .memberpay-information-header__logopay
+    = link_to image_tag( 'logomercari.svg'), root_path
+  .userRegistpay-complete-progress-bar
+    .userRegistpay-complete-progress-bar__text
+      .userRegistpay-complete-progress-bar__text__member-info
+        %p会員情報
+      .userRegistpay-complete-progress-bar__text__phone-confirmation
+        %p電話番号認証
+      .userRegistpay-complete-progress-bar__text__adress
+        %pお届け先住所入力
+      .userRegistpay-complete-progress-bar__text__payment
+        %p支払い方法
+      .userRegistpay-complete-progress-bar__text__complete
+        %p完了
+    .userRegistpay-complete-progress-bar__lines
+      .userRegistpay-complete-progress-bar__lines__member-info
+      .userRegistpay-complete-progress-bar__lines__member-info-to-phone
+      .userRegistpay-complete-progress-bar__lines__phone-confirmation
+      .userRegistpay-complete-progress-bar__lines__phone-confirmation-to-adress
+      .userRegistpay-complete-progress-bar__lines__adress
+      .userRegistpay-complete-progress-bar__lines__adress-to-payment
+      .userRegistpay-complete-progress-bar__lines__payment
+      .userRegistpay-complete-progress-bar__lines__payment-to-complete
+      .userRegistpay-complete-progress-bar__lines__complete
+.card-data-inputpay
+  .card-data-inputpay__top
+    クレジットカード情報入力
+  = form_with(model: @user, local: true, url: signups_path, method: "post", class: "card-data-inputpay__information", html: { name: "inputForm" }) do |form|
+    .card-data-inputpay__information__box
+      .card-data-inputpay__information__box__card-number-box
+        .card-data-inputpay__information__box__card-number-box__card-number
+          カード番号
+        .card-data-inputpay__information__box__card-number-box__label-hisu
+          必須
+      .card-data-inputpay__information__box__text
+        = form.text_field :card_number, class: "card-data-inputpay__information__box__text__card-number-input", id: "card_number", placeholder: "半角数字のみ", maxlength: "16"
+      .card-data-inputpay__information__box__card-list-box
+        .card-data-inputpay__information__box__card-list-box__card-name
+          .card-data-inputpay__information__box__card-list-box__card-name__visa
+            = image_tag "card-visa.svg", id: "card-data-inputpay__information__box__card-list-box__card-name__icon-visa", class: "card-data-inputpay__information__box__card-list-box__card-name__icon-visa", size: "49x20"
+          .card-data-inputpay__information__box__card-list-box__card-name__master
+            = image_tag "card-master.svg", id: "card-data-inputpay__information__box__card-list-box__card-name__icon-master", class: "card-data-inputpay__information__box__card-list-box__card-name__icon-master", size: "34x20"
+          .card-data-inputpay__information__box__card-list-box__card-name__saison
+            = image_tag "card-saison.svg", id: "card-data-inputpay__information__box__card-list-box__card-name__icon-saison", class: "card-data-inputpay__information__box__card-list-box__card-name__icon-saison", size: "30x20"
+          .card-data-inputpay__information__box__card-list-box__card-name__jcb
+            = image_tag "card-jcb.svg", id: "card-data-inputpay__information__box__card-list-box__card-name__icon-jcb", class: "card-data-inputpay__information__box__card-list-box__card-name__icon-jcb", size: "32x20"
+          .card-data-inputpay__information__box__card-list-box__card-name__american
+            = image_tag "card-american.svg", id: "card-data-inputpay__information__box__card-list-box__card-name__icon-american", class: "card-data-inputpay__information__box__card-list-box__card-name__icon-american", size: "21x20"
+          .card-data-inputpay__information__box__card-list-box__card-name__dinersclub
+            = image_tag "card-dinersclub.svg", id: "card-data-inputpay__information__box__card-list-box__card-name__icon-dinersclub", class: "card-data-inputpay__information__box__card-list-box__card-name__icon-dinersclub", size: "32x20"
+          .card-data-inputpay__information__box__card-list-box__card-name__discover
+            = image_tag "card-discover.svg", id: "card-data-inputpay__information__box__card-list-box__card-name__icon-discover", class: "card-data-inputpay__information__box__card-list-box__card-name__icon-discover", size: "32x20"
+      .card-data-inputpay__information__box__expiration-date-box
+        .card-data-inputpay__information__box__expiration-date-box__expiration-date
+          有効期限
+        .card-data-inputpay__information__box__expiration-date-box__label-hisu
+          必須
+      .card-data-inputpay__information__box__expiration-months-box
+        .card-data-inputpay__information__box__expiration-months-box__expiration-month-box__text
+          = form.select :exp_month, [["01",1],["02",2],["03",3],["04",4],["05",5],["06",6],["07",7],["08",8],["09",9],["10",10],["11",11],["12",12]],{} , class: "card-data-inputpay__information__box__expiration-months-box__expiration-month-box__text__box", id: "exp_month"
+        .card-data-inputpay__information__box__expiration-months-box__expiration-month-box__text__icon-chevron-down
+          = fa_icon 'chevron-down'
+        .card-data-inputpay__information__box__expiration-months-box__expiration-month-box__text-month
+          月
+      .card-data-inputpay__information__box__expiration-years-box
+        .card-data-inputpay__information__box__expiration-years-box__expiration-year-box__text
+          = form.select :exp_year, [["19",2019],["20",2020],["21",2021],["22",2022],["23",2023],["24",2024],["25",2025],["26",2026],["27",2027],["28",2028],["29",2029]],{} , class: "card-data-inputpay__information__box__expiration-years-box__expiration-year-box__text__box", id: "exp_year"
+        .card-data-inputpay__information__box__expiration-years-box__expiration-year-box__text__icon-chevron-down
+          = fa_icon 'chevron-down'
+        .card-data-inputpay__information__box__expiration-years-box__expiration-year-box__text-year
+          年
+      .card-data-inputpay__information__box__security-date-box
+        .card-data-inputpay__information__box__security-date-box__security-date
+          セキュリティコード
+        .card-data-inputpay__information__box__security-date-box__label-hisu
+          必須
+      .card-data-inputpay__information__box__text
+        = form.text_field :cvc, class: "card-data-inputpay__information__box__text__card-number-input", id: "cvc", placeholder: "カード背面4桁もしくは3桁の番号", maxlength: "4"
+      .card-data-inputpay__information__box__secret-code
+        .card-data-inputpay__information__box__secret-code__image-quesution
+          = fa_icon 'question-circle'
+          カード裏面の番号とは？
+      .card-data-inputpay__information__box__text-area#card-token
+        = form.submit "次へ進む", class: "card-delete-button", id: "token-submit"
+=render 'shared/copywrite-bottom'

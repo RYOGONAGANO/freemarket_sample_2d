@@ -13,11 +13,10 @@
         margin-bottom: 8px;
       }
       &__btn {
-        @include btn;
-        width: 328px;
-        height: 42px;
-        background-color: colors(blue);
+        @include btn($background-color: colors(blue));
         margin: 0px auto;
+        line-height: 50px;
+        cursor: pointer;
       }
     }
 
@@ -36,7 +35,6 @@
           color: colors(white);
           font-size: 13px;
           &__icon {
-            display: inline;
             float: left;
             font-size: 30px;
             margin: 7px;
@@ -57,9 +55,6 @@
           background-repeat: no-repeat;
           background-position-x: 15px;
           background-position-y: 15px;
-
-          &__icon {
-          }
           &__text {
             display: inline;
             font-size: 20px;
@@ -68,30 +63,20 @@
         }
       }
     .login_form{
-      height: 406px;
       background-color: colors(white);
+      padding-bottom: 32px;
       .login_form_contents{
         margin: 0 64px;
         padding-top: 24px;
         &__input-email{
-          width: 328px;
-          height: 48px;
-          border-radius: 5px;
-          border: solid 1px #80808073;
-
+          @include input-form;
         }
         &__input-password{
           margin-top: 30px;
-          width: 328px;
-          height: 48px;
-          border-radius: 5px;
-          border: solid 1px #80808073;
+          @include input-form;
         }
         &__re-captcha{
           margin-top: 30px;
-          width: 328px;
-          height: 78px;
-          background-color:lightblue;
         }
         &__login-btn{
           margin: 24px 0px 40px;
@@ -100,6 +85,7 @@
           background-color: colors(btn-red);
           color: colors(white);
           font-size: 13px;
+          cursor: pointer;
         }
         &__foget-password__text{
           margin-top: 40px;

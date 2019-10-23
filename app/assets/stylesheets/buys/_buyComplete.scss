@@ -1,0 +1,204 @@
+.buyComplete-content {
+  width: 100vw;
+  height: 754px;
+  &__maincontent {
+    width: 700px;
+    height: 100%;
+    background: colors(white);
+    margin: 0 auto;
+    &__top {
+      width: 100%;
+      height: 65px;
+      line-height: 65px;
+      text-align: center;
+      border-bottom: solid 1px colors(gray);
+    }
+    &__content-boxs {
+      width: 100%;
+      height: 320px;
+      border-bottom: solid 1px colors(gray);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &__content-inner {
+        width: 320px;
+        height: 295px;
+        &__image-title {
+          width: 100%;
+          height: 64px;
+          display: flex;
+          justify-content: space-between;
+          &__image {
+            width: 64px;
+            height: 100%;
+          }
+          &__title {
+            width: 240px;
+            height: 100%;
+            font-size: 16px;
+            font-weight: bold;
+          }
+        }
+        &__price {
+          width: 320px;
+          height: 33px;
+          display: flex;
+          justify-content: center;
+          &__integer {
+            height: 100%;
+            line-height: 33px;
+            font-size: 22px;
+            font-weight: bold;
+            margin-right: 5px;
+          }
+          &__string {
+            width: 56px;
+            height: 100%;
+            line-height: 33px;
+            font-size: 14px;
+          }
+        }
+        &__point {
+          width: 320px;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: solid 1px colors(ber-gray);
+          &__text {
+            width: 100px;
+            height: 18px;
+            line-height: 18px;
+          }
+          &__icon {
+            width: 18px;
+            height: 18px;
+            text-align: center;
+            line-height: 18px;
+            font-size: 24px;
+          }
+        }
+        &__payment {
+          width: 320px;
+          height: 60px;
+          display: flex;
+          &__text {
+            width: 194px;
+            height: 100%;
+            text-align: left;
+            line-height: 60px;
+            font-size: 18px;
+            font-weight: bold;
+          }
+          &__price {
+            width: 126px;
+            height: 100%;
+            text-align: right;
+            line-height: 60px;
+            font-size: 28px;
+            font-weight: bold;
+          }
+        }
+        &__btn {
+          width: 100%;
+          height: 50px;
+          background: colors(btn-red);
+          font-size: 14px;
+          color: colors(white);
+        }
+      }
+    }
+    &__adress {
+      width: 100%;
+      height: 184px;
+      border-bottom: solid 1px colors(gray);
+      display: flex;
+      justify-content: center;
+      &__inner {
+        width: 320px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        &__boxs {
+          width: 100%;
+          height: 103px;
+          &__text {
+            width: 100%;
+            height: 14px;
+            font-weight: bold;
+          }
+          &__ditail {
+            width: 100%;
+            height: 60px;
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            &__text {
+              width: 100%;
+              height: 80%;
+              line-height: 18px;
+            }
+          }
+          &__change {
+            width: 100%;
+            height: 16px;
+            color: colors(bule);
+            text-align: right;
+            a {
+              color: colors(blue);
+            }
+            a:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    &__payment {
+      width: 100%;
+      height: 184px;
+      display: flex;
+      justify-content: center;
+      &__inner {
+        width: 320px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        &__boxs {
+          width: 100%;
+          height: 100px;
+          &__text {
+            width: 100%;
+            height: 14px;
+            font-weight: bold;
+          }
+          &__cardinfo {
+            width: 100%;
+            height: 64px;
+            margin-top: 8px;
+            &__number {
+              width: 100%;
+              height: 43px;
+            }
+            &__brand {
+              width: 26px;
+              height: 20px;
+            }
+            &__change {
+              width: 100%;
+              height: 16px;
+              color: colors(bule);
+              text-align: right;
+              a {
+                color: colors(blue);
+              }
+              a:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
