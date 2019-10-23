@@ -1,7 +1,9 @@
 = render "shared/header"
 .content
-  .content__top
-    = image_tag "mercari-ad-toppage.png"
+  .content__slide-banner.owl-carousel
+    = link_to "", root_path, class: "content__slide-banner__link content__slide-banner__link--toppage-image"
+    = link_to "", root_path, class: "content__slide-banner__link content__slide-banner__link--camp"
+    = link_to "", root_path, class: "content__slide-banner__link content__slide-banner__link--cm"
   .content__title1
     .content__title1__name
       -# 人気のカテゴリー

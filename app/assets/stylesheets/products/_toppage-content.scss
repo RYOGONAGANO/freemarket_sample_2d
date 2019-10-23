@@ -1,20 +1,65 @@
 .content {
   width: 99vw;
   margin-left: -1px;
-  &__top{
-    img{
-      height: 370px;
-      border-top: ridge;
-      margin-right: -15px;
-      background-size: 100% 100%;
-      width: 100vw;
+  &__slide-banner {
+    height: 390px;
+    border-top: ridge;
+    overflow: hidden;
+    position: relative;
+    &__link {
+      display: block;
+      &--toppage-image {
+        @include slide-banner-owl-item-background("mercari-ad-toppage.png");
+      }
+      &--camp {
+        @include slide-banner-owl-item-background("index_camp.png");
+      }
+      &--cm {
+        @include slide-banner-owl-item-background("index_cm.jpg");
+      }
+    }
+    & .owl-dots {
+      margin: -30px;
+      text-align: center;
+    }
+    & .owl-dot {
+      position: relative;
+      background: white !important;
+      opacity: 0.4;
+      border-radius: 50%;
+      height: 12px;
+      width: 12px;
+      min-height: 12px;
+      margin-right: 15px;
+      outline: none;
+      &.active {
+        opacity: 1;
+        background: colors(black) !important;
+      }
+    }
+    & .owl-nav {
+      color: transparent;
+    }
+    & .owl-prev {
+      @include slide-banner-owl-nav-btn("carousel-prev.png");
+      left: 60px;
+    }
+    & .owl-next {
+      @include slide-banner-owl-nav-btn("carousel-next.png");
+      right: 60px;
+    }
+    & .owl-stage-outer,
+    .owl-stage,
+    .owl-item,
+    .owl-item > a {
+      height: 100%;
     }
   }
   &__title1 {
     height: 171px;
     width: 100vw;
     background-color: colors(white);
-    &__name{
+    &__name {
       font-size: 27px;
       font-weight: bold;
       text-align: center;
