@@ -9,19 +9,23 @@
     margin: 0 0 0 auto;
     .mypage-menu-list {
       margin-top: 8px;
-      #active {
-        background: colors(gray);
-        font-weight: 600;
-      }
-      .mypage-menu-list__line {
+      &__line {
         display: block;
         background-color: colors(white);
         padding: 16px;
         font-size: 14px;
         display: flex;
         justify-content: space-between;
-        color: colors(black);
+        color: colors(ber-gray);
         border-top: 1px solid colors(gray);
+        span {
+          color: colors(black);
+        }
+        &.active {
+          color: colors(black);
+          background: colors(gray);
+          font-weight: 600;
+        }
       }
     }
     .merpay-title {
