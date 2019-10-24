@@ -18,6 +18,7 @@
         justify-content: space-between;
         color: colors(ber-gray);
         border-top: 1px solid colors(gray);
+
         span {
           color: colors(black);
         }
@@ -26,6 +27,9 @@
           background: colors(gray);
           font-weight: 600;
         }
+      }
+      &__line:hover {
+        background: colors(gray);
       }
     }
     .merpay-title {
