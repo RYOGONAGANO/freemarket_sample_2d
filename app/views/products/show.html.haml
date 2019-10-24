@@ -6,85 +6,15 @@
         = @product.name
     .product-detail
       .product-photo
-        .product-photo__carousel
-          .product-photo__carousel__stage-outer
-            .product-photo__carousel__stage-outer__stage
-              .product-photo__carousel__stage-outer__stage__image#active
-                .product-photo__carousel__stage-outer__stage__image__inner
-                  = image_tag "test_product.jpg",class: "product-photo__carousel__stage-outer__stage__image__inner__lazy"
-              .product-photo__carousel__stage-outer__stage__image
-                .product-photo__carousel__stage-outer__stage__image__inner
-                  = image_tag "test_product.jpg",class: "product-photo__carousel__stage-outer__stage__image__inner__lazy"
-              .product-photo__carousel__stage-outer__stage__image
-                .product-photo__carousel__stage-outer__stage__image__inner
-                  = image_tag "test_product.jpg",class: "product-photo__carousel__stage-outer__stage__image__inner__lazy"
-              .product-photo__carousel__stage-outer__stage__image
-                .product-photo__carousel__stage-outer__stage__image__inner
-                  = image_tag "test_product.jpg",class: "product-photo__carousel__stage-outer__stage__image__inner__lazy"
-              .product-photo__carousel__stage-outer__stage__image#active
-                .product-photo__carousel__stage-outer__stage__image__inner
-                  = image_tag "test_product.jpg",class: "product-photo__carousel__stage-outer__stage__image__inner__lazy"
-              .product-photo__carousel__stage-outer__stage__image
-                .product-photo__carousel__stage-outer__stage__image__inner
-                  = image_tag "test_product.jpg",class: "product-photo__carousel__stage-outer__stage__image__inner__lazy"
-              .product-photo__carousel__stage-outer__stage__image
-                .product-photo__carousel__stage-outer__stage__image__inner
-                  = image_tag "test_product.jpg",class: "product-photo__carousel__stage-outer__stage__image__inner__lazy"
-              .product-photo__carousel__stage-outer__stage__image
-                .product-photo__carousel__stage-outer__stage__image__inner
-                  = image_tag "test_product.jpg",class: "product-photo__carousel__stage-outer__stage__image__inner__lazy"
-              .product-photo__carousel__stage-outer__stage__image
-                .product-photo__carousel__stage-outer__stage__image__inner
-                  = image_tag "test_product.jpg",class: "product-photo__carousel__stage-outer__stage__image__inner__lazy"
-              .product-photo__carousel__stage-outer__stage__image
-                .product-photo__carousel__stage-outer__stage__image__inner
-                  = image_tag "test_product.jpg",class: "product-photo__carousel__stage-outer__stage__image__inner__lazy"
-        .product-photo__nav
-          .product-photo__nav__prev
-            prev
-          .product-photo__nav__next
-            next
+        .product-photo__carousel.owl-carousel
+          - 10.times do
+            = lazy_image_tag "test_product.jpg", class: "owl-lazy"
         .product-photo__dots
-          .product-photo__dots__dot#active
-            %span
-            .product-photo__dots__dot__inner
-              = image_tag "test_product.jpg"
-          .product-photo__dots__dot
-            %span
-            .product-photo__dots__dot__inner
-              = image_tag "test_product.jpg"
-          .product-photo__dots__dot
-            %span
-            .product-photo__dots__dot__inner
-              = image_tag "test_product.jpg"
-          .product-photo__dots__dot
-            %span
-            .product-photo__dots__dot__inner
-              = image_tag "test_product.jpg"
-          .product-photo__dots__dot
-            %span
-            .product-photo__dots__dot__inner
-              = image_tag "test_product.jpg"
-          .product-photo__dots__dot
-            %span
-            .product-photo__dots__dot__inner
-              = image_tag "test_product.jpg"
-          .product-photo__dots__dot
-            %span
-            .product-photo__dots__dot__inner
-              = image_tag "test_product.jpg"
-          .product-photo__dots__dot
-            %span
-            .product-photo__dots__dot__inner
-              = image_tag "test_product.jpg"
-          .product-photo__dots__dot
-            %span
-            .product-photo__dots__dot__inner
-              = image_tag "test_product.jpg"
-          .product-photo__dots__dot
-            %span
-            .product-photo__dots__dot__inner
-              = image_tag "test_product.jpg"
+          - 10.times do
+            .product-photo__dots__dot
+              %span
+              .product-photo__dots__dot__inner.owl-dot
+                = lazy_image_tag "test_product.jpg", class: "owl-lazy"
       %table.product-detail__table
         %tbody
           %tr
@@ -208,7 +138,7 @@
       - @buyer_products.each do |buyer_product|
         .other-products__box__product
           = link_to product_path(buyer_product.id) do
-            =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
+            = lazy_image_tag "test_product.jpg", class: "other-products__box__product__image"
             .other-products__box__product__index
               .other-products__box__product__index__name
                 = buyer_product.name
@@ -221,78 +151,19 @@
     %h2.other-products__brand
       ウール リッチのダウンジャケット その他の商品
     .other-products__box
-      .other-products__box__product
-        = link_to root_path do
-          =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
-          .other-products__box__product__index
-            .other-products__box__product__index__name
-              他の商品名
-            .other-products__box__product__index__price-like
-              .other-products__box__product__index__price-like__price
-                ¥15,000
-              .other-products__box__product__index__price-like__like
-                = fa_icon 'heart'
-                %span 15
-      .other-products__box__product
-        = link_to root_path do
-          =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
-          .other-products__box__product__index
-            .other-products__box__product__index__name
-              他の商品名
-            .other-products__box__product__index__price-like
-              .other-products__box__product__index__price-like__price
-                ¥15,000
-              .other-products__box__product__index__price-like__like
-                = fa_icon 'heart'
-                %span 15
-      .other-products__box__product
-        = link_to root_path do
-          =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
-          .other-products__box__product__index
-            .other-products__box__product__index__name
-              他の商品名
-            .other-products__box__product__index__price-like
-              .other-products__box__product__index__price-like__price
-                ¥15,000
-              .other-products__box__product__index__price-like__like
-                = fa_icon 'heart'
-                %span 15
-      .other-products__box__product
-        = link_to root_path do
-          =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
-          .other-products__box__product__index
-            .other-products__box__product__index__name
-              他の商品名
-            .other-products__box__product__index__price-like
-              .other-products__box__product__index__price-like__price
-                ¥15,000
-              .other-products__box__product__index__price-like__like
-                = fa_icon 'heart'
-                %span 15
-      .other-products__box__product
-        = link_to root_path do
-          =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
-          .other-products__box__product__index
-            .other-products__box__product__index__name
-              他の商品名
-            .other-products__box__product__index__price-like
-              .other-products__box__product__index__price-like__price
-                ¥15,000
-              .other-products__box__product__index__price-like__like
-                = fa_icon 'heart'
-                %span 15
-      .other-products__box__product
-        = link_to root_path do
-          =image_tag 'test_product.jpg', class: 'other-products__box__product__image'
-          .other-products__box__product__index
-            .other-products__box__product__index__name
-              他の商品名
-            .other-products__box__product__index__price-like
-              .other-products__box__product__index__price-like__price
-                ¥15,000
-              .other-products__box__product__index__price-like__like
-                = fa_icon 'heart'
-                %span 15
+      - 6.times do
+        .other-products__box__product
+          = link_to root_path do
+            = lazy_image_tag 'test_product.jpg', class: 'other-products__box__product__image'
+            .other-products__box__product__index
+              .other-products__box__product__index__name
+                他の商品名
+              .other-products__box__product__index__price-like
+                .other-products__box__product__index__price-like__price
+                  ¥15,000
+                .other-products__box__product__index__price-like__like
+                  = fa_icon 'heart'
+                  %span 15
 %ul.nav-crumb-list
   %li{itemscope: "", itemtype: "”http://data-vocabulary.org/Breadcrumb”"}
     = link_to root_path, class: 'nav-product__toppage', itemprop: "url" do
