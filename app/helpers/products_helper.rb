@@ -1,4 +1,4 @@
-module ApplicationHelper
+module ProductsHelper
   def lazy_image_tag(source, options={})
     options['data-src'] = asset_path(source)
     if options[:class].blank?
