@@ -29,7 +29,7 @@
       .content__main1__category1__box
         .content__main1__category1__box__grid
           - @products.each do |product|
-            = link_to product_path(id: [1]) do
+            = link_to product_path(product.id) do
               .content__main1__category1__box__grid__item1
                 .content__main1__category1__box__grid__item1__image
                   = image_tag "test_product.jpg"
@@ -37,6 +37,6 @@
                     %span=number_to_currency(product.price)
                 .content__main1__category1__box__grid__item1__name
                   =product.name
-                  .content__main1__category1__box__grid__item1__name__opacity                 
+                  .content__main1__category1__box__grid__item1__name__opacity
 = render "shared/footer"
 = render "shared/buy"
