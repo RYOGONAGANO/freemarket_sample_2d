@@ -47,7 +47,7 @@
         background-color: colors(white);
         .mypage-menu-tabs {
           @include tabs;
-          .mypage-menu-tab{
+          .mypage-menu-tab {
             width: 50%;
           }
           #active {
@@ -72,7 +72,7 @@
               max-height: 4.4em;
               &__time {
                 display: flex;
-                color: #888;
+                color: colors(title-gray);
                 &__date {
                   margin-left: 8px;
                 }
@@ -83,6 +83,9 @@
               top:50%;
               right: 15px;
             }
+          }
+          &__line:hover {
+            background: colors(ash);
           }
           &--mercari {
             width: 48px;
@@ -99,6 +102,9 @@
               background-color: colors(gray);
               color: colors(black);
               display: block;
+            }
+            a:hover {
+              background: colors(ash);
             }
           }
         }
