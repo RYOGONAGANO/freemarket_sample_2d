@@ -100,6 +100,20 @@
     color: #888;
   }
 }
+
+@mixin fas-arrow-none {
+  .fas {
+    font-weight: 900;
+    float: right;
+    position: relative;
+    font-size: 25px;
+    top: 12px;
+    right: 40px;
+    color: #888;
+    display: none;
+  }
+}
+
 @mixin required {
   background-color: #ea352d;
   color: white;

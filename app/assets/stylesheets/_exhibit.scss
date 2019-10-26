@@ -58,7 +58,6 @@
        }
       }
     &__itemname{
-      height: 355px;
       width: 100%;
       border-bottom: solid 1px colors(bottom-gray);
       padding: 40px;
@@ -104,6 +103,7 @@
           border: solid 1px colors(gray2);
           padding: 10px;
           font-size: 15.8px;
+          resize: vertical;
           @include focus;
         }
       }
@@ -125,11 +125,20 @@
       &__rightbox{
         width: 80%;
         padding: 0px 35px 0 40px;
+        &__categorybox#category1{
+          position: inherit;
+          width: 100%;
+        }
+        &__categorybox#category2{
+          position: inherit;
+          width: 100%;
+        }
         &__categorybox{
           width: 88%;
           position: relative;
           left: 15px;
           float: right;
+         
           &__categorytitle{
             display: flex;
             margin-bottom: 5px;
@@ -156,17 +165,44 @@
           z-index: 1;
           @include focus;
         }
+        #child_category{
+          font-size: 16px;
+          float: right;
+          height: 48px;
+          width: 95%;
+          background-color: colors(gray-trans);
+          text-indent: 15px;
+          -webkit-appearance: none;
+          position: absolute;
+          cursor: pointer;
+          z-index: 1;
+          @include focus;
+        }
+        #grandchild_category{
+          font-size: 16px;
+          float: right;
+          height: 48px;
+          width: 95%;
+          background-color: colors(gray-trans);
+          text-indent: 15px;
+          -webkit-appearance: none;
+          position: absolute;
+          cursor: pointer;
+          z-index: 1;
+          @include focus;
+        }
+        
       }
       &__statusbox{
         width: 88%;
         position: relative;
         left: 15px;
-        padding-top: 30px;
+        top: -13px;
         float: right;
         &__statustitle{
           display: flex;
           margin-bottom: 5px;
-          padding-top: 35px;
+          padding-top: 80px;
           clear: both;
           &__name{
             font-size: 14px;
@@ -176,6 +212,8 @@
             @include requiredname;
           }
         }
+   
+      
       @include fas-arrow;
       #status{
         font-size: 16px;
@@ -246,6 +284,38 @@
           @include focus;
         }
       }
+      &__deliverymethod{
+        width: 94%;
+        position: relative;
+        left: 8px;
+        float: right;
+        &__deliverytitle{
+          display: flex;
+          margin-bottom: 5px;
+          padding-top: 40px;
+          &__name{
+            font-size: 14px;
+            font-weight: bold;
+          }
+          &__required{
+            @include requiredname;
+          }
+        }
+      @include fas-arrow;
+      #shipping_method{
+        font-size: 16px;
+        float: right;
+        height: 48px;
+        width: 95%;
+        background-color: colors(gray-trans);
+        text-indent: 15px;
+        -webkit-appearance: none;
+        position: absolute;
+        cursor: pointer;
+        z-index: 1;
+        @include focus;
+      }
+    }
       &__deliveryarea{
         width: 88%;
         position: relative;

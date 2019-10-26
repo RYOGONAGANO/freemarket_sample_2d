@@ -1,4 +1,4 @@
-= form_with(model: @product, local: true) do |f|
+= form_with(model: @product) do |f|
   = render "shared/logo-onlyheader"
   .exhibit
     .exhibit__box
@@ -46,15 +46,17 @@
                 カテゴリー
               .exhibit__box__detail__rightbox__categorybox__categorytitle__required
                 必須
-            = f.collection_select :category, Product_category.all, :id, :name , prompt: "---"
+            = f.select :category, @category, prompt: "---"
             %i.fas.fa-angle-down
+          .exhibit__box__detail__rightbox__categorybox#category1
+          .exhibit__box__detail__rightbox__categorybox#category2
           .exhibit__box__detail__rightbox__statusbox
             .exhibit__box__detail__rightbox__statusbox__statustitle
               .exhibit__box__detail__rightbox__statusbox__statustitle__name
                 商品の状態
               .exhibit__box__detail__rightbox__statusbox__statustitle__required
                 必須
-            = f.collection_select :status, Product_status.all, :id, :name, prompt: "---"
+            = f.select :status, Product.statuses.keys, prompt: "---"
             %i.fas.fa-angle-down
       .exhibit__box__delivery
         .exhibit__box__delivery__leftbox
@@ -68,8 +70,9 @@
                 配送量の負担
               .exhibit__box__delivery__rightbox__deliverymoney__deliverytitle__required
                 必須
-            = f.collection_select :charge, Delivery_fee.all, :id, :name, prompt: "---"
+            = f.select :charge, Product.fees.keys, prompt: "---"
             %i.fas.fa-angle-down
+          .exhibit__box__delivery__rightbox__deliverymethod
           .exhibit__box__delivery__rightbox__deliveryarea
             .exhibit__box__delivery__rightbox__deliveryarea__areatitle
               .exhibit__box__delivery__rightbox__deliveryarea__areatitle__name
@@ -84,7 +87,7 @@
                 発送までの日数
               .exhibit__box__delivery__rightbox__deliveryday__daytitle__required
                 必須
-            = f.collection_select :shipping_date, Delivery_date.all, :id, :name, prompt: "---"
+            = f.select :shipping_date, Product.shippingdays.keys, prompt: "---"
             %i.fas.fa-angle-down
       .exhibit__box__price
         .exhibit__box__price__leftbox
@@ -105,12 +108,12 @@
             .exhibit__box__price__rightbox__fee__title
               販売手数料 (10%)
             .exhibit__box__price__rightbox__fee__display
-              ー
+              %p#fee -
           .exhibit__box__price__rightbox__profit
             .exhibit__box__price__rightbox__profit__title
               販売利益
             .exhibit__box__price__rightbox__profit__display
-              ー
+              %p#fee_sum -
       .exhibit__box__confirmation
         .exhibit__box__confirmation__box
           .exhibit__box__confirmation__box__consenttext
