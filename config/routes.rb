@@ -6,14 +6,10 @@ Rails.application.routes.draw do
     collection do
       get :profile
       get :profilechange
-      get :card_data_delete
-      get :card_data_input
-      get :card_data_create
       get :authentication
       get :login
       get :logout
       get :registrationNewmenbar
-      get :buyComplete
       get :mypage
     end
   end
@@ -27,7 +23,11 @@ Rails.application.routes.draw do
       get :regist_complete # 登録完了後のページ
     end
   end
-  resources :products 
-
+  resources :products do
+    resources :buys, only: [:new, :create]
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  resources :cards, only: [:index, :new, :create, :destroy]
+
 end

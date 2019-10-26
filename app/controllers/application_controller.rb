@@ -2,16 +2,11 @@ class ApplicationController < ActionController::Base
   before_action :basic_auth, if: :production?
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :set_request_filter
 
   private
 
   def production?
     Rails.env.production?
-  end
-
-  def set_request_filter
-    Thread.current[:request] = request
   end
 
   def basic_auth

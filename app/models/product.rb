@@ -28,4 +28,12 @@ class Product < ApplicationRecord
   validates :name, length: { in: 0..40 }
   validates :description, length: { in: 0..999 }
   validates :image, :name, :description, :category, :status, :charge, :shipping_area, :shipping_date, :price, presence: true
+
+  def previous
+    Product.order(id: "DESC").find_by("id < ?", self.id)
+  end
+
+  def next
+    Product.order(id: "ASC").find_by("id > ?", self.id)
+  end
 end

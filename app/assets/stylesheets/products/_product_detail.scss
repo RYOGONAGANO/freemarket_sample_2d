@@ -23,13 +23,20 @@
         min-height: 375px;
         &__carousel {
           position: relative;
+          overflow: hidden;
+          height: 100%;
           img {
             width: 100%;
             vertical-align: bottom;
           }
+          & .owl-stage-outer,
+            .owl-stage,
+            .owl-item,
+            .owl-item > image {
+              height: 100%;
+          }
           &__stage-outer {
             position: relative;
-            overflow: hidden;
             &__stage {
               position: relative;
               left: 0px;
@@ -53,22 +60,9 @@
             }
           }
         }
-        &__nav {
-          display: none;
-          &__prev {
-            display: none;
-          }
-          &__next {
-            display: none;
-          }
-        }
         &__dots {
           line-height: 0;
           font-size: 0;
-          #active {
-            opacity: 1;
-            cursor: default;
-          }
           &__dot {
             width: 60px;
             height: 60px;
@@ -78,6 +72,10 @@
             display: inline-block;
             opacity: 0.4;
             cursor: pointer;
+            &.active {
+              opacity: 1;
+              cursor: default;
+            }
             span {
               display: none;
             }

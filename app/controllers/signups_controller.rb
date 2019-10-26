@@ -3,7 +3,6 @@ class SignupsController < ApplicationController
   before_action :validates_authentication, only: :address
   before_action :validates_address, only: :carddata
 
-
   def member_information_input
     @user = User.new
     @user.build_user_detail
@@ -28,6 +27,7 @@ class SignupsController < ApplicationController
     @user = User.new
     @user.build_address
     @user.build_user_detail
+    @card = Card.new
   end
 
   def create
@@ -39,18 +39,33 @@ class SignupsController < ApplicationController
     )
     @user.build_user_detail(session[:user_detail_attributes])
     @user.build_address(session[:address_attributes])
-    if @user.save
-      session[:id] = @user.id
-      redirect_to regist_complete_signups_path
+
+    Payjp.api_key = 'sk_test_717aca1da4b849138cd2e0ee'
+    if params['payjp-token'].blank?
+      render action: "carddata" and return
     else
-      render '/signups/member_information_input'
+      # トークンが正常に発行されていたら、顧客情報をPAY.JPに登録します。
+      customer = Payjp::Customer.create(
+        description: 'sample', # 無くてもOK。PAY.JPの顧客情報に表示する概要です。
+        email: session[:email],
+        card: params['payjp-token'], # 直前のnewアクションで発行され、送られてくるトークンをここで顧客に紐付けて永久保存します。
+        metadata: {user_id: @user.id} # 無くてもOK。
+      )
+      if @user.save
+        session[:id] = @user.id
+        redirect_to regist_complete_signups_path
+      else
+        render '/signups/member_information_input' and return
+      end
+
+      @card = Card.new(user_id: @user.id, customer_id: customer.id, card_id: customer.default_card)
+      redirect_to action: "carddata" and return unless @card.save
     end
   end
 
   def regist_complete
     sign_in User.find(session[:id]) unless user_signed_in?
   end
-
 
   private
 
