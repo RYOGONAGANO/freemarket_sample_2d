@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
 
   def index
+    @products = Product.where("id <= ?", 10)
   end
 
   def new
@@ -36,7 +37,6 @@ class ProductsController < ApplicationController
   end
 
   def update
-    @products = Product.where("id <= ?", 10)
     
   end
 
