@@ -1,5 +1,13 @@
 {
   "name": "freemarket_sample_2d",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "dropzone": "^5.5.1",
+    "jquery": "^3.4.1"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/RYOGONAGANO/freemarket_sample_2d.git",
+  "author": "kaitokwt <vitesthedust@gmail.com>",
+  "license": "MIT"
 }
