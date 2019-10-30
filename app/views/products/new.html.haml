@@ -1,4 +1,4 @@
-= form_with(model: @test, local: true) do |f|
+= form_with(model: @product, local: true, multipart: true, class: "form-product") do |f|
   = render "shared/logo-onlyheader"
   .exhibit
     .exhibit__box
@@ -13,13 +13,9 @@
               必須
           .exhibit__box__image__in__message
             最大10枚までアップロードできます
-          %label
-            .exhibit__box__image__in__upload
-              .exhibit__box__image__in__upload__message
-                = f.file_field :image, class: :img_upload
-                ドラッグアンドドロップ
-                %br
-                またはクリックしてファイルをアップロード
+          .exhibit__box__image__in__upload#drop
+            .fallback
+              = f.file_field :images, multiple: true, class: :img_upload
       .exhibit__box__itemname
         .exhibit__box__itemname__topbox
           .exhibit__box__itemname__topbox__title
@@ -131,4 +127,4 @@
             = f.submit "出品する",  class: "exhibit-submit"
           .exhibit__box__confirmation__box__return-btn
             = link_to "もどる", tests_path, class: "return-link"
-  = render "shared/copywrite-bottom" 
+  = render "shared/copywrite-bottom"
