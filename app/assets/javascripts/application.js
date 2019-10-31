@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery/dist/jquery
+//= require rails-ujs
 //= require dropzone/dist/dropzone
 //= require activestorage
 //= require owl.carousel
