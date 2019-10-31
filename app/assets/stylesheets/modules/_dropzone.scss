@@ -1,0 +1,84 @@
+.previews {
+  float: left;
+  .dz-preview {
+    width: 116px;
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    border: 1px solid colors(gray);
+    .dz-image {
+      height: 116px;
+      background: colors(gray);
+      display: flex;
+      align-content: center;
+      img {
+        width: 100%;
+        object-fit: contain;
+        display: block;
+      }
+    }
+    .upload-btn {
+      width: 50%;
+      background: colors(ash);
+      border-right: 1px solid colors(gray);
+      display: inline-block;
+      .upload-edit {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        line-height: 46px;
+        color: colors(blue);
+      }
+    }
+    .dz-remove {
+      width: 50%;
+      float: right;
+      background: colors(ash);
+      color: colors(blue);
+      text-align: center;
+      line-height: 46px;
+    }
+  }
+  .dz-preview:first-child {
+    margin: 0;
+  }
+}
+
+.exhibit-drop {
+  @include dropzone;
+  margin: 0;
+}
+.exhibit-drop.item1 {
+  @include dropzone(80%);
+}
+.exhibit-drop.item2 {
+  @include dropzone(60%);
+}
+.exhibit-drop.item3 {
+  @include dropzone(40%);
+}
+.exhibit-drop.item4 {
+  @include dropzone(20%);
+}
+.exhibit-drop.item5 {
+  @include dropzone;
+}
+.dz-started {
+  .dz-message {
+    display: none;
+  }
+}
+.dz-message {
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  right: 15px;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  line-height: 1.5;
+  text-align: center;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  font-family: monospace,monospace;
+}

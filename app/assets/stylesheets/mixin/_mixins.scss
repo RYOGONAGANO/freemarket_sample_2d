@@ -230,3 +230,13 @@
     }
   }
 }
+
+@mixin dropzone($width: 100%) {
+  position: relative;
+  height: 162px;
+  width: $width;
+  background-color: colors(ash);
+  border: dotted 1.5px colors(gray2);
+  cursor: pointer;
+  float: right;
+}

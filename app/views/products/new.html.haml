@@ -13,9 +13,11 @@
               必須
           .exhibit__box__image__in__message
             最大10枚までアップロードできます
-          .exhibit__box__image__in__upload#drop
-            .fallback
-              = f.file_field :images, multiple: true, class: :img_upload
+          .exhibit__box__image__in__upload
+            .previews#previews
+            .exhibit-drop#dropzone
+              .fallback
+                = f.file_field :images, multiple: true, class: :img_upload
       .exhibit__box__itemname
         .exhibit__box__itemname__topbox
           .exhibit__box__itemname__topbox__title

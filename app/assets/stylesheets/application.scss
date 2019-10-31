@@ -1,5 +1,5 @@
 @import 'font-awesome';
-@import "../../../node_modules/dropzone/dist/dropzone";
+// @import "../../../node_modules/dropzone/dist/dropzone";
 @import "owl.carousel";
 @import "owl.theme.default";
 @import 'config/reset';
@@ -14,6 +14,7 @@
 @import 'modules/copywrite-bottom';
 @import 'modules/new-user-progress';
 @import 'modules/errors';
+@import 'modules/dropzone';
 
 @import 'users/mypage';
 @import 'users/profile';
