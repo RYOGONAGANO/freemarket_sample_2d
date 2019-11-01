@@ -4,6 +4,7 @@
 @import 'config/reset';
 @import 'config/variables';
 @import 'mixin/mixins';
+
 @import "modules/header";
 @import 'modules/sidemenu';
 @import 'modules/footer';
@@ -12,6 +13,7 @@
 @import 'modules/copywrite-bottom';
 @import 'modules/new-user-progress';
 @import 'modules/errors';
+@import 'modules/dropzone';
 
 @import 'users/mypage';
 @import 'users/profile';

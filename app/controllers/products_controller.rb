@@ -1,7 +1,15 @@
 class ProductsController < ApplicationController
+
   def index
     @products = Product.where("id <= ?", 10)
-    
+  end
+
+  def new
+    @product = Product.new
+  end
+
+  def create
+    session[:images] = params[:product][:images] unless session[:images]
   end
 
   def show
