@@ -4,7 +4,7 @@
     width: 116px;
     position: relative;
     display: inline-block;
-    margin-left: 10px;
+    margin: 0 0 10px 10px;
     border: 1px solid colors(gray);
     .dz-image {
       height: 116px;
@@ -42,32 +42,27 @@
   .dz-preview:first-child {
     margin: 0;
   }
-}
-
-.exhibit-drop {
-  @include dropzone;
-  margin: 0;
-}
-.exhibit-drop.item1 {
-  @include dropzone(80%);
-}
-.exhibit-drop.item2 {
-  @include dropzone(60%);
-}
-.exhibit-drop.item3 {
-  @include dropzone(40%);
-}
-.exhibit-drop.item4 {
-  @include dropzone(20%);
-}
-.exhibit-drop.item5 {
-  @include dropzone;
-}
-.dz-started {
-  .dz-message {
-    display: none;
+  .dz-preview:nth-child(6) {
+    margin: 0;
   }
 }
+
+.exhibit-drop.item0{
+  @include dropzone($margin-left: 0);
+}
+.exhibit-drop.item1 {
+  @include dropzone(79%);
+}
+.exhibit-drop.item2 {
+  @include dropzone(59%);
+}
+.exhibit-drop.item3 {
+  @include dropzone(39%);
+}
+.exhibit-drop.item4 {
+  @include dropzone(19%);
+}
+
 .dz-message {
   font-size: 14px;
   position: absolute;
