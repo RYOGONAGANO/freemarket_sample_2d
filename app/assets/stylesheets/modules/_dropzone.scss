@@ -1,5 +1,6 @@
 .previews {
   float: left;
+  position: relative;
   .dz-preview {
     width: 116px;
     position: relative;
@@ -43,7 +44,7 @@
     margin: 0;
   }
   .dz-preview:nth-child(6) {
-    margin: 0;
+    margin: 0 0 40px 0;
   }
 }
 
@@ -51,16 +52,20 @@
   @include dropzone($margin-left: 0);
 }
 .exhibit-drop.item1 {
-  @include dropzone(79%);
+  @include dropzone(79%, $position: absolute);
+  right: 0;
 }
 .exhibit-drop.item2 {
-  @include dropzone(59%);
+  @include dropzone(59%, $position: absolute);
+  right: 0;
 }
 .exhibit-drop.item3 {
-  @include dropzone(39%);
+  @include dropzone(39%, $position: absolute);
+  right: 0;
 }
 .exhibit-drop.item4 {
-  @include dropzone(19%);
+  @include dropzone(19%, $position: absolute);
+  right: 0;
 }
 
 .dz-message {
