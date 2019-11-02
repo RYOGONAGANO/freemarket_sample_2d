@@ -19,7 +19,6 @@ $(function(){
 
   $('#product_charge').on('change', function(){
     var method = document.getElementById("product_charge").value;
-    console.log(method)
     if (method != ""){  
       $.ajax({
         url: 'new',
