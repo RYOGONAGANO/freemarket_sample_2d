@@ -25,14 +25,14 @@
               商品名
             .exhibit__box__itemname__topbox__title__required
               必須
-          = f.text_field :text, class: :product_name, placeholder: "商品名  (必須40文字まで)"
+          = f.text_field :name, class: :product_name, placeholder: "商品名  (必須40文字まで)"
         .exhibit__box__itemname__bottombox
           .exhibit__box__itemname__bottombox__title
             .exhibit__box__itemname__bottombox__title__name
               商品の説明
             .exhibit__box__itemname__bottombox__title__required
               必須
-          = f.text_area :text, class: :product_detail, placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
+          = f.text_area :description, class: :product_detail, placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。"
       .exhibit__box__detail
         .exhibit__box__detail__leftbox
           .exhibit__box__detail__leftbox__title
@@ -44,15 +44,18 @@
                 カテゴリー
               .exhibit__box__detail__rightbox__categorybox__categorytitle__required
                 必須
-            = f.select :category, [["レディース"],["メンズ"],["ベビー・キッズ"],["インテリア・住まい・小物"],["本・音楽・ゲーム"],["おもちゃ・ホビー・グッズ"],["コスメ・香水・美容"],["家電・スマホ・カメラ"],["スポーツ・レジャー"],["ハンドメイド"],["チケット"],["自転車・オートバイ"],["その他"]], prompt: "---"
+            = f.select :category, @category, prompt: "---"
             %i.fas.fa-angle-down
+          .exhibit__box__detail__rightbox__categorybox#category1
+          .exhibit__box__detail__rightbox__categorybox#category2
+          .exhibit__box__detail__rightbox__categorybox#category3
           .exhibit__box__detail__rightbox__statusbox
             .exhibit__box__detail__rightbox__statusbox__statustitle
               .exhibit__box__detail__rightbox__statusbox__statustitle__name
                 商品の状態
               .exhibit__box__detail__rightbox__statusbox__statustitle__required
                 必須
-            = f.select :status, [["新品、未使用"],["未使用に近い"],["目立った傷や汚れなし"],["やや傷や汚れあり"],["傷や汚れあり"],["全体的に状態が悪い"]], prompt: "---"
+            = f.select :status, Product.statuses.keys, prompt: "---"
             %i.fas.fa-angle-down
       .exhibit__box__delivery
         .exhibit__box__delivery__leftbox
@@ -66,15 +69,16 @@
                 配送量の負担
               .exhibit__box__delivery__rightbox__deliverymoney__deliverytitle__required
                 必須
-            = f.select :price, [], prompt: "---"
+            = f.select :charge, Product.fees.keys, prompt: "---"
             %i.fas.fa-angle-down
+          .exhibit__box__delivery__rightbox__deliverymethod
           .exhibit__box__delivery__rightbox__deliveryarea
             .exhibit__box__delivery__rightbox__deliveryarea__areatitle
               .exhibit__box__delivery__rightbox__deliveryarea__areatitle__name
                 発送元の地域
               .exhibit__box__delivery__rightbox__deliveryarea__areatitle__required
                 必須
-            = f.select :area, [], prompt: "---"
+            = f.collection_select :shipping_area, Prefecture.all, :id, :name, prompt: "---"
             %i.fas.fa-angle-down
           .exhibit__box__delivery__rightbox__deliveryday
             .exhibit__box__delivery__rightbox__deliveryday__daytitle
@@ -82,7 +86,7 @@
                 発送までの日数
               .exhibit__box__delivery__rightbox__deliveryday__daytitle__required
                 必須
-            = f.select :day, [], prompt: "---"
+            = f.select :shipping_date, Product.shippingdays.keys, prompt: "---"
             %i.fas.fa-angle-down
       .exhibit__box__price
         .exhibit__box__price__leftbox
@@ -98,17 +102,17 @@
                 必須
             .exhibit__box__price__rightbox__value__yenmark
               %i.fas.fa-yen-sign
-            = f.text_field :value, class: :product_value, placeholder: "例）300"
+              = f.text_field :price, class: :product_price, placeholder: "例）300"
           .exhibit__box__price__rightbox__fee
             .exhibit__box__price__rightbox__fee__title
               販売手数料 (10%)
             .exhibit__box__price__rightbox__fee__display
-              ー
+              %p#fee -
           .exhibit__box__price__rightbox__profit
             .exhibit__box__price__rightbox__profit__title
               販売利益
             .exhibit__box__price__rightbox__profit__display
-              ー
+              %p#fee_sum -
       .exhibit__box__confirmation
         .exhibit__box__confirmation__box
           .exhibit__box__confirmation__box__consenttext
@@ -126,7 +130,7 @@
               = link_to "加盟店規約", new_test_path, class: "consent4"
               に同意したことになります。
           .exhibit__box__confirmation__box__exhibit-btn
-            = f.submit "出品する",  class: "exhibit-submit"
+            = f.submit "出品する", class: "exhibit-submit"
           .exhibit__box__confirmation__box__return-btn
-            = link_to "もどる", tests_path, class: "return-link"
-  = render "shared/copywrite-bottom"
+            = link_to "もどる", products_path, class: "return-link"
+  = render "shared/copywrite-bottom" 

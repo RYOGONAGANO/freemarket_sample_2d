@@ -1,66 +1,78 @@
-.exhibit {
+.exhibit{
   width: 100vw;
-  &__box {
+  &__box{
     background-color: white;
     height: 100%;
-    width: 700px;
+    width: 48.5%;
     margin: auto;
     &__title{
      height: 100px;
      width: 100%;
-     text-align: center; 
+     text-align: center;
      line-height: 100px;
      font-size: 22px;
      font-weight: bold;
      border-bottom: solid 1px colors(bottom-gray); 
     }
-    &__image {
-      width: 620px;
-      height: 313px;
-      padding: 40px;
-      &__in {
+    &__image{
+      height: 303px;
+      width: 100%;
+      border-bottom: solid 1px colors(bottom-gray); 
+      &__in{
+        height: 100%;
         width: 100%;
-        &__title {
+        padding: 40px;
+        &__title{
           font-weight: bold;
           display: flex;
-          &__name {
+          &__name{
             font-size: 16px;
           }
-          &__required {
+          &__required{
             @include requiredname;
           }
         }
-        &__message {
+        &__message{
           padding-top: 10px;
           font-size: 14px;
         }
-        &__upload {
-          width: 620px;
+        &__upload{
+          height: 162px;
+          width: 100%;
+          background-color: colors(ash);
           margin-top: 20px;
-          display: block;
-          position: relative;
+          border: dotted 1.5px colors(gray2);
+          cursor: pointer;
+          #image{
+            display: none;
+          }
+          &__message{
+            text-align: center;
+            margin-top: 60px;
+            line-height: 1.5;
+            font-size: 14px;
+            letter-spacing: -2px;
+            -webkit-text-stroke: 0.7px;
+          }
         }
+       }
       }
-    }
-    &__itemname {
+    &__itemname{
       width: 100%;
-      height: 355px;
-      border-top: solid 1px colors(bottom-gray);
       border-bottom: solid 1px colors(bottom-gray);
       padding: 40px;
-      @include clearfix;
-      &__topbox {
-        &__title {
+      &__topbox{
+        &__title{
           font-weight: bold;
           display: flex;
-          &__name {
+          &__name{
             font-size: 14px;
           }
-          &__required {
+          &__required{
             @include requiredname;
           }
         }
-        .product_name {
+        .product_name{
           height: 48px;
           width: 100%;
           margin-top: 8px;
@@ -72,19 +84,19 @@
           @include focus;
         }
       }
-      &__bottombox {
-        &__title {
+      &__bottombox{
+        &__title{
           font-weight: bold;
           display: flex;
           margin-top: 40px;
-          &__name {
+          &__name{
             font-size: 14px;
           }
-          &__required {
+          &__required{
             @include requiredname;
           }
         }
-        .product_detail {
+        .product_detail{
           height: 142px;
           width: 100%;
           margin-top: 8px;
@@ -96,37 +108,30 @@
         }
       }
     }
-    &__detail {
+    &__detail{
       height: 261px;
       width: 100%;
       border-bottom: solid 1px colors(bottom-gray);
       display: flex;
-      &__leftbox {
+      &__leftbox{
         padding: 40px;
-        &__title {
+        &__title{
           width: 70px;
           font-size: 14px;
           font-weight: bold;
           color: gray;
         }
       }
-      &__rightbox {
+      &__rightbox{
         width: 80%;
         padding: 0px 35px 0 40px;
         &__categorybox#category1{
           position: inherit;
           width: 100%;
-          margin-top: -15px;
         }
         &__categorybox#category2{
           position: inherit;
           width: 100%;
-          margin-top: -15px;
-        }
-        &__categorybox#category3{
-          position: inherit;
-          width: 100%;
-          
         }
         &__categorybox{
           width: 88%;
@@ -138,33 +143,16 @@
             display: flex;
             margin-bottom: 5px;
             padding-top: 40px;
-            &__name {
+            &__name{
               font-size: 14px;
               font-weight: bold;
             }
-            &__required {
+            &__required{
               @include requiredname;
             }
-            &__any{
-              @include anyname;
-            }
           }
-          @include fas-arrow;
-          #product_category {
-            font-size: 16px;
-            float: right;
-            height: 48px;
-            width: 95%;
-            background-color: colors(gray-trans);
-            text-indent: 15px;
-            -webkit-appearance: none;
-            position: absolute;
-            cursor: pointer;
-            z-index: 1;
-            @include focus;
-          }
-        }
-        #product_child_category{
+        @include fas-arrow;
+        #category{
           font-size: 16px;
           float: right;
           height: 48px;
@@ -177,7 +165,7 @@
           z-index: 1;
           @include focus;
         }
-        #product_grandchild_category{
+        #child_category{
           font-size: 16px;
           float: right;
           height: 48px;
@@ -190,7 +178,7 @@
           z-index: 1;
           @include focus;
         }
-        #product_size{
+        #grandchild_category{
           font-size: 16px;
           float: right;
           height: 48px;
@@ -200,26 +188,11 @@
           -webkit-appearance: none;
           position: absolute;
           cursor: pointer;
-          z-index: 1;
-          @include focus;
-        }
-
-        #product_brand_name{
-          font-size: 16px;
-          float: right;
-          height: 48px;
-          width: 95%;
-          background-color: colors(gray-trans);
-          border-radius: 5px;
-          border: solid 1px #a9a9a985;
-          text-indent: 15px;
-          -webkit-appearance: none;
-          position: absolute;
           z-index: 1;
           @include focus;
         }
         
-      
+      }
       &__statusbox{
         width: 88%;
         position: relative;
@@ -234,69 +207,70 @@
           &__name{
             font-size: 14px;
             font-weight: bold;
-            }
-            &__required {
-              @include requiredname;
-            }
           }
-          @include fas-arrow;
-          #product_status {
-            font-size: 16px;
-            float: right;
-            height: 48px;
-            width: 95%;
-            background-color: colors(gray-trans);
-            text-indent: 15px;
-            -webkit-appearance: button;
-            position: absolute;
-            z-index: 1;
-            cursor: pointer;
-            @include focus;
+          &__required{
+            @include requiredname;
           }
         }
+   
+      
+      @include fas-arrow;
+      #status{
+        font-size: 16px;
+        float: right;
+        height: 48px;
+        width: 95%;
+        background-color: colors(gray-trans);
+        text-indent: 15px;
+        -webkit-appearance: button;
+        position: absolute;
+        z-index: 1;
+        cursor: pointer;
+        @include focus;
       }
-      }
-    
-    &__delivery {
+     }
+    }
+   }
+    &__delivery{
       height: 371px;
       width: 100%;
       border-bottom: solid 1px colors(bottom-gray);
       display: flex;
-      &__leftbox {
+      &__leftbox{
         padding: 40px 0 40px 40px;
-        &__title {
+        &__title{
           width: 110px;
           font-size: 14px;
           font-weight: bold;
           color: gray;
           display: flex;
-          .fas {
+          .fas{
             color: colors(blue);
           }
         }
       }
-      &__rightbox {
+      &__rightbox{
         width: 80%;
         padding: 0px 35px 0 40px;
-        &__deliverymoney {
+        &__deliverymoney{
           width: 88%;
           position: relative;
           left: 15px;
           float: right;
-          &__deliverytitle {
+          &__deliverytitle{
             display: flex;
             margin-bottom: 5px;
             padding-top: 40px;
-            &__name {
+            &__name{
               font-size: 14px;
               font-weight: bold;
             }
-            &__required {
+            &__required{
               @include requiredname;
             }
           }
         @include fas-arrow;
-        #product_charge{
+        #charge{
           font-size: 16px;
           float: right;
           height: 48px;
@@ -311,8 +285,9 @@
         }
       }
       &__deliverymethod{
-        width: 100%;
+        width: 94%;
         position: relative;
+        left: 8px;
         float: right;
         &__deliverytitle{
           display: flex;
@@ -327,7 +302,7 @@
           }
         }
       @include fas-arrow;
-      #product_shipping_method{
+      #shipping_method{
         font-size: 16px;
         float: right;
         height: 48px;
@@ -341,43 +316,27 @@
         @include focus;
       }
     }
-  
-          #product_price {
-            font-size: 16px;
-            float: right;
-            height: 48px;
-            width: 95%;
-            background-color: colors(gray-trans);
-            text-indent: 15px;
-            -webkit-appearance: none;
-            position: absolute;
-            cursor: pointer;
-            z-index: 1;
-            @include focus;
+      &__deliveryarea{
+        width: 88%;
+        position: relative;
+        left: 15px;
+        padding-top: 30px;
+        float: right;
+        &__areatitle{
+          display: flex;
+          margin-bottom: 5px;
+          padding-top: 35px;
+          clear: both;
+          &__name{
+            font-size: 14px;
+            font-weight: bold;
           }
-        
-        &__deliveryarea {
-          width: 88%;
-          position: relative;
-          left: 15px;
-          padding-top: 30px;
-          float: right;
-          &__areatitle {
-            display: flex;
-            margin-bottom: 5px;
-            padding-top: 35px;
-            clear: both;
-            &__name {
-              font-size: 14px;
-              font-weight: bold;
-            }
-            &__required {
-              @include requiredname;
-            }
+          &__required{
+            @include requiredname;
           }
         }
       @include fas-arrow;
-      #product_shipping_area{
+      #shipping_area{
         font-size: 16px;
         float: right;
         height: 48px;
@@ -390,7 +349,7 @@
         cursor: pointer;
         @include focus;
       }
-     
+     }
      &__deliveryday{
       width: 88%;
       position: relative;
@@ -410,9 +369,8 @@
           @include requiredname;
         }
       }
-    }
     @include fas-arrow;
-    #product_shipping_date{
+    #shipping_date{
       font-size: 16px;
       float: right;
       height: 48px;
@@ -423,32 +381,33 @@
       position: absolute;
       z-index: 1;
       cursor: pointer;
-      }
+      @include focus;
     }
-  }
-
-    &__price {
+   }
+    }
+    }
+    &__price{
       height: 299px;
       width: 100%;
       border-bottom: solid 1px colors(bottom-gray);
       display: flex;
-      &__leftbox {
+      &__leftbox{
         padding: 45px 0 40px 40px;
-        &__title {
+        &__title{
           width: 180px;
           font-size: 14px;
           font-weight: bold;
           color: gray;
           display: flex;
-          .fas {
+          .fas{
             color: colors(blue);
           }
         }
       }
-      &__rightbox {
+      &__rightbox{
         width: 80%;
         padding: 0px 35px 0 40px;
-        &__value {
+        &__value{
           width: 100%;
           position: relative;
           left: 15px;
@@ -457,46 +416,40 @@
           margin-bottom: 5px;
           padding-top: 50px;
           justify-content: space-between;
-          &__valuetitle {
+          &__valuetitle{
             display: flex;
             position: relative;
             top: 14px;
             right: 15px;
-            &__name {
+            &__name{
               font-size: 14px;
               font-weight: bold;
               width: 28px;
             }
-            &__required {
+            &__required{
               @include requiredname;
             }
           }
-          &__yenmark {
+          &__yenmark{
             line-height: 47px;
             position: relative;
             font-size: 10px;
-            .fas.fa-yen-sign{
-              position: relative;
-              right: 25px;
-              bottom: 1px;
-            }
-            .product_price{
-              position: relative;
-              bottom: 4px;
-              height: 48px;
-              border-radius: 5px;
-              border: solid 1px colors(gray2);
-              right: 20px;
-              width: 160px;
-              font-size: 15.4px;
-              text-align: right;
-              padding-right: 16px;
-              @include focus;
-            }
           }
-          
+          .product_price{
+            position: relative;
+            bottom: 4px;
+            height: 48px;
+            border-radius: 5px;
+            border: solid 1px colors(gray2);
+            right: 20px;
+            width: 160px;
+            font-size: 15.4px;
+            text-align: right;
+            padding-right: 16px;
+            @include focus;
+          }
         }
-        &__fee {
+        &__fee{
           border-top: solid 1px colors(bottom-gray);
           border-bottom: solid 1px colors(bottom-gray);
           width: 99%;
@@ -504,71 +457,71 @@
           clear: both;
           position: relative;
           top: 13px;
-          &__title {
+          &__title{
             width: 120px;
             height: 25px;
             line-height: 60px;
           }
-          &__display {
+          &__display{
             float: right;
           }
         }
-        &__profit {
+        &__profit{
           width: 99%;
           height: 65px;
           clear: both;
           position: relative;
           top: 13px;
-          &__title {
+          &__title{
             width: 120px;
             height: 25px;
             line-height: 60px;
             font-size: 16px;
             font-weight: bold;
           }
-          &__display {
+          &__display{
             font-weight: bold;
             float: right;
             font-size: 16px;
           }
         }
       }
-    }
-    &__confirmation {
+   }
+    &__confirmation{
       height: 329px;
       width: 100%;
-      &__box {
+      &__box{
         height: 329px;
         width: 100%;
         padding: 40px;
-        &__consenttext {
+        &__consenttext{
           width: 101%;
           font-size: 14px;
           line-height: 22px;
-          &__1 {
-            .consent1 {
+          &__1{
+            .consent1{
               color: colors(blue);
             }
-            .consent2 {
-              color: colors(blue);
-            }
-          }
-          &__2 {
-            .consent3 {
+            .consent2{
               color: colors(blue);
             }
           }
-          &__3 {
-            .consent4 {
+          &__2{
+            .consent3{
+              color: colors(blue);
+            }
+          }
+          &__3{
+            .consent4{
               color: colors(blue);
             }
           }
         }
-        &__exhibit-btn {
+        &__exhibit-btn{
           width: 100%;
           height: 50px;
           margin-top: 40px;
-          .exhibit-submit {
+          .exhibit-submit{
             height: 50px;
             width: 100%;
             background: colors(btn-red);
@@ -577,12 +530,12 @@
             outline: none;
           }
         }
-        &__return-btn {
+        &__return-btn{
           width: 100%;
           height: 50px;
           margin-top: 40px;
           text-align: center;
-          .return-link {
+          .return-link{
             height: 50px;
             width: 45%;
             background: colors(gray3);
@@ -596,3 +549,6 @@
     }
   }
 }
+
+
+
