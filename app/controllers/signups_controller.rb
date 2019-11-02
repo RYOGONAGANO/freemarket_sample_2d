@@ -55,7 +55,7 @@ class SignupsController < ApplicationController
         session[:id] = @user.id
         redirect_to regist_complete_signups_path
       else
-        render '/signups/member_information_input'
+        render '/signups/member_information_input' and return
       end
 
       @card = Card.new(user_id: @user.id, customer_id: customer.id, card_id: customer.default_card)
