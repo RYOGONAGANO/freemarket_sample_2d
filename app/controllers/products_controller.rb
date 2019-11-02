@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
 
   def new
      @category = []
-      Category.where(ancestry: nil).each do |parent|
+      Category.where(ancestry: nil).map do |parent|
          @category << parent.name
       end
       @product = Product.new
@@ -34,7 +34,6 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
-      binding.pry
       redirect_to root_path
     else
       render new_product_path
