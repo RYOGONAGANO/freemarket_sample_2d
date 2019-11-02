@@ -1,0 +1,166 @@
+.mypage-main__content {
+  @include chapter();
+  height: 72px;
+  line-height: 72px;
+  font-size: 16px;
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.mypage-main__productStatus {
+  @include chapter(0px);
+  width: 700px;
+  height: 185px;
+  // background-color: colors(white);
+  &__boxs {
+    width: 100%;
+    height: 72px;
+    display: flex;
+    &__selling {
+      width: 33%;
+      height: 100%;
+      line-height: 72px;
+      border-top: 2px solid colors(btn-red);
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    &__trading {
+      width: 33%;
+      height: 100%;
+      line-height: 72px;
+      background-color: colors(gray);
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    &__sold {
+      width: 34%;
+      height: 100%;
+      line-height: 72px;
+      background-color: colors(gray);
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+  &__ditailBox {
+    width: 100%;
+    height: 113px;
+    display: flex;
+    &__left {
+      width: 80px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &__image {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    &__center {
+      width: 210px;
+      height: 100%;
+      &__upper {
+        width: 100%x;
+        height: 50%;
+        font-size: 16px;
+        padding-left: 10px;
+        line-height: 56px;
+      }
+      &__rower {
+        width: 100%x;
+        height: 50%;
+        display: flex;
+        &__left {
+          width: 60%;
+          height: 100%;
+          display: flex;
+          &__hart {
+            width: 25%;
+            height: 100%;
+            line-height: 56.5px;
+            text-align: center;
+          }
+          &__hartInt {
+            width: 25%;
+            height: 100%;
+            line-height: 56.5px;
+            text-align: center;
+          }
+          &__comment {
+            width: 25%;
+            height: 100%;
+            line-height: 56.5px;
+            text-align: center;
+          }
+          &__commentInt {
+            width: 25%;
+            height: 100%;
+            line-height: 56.5px;
+            text-align: center;
+          }
+        }
+        &__right {
+          width: 40%;
+          height: 100%;
+          background-color: white;
+          display: flex;
+          align-items: center;
+          &__blueBox {
+            width: 60px;
+            height: 25px;
+            background-color: colors(blue);
+            border-radius: 0.5em;
+            font-size: 12px;
+            color: colors(white);
+            line-height: 25px;
+            text-align: center;
+          }
+        }
+      }
+    }
+    &__right {
+      width: calc(100% - 136px);
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      &__icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        text-align: center;
+        padding-top: 10px;
+      }
+    }
+  }
+}
+.mypage-main__peger {
+  width: 700px;
+  height: 44px;
+  margin: 40px 36.5px;
+  display: flex;
+  justify-content: space-between;
+  &__rightBox {
+    width: 44px;
+    height: 100%;
+    background-color: colors(white);
+    line-height: 44px;
+    text-align: center;
+    font-size: 16px;
+    border: solid 2px colors(ber-gray);
+    border-radius: 5px;
+  }
+  &__leftBox {
+    width: 44px;
+    height: 100%;
+    background-color: colors(white);
+    line-height: 44px;
+    text-align: center;
+    font-size: 16px;
+    border: solid 2px colors(ber-gray);
+    border-radius: 5px;
+  }
+}

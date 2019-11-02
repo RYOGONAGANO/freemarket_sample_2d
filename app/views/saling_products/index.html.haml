@@ -1,0 +1,39 @@
+= render 'shared/header'
+.mypage-contents
+  = render 'shared/sidemenu'
+  .mypage-main
+    .mypage-main__content
+      出品した商品
+    .mypage-main__productStatus
+      .mypage-main__productStatus__boxs
+        = link_to "出品中", root_path, class: "mypage-main__productStatus__boxs__selling"
+        = link_to "取引中", root_path, class: "mypage-main__productStatus__boxs__trading"
+        = link_to "売却済み", root_path, class: "mypage-main__productStatus__boxs__sold"
+      .mypage-main__productStatus__ditailBox
+        .mypage-main__productStatus__ditailBox__left
+          = lazy_image_tag "test_product.jpg" , class: 'mypage-main__productStatus__ditailBox__left__image'
+        .mypage-main__productStatus__ditailBox__center
+          .mypage-main__productStatus__ditailBox__center__upper
+            = @prducts
+          .mypage-main__productStatus__ditailBox__center__rower
+            .mypage-main__productStatus__ditailBox__center__rower__left
+              .mypage-main__productStatus__ditailBox__center__rower__left__hart
+                = fa_icon "heart"
+              .mypage-main__productStatus__ditailBox__center__rower__left__hartInt
+                0
+              .mypage-main__productStatus__ditailBox__center__rower__left__comment
+                =fa_icon "comment-alt"
+              .mypage-main__productStatus__ditailBox__center__rower__left__commentInt
+                0
+            .mypage-main__productStatus__ditailBox__center__rower__right
+              .mypage-main__productStatus__ditailBox__center__rower__right__blueBox
+                出品中
+        .mypage-main__productStatus__ditailBox__right
+          = fa_icon "chevron-right", class: "mypage-main__productStatus__ditailBox__right__icon"
+    .mypage-main__peger
+      .mypage-main__peger__rightBox
+        = fa_icon "chevron-left"
+      .mypage-main__peger__leftBox
+        = fa_icon "chevron-right"
+= render 'shared/buy'
+= render 'shared/footer'
