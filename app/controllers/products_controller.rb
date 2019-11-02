@@ -39,6 +39,7 @@ class ProductsController < ApplicationController
     else
       render new_product_path
     end
+    session[:images] = params[:product][:images] unless session[:images]
   end
 
   def edit

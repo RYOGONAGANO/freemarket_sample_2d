@@ -31,6 +31,9 @@ class Product < ApplicationRecord
   validates :description, length: { in: 0..999 }
   validates :image, :name, :description, :category, :status, :charge, :shipping_area, :shipping_date, :price, presence: true
 
+  has_many_attached :images
+
+
   def previous
     Product.order(id: "DESC").find_by("id < ?", self.id)
   end
