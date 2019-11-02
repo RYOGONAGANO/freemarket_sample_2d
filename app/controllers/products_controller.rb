@@ -6,9 +6,7 @@ class ProductsController < ApplicationController
 
   def new
      @category = []
-      Category.where(ancestry: nil).map do |parent|
-         @category << parent.name
-      end
+      Category.where(ancestry: nil).map{|parent| @category << parent.name }
       @product = Product.new
       @category_children = Category.find_by(name: "#{params[:parent_name]}", ancestry: nil).children if params[:parent_name].present? 
       @category_grandchildren = Category.find_by(name: "#{params[:child_id]}").children if params[:child_id].present?
