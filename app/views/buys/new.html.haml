@@ -48,12 +48,25 @@
           .buyComplete-content__maincontent__payment__inner__boxs__text
             %p支払い方法
           .buyComplete-content__maincontent__payment__inner__boxs__cardinfo
-            .buyComplete-content__maincontent__payment__inner__boxs__cardinfo__number
-              %p************1234
-              01/21
+            - if @card.present?
+              .card-data-delete__information__box__card-companys
+                .card-data-delete__information__box__card-companys__box
+                  .card-data-delete__information__box__card-companys__box__card-company
+                    = image_tag "#{@card_src}", id: "card-data-delete__information__box__card-companys__box__card-company__icon", class: "card-data-delete__information__box__card-companys__box__card-company__icon"
+                .card-data-delete__information__box__card-companys__card-number
+                  = "************" + @card_information.last4
+                .card-data-delete__information__box__card-companys__card-yearmonth
+                  = @exp_data
+            - else
+              = render "shared/add_card"
             = image_tag 'card-jcb.svg',size: "26x20", class: "buyComplete-content__maincontent__payment__inner__boxs__cardinfo__brand"
             .buyComplete-content__maincontent__payment__inner__boxs__cardinfo__change
-              = link_to root_path do
-                %span 変更する
-                = fa_icon 'angle-right'
+              - if @card.present?
+                = link_to new_card_path , class: "change" do
+                  %span 変更する
+                  = fa_icon 'angle-right'
+              - else
+                = link_to cards_path , class: "change" do
+                  %span 変更する
+                  = fa_icon 'angle-right'
 = render 'shared/copywrite-bottom'
