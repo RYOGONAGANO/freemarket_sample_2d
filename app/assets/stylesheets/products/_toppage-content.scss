@@ -13,6 +13,7 @@
       }
       &--camp {
         @include slide-banner-owl-item-background("index_camp.png");
+        background-repeat: no-repeat;
       }
       &--cm {
         @include slide-banner-owl-item-background("index_cm.jpg");
