@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
       Category.where(ancestry: nil).each do |parent|
          @category << parent.name
       end
-      
+      @product = Product.new
       @category_children = Category.find_by(name: "#{params[:parent_name]}", ancestry: nil).children if params[:parent_name].present? 
       @category_grandchildren = Category.find_by(name: "#{params[:child_id]}").children if params[:child_id].present?
       @size = Category.find_by(name: "#{params[:size]}") if params[:size].present?
@@ -64,6 +64,6 @@ class ProductsController < ApplicationController
   private
 
   def  product_params
-    params.require(:product).permit(:image, :name, :description, :status, :charge, :shipping_area, :shipping_date, :price, :shipping_method, :size, :brand_name ).merge(category: grandchild_category).merge(user_id: current_user.id)
+    params.require(:product).permit(:image, :name, :description, :status, :charge, :shipping_area, :shipping_date, :price, :shipping_method, :size, :brand_name ).merge(:category).merge(user_id: current_user.id)
   end
 end

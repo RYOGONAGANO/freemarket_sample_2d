@@ -150,7 +150,7 @@
             }
           }
           @include fas-arrow;
-          #category {
+          #product_category {
             font-size: 16px;
             float: right;
             height: 48px;
@@ -164,7 +164,7 @@
             @include focus;
           }
         }
-        #child_category{
+        #product_child_category{
           font-size: 16px;
           float: right;
           height: 48px;
@@ -177,7 +177,7 @@
           z-index: 1;
           @include focus;
         }
-        #grandchild_category{
+        #product_grandchild_category{
           font-size: 16px;
           float: right;
           height: 48px;
@@ -190,7 +190,7 @@
           z-index: 1;
           @include focus;
         }
-        #size{
+        #product_size{
           font-size: 16px;
           float: right;
           height: 48px;
@@ -204,7 +204,7 @@
           @include focus;
         }
 
-        #brand_name{
+        #product_brand_name{
           font-size: 16px;
           float: right;
           height: 48px;
@@ -219,7 +219,7 @@
           @include focus;
         }
         
-      }
+      
       &__statusbox{
         width: 88%;
         position: relative;
@@ -240,7 +240,7 @@
             }
           }
           @include fas-arrow;
-          #status {
+          #product_status {
             font-size: 16px;
             float: right;
             height: 48px;
@@ -255,7 +255,8 @@
           }
         }
       }
-    }
+      }
+    
     &__delivery {
       height: 371px;
       width: 100%;
@@ -295,7 +296,7 @@
             }
           }
         @include fas-arrow;
-        #charge{
+        #product_charge{
           font-size: 16px;
           float: right;
           height: 48px;
@@ -326,7 +327,7 @@
           }
         }
       @include fas-arrow;
-      #shipping_method{
+      #product_shipping_method{
         font-size: 16px;
         float: right;
         height: 48px;
@@ -340,7 +341,8 @@
         @include focus;
       }
     }
-          #price {
+  
+          #product_price {
             font-size: 16px;
             float: right;
             height: 48px;
@@ -353,7 +355,7 @@
             z-index: 1;
             @include focus;
           }
-        }
+        
         &__deliveryarea {
           width: 88%;
           position: relative;
@@ -373,9 +375,9 @@
               @include requiredname;
             }
           }
-          
+        }
       @include fas-arrow;
-      #shipping_area{
+      #product_shipping_area{
         font-size: 16px;
         float: right;
         height: 48px;
@@ -388,7 +390,7 @@
         cursor: pointer;
         @include focus;
       }
-     }
+     
      &__deliveryday{
       width: 88%;
       position: relative;
@@ -408,8 +410,9 @@
           @include requiredname;
         }
       }
+    }
     @include fas-arrow;
-    #shipping_date{
+    #product_shipping_date{
       font-size: 16px;
       float: right;
       height: 48px;
@@ -422,6 +425,8 @@
       cursor: pointer;
       }
     }
+  }
+
     &__price {
       height: 299px;
       width: 100%;
