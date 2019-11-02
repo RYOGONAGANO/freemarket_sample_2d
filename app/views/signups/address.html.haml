@@ -3,29 +3,7 @@
   .member-information-header
     .member-information-header__logo
       = link_to image_tag( 'logomercari.svg'), root_path
-    .userRegist-complete-progress-bar
-      .userRegist-complete-progress-bar__text
-        .userRegist-complete-progress-bar__text__member-info
-          %p会員情報
-        .userRegist-complete-progress-bar__text__phone-confirmation
-          %p電話番号認証
-        .userRegist-complete-progress-bar__text__adress
-          %pお届け先住所入力
-        .userRegist-complete-progress-bar__text__payment
-          %p支払い方法
-        .userRegist-complete-progress-bar__text__complete
-          %p完了
-      .userRegist-complete-progress-bar__lines
-        .userRegist-complete-progress-bar__lines__member-info
-        .userRegist-complete-progress-bar__lines__member-info-to-phone
-        .userRegist-complete-progress-bar__lines__phone-confirmation
-        .userRegist-complete-progress-bar__lines__phone-confirmation-to-adress
-        .userRegist-complete-progress-bar__lines__adress
-        .userRegist-complete-progress-bar__lines__adress-to-payment
-        .userRegist-complete-progress-bar__lines__payment
-        .userRegist-complete-progress-bar__lines__payment-to-complete
-        .userRegist-complete-progress-bar__lines__complete
-
+    = render "shared/new_user_progress"
   .address-registration
     .address-registration-entire
       .address-registration-entire__title

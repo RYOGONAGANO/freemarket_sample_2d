@@ -60,11 +60,6 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-#間違ってgemを（carrierwave、fog-aws）インストールしました、使っていません
-gem 'carrierwave'
-gem 'fog-aws'
-
-
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
@@ -79,6 +74,6 @@ gem 'devise'
 gem 'recaptcha', require: "recaptcha/rails"
 gem 'dotenv-rails'
 gem 'pry-rails'
-gem 'jquery-rails'
 gem 'active_hash'
 gem 'payjp'
+gem 'owlcarousel-rails'

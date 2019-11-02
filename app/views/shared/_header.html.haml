@@ -1,44 +1,44 @@
 .header
-  .header__title
-    = link_to root_path do
-      .header__title__logo
-    .header__title__search
-      何かお探しですか ?
-      = fa_icon "search"
-  .header__menu
-    .header__menu__left
-      .header__menu__left__category
-        = fa_icon "list"
-        %span カテゴリーから探す
-      .header__menu__left__brand
-        .header__menu__left__brand__icon
-          = image_tag "brand-tag.png"
-        .header__menu__left__brand__tag
-          %span ブランドから探す
-    .header__menu__right
-      - unless user_signed_in?
-        .header__menu__right__signup
-          = link_to registrationNewmenbar_users_path, class: 'header__menu__right__signup--btn' do
-            新規会員登録
-        .header__menu__right__login
-          = link_to new_user_session_path, class: 'header__menu__right__login--btn' do
-            ログイン
-      - else
-        = link_to root_path do
-          .header__menu__right__like
-            = fa_icon "heart"
-            いいね ! 一覧
-        = link_to root_path do
-          .header__menu__right__news
-            = fa_icon "bell"
-            お知らせ
-        = link_to root_path do
-          .header__menu__right__todo
-            = fa_icon "check"
-            やることリスト
-        = link_to users_path do
-          .header__menu__right__mypage
-            .header__menu__right__mypage__icon
-              = image_tag "member_photo_noimage.png"
-            .header__menu__right__mypage__tag
+  .header-box
+    .header-box__title
+      = link_to root_path do
+        .header-box__title__logo
+      .header-box__title__search
+        何かお探しですか ?
+        = fa_icon "search"
+    .header-box__menu
+      .header-box__menu__left
+        .header-box__menu__left__category
+          = link_to root_path, class: "header-box__menu__left__category__link" do
+            = fa_icon "list"
+            %span カテゴリーから探す
+        .header-box__menu__left__brand
+          = link_to root_path, class: "header-box__menu__left__brand__link" do
+            = image_tag "brand-tag.png", class: "header-box__menu__left__brand__link__icon"
+            .header-box__menu__left__brand__link__tag
+              %span ブランドから探す
+      .header-box__menu__right
+        - unless user_signed_in?
+          .header-box__menu__right__signup
+            = link_to registrationNewmenbar_users_path, class: 'header-box__menu__right__signup--btn' do
+              新規会員登録
+          .header-box__menu__right__login
+            = link_to new_user_session_path, class: 'header-box__menu__right__login--btn' do
+              ログイン
+        - else
+          .header-box__menu__right__like
+            = link_to root_path, class: "header-box__menu__right__like__link" do
+              = fa_icon "heart"
+              %span いいね ! 一覧
+          .header-box__menu__right__news
+            = link_to root_path, class: "header-box__menu__right__news__link" do
+              = fa_icon "bell"
+              %span お知らせ
+          .header-box__menu__right__todo
+            = link_to root_path, class: "header-box__menu__right__todo__link" do
+              = fa_icon "check"
+              %span やることリスト
+          .header-box__menu__right__mypage
+            = link_to users_path, class: "header-box__menu__right__mypage__link" do
+              = image_tag "member_photo_noimage.png", class: "header-box__menu__right__mypage__link__icon"
               %span マイページ
