@@ -3,12 +3,12 @@
   &__box{
     background-color: white;
     height: 100%;
-    width: 48.5%;
+    width: 700px;
     margin: auto;
     &__title{
      height: 100px;
      width: 100%;
-     text-align: center;
+     text-align: center; 
      line-height: 100px;
      font-size: 22px;
      font-weight: bold;
@@ -128,10 +128,17 @@
         &__categorybox#category1{
           position: inherit;
           width: 100%;
+          margin-top: -15px;
         }
         &__categorybox#category2{
           position: inherit;
           width: 100%;
+          margin-top: -15px;
+        }
+        &__categorybox#category3{
+          position: inherit;
+          width: 100%;
+          
         }
         &__categorybox{
           width: 88%;
@@ -149,6 +156,9 @@
             }
             &__required{
               @include requiredname;
+            }
+            &__any{
+              @include anyname;
             }
           }
         @include fas-arrow;
@@ -188,6 +198,34 @@
           -webkit-appearance: none;
           position: absolute;
           cursor: pointer;
+          z-index: 1;
+          @include focus;
+        }
+        #size{
+          font-size: 16px;
+          float: right;
+          height: 48px;
+          width: 95%;
+          background-color: colors(gray-trans);
+          text-indent: 15px;
+          -webkit-appearance: none;
+          position: absolute;
+          cursor: pointer;
+          z-index: 1;
+          @include focus;
+        }
+
+        #brand_name{
+          font-size: 16px;
+          float: right;
+          height: 48px;
+          width: 95%;
+          background-color: colors(gray-trans);
+          border-radius: 5px;
+          border: solid 1px #a9a9a985;
+          text-indent: 15px;
+          -webkit-appearance: none;
+          position: absolute;
           z-index: 1;
           @include focus;
         }
@@ -285,9 +323,8 @@
         }
       }
       &__deliverymethod{
-        width: 94%;
+        width: 100%;
         position: relative;
-        left: 8px;
         float: right;
         &__deliverytitle{
           display: flex;
@@ -433,22 +470,27 @@
           &__yenmark{
             line-height: 47px;
             position: relative;
-            left: 55px;
             font-size: 10px;
+            .fas.fa-yen-sign{
+              position: relative;
+              right: 25px;
+              bottom: 1px;
+            }
+            .product_price{
+              position: relative;
+              bottom: 4px;
+              height: 48px;
+              border-radius: 5px;
+              border: solid 1px colors(gray2);
+              right: 20px;
+              width: 160px;
+              font-size: 15.4px;
+              text-align: right;
+              padding-right: 16px;
+              @include focus;
+            }
           }
-          .product_price{
-            position: relative;
-            bottom: 4px;
-            height: 48px;
-            border-radius: 5px;
-            border: solid 1px colors(gray2);
-            right: 20px;
-            width: 160px;
-            font-size: 15.4px;
-            text-align: right;
-            padding-right: 16px;
-            @include focus;
-          }
+          
         }
         &__fee{
           border-top: solid 1px colors(bottom-gray);

@@ -4,6 +4,7 @@ class Product < ApplicationRecord
   belongs_to :exhibitor, class_name: "User"
   belongs_to :category
   belongs_to_active_hash :prefecture
+  has_one_attached :image
 
   enum status: {新品、未使用: 1, 未使用に近い: 2, 目立った傷や汚れなし: 3,
                 やや傷や汚れあり: 4, 傷や汚れあり: 5, 全体的に状態が悪い: 6}
@@ -25,6 +26,7 @@ class Product < ApplicationRecord
 
 
   validates :price, length: { in: 3..7 }
+  validates :price, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :name, length: { in: 0..40 }
   validates :description, length: { in: 0..999 }
   validates :image, :name, :description, :category, :status, :charge, :shipping_area, :shipping_date, :price, presence: true

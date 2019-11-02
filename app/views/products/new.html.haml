@@ -1,4 +1,4 @@
-= form_with(model: @product) do |f|
+= form_with(model: @product, url: products_path, method: "get") do |f|
   = render "shared/logo-onlyheader"
   .exhibit
     .exhibit__box
@@ -50,6 +50,7 @@
             %i.fas.fa-angle-down
           .exhibit__box__detail__rightbox__categorybox#category1
           .exhibit__box__detail__rightbox__categorybox#category2
+          .exhibit__box__detail__rightbox__categorybox#category3
           .exhibit__box__detail__rightbox__statusbox
             .exhibit__box__detail__rightbox__statusbox__statustitle
               .exhibit__box__detail__rightbox__statusbox__statustitle__name

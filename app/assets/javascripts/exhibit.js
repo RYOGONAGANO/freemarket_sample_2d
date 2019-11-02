@@ -1,86 +1,3 @@
-// $(function(){
-
-//   function method1() {
-//     var html = `<div class="exhibit__box__delivery__rightbox__deliverymethod">
-//     <div class="exhibit__box__delivery__rightbox__deliverymethod__deliverytitle">
-//     <div class="exhibit__box__delivery__rightbox__deliverymethod__deliverytitle__name">
-//     配送の方法
-//     </div>
-//     <div class="exhibit__box__delivery__rightbox__deliverymethod__deliverytitle__required">
-//     必須
-//     </div>
-//     </div>
-//     <select name="shipping_method" id="shipping_method">
-//     <option value="">---</option>
-//     <option value="1">未定</option>
-//     <option value="2">らくらくメルカリ便</option>
-//     <option value="3">ゆうメール</option>
-//     <option value="4">レターパック</option>
-//     <option value="5">普通郵便(定形、定形外)</option>
-//     <option value="6">クロネコヤマト</option>
-//     <option value="7">ゆうパック</option>
-//     <option value="8">クリックポスト</option>
-//     <option value="9">ゆうパケット</option>
-//     </select>
-//     <i class="fas fa-angle-down"></i></div>`
-//     return html;
-//   }
-//   function method2() {
-//     var html = `<div class="exhibit__box__delivery__rightbox__deliverymethod">
-//     <div class="exhibit__box__delivery__rightbox__deliverymethod__deliverytitle">
-//     <div class="exhibit__box__delivery__rightbox__deliverymethod__deliverytitle__name">
-//     配送の方法
-//     </div>
-//     <div class="exhibit__box__delivery__rightbox__deliverymethod__deliverytitle__required">
-//     必須
-//     </div>
-//     </div>
-//     <select name="shipping_method" id="shipping_method">
-//     <option value="">---</option>
-//     <option value="1">未定</option>
-//     <option value="2">クロネコヤマト</option>
-//     <option value="3">ゆうパック</option>
-//     <option value="4">ゆうメール</option>
-//     </select>
-//     <i class="fas fa-angle-down"></i></div>`
-//     return html;
-//   }
-
-
-//   $('#charge').on('change', function(){
-//       var delivery_charge = document.getElementById("charge").value;
-//       switch(delivery_charge){
-//         case "送料込み(出品者負担)":
-//             $(".exhibit__box__delivery__rightbox__deliverymethod").empty();
-//             $('.exhibit__box__delivery__rightbox__deliverymethod').append(method1);
-//             $('.exhibit__box__delivery').css({
-//             'height': '446px',
-//             });
-//           break;
-
-//         case "着払い(購入者負担)":
-//             $(".exhibit__box__delivery__rightbox__deliverymethod").empty();
-//             $('.exhibit__box__delivery__rightbox__deliverymethod').append(method2);
-//             $('.exhibit__box__delivery').css({
-//             'height': '446px',
-//             });
-//           break;
-
-//         case "":
-//             $(".exhibit__box__delivery__rightbox__deliverymethod").empty();
-//             $('.exhibit__box__delivery').css({
-//               'height': '',
-//               });
-//           break;
-
-//         default:
-//           break;
-//       }
-//   });
-// });
-
-// 
-
 $(function(){
   function delivery_plus(delivery){
     var html = `<option value="${delivery.name}" data-category="${delivery.id}">${delivery.name}</option>`;
@@ -116,7 +33,6 @@ $(function(){
         shipping.forEach(function(delivery){
           insertHTML += delivery_plus(delivery);
         });
-        console.log(shipping);
         delivery_method1(insertHTML);
         $('.exhibit__box__delivery').css({
           'height': '446px',

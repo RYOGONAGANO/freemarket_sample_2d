@@ -17,3 +17,8 @@ json.array! @delivery_method2 do |value, key|
   json.id key
   json.name value
 end
+
+json.array! @category_size do |value, key|
+  json.id key
+  json.name value
+end
