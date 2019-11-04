@@ -82,6 +82,20 @@
   margin-top: -4px;
 }
 
+@mixin anyname {
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background-color: colors(ber-gray);
+  width: 32px;
+  height: 19px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 10%;
+  margin-left: 10px;
+  margin-top: -4px;
+}
+
 @mixin focus {
   &:focus {
     border-color: rgb(0, 153, 255);
@@ -100,6 +114,20 @@
     color: #888;
   }
 }
+
+@mixin fas-arrow-none {
+  .fas {
+    font-weight: 900;
+    float: right;
+    position: relative;
+    font-size: 25px;
+    top: 12px;
+    right: 40px;
+    color: #888;
+    display: none;
+  }
+}
+
 @mixin required {
   background-color: #ea352d;
   color: white;
@@ -191,7 +219,9 @@
   background: image_url($background-image);
   background-size: auto 100%;
   background-position: center;
-  background-repeat: no-repeat;
+  width: 100%;
+  display: block;
+  object-fit: contain;
 }
 
 @mixin slide-banner-owl-nav-btn($background-image) {

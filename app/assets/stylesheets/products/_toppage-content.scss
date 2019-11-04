@@ -1,5 +1,5 @@
 .content {
-  width: 100vw;
+  width: 100%;
   margin-left: -1px;
   &__slide-banner {
     height: 390px;
@@ -13,6 +13,7 @@
       }
       &--camp {
         @include slide-banner-owl-item-background("index_camp.png");
+        background-repeat: no-repeat;
       }
       &--cm {
         @include slide-banner-owl-item-background("index_cm.jpg");
