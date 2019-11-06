@@ -66,12 +66,12 @@ ActiveRecord::Schema.define(version: 2019_11_04_030812) do
     t.text "name", null: false
     t.integer "price", null: false
     t.text "description", null: false
-    t.integer "status", null: false
-    t.integer "fee", null: false
-    t.integer "shipping_method", null: false
-    t.string "shipping_area", null: false
-    t.integer "shipping_date", null: false
-    t.integer "size"
+    t.integer "status", default: 0, null: false
+    t.integer "fee", default: 0, null: false
+    t.integer "shipping_method", default: 0, null: false
+    t.string "shipping_area", default: "0", null: false
+    t.integer "shipping_date", default: 0, null: false
+    t.integer "size", default: 0
     t.bigint "buyer_id"
     t.bigint "exhibitor_id", null: false
     t.datetime "created_at", null: false
