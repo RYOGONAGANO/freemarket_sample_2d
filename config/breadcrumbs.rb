@@ -31,6 +31,3 @@ crumb :products_name do |product|
   link product.name
   parent :root
 end
-
-
-
