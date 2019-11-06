@@ -21,6 +21,9 @@ jQuery(document).ready(function() {
     dictCancelUpload: "削除",
     autoProcessQueue: false,
     dictDefaultMessage: "ドラッグアンドドロップ<br>またはクリックしてファイルをアップロード",
+    dictInvalidFileType: "画像ファイル以外です。",
+    dictMaxFilesExceeded: "一度にアップロード出来るのは10ファイルまでです。",
+    dictFileTooBig: "ファイルが大きすぎます。 ({{filesize}}MiB). 最大サイズ: {{maxFilesize}}MiB.",
     parallelUploads: 10,
     thumbnailHeight: null,
     thumbnailWidth: null,
@@ -40,7 +43,6 @@ jQuery(document).ready(function() {
         this.removeAllFiles(true);
       });
 
-      // TODO:保存処置・フォームをまとめる
       dzClosure = this;//Makes sure that 'this' is understood inside the functions below.
        //for Dropzone to process the queue (instead of default form behavior):
         document.getElementById("submit-all").addEventListener("click", function(e) {
@@ -53,9 +55,9 @@ jQuery(document).ready(function() {
         this.on("sendingmultiple", function(data, xhr, formData) {
             formData.append("product[name]", jQuery("#product_name").val());
             formData.append("product[description]", jQuery("#product_description").val());
-            formData.append("product[category_id]", jQuery("#product_grandchild_category").val());
-            formData.append("product[size]", jQuery("#product_size").val());
-            formData.append("product[brand_name]", jQuery("#product_brand_name").val());
+            formData.append("product[category_id]", jQuery("#product_grandchild_category option:selected").data('category'));
+            if (jQuery("#product_size").val()) formData.append("product[size]", jQuery("#product_size").val());
+            // formData.append("product[brand_name]", jQuery("#product_brand_name").val());
             formData.append("product[status]", jQuery("#product_status").val());
             formData.append("product[fee]", jQuery("#product_fee").val());
             formData.append("product[shipping_method]", jQuery("#product_shipping_method").val());
@@ -79,10 +81,6 @@ jQuery(document).ready(function() {
     }
   });
 
-  // $(".form-product").on("submit", function(e) {
-  //   myDropzone.processQueue();
-  // });
-
   const target = document.getElementById("previews");
   const add_target = document.getElementById("dropzone");
   var befor_size = -1;
@@ -101,9 +99,7 @@ jQuery(document).ready(function() {
     };
 
     if (preview_size < befor_size ) {
-      console.log(count);
       add_target.classList.remove(`item${count}`);
-      console.log(size);
       if (size > 4 ) size = size - 5;
       add_target.classList.add(`item${size}`);
     } else if (preview_size > befor_size ) {
@@ -115,22 +111,6 @@ jQuery(document).ready(function() {
     }
     count = size;
     befor_size = preview_size;
-
-    // if (size < befor_size ) {
-    //   size--;
-    //   add_target.classList.remove(`item${size}`);
-    //   if (size < 1 ) size = 5;
-    //   add_target.classList.add(`item${size - 1}`);
-    //   befor_size = size;
-    // } else if (size > befor_size ) {
-    //   add_target.classList.remove(`item${size - 1}`);
-    //   if (size > 4) size = 0;
-    //   add_target.classList.add(`item${size}`);
-    //   size++;
-    //   befor_size = size;
-    // } else {
-    //   alert("エラーです。");
-    // }
   });
 
   const config = {
