@@ -2,6 +2,20 @@
   position: relative;
   bottom: -48px;
   margin-left: 8px;
+  .breadcrumbs{
+    height: 50px;
+    border-top: solid 1px colors(gray); 
+    text-indent: 200px;
+    line-height: 48px;
+    clear: both;
+    a:hover{
+      border-bottom: solid 1px colors(black);
+      color: colors(title-gray);
+    }
+    .current{
+      font-weight: bold;
+    }
+  }
   &__ad{
     img{
     background-repeat: no-repeat;

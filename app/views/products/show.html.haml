@@ -164,12 +164,4 @@
                 .other-products__box__product__index__price-like__like
                   = fa_icon 'heart'
                   %span 15
-%ul.nav-crumb-list
-  %li{itemscope: "", itemtype: "”http://data-vocabulary.org/Breadcrumb”"}
-    = link_to root_path, class: 'nav-product__toppage', itemprop: "url" do
-      %span メルカリ
-      = fa_icon 'chevron-right'
-  %li{itemscope: "", itemtype: "”http://data-vocabulary.org/Breadcrumb”"}
-    %span{itemprop: "title"}
-      商品名
 = render 'shared/footer'
