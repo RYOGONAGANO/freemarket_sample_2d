@@ -74,6 +74,7 @@ jQuery(document).ready(function() {
           // Gets triggered when there was an error sending the files.
           // Maybe show form again, and notify user of error
           alert("送信できませんでした。")
+          location.href = '/products/new'
         });
     },
     headers: {
