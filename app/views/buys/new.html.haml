@@ -25,9 +25,16 @@
           .buyComplete-content__maincontent__content-boxs__content-inner__payment__text
             %p支払い金額
           .buyComplete-content__maincontent__content-boxs__content-inner__payment__price
-            %p¥1500
-        %button{type: "submit", class: "buyComplete-content__maincontent__content-boxs__content-inner__btn"}
-          購入する
+            %p¥5,000
+            %button.buyComplete-content__maincontent__content-boxs__content-inner__btn#modal-open-btn 購入
+        = link_to product_buys_path, method: :POST, id: 'item-delete-btn'
+        #overlay
+          #modalWindow
+            .modal-message-box
+              %div 購入が完了しました
+            %button#modal-close-btn 確認
+            -# %button#delete-comformation-btn 削除する
+            
     .buyComplete-content__maincontent__adress
       .buyComplete-content__maincontent__adress__inner
         .buyComplete-content__maincontent__adress__inner__boxs
@@ -59,10 +66,9 @@
                   = @exp_data
             - else
               = render "shared/add_card"
-            = image_tag 'card-jcb.svg',size: "26x20", class: "buyComplete-content__maincontent__payment__inner__boxs__cardinfo__brand"
             .buyComplete-content__maincontent__payment__inner__boxs__cardinfo__change
               - if @card.present?
-                = link_to new_card_path , class: "change" do
+                = link_to card_data_display_cards_path , class: "change" do
                   %span 変更する
                   = fa_icon 'angle-right'
               - else

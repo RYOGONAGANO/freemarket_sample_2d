@@ -1,4 +1,7 @@
 class BuysController < ApplicationController
+
+  require "payjp"
+
   def new
     @product = Product.find(params[:product_id])
     @card = Card.where(user_id: current_user.id).first if Card.where(user_id: current_user.id).present?
@@ -28,6 +31,35 @@ class BuysController < ApplicationController
         @card_src = "card-saison.svg"
       end
       # ---------------------------------------------------------------
+    end
+  end
+
+  def create #クレジット購入
+    # 購入した際の情報を元に引っ張ってくる
+    card = current_user.card
+
+    if card.blank?
+      redirect_to action: "new"
+      flash[:alert] = '購入にはクレジットカード登録が必要です'
+    else
+      @product = Product.find(params[:product_id])
+      # テーブル紐付けてるのでログインユーザーのクレジットカードを引っ張ってくる
+      Payjp.api_key = "sk_test_717aca1da4b849138cd2e0ee"
+      # キーをセットする(環境変数においても良い)
+      Payjp::Charge.create(
+      amount: @product.price, #支払金額
+      customer: card.customer_id, #顧客ID
+      currency: 'jpy', #日本円
+      )
+      # ↑商品の金額をamountへ、cardの顧客idをcustomerへ、currencyをjpyへ入れる
+      if @product.update(buyer_id: current_user.id)
+        flash[:notice] = '購入しました。'
+        redirect_to product_path(@product.id)
+      else
+        flash[:alert] = '購入に失敗しました。'
+        redirect_to product_path(@product.id)
+      end
+      #↑この辺はこちら側のテーブル設計どうりに色々しています
     end
   end
 end
