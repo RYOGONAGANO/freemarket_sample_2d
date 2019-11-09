@@ -21,7 +21,7 @@
             %th 出品者
             %td
               = link_to root_path do
-                = @product.buyer.nickname
+                = @product.exhibitor.nickname
               .table-user-ratings
                 .table-user-ratings__rating
                   = fa_icon 'laugh', class: "table-user-ratings__rating--good"

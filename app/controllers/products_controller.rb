@@ -1,7 +1,8 @@
 class ProductsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create]
 
   def index
-    @products = Product.where("id <= ?", 10)
+    @products = Product.with_attached_images.where("id <= ?", 10).where(buyer_id: nil)
   end
 
   def new
@@ -53,7 +54,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @previous = @product.previous
     @next = @product.next
-    @buyer_products = Product.where("buyer_id = ? and id != ?", "#{@product.buyer.id}", "#{params[:id]}").order(created_at: "DESC").limit(6)
+    @buyer_products = Product.where("exhibitor_id = ? and id != ?", "#{@product.exhibitor.id}", "#{params[:id]}").order(created_at: "DESC").limit(6)
   end
 
   def destroy
