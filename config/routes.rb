@@ -12,7 +12,7 @@ Rails.application.routes.draw do
       get :registrationNewmenbar
       get :mypage
     end
-    resources :saling_products, only: [:index]
+    resources :saling_products, only: [:index, :show, :destroy]
   end
 
   resources :signups do

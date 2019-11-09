@@ -11,7 +11,7 @@
         = link_to "売却済み", root_path, class: "mypage-main__productStatus__boxs__sold"
       .mypage-main__productStatus__ditailBox
         - @products.each do |product|
-          = link_to root_path, class: "mypage-main__productStatus__ditailBox__in" do
+          = link_to user_saling_product_path(current_user,product), class: "mypage-main__productStatus__ditailBox__in" do
             .mypage-main__productStatus__ditailBox__in__left
               = lazy_image_tag "test_product.jpg" , class: 'mypage-main__productStatus__ditailBox__in__left__image'
             .mypage-main__productStatus__ditailBox__in__center
