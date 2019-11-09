@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
       user = nil
     end
 
-    @products = Product.with_attached_images.where("id <= ? and exhibitor_id != ?", "10", "#{user}").where(buyer_id: nil)
+    @products = Product.with_attached_images.where("exhibitor_id != ?", "#{user}").where(buyer_id: nil).limit(10)
   end
 
   def new
