@@ -8,7 +8,7 @@
           .mypage-user__header__icon
             = image_tag "member_photo_noimage.png", width: '60px', height: '60px'
           .mypage-user__header__name
-            user-name
+            = @user.nickname
           .mypage-user__header__count
             .mypage-user__header__count__evaluate
               評価
@@ -17,7 +17,7 @@
             .mypage-user__header__count__exhibit
               出品数
               %span.mypage-user__header__count__exhibit__number
-                0
+                = @products.length
       .notice-todo
         .mypage-menu-tabs
           .mypage-menu-tab#active
