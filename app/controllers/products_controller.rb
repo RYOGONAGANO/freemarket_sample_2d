@@ -40,8 +40,7 @@ class ProductsController < ApplicationController
     hash = images.permit!.to_h
     hash_size = hash.length
 
-    if @product.invalid?
-      @product.save
+    if @product.save
       for i in 0..(hash_size - 1) do
         @product.images.attach(params[:product][:images]["#{i}"])
       end
