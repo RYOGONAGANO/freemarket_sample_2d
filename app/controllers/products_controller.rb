@@ -29,7 +29,6 @@ class ProductsController < ApplicationController
   end
 
   def create
-    binding.pry
     @product = Product.new(product_params)
     images = params[:product][:images]
     hash = images.permit!.to_h
@@ -53,6 +52,8 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @images = Product.with_attached_images.find(params[:id])
+    
     @previous = @product.previous
     @next = @product.next
     @buyer_products = Product.where("exhibitor_id = ? and id != ?", "#{@product.exhibitor.id}", "#{params[:id]}").order(created_at: "DESC").limit(6)

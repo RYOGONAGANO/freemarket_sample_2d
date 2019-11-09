@@ -7,10 +7,10 @@
     .product-detail
       .product-photo
         .product-photo__carousel.owl-carousel
-          - @product.each do |index|
+          - 10.times do |index|
             = lazy_image_tag url_for(@product.images[index]), class: "owl-lazy"
         .product-photo__dots
-          - @product.each do |index|
+          - 10.times do |index|
             .product-photo__dots__dot
               %span
               .product-photo__dots__dot__inner.owl-dot
@@ -61,7 +61,7 @@
           %tr
             %th 配送の方法
             %td
-              = Product.shipping_method1s.keys[@product.shipping_method]
+              = Product.shipping_methods.keys.to_s[@product.shipping_method]
           %tr
             %th 発送元地域
             %td
