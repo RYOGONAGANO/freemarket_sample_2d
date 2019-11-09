@@ -13,7 +13,6 @@
       font-size: 22px;
       font-weight: bold;
       border-bottom: solid 1px colors(bottom-gray);
-
     }
     &__image {
       width: 620px;
@@ -92,6 +91,7 @@
           border: solid 1px colors(gray2);
           padding: 10px;
           font-size: 15.8px;
+          resize: vertical;
           @include focus;
         }
       }
@@ -113,11 +113,26 @@
       &__rightbox {
         width: 80%;
         padding: 0px 35px 0 40px;
+        &__categorybox#category1 {
+          position: inherit;
+          width: 100%;
+          margin-top: -15px;
+        }
+        &__categorybox#category2 {
+          position: inherit;
+          width: 100%;
+          margin-top: -15px;
+        }
+        &__categorybox#category3 {
+          position: inherit;
+          width: 100%;
+        }
         &__categorybox {
           width: 88%;
           position: relative;
           left: 15px;
           float: right;
+
           &__categorytitle {
             display: flex;
             margin-bottom: 5px;
@@ -129,9 +144,12 @@
             &__required {
               @include requiredname;
             }
+            &__any {
+              @include anyname;
+            }
           }
           @include fas-arrow;
-          #category {
+          #product_category {
             font-size: 16px;
             float: right;
             height: 48px;
@@ -145,16 +163,71 @@
             @include focus;
           }
         }
+        #product_child_category {
+          font-size: 16px;
+          float: right;
+          height: 48px;
+          width: 95%;
+          background-color: colors(gray-trans);
+          text-indent: 15px;
+          -webkit-appearance: none;
+          position: absolute;
+          cursor: pointer;
+          z-index: 1;
+          @include focus;
+        }
+        #product_grandchild_category {
+          font-size: 16px;
+          float: right;
+          height: 48px;
+          width: 95%;
+          background-color: colors(gray-trans);
+          text-indent: 15px;
+          -webkit-appearance: none;
+          position: absolute;
+          cursor: pointer;
+          z-index: 1;
+          @include focus;
+        }
+        #product_size {
+          font-size: 16px;
+          float: right;
+          height: 48px;
+          width: 95%;
+          background-color: colors(gray-trans);
+          text-indent: 15px;
+          -webkit-appearance: none;
+          position: absolute;
+          cursor: pointer;
+          z-index: 1;
+          @include focus;
+        }
+
+        #product_brand_name {
+          font-size: 16px;
+          float: right;
+          height: 48px;
+          width: 95%;
+          background-color: colors(gray-trans);
+          border-radius: 5px;
+          border: solid 1px #a9a9a985;
+          text-indent: 15px;
+          -webkit-appearance: none;
+          position: absolute;
+          z-index: 1;
+          @include focus;
+        }
+
         &__statusbox {
           width: 88%;
           position: relative;
           left: 15px;
-          padding-top: 30px;
+          top: -13px;
           float: right;
           &__statustitle {
             display: flex;
             margin-bottom: 5px;
-            padding-top: 35px;
+            padding-top: 80px;
             clear: both;
             &__name {
               font-size: 14px;
@@ -165,7 +238,7 @@
             }
           }
           @include fas-arrow;
-          #status {
+          #product_status {
             font-size: 16px;
             float: right;
             height: 48px;
@@ -181,6 +254,7 @@
         }
       }
     }
+
     &__delivery {
       height: 371px;
       width: 100%;
@@ -220,7 +294,7 @@
             }
           }
           @include fas-arrow;
-          #price {
+          #product_fee {
             font-size: 16px;
             float: right;
             height: 48px;
@@ -234,6 +308,52 @@
             @include focus;
           }
         }
+        &__deliverymethod {
+          width: 100%;
+          position: relative;
+          float: right;
+          &__deliverytitle {
+            display: flex;
+            margin-bottom: 5px;
+            padding-top: 40px;
+            &__name {
+              font-size: 14px;
+              font-weight: bold;
+            }
+            &__required {
+              @include requiredname;
+            }
+          }
+          @include fas-arrow;
+          #product_shipping_method {
+            font-size: 16px;
+            float: right;
+            height: 48px;
+            width: 95%;
+            background-color: colors(gray-trans);
+            text-indent: 15px;
+            -webkit-appearance: none;
+            position: absolute;
+            cursor: pointer;
+            z-index: 1;
+            @include focus;
+          }
+        }
+
+        #product_price {
+          font-size: 16px;
+          float: right;
+          height: 48px;
+          width: 95%;
+          background-color: colors(gray-trans);
+          text-indent: 15px;
+          -webkit-appearance: none;
+          position: absolute;
+          cursor: pointer;
+          z-index: 1;
+          @include focus;
+        }
+
         &__deliveryarea {
           width: 88%;
           position: relative;
@@ -253,21 +373,22 @@
               @include requiredname;
             }
           }
-          @include fas-arrow;
-          #area {
-            font-size: 16px;
-            float: right;
-            height: 48px;
-            width: 95%;
-            background-color: colors(gray-trans);
-            text-indent: 15px;
-            -webkit-appearance: button;
-            position: absolute;
-            z-index: 1;
-            cursor: pointer;
-            @include focus;
-          }
         }
+        @include fas-arrow;
+        #product_shipping_area {
+          font-size: 16px;
+          float: right;
+          height: 48px;
+          width: 95%;
+          background-color: colors(gray-trans);
+          text-indent: 15px;
+          -webkit-appearance: button;
+          position: absolute;
+          z-index: 1;
+          cursor: pointer;
+          @include focus;
+        }
+
         &__deliveryday {
           width: 88%;
           position: relative;
@@ -287,23 +408,23 @@
               @include requiredname;
             }
           }
-          @include fas-arrow;
-          #day {
-            font-size: 16px;
-            float: right;
-            height: 48px;
-            width: 95%;
-            background-color: colors(gray-trans);
-            text-indent: 15px;
-            -webkit-appearance: button;
-            position: absolute;
-            z-index: 1;
-            cursor: pointer;
-            @include focus;
-          }
+        }
+        @include fas-arrow;
+        #product_shipping_date {
+          font-size: 16px;
+          float: right;
+          height: 48px;
+          width: 95%;
+          background-color: colors(gray-trans);
+          text-indent: 15px;
+          -webkit-appearance: button;
+          position: absolute;
+          z-index: 1;
+          cursor: pointer;
         }
       }
     }
+
     &__price {
       height: 299px;
       width: 100%;
@@ -351,21 +472,25 @@
           &__yenmark {
             line-height: 47px;
             position: relative;
-            left: 55px;
             font-size: 10px;
-          }
-          .product_value {
-            position: relative;
-            bottom: 4px;
-            height: 48px;
-            border-radius: 5px;
-            border: solid 1px colors(gray2);
-            right: 20px;
-            width: 160px;
-            font-size: 15.4px;
-            text-align: right;
-            padding-right: 16px;
-            @include focus;
+            .fas.fa-yen-sign {
+              position: relative;
+              right: 25px;
+              bottom: 1px;
+            }
+            .product_price {
+              position: relative;
+              bottom: 4px;
+              height: 48px;
+              border-radius: 5px;
+              border: solid 1px colors(gray2);
+              right: 20px;
+              width: 160px;
+              font-size: 15.4px;
+              text-align: right;
+              padding-right: 16px;
+              @include focus;
+            }
           }
         }
         &__fee {

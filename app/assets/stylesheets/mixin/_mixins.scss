@@ -65,6 +65,7 @@
   img {
     height: 188px;
     width: 188px;
+    object-fit: contain;
   }
 }
 
@@ -73,6 +74,20 @@
   font-weight: bold;
   color: white;
   background-color: colors(btn-red);
+  width: 32px;
+  height: 19px;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 10%;
+  margin-left: 10px;
+  margin-top: -4px;
+}
+
+@mixin anyname {
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  background-color: colors(ber-gray);
   width: 32px;
   height: 19px;
   text-align: center;
@@ -100,6 +115,20 @@
     color: #888;
   }
 }
+
+@mixin fas-arrow-none {
+  .fas {
+    font-weight: 900;
+    float: right;
+    position: relative;
+    font-size: 25px;
+    top: 12px;
+    right: 40px;
+    color: #888;
+    display: none;
+  }
+}
+
 @mixin required {
   background-color: #ea352d;
   color: white;

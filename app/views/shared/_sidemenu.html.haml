@@ -27,7 +27,7 @@
           .mypage-menu-list__line--arrow
             = fa_icon "chevron-right"
       %li
-        = link_to root_path, class: "mypage-menu-list__line" do
+        = link_to user_saling_products_path(current_user.id), class: "mypage-menu-list__line" do
           %span 出品した商品 - 出品中
           .mypage-menu-list__line--arrow
             = fa_icon "chevron-right"

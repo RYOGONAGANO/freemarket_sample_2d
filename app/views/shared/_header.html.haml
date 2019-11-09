@@ -41,4 +41,6 @@
           .header-box__menu__right__mypage
             = link_to users_path, class: "header-box__menu__right__mypage__link" do
               = image_tag "member_photo_noimage.png", class: "header-box__menu__right__mypage__link__icon"
-              %span マイページ
+              %span マイページ 
+  - if %w[users logout_users profile_users profilechange_users cards].any? { |name| current_page?(send("#{name}_path")) }
+    = render 'shared/breadcrumbs'
