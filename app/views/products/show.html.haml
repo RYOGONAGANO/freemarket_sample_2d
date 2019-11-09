@@ -7,14 +7,14 @@
     .product-detail
       .product-photo
         .product-photo__carousel.owl-carousel
-          - 10.times do |index|
-            = lazy_image_tag url_for(@product.images[index]), class: "owl-lazy"
+          - @product.images.each do |index|
+            = lazy_image_tag url_for(index), class: "owl-lazy"
         .product-photo__dots
-          - 10.times do |index|
+          - @product.images.each do |index|
             .product-photo__dots__dot
               %span
               .product-photo__dots__dot__inner.owl-dot
-                = lazy_image_tag url_for(@product.images[index]), class: "owl-lazy"
+                = lazy_image_tag url_for(index), class: "owl-lazy"
       %table.product-detail__table
         %tbody
           %tr

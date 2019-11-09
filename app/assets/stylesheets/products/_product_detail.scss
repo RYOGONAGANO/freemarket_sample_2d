@@ -28,9 +28,14 @@
           img {
             width: 100%;
             vertical-align: bottom;
+            padding-left: 3px;
           }
           & .owl-stage-outer,
-            .owl-stage,
+            .owl-stage{
+            align-items: center;
+            display: flex;
+            margin-bottom: 10px;
+            }
             .owl-item,
             .owl-item > image {
               height: 100%;
@@ -65,12 +70,13 @@
           font-size: 0;
           &__dot {
             width: 60px;
-            height: 60px;
             max-height: none;
             position: relative;
             overflow: hidden;
             display: inline-block;
             opacity: 0.4;
+            vertical-align: middle;
+            margin-bottom: 20px;
             cursor: pointer;
             &.active {
               opacity: 1;
