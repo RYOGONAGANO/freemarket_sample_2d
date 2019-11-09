@@ -54,7 +54,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
     @previous = @product.previous
     @next = @product.next
-    @buyer_products = Product.where("buyer_id = ? and id != ?", "#{@product.buyer.id}", "#{params[:id]}").order(created_at: "DESC").limit(6)
+    @buyer_products = Product.where("exhibitor_id = ? and id != ?", "#{@product.exhibitor.id}", "#{params[:id]}").order(created_at: "DESC").limit(6)
   end
 
   def destroy
