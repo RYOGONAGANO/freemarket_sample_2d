@@ -28,6 +28,9 @@ jQuery(document).ready(function() {
     thumbnailHeight: null,
     thumbnailWidth: null,
     previewsContainer: '.previews',
+    queuecomplete: function(){
+      // location.href = '/'
+    } ,
     init: function() {
       if (!this.element.querySelector(".dz-message")) {
         this.element.appendChild(
@@ -68,13 +71,13 @@ jQuery(document).ready(function() {
         this.on("successmultiple", function(files, response) {
           // Gets triggered when the files have successfully been sent.
           // Redirect user or notify of success.
-          location.href = '/'
+          location.href = "/"
         });
         this.on("errormultiple", function(files, response) {
           // Gets triggered when there was an error sending the files.
           // Maybe show form again, and notify user of error
           alert("送信できませんでした。")
-          location.href = '/products/new'
+          location.href = "/products/new"
         });
     },
     headers: {
