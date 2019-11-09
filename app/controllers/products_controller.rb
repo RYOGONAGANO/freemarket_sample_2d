@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
 
   def index
-    @products = Product.with_attached_images.where("id <= ?", 10).where(buyer_id: nil)
+    @products = Product.with_attached_images.where("id <= ? and exhibitor_id != ?", "10", "current_user").where(buyer_id: nil)
   end
 
   def new
@@ -29,6 +29,7 @@ class ProductsController < ApplicationController
   end
 
   def create
+    binding.pry
     @product = Product.new(product_params)
     images = params[:product][:images]
     hash = images.permit!.to_h
