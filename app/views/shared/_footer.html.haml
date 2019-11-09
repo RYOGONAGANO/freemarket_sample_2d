@@ -1,4 +1,6 @@
 .footer
+  - unless %w[users logout_users profile_users profilechange_users cards].any? { |name| current_page?(send("#{name}_path")) }
+    = render 'shared/breadcrumbs'
   .footer__ad
     = lazy_image_tag "mercari-ad.png"
   .footer__box

@@ -5,14 +5,14 @@
     height: 100%;
     width: 700px;
     margin: auto;
-    &__title{
-     height: 100px;
-     width: 100%;
-     text-align: center; 
-     line-height: 100px;
-     font-size: 22px;
-     font-weight: bold;
-     border-bottom: solid 1px colors(bottom-gray); 
+    &__title {
+      height: 100px;
+      width: 100%;
+      text-align: center;
+      line-height: 100px;
+      font-size: 22px;
+      font-weight: bold;
+      border-bottom: solid 1px colors(bottom-gray);
     }
     &__image {
       width: 620px;
@@ -113,28 +113,27 @@
       &__rightbox {
         width: 80%;
         padding: 0px 35px 0 40px;
-        &__categorybox#category1{
+        &__categorybox#category1 {
           position: inherit;
           width: 100%;
           margin-top: -15px;
         }
-        &__categorybox#category2{
+        &__categorybox#category2 {
           position: inherit;
           width: 100%;
           margin-top: -15px;
         }
-        &__categorybox#category3{
+        &__categorybox#category3 {
           position: inherit;
           width: 100%;
-          
         }
-        &__categorybox{
+        &__categorybox {
           width: 88%;
           position: relative;
           left: 15px;
           float: right;
-         
-          &__categorytitle{
+
+          &__categorytitle {
             display: flex;
             margin-bottom: 5px;
             padding-top: 40px;
@@ -145,7 +144,7 @@
             &__required {
               @include requiredname;
             }
-            &__any{
+            &__any {
               @include anyname;
             }
           }
@@ -164,7 +163,7 @@
             @include focus;
           }
         }
-        #product_child_category{
+        #product_child_category {
           font-size: 16px;
           float: right;
           height: 48px;
@@ -177,7 +176,7 @@
           z-index: 1;
           @include focus;
         }
-        #product_grandchild_category{
+        #product_grandchild_category {
           font-size: 16px;
           float: right;
           height: 48px;
@@ -190,7 +189,7 @@
           z-index: 1;
           @include focus;
         }
-        #product_size{
+        #product_size {
           font-size: 16px;
           float: right;
           height: 48px;
@@ -204,7 +203,7 @@
           @include focus;
         }
 
-        #product_brand_name{
+        #product_brand_name {
           font-size: 16px;
           float: right;
           height: 48px;
@@ -218,22 +217,21 @@
           z-index: 1;
           @include focus;
         }
-        
-      
-      &__statusbox{
-        width: 88%;
-        position: relative;
-        left: 15px;
-        top: -13px;
-        float: right;
-        &__statustitle{
-          display: flex;
-          margin-bottom: 5px;
-          padding-top: 80px;
-          clear: both;
-          &__name{
-            font-size: 14px;
-            font-weight: bold;
+
+        &__statusbox {
+          width: 88%;
+          position: relative;
+          left: 15px;
+          top: -13px;
+          float: right;
+          &__statustitle {
+            display: flex;
+            margin-bottom: 5px;
+            padding-top: 80px;
+            clear: both;
+            &__name {
+              font-size: 14px;
+              font-weight: bold;
             }
             &__required {
               @include requiredname;
@@ -255,8 +253,8 @@
           }
         }
       }
-      }
-    
+    }
+
     &__delivery {
       height: 371px;
       width: 100%;
@@ -295,54 +293,8 @@
               @include requiredname;
             }
           }
-        @include fas-arrow;
-        #product_charge{
-          font-size: 16px;
-          float: right;
-          height: 48px;
-          width: 95%;
-          background-color: colors(gray-trans);
-          text-indent: 15px;
-          -webkit-appearance: none;
-          position: absolute;
-          cursor: pointer;
-          z-index: 1;
-          @include focus;
-        }
-      }
-      &__deliverymethod{
-        width: 100%;
-        position: relative;
-        float: right;
-        &__deliverytitle{
-          display: flex;
-          margin-bottom: 5px;
-          padding-top: 40px;
-          &__name{
-            font-size: 14px;
-            font-weight: bold;
-          }
-          &__required{
-            @include requiredname;
-          }
-        }
-      @include fas-arrow;
-      #product_shipping_method{
-        font-size: 16px;
-        float: right;
-        height: 48px;
-        width: 95%;
-        background-color: colors(gray-trans);
-        text-indent: 15px;
-        -webkit-appearance: none;
-        position: absolute;
-        cursor: pointer;
-        z-index: 1;
-        @include focus;
-      }
-    }
-  
-          #product_price {
+          @include fas-arrow;
+          #product_fee {
             font-size: 16px;
             float: right;
             height: 48px;
@@ -355,7 +307,53 @@
             z-index: 1;
             @include focus;
           }
-        
+        }
+        &__deliverymethod {
+          width: 100%;
+          position: relative;
+          float: right;
+          &__deliverytitle {
+            display: flex;
+            margin-bottom: 5px;
+            padding-top: 40px;
+            &__name {
+              font-size: 14px;
+              font-weight: bold;
+            }
+            &__required {
+              @include requiredname;
+            }
+          }
+          @include fas-arrow;
+          #product_shipping_method {
+            font-size: 16px;
+            float: right;
+            height: 48px;
+            width: 95%;
+            background-color: colors(gray-trans);
+            text-indent: 15px;
+            -webkit-appearance: none;
+            position: absolute;
+            cursor: pointer;
+            z-index: 1;
+            @include focus;
+          }
+        }
+
+        #product_price {
+          font-size: 16px;
+          float: right;
+          height: 48px;
+          width: 95%;
+          background-color: colors(gray-trans);
+          text-indent: 15px;
+          -webkit-appearance: none;
+          position: absolute;
+          cursor: pointer;
+          z-index: 1;
+          @include focus;
+        }
+
         &__deliveryarea {
           width: 88%;
           position: relative;
@@ -376,56 +374,56 @@
             }
           }
         }
-      @include fas-arrow;
-      #product_shipping_area{
-        font-size: 16px;
-        float: right;
-        height: 48px;
-        width: 95%;
-        background-color: colors(gray-trans);
-        text-indent: 15px;
-        -webkit-appearance: button;
-        position: absolute;
-        z-index: 1;
-        cursor: pointer;
-        @include focus;
-      }
-     
-     &__deliveryday{
-      width: 88%;
-      position: relative;
-      left: 15px;
-      padding-top: 30px;
-      float: right;
-      &__daytitle{
-        display: flex;
-        margin-bottom: 5px;
-        padding-top: 35px;
-        clear: both;
-        &__name{
-          font-size: 14px;
-          font-weight: bold;
+        @include fas-arrow;
+        #product_shipping_area {
+          font-size: 16px;
+          float: right;
+          height: 48px;
+          width: 95%;
+          background-color: colors(gray-trans);
+          text-indent: 15px;
+          -webkit-appearance: button;
+          position: absolute;
+          z-index: 1;
+          cursor: pointer;
+          @include focus;
         }
-        &__required{
-          @include requiredname;
+
+        &__deliveryday {
+          width: 88%;
+          position: relative;
+          left: 15px;
+          padding-top: 30px;
+          float: right;
+          &__daytitle {
+            display: flex;
+            margin-bottom: 5px;
+            padding-top: 35px;
+            clear: both;
+            &__name {
+              font-size: 14px;
+              font-weight: bold;
+            }
+            &__required {
+              @include requiredname;
+            }
+          }
+        }
+        @include fas-arrow;
+        #product_shipping_date {
+          font-size: 16px;
+          float: right;
+          height: 48px;
+          width: 95%;
+          background-color: colors(gray-trans);
+          text-indent: 15px;
+          -webkit-appearance: button;
+          position: absolute;
+          z-index: 1;
+          cursor: pointer;
         }
       }
     }
-    @include fas-arrow;
-    #product_shipping_date{
-      font-size: 16px;
-      float: right;
-      height: 48px;
-      width: 95%;
-      background-color: colors(gray-trans);
-      text-indent: 15px;
-      -webkit-appearance: button;
-      position: absolute;
-      z-index: 1;
-      cursor: pointer;
-      }
-    }
-  }
 
     &__price {
       height: 299px;
@@ -475,12 +473,12 @@
             line-height: 47px;
             position: relative;
             font-size: 10px;
-            .fas.fa-yen-sign{
+            .fas.fa-yen-sign {
               position: relative;
               right: 25px;
               bottom: 1px;
             }
-            .product_price{
+            .product_price {
               position: relative;
               bottom: 4px;
               height: 48px;
@@ -494,7 +492,6 @@
               @include focus;
             }
           }
-          
         }
         &__fee {
           border-top: solid 1px colors(bottom-gray);

@@ -161,4 +161,20 @@
       }
     }
   }
+  .breadcrumbs{
+    height: 50px;
+    background-color: colors(white);
+    border-top: solid 1px colors(bottom-gray); 
+    text-indent: 140px;
+    line-height: 48px;
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.16);
+    a:hover{
+      border-bottom: solid 1px colors(black);
+      color: colors(title-gray);
+    }
+    .current{
+      font-weight: bold;
+    }
+  }
 }
+

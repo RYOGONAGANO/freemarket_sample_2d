@@ -8,7 +8,7 @@ $(function(){
     var html = `<div class="exhibit__box__detail__rightbox__categorybox">
     <div class="exhibit__box__detail__rightbox__categorybox__categorytitle">
     </div>
-    <select name="shipping_method" id="product_shipping_method">
+    <select name="product[shipping_method]" id="product_shipping_method">
     <option value="">---</option>
     ${insertHTML}
     </select>
@@ -17,9 +17,9 @@ $(function(){
     $('.exhibit__box__delivery__rightbox__deliverymethod').append(html);
   }
 
-  $('#product_charge').on('change', function(){
-    var method = document.getElementById("product_charge").value;
-    if (method != ""){  
+  $('#product_fee').on('change', function(){
+    var method = document.getElementById("product_fee").value;
+    if (method != ""){
       $.ajax({
         url: 'new',
         type: 'GET',
