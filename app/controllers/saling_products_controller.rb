@@ -8,10 +8,10 @@ class SalingProductsController < ApplicationController
   end
 
   def destroy
-    # @product = Product.find(params[:id])
-    # if @product.exhibitor_id == current_user.id
-    #   @product.destroy
-    # end
+    @product = Product.find(params[:id])
+    if @product.exhibitor_id == current_user.id
+      @product.destroy
+    end
   end
   
 end
