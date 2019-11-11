@@ -1,0 +1,45 @@
+= render 'shared/header'
+.mypage-contents
+  = render 'shared/sidemenu'
+  .mypage-main
+    .mypage-main__content
+      出品した商品
+    .mypage-main__productStatus
+      .mypage-main__productStatus__boxs
+        = link_to "出品中", user_saling_products_path(current_user.id), class: "mypage-main__productStatus__boxs__sell"
+        = link_to "取引中", root_path, class: "mypage-main__productStatus__boxs__trading"
+        = link_to "売却済み", user_soldout_products_path(current_user.id), class: "mypage-main__productStatus__boxs__soldout"
+      .mypage-main__productStatus__ditailBox
+        - if @products.present?
+          - @products.each do |product|
+            = link_to root_path, class: "mypage-main__productStatus__ditailBox__in" do
+              .mypage-main__productStatus__ditailBox__in__left
+                = lazy_image_tag url_for(product.images[0]) , class: 'mypage-main__productStatus__ditailBox__in__left__image'
+              .mypage-main__productStatus__ditailBox__in__center
+                .mypage-main__productStatus__ditailBox__in__center__upper
+                  = product.name
+                .mypage-main__productStatus__ditailBox__in__center__rower
+                  .mypage-main__productStatus__ditailBox__in__center__rower__left
+                    .mypage-main__productStatus__ditailBox__in__center__rower__left__hart
+                      = fa_icon "heart"
+                    .mypage-main__productStatus__ditailBox__in__center__rower__left__hartInt
+                      0
+                    .mypage-main__productStatus__ditailBox__in__center__rower__left__comment
+                      =fa_icon "comment-alt"
+                    .mypage-main__productStatus__ditailBox__in__center__rower__left__commentInt
+                      0
+                  .mypage-main__productStatus__ditailBox__in__center__rower__right
+                    .mypage-main__productStatus__ditailBox__in__center__rower__right__blueBox
+                      売却済み
+              .mypage-main__productStatus__ditailBox__in__right
+                = fa_icon "chevron-right", class: "mypage-main__productStatus__ditailBox__right__icon"
+        - else
+          .mypage-main__productStatus__ditailBox__no-product
+            %span 売却済の商品がありません
+    .mypage-main__peger
+      .mypage-main__peger__rightBox
+        = fa_icon "chevron-left"
+      .mypage-main__peger__leftBox
+        = fa_icon "chevron-right"
+= render 'shared/buy'
+= render 'shared/footer'
