@@ -69,7 +69,7 @@ jQuery(document).ready(function() {
         this.on("successmultiple", function(files, response) {
           // Gets triggered when the files have successfully been sent.
           // Redirect user or notify of success.
-          alert("送信できてる。")
+          alert("出品完了。")
 
           location.href = "/"
         });

@@ -419,12 +419,21 @@
     }
   }
 }
-.nav-crumb-list {
-  @include clearfix;
-  width: 700px;
-  margin: 24px auto 0;
-  padding: 16px;
-  li {
-    display: inline-block;
+.footer-breadcrumbs {
+  position: relative;
+  bottom: -48px;
+  .breadcrumbs{
+    height: 50px;
+    border-top: solid 1px colors(gray);
+    text-indent: 200px;
+    line-height: 48px;
+    clear: both;
+    a:hover{
+      border-bottom: solid 1px colors(black);
+      color: colors(title-gray);
+    }
+    .current{
+      font-weight: bold;
+    }
   }
 }
