@@ -28,9 +28,6 @@ jQuery(document).ready(function() {
     thumbnailHeight: null,
     thumbnailWidth: null,
     previewsContainer: '.previews',
-    queuecomplete: function(){
-      // location.href = '/'
-    } ,
     init: function() {
       if (!this.element.querySelector(".dz-message")) {
         this.element.appendChild(
@@ -67,10 +64,13 @@ jQuery(document).ready(function() {
             formData.append("product[shipping_area]", jQuery("#product_shipping_area").val());
             formData.append("product[shipping_date]", jQuery("#product_shipping_date").val());
             formData.append("product[price]", jQuery("#product_price").val());
+            console.log(...formData.entries());
         });
         this.on("successmultiple", function(files, response) {
           // Gets triggered when the files have successfully been sent.
           // Redirect user or notify of success.
+          alert("送信できてる。")
+
           location.href = "/"
         });
         this.on("errormultiple", function(files, response) {
