@@ -89,7 +89,7 @@ class SignupsController < ApplicationController
       address_attributes: [
         :id,
         :postal_code,
-        :prefectures_id,
+        :prefecture_id,
         :city,
         :address,
         :building

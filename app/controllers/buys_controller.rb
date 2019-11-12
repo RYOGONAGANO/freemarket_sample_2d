@@ -1,16 +1,15 @@
 class BuysController < ApplicationController
-
   require "payjp"
+  before_action :authenticate_user!, only: [:new, :create]
+  before_action :redirect_exhibiter, only: [:new]
 
   def new
+    @product = Product.find(params[:product_id])
     @address = current_user.address
-    @user_address = @address.city + @address.address
+    @user_address = Prefecture.find(@product.shipping_area).name + " " + @address.city + @address.address
     @user = UserDetail.find_by(user_id: current_user)
     @name = @user.last_name + " " + @user.first_name
     
-    
-    
-    @product = Product.find(params[:product_id])
     @card = Card.where(user_id: current_user.id).first if Card.where(user_id: current_user.id).present?
     if @card.present?
       Payjp.api_key = "sk_test_717aca1da4b849138cd2e0ee"
@@ -61,12 +60,16 @@ class BuysController < ApplicationController
       # ↑商品の金額をamountへ、cardの顧客idをcustomerへ、currencyをjpyへ入れる
       if @product.update(buyer_id: current_user.id)
         flash[:notice] = '購入しました。'
-        redirect_to product_path(@product.id)
       else
         flash[:alert] = '購入に失敗しました。'
         redirect_to product_path(@product.id)
       end
       #↑この辺はこちら側のテーブル設計どうりに色々しています
     end
+  end
+
+  def redirect_exhibiter
+    @product = Product.find(params[:product_id])
+    redirect_to root_path if @product.exhibitor_id == current_user.id
   end
 end
