@@ -3,6 +3,13 @@ class BuysController < ApplicationController
   require "payjp"
 
   def new
+    @address = current_user.address
+    @user_address = @address.city + @address.address
+    @user = UserDetail.find_by(user_id: current_user)
+    @name = @user.last_name + " " + @user.first_name
+    
+    
+    
     @product = Product.find(params[:product_id])
     @card = Card.where(user_id: current_user.id).first if Card.where(user_id: current_user.id).present?
     if @card.present?
