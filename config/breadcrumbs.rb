@@ -31,3 +31,13 @@ crumb :products_name do |product|
   link product.name
   parent :root
 end
+
+crumb :saling_products do |product|
+  link "出品した商品 - 出品中", user_saling_products_path(current_user.id)
+  parent :user_show
+end
+
+crumb :soldout_products do |product|
+  link "出品した商品 - 売却済み", user_soldout_products_path(current_user.id)
+  parent :user_show
+end

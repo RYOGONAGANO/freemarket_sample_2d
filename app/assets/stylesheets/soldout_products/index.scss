@@ -1,0 +1,24 @@
+.mypage-main {
+  &__productStatus {
+    &__boxs {
+      &__sell {
+        width: 34%;
+        height: 100%;
+        line-height: 72px;
+        background-color: colors(gray);
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      &__soldout {
+        width: 33%;
+        height: 100%;
+        line-height: 72px;
+        border-top: 2px solid colors(btn-red);
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+      }
+    }
+  }
+}

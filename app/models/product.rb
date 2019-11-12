@@ -38,10 +38,12 @@ class Product < ApplicationRecord
 
 
   def previous
-    Product.order(id: "DESC").find_by("id < ?", self.id)
+    products = Product.where(buyer_id: nil)
+    products.order(id: "DESC").find_by("id < ?", self.id)
   end
 
   def next
-    Product.order(id: "ASC").find_by("id > ?", self.id)
+    products = Product.where(buyer_id: nil)
+    products.order(id: "ASC").find_by("id > ?", self.id)
   end
 end

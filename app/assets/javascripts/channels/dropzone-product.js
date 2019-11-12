@@ -64,17 +64,20 @@ jQuery(document).ready(function() {
             formData.append("product[shipping_area]", jQuery("#product_shipping_area").val());
             formData.append("product[shipping_date]", jQuery("#product_shipping_date").val());
             formData.append("product[price]", jQuery("#product_price").val());
+            console.log(...formData.entries());
         });
         this.on("successmultiple", function(files, response) {
           // Gets triggered when the files have successfully been sent.
           // Redirect user or notify of success.
-          location.href = '/'
+          alert("出品完了。")
+
+          location.href = "/"
         });
         this.on("errormultiple", function(files, response) {
           // Gets triggered when there was an error sending the files.
           // Maybe show form again, and notify user of error
           alert("送信できませんでした。")
-          location.href = '/products/new'
+          location.href = "/products/new"
         });
     },
     headers: {

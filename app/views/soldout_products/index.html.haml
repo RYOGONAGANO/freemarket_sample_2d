@@ -6,11 +6,11 @@
       出品した商品
     .mypage-main__productStatus
       .mypage-main__productStatus__boxs
-        = link_to "出品中", user_saling_products_path(current_user.id), class: "mypage-main__productStatus__boxs__selling"
+        = link_to "出品中", user_saling_products_path(current_user.id), class: "mypage-main__productStatus__boxs__sell"
         = link_to "取引中", root_path, class: "mypage-main__productStatus__boxs__trading"
-        = link_to "売却済み", user_soldout_products_path(current_user.id), class: "mypage-main__productStatus__boxs__sold"
+        = link_to "売却済み", user_soldout_products_path(current_user.id), class: "mypage-main__productStatus__boxs__soldout"
       .mypage-main__productStatus__ditailBox
-        -if @products.present?
+        - if @products.present?
           - @products.each do |product|
             = link_to root_path, class: "mypage-main__productStatus__ditailBox__in" do
               .mypage-main__productStatus__ditailBox__in__left
@@ -30,12 +30,12 @@
                       0
                   .mypage-main__productStatus__ditailBox__in__center__rower__right
                     .mypage-main__productStatus__ditailBox__in__center__rower__right__blueBox
-                      出品中
+                      売却済み
               .mypage-main__productStatus__ditailBox__in__right
                 = fa_icon "chevron-right", class: "mypage-main__productStatus__ditailBox__right__icon"
         - else
           .mypage-main__productStatus__ditailBox__no-product
-            %span 出品中の商品がありません
+            %span 売却済の商品がありません
     .mypage-main__peger
       .mypage-main__peger__rightBox
         = fa_icon "chevron-left"
