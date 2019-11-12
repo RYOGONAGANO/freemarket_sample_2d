@@ -7,14 +7,14 @@
     .product-detail
       .product-photo
         .product-photo__carousel.owl-carousel
-          - 10.times do
-            = lazy_image_tag "test_product.jpg", class: "owl-lazy"
+          - @product.images.each do |index|
+            = lazy_image_tag url_for(index), class: "owl-lazy"
         .product-photo__dots
-          - 10.times do
+          - @product.images.each do |index|
             .product-photo__dots__dot
               %span
               .product-photo__dots__dot__inner.owl-dot
-                = lazy_image_tag "test_product.jpg", class: "owl-lazy"
+                = lazy_image_tag url_for(index), class: "owl-lazy"
       %table.product-detail__table
         %tbody
           %tr
@@ -36,43 +36,41 @@
             %th カテゴリー
             %td
               = link_to root_path, class: "table-category" do
-                メンズ
+                = @product.category.parent.parent.name
               = link_to root_path, class: "table-category" do
                 = fa_icon 'chevron-right'
-                ジャケット/アウター
+                = @product.category.parent.name
               = link_to root_path, class: "table-category" do
                 = fa_icon 'chevron-right'
-                ダウンジャケット
+                = @product.category.name
           %tr
             %th ブランド
             %td
-              = link_to root_path do
-                ウール リッチ
           %tr
             %th 商品のサイズ
             %td
-              M
+              = @product.size
           %tr
             %th 商品の状態
             %td
-              目立った傷や汚れなし
+              = @product.status
           %tr
             %th 配送料の負担
             %td
-              送料込み(出品者負担)
+              = @product.fee
           %tr
             %th 配送の方法
             %td
-              らくらくメルカリ便
+              = Product.shipping_methods.keys.to_s[@product.shipping_method]
           %tr
             %th 発送元地域
             %td
               = link_to root_path do
-                東京
+                = Prefecture.find(@product.shipping_area).name
           %tr
             %th 発送日の目安
             %td
-              2~3日で発送
+              = @product.shipping_date
     .price-box
       %span.price-box--price
         = number_to_currency(@product.price)
@@ -138,7 +136,7 @@
       - @buyer_products.each do |buyer_product|
         .other-products__box__product
           = link_to product_path(buyer_product.id) do
-            = lazy_image_tag "test_product.jpg", class: "other-products__box__product__image"
+            = lazy_image_tag url_for(buyer_product.images[0]), class: "other-products__box__product__image"
             .other-products__box__product__index
               .other-products__box__product__index__name
                 = buyer_product.name
@@ -148,22 +146,4 @@
                 .other-products__box__product__index__price-like__like
                   = fa_icon 'heart'
                   %span 15
-    %h2.other-products__brand
-      ウール リッチのダウンジャケット その他の商品
-    .other-products__box
-      - 6.times do
-        .other-products__box__product
-          = link_to root_path do
-            = lazy_image_tag 'test_product.jpg', class: 'other-products__box__product__image'
-            .other-products__box__product__index
-              .other-products__box__product__index__name
-                他の商品名
-              .other-products__box__product__index__price-like
-                .other-products__box__product__index__price-like__price
-                  ¥15,000
-                .other-products__box__product__index__price-like__like
-                  = fa_icon 'heart'
-                  %span 15
-.footer-breadcrumbs
-  = render 'shared/breadcrumbs'
 = render 'shared/footer'
