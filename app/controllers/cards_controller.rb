@@ -4,7 +4,7 @@ class CardsController < ApplicationController
 
   def index #CardのデータをPayjpに送って情報を取り出す
     if @card.present?
-      Payjp.api_key = "sk_test_717aca1da4b849138cd2e0ee"
+      Payjp.api_key = Rails.application.credentials.payjp[:PAYJP_PRIVATE_KEY]
       customer = Payjp::Customer.retrieve(@card.customer_id)
       @card_information = customer.cards.retrieve(@card.card_id)
       exp_month = @card_information.exp_month.to_s
@@ -33,7 +33,7 @@ class CardsController < ApplicationController
   end
 
   def destroy #PayjpとCardのデータベースを削除
-    Payjp.api_key = "sk_test_717aca1da4b849138cd2e0ee"
+    Payjp.api_key = Rails.application.credentials.payjp[:PAYJP_PRIVATE_KEY]
     customer = Payjp::Customer.retrieve(@card.customer_id)
     customer.delete
     if @card.destroy #削除に成功した時にポップアップを表示します。
@@ -49,7 +49,7 @@ class CardsController < ApplicationController
   end
 
   def create #PayjpとCardのデータベースを作成
-    Payjp.api_key = 'sk_test_717aca1da4b849138cd2e0ee'
+    Payjp.api_key = Rails.application.credentials.payjp[:PAYJP_PRIVATE_KEY]
 
     if params['payjp-token'].blank?
       redirect_to action: "new"
@@ -77,7 +77,7 @@ class CardsController < ApplicationController
   def card_data_display
     @product = Product
     if @card.present?
-      Payjp.api_key = "sk_test_717aca1da4b849138cd2e0ee"
+      Payjp.api_key = Rails.application.credentials.payjp[:PAYJP_PRIVATE_KEY]
       customer = Payjp::Customer.retrieve(@card.customer_id)
       @card_information = customer.cards.retrieve(@card.card_id)
       exp_month = @card_information.exp_month.to_s
