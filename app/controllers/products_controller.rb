@@ -52,6 +52,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @images = @product.images
     @previous = @product.previous
     @next = @product.next
     @buyer_products = Product.where("exhibitor_id = ? and id != ?", "#{@product.exhibitor.id}", "#{params[:id]}").order(created_at: "DESC").limit(6)

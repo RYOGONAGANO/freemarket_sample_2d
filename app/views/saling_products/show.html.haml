@@ -7,14 +7,14 @@
     .product-detail
       .product-photo
         .product-photo__carousel.owl-carousel
-          - @product.images.each do |index|
-            = lazy_image_tag url_for(index), class: "owl-lazy"
+          - 10.times do
+            = lazy_image_tag url_for(@product.images[0]), class: "owl-lazy"
         .product-photo__dots
-          - @product.images.each do |index|
+          - 10.times do
             .product-photo__dots__dot
               %span
               .product-photo__dots__dot__inner.owl-dot
-                = lazy_image_tag url_for(index), class: "owl-lazy"
+                = lazy_image_tag url_for(@product.images[0]), class: "owl-lazy"
       %table.product-detail__table
         %tbody
           %tr
@@ -36,82 +36,67 @@
             %th カテゴリー
             %td
               = link_to root_path, class: "table-category" do
-                = @product.category.parent.parent.name
+                メンズ
               = link_to root_path, class: "table-category" do
                 = fa_icon 'chevron-right'
-                = @product.category.parent.name
+                ジャケット/アウター
               = link_to root_path, class: "table-category" do
                 = fa_icon 'chevron-right'
-                = @product.category.name
+                ダウンジャケット
           %tr
             %th ブランド
             %td
+              = link_to root_path do
+                ウール リッチ
           %tr
             %th 商品のサイズ
             %td
-              = @product.size
+              M
           %tr
             %th 商品の状態
             %td
-              = @product.status
+              目立った傷や汚れなし
           %tr
             %th 配送料の負担
             %td
-              = @product.fee
+              送料込み(出品者負担)
           %tr
             %th 配送の方法
             %td
-              = Product.shipping_methods.keys.to_s[@product.shipping_method]
+              らくらくメルカリ便
           %tr
             %th 発送元地域
             %td
               = link_to root_path do
-                = Prefecture.find(@product.shipping_area).name
+                東京
           %tr
             %th 発送日の目安
             %td
-              = @product.shipping_date
+              2~3日で発送
     .price-box
       %span.price-box--price
         = number_to_currency(@product.price)
       %span.price-box--tax (税込)
       %span.price-box--shipping-free 送料込み
-
-    - if @product.buyer_id == nil
-      = link_to new_product_buy_path(@product.id), class: "product-details__buy-btn-on" do
-        購入画面に進む
-    - else
-      .product-details__buy-btn-off
-        商品売り切れ
-
-
-
-
-
-
-
-    -# = link_to new_product_buy_path(@product.id), class: "product-details__buy-btn" do
-    -#   購入画面に進む
-
-
-
     .product-details__description
       %P
         = simple_format(@product.description)
-    .product-details__buttons
-      .product-details__buttons__left
-        %button{type: 'button', class: 'product-details__buttons__left__like'}
-          = fa_icon 'heart', class: 'product-details__buttons__left__like--heart'
-          %span いいね！
-          %span.product-details__buttons__left__like__count
-            100
-        = link_to root_path, class: 'product-details__buttons__left__report' do
-          = fa_icon 'flag', class: 'product-details_buttons__left__report--flag'
-          %span 不適切な商品の報告
-      .product-details__buttons__right
-        = link_to root_path, class: 'product-details__buttons__right__safety-effort' do
-          = fa_icon 'lock'
-          %span あんしん・あんぜんへの取り組み
+    
+  .product-editBoxs
+    .product-editBoxs__buttons1
+      = link_to root_path, class: 'product-editBoxs__buttons1__buttonEdit' do
+        .product-editBoxs__buttons1__buttonEdit__text
+          %span 商品の編集
+    .product-editBoxs__buttons2
+      %span or
+    .product-editBoxs__buttons3
+      = link_to root_path, class: 'product-editBoxs__buttons3__buttonStop' do
+        .product-editBoxs__buttons3__buttonStop__text
+          %span 出品を一旦停止する
+    .product-editBoxs__buttons4
+      = link_to user_saling_product_path(current_user,@product), method: :delete, class: 'product-editBoxs__buttons4__buttonDelete' do
+        .product-editBoxs__buttons4__buttonDelete__text
+          %span この商品を削除する
   .product-messages
     .product-messages__form
       %p
@@ -146,21 +131,12 @@
       = link_to root_path, class: 'social-medias__icons__icon' do
         .social-medias__icons__icon--pinterest
           %i{class: 'fab fa-pinterest-square'}
-  .other-products
-    %h2.other-products__username
-      出品者 さんのその他の出品
-    .other-products__box
-      - @buyer_products.each do |buyer_product|
-        .other-products__box__product
-          = link_to product_path(buyer_product.id) do
-            = lazy_image_tag url_for(buyer_product.images[0]), class: "other-products__box__product__image"
-            .other-products__box__product__index
-              .other-products__box__product__index__name
-                = buyer_product.name
-              .other-products__box__product__index__price-like
-                .other-products__box__product__index__price-like__price
-                  = number_to_currency(buyer_product.price)
-                .other-products__box__product__index__price-like__like
-                  = fa_icon 'heart'
-                  %span 15
+%ul.nav-crumb-list
+  %li{itemscope: "", itemtype: "”http://data-vocabulary.org/Breadcrumb”"}
+    = link_to root_path, class: 'nav-product__toppage', itemprop: "url" do
+      %span メルカリ
+      = fa_icon 'chevron-right'
+  %li{itemscope: "", itemtype: "”http://data-vocabulary.org/Breadcrumb”"}
+    %span{itemprop: "title"}
+      商品名
 = render 'shared/footer'

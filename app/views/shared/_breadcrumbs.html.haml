@@ -13,9 +13,15 @@
   - breadcrumb :cards_index
 
 - when ['users', 'profile']
-  - breadcrumb :users_profile 
+  - breadcrumb :users_profile
 
 - when ['products', 'show']
-  - breadcrumb :products_name, @product   
+  - breadcrumb :products_name, @product
+
+- when ['saling_products', 'index']
+  - breadcrumb :saling_products
+
+- when ['soldout_products', 'index']
+  - breadcrumb :soldout_products
 
 = breadcrumbs separator: " &nbsp;&nbsp;&#12297;&nbsp; "

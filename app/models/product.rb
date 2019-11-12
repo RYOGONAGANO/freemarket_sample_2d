@@ -13,6 +13,10 @@ class Product < ApplicationRecord
 
   enum shipping_date: {"1~2日で発送": 1, "2~3日で発送": 2, "4~7日で発送": 3}
 
+  enum shipping_method: {未定: 1, らくらくメルカリ便: 2, ゆうメール: 3,
+                        レターパック: 4, "普通郵便(定形、定形外)": 5, クロネコヤマト: 6,
+                        ゆうパック: 7, クリックポスト: 8, ゆうパケット: 9}
+
   enum shipping_method1: {未定: 1, らくらくメルカリ便: 2, ゆうメール: 3,
                         レターパック: 4, "普通郵便(定形、定形外)": 5, クロネコヤマト: 6,
                         ゆうパック: 7, クリックポスト: 8, ゆうパケット: 9},_prefix: true
@@ -34,10 +38,12 @@ class Product < ApplicationRecord
 
 
   def previous
-    Product.order(id: "DESC").find_by("id < ?", self.id)
+    products = Product.where(buyer_id: nil)
+    products.order(id: "DESC").find_by("id < ?", self.id)
   end
 
   def next
-    Product.order(id: "ASC").find_by("id > ?", self.id)
+    products = Product.where(buyer_id: nil)
+    products.order(id: "ASC").find_by("id > ?", self.id)
   end
 end

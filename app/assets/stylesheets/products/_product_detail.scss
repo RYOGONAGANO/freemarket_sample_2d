@@ -28,10 +28,16 @@
           img {
             width: 100%;
             vertical-align: bottom;
+            padding-left: 3px;
           }
-          & .owl-stage-outer,
-            .owl-stage,
-            .owl-item,
+          & .owl-stage-outer
+            .owl-stage{
+            align-items: center;
+            display: flex;
+            margin-bottom: 10px;
+            height: 254px;
+            }
+            .owl-item
             .owl-item > image {
               height: 100%;
           }
@@ -65,12 +71,13 @@
           font-size: 0;
           &__dot {
             width: 60px;
-            height: 60px;
             max-height: none;
             position: relative;
             overflow: hidden;
             display: inline-block;
             opacity: 0.4;
+            vertical-align: middle;
+            margin-bottom: 20px;
             cursor: pointer;
             &.active {
               opacity: 1;
@@ -429,12 +436,21 @@
     }
   }
 }
-.nav-crumb-list {
-  @include clearfix;
-  width: 700px;
-  margin: 24px auto 0;
-  padding: 16px;
-  li {
-    display: inline-block;
+.footer-breadcrumbs {
+  position: relative;
+  bottom: -48px;
+  .breadcrumbs{
+    height: 50px;
+    border-top: solid 1px colors(gray);
+    text-indent: 200px;
+    line-height: 48px;
+    clear: both;
+    a:hover{
+      border-bottom: solid 1px colors(black);
+      color: colors(title-gray);
+    }
+    .current{
+      font-weight: bold;
+    }
   }
 }

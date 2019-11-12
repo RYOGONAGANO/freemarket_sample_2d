@@ -78,7 +78,7 @@
                 発送元の地域
               .exhibit__box__delivery__rightbox__deliveryarea__areatitle__required
                 必須
-            = f.collection_select :shipping_area, Prefecture.all, :id, :name, prompt: "---"
+            = f.collection_select :shipping_area, Prefecture.all, :id, :name, include_blank: "---"
             %i.fas.fa-angle-down
           .exhibit__box__delivery__rightbox__deliveryday
             .exhibit__box__delivery__rightbox__deliveryday__daytitle
@@ -117,17 +117,17 @@
         .exhibit__box__confirmation__box
           .exhibit__box__confirmation__box__consenttext
             .exhibit__box__confirmation__box__consenttext__1
-              = link_to "禁止されている出品", new_test_path, class: "consent1"
+              = link_to "禁止されている出品", root_path, class: "consent1"
               、
-              = link_to "行為", new_test_path, class: "consent2"
+              = link_to "行為", root_path, class: "consent2"
               を必ずご確認ください。
             .exhibit__box__confirmation__box__consenttext__2
               またブランド品でシリアルナンバー等がある場合はご記載ください。
-              = link_to "偽ブランドの販売", new_test_path, class: "consent3"
+              = link_to "偽ブランドの販売", root_path, class: "consent3"
               は犯罪であり処罰される可能性があります。
             .exhibit__box__confirmation__box__consenttext__3
               また、出品をもちまして
-              = link_to "加盟店規約", new_test_path, class: "consent4"
+              = link_to "加盟店規約", root_path, class: "consent4"
               に同意したことになります。
           .exhibit__box__confirmation__box__exhibit-btn
             = f.submit "出品する", class: "exhibit-submit", id: 'submit-all'

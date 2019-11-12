@@ -82,11 +82,6 @@ ActiveRecord::Schema.define(version: 2019_11_04_030812) do
     t.index ["exhibitor_id"], name: "index_products_on_exhibitor_id"
   end
 
-  create_table "tests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "user_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "first_name", null: false
     t.string "last_name", null: false
