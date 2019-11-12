@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { sessions: "users/sessions" }
   root to: 'products#index'
-  resources :tests
   resources :users do
     collection do
       get :profile
@@ -10,9 +9,9 @@ Rails.application.routes.draw do
       get :login
       get :logout
       get :registrationNewmenbar
-      get :mypage
     end
     resources :saling_products, only: [:index, :show, :destroy]
+    resources :soldout_products, only: [:index]
   end
 
   resources :signups do

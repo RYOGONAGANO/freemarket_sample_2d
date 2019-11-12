@@ -32,9 +32,7 @@ has_many :liked_products, through: :likes, source: :product
 |last_name|string|null: false|
 |first_name_kata|string|null: false|
 |last_name_kata|string|null: false|
-|birth_year  |integer|null: false|
-|birth_month |integer|null: false|
-|birth_day   |integer|null: false|
+|birthday   |integer|null: false|
 |sms_phone|string|  |
 |phone |string|     |
 |profile|text|      |
@@ -104,16 +102,18 @@ belongs_to :user
 |price |integer|null: false|
 |description|text|null: false|
 |status|integer|null: false|
-|charge|string|null: false|
-|shipping_method|string|null :false|
-|shipping_area|string|null: false|
-|shipping_date|string|null: false|
-|size  |string|     |
+|fee|integer|null: false|
+|shipping_method|integer|null :false|
+|shipping_area|integer|null: false|
+|shipping_date|integer|null: false|
+|size  |integer|     |
 |buyer|references|foreign_key: true|
 |exhibitor|references|null: false, foreign_key: true|
+|category|references|null: false, foreign_key: true|
+
 
 ### Assocation
-belongs_to :buyer, class_name: "User"  
+belongs_to :buyer, class_name: "User", optional: true  
 belongs_to :exhibitor, class_name: "User"  
 belongs_to :category  
 belongs_to :brand  
@@ -137,7 +137,7 @@ belongs_to :product, dependent: destroy
 |column|type|options|
 |------|----|-------|
 |name  |string|null: false|
-|path  |string|     |
+|ancestry|string|     |
 |product|references|null: false, foreign_key: true|
 
 ### Assocation
