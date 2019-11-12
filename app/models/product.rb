@@ -33,7 +33,7 @@ class Product < ApplicationRecord
   validates :price, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :name, length: { in: 0..40 }
   validates :description, length: { in: 0..999 }
-  validates :name, :description, :status, :fee, :shipping_area, :shipping_date, :price, presence: true
+  validates :name, :description, :status, :fee, :shipping_method, :shipping_area, :shipping_date, :price, presence: true
 
 
 

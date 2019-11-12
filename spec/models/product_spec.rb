@@ -4,12 +4,6 @@ describe Product do
     @product = build(:product)
   end
 
-  shared_examples "price_save" do
-    # @product = build(:product)
-    binding.pry
-    expect(@product).to be_valid
-  end
-
   describe '#create' do
     context 'can`t save' do
       example "nameが空の場合、保存できない" do
@@ -40,6 +34,30 @@ describe Product do
         @product.fee = nil
         @product.valid?
         expect(@product.errors[:fee]).to include("を入力してください")
+      end
+
+      example "shipping_methodが空の場合、保存できない" do
+        @product.shipping_method = nil
+        @product.valid?
+        expect(@product.errors[:shipping_method]).to include("を入力してください")
+      end
+
+      example "shipping_areaが空の場合、保存できない" do
+        @product.shipping_area = nil
+        @product.valid?
+        expect(@product.errors[:shipping_area]).to include("を入力してください")
+      end
+
+      example "shipping_dateが空の場合、保存できない" do
+        @product.shipping_date = nil
+        @product.valid?
+        expect(@product.errors[:shipping_date]).to include("を入力してください")
+      end
+    end
+
+    context "can save" do
+      example "nameとpriceとdescriptionとstatusとfeeとshipping_methodとshipping_areaとshipping_dateがあれば保存できる" do
+        expect(@product).to be_valid
       end
     end
   end
@@ -104,8 +122,12 @@ describe Product do
       end
     end
 
-    it_behaves_like "price_save"
-
+    context 'can save' do
+      example "priceは整数の場合、保存できる" do
+        @product.price = 111
+        expect(@product).to be_valid
+      end
+    end
   end
 end
 
