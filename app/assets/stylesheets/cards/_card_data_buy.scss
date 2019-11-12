@@ -1,0 +1,10 @@
+.card-content {
+  width: 100vw;
+  height: 562px;
+  .card-box {
+    @include chapter(0, auto);
+    .card-data-input {
+      margin: 0;
+    }
+  }
+}

@@ -78,8 +78,25 @@
         = number_to_currency(@product.price)
       %span.price-box--tax (税込)
       %span.price-box--shipping-free 送料込み
-    = link_to new_product_buy_path(@product.id), class: "product-details__buy-btn" do
-      購入画面に進む
+
+    - if @product.buyer_id == nil
+      = link_to new_product_buy_path(@product.id), class: "product-details__buy-btn-on" do
+        購入画面に進む
+    - else
+      .product-details__buy-btn-off
+        商品売り切れ
+
+
+
+
+
+
+
+    -# = link_to new_product_buy_path(@product.id), class: "product-details__buy-btn" do
+    -#   購入画面に進む
+
+
+
     .product-details__description
       %P
         = simple_format(@product.description)

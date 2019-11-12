@@ -7,7 +7,7 @@
       .buyComplete-content__maincontent__content-boxs__content-inner
         .buyComplete-content__maincontent__content-boxs__content-inner__image-title
           .buyComplete-content__maincontent__content-boxs__content-inner__image-title__image
-            = image_tag 'test_product.jpg', size:'64x64'
+            = image_tag url_for(@product.images[0]), size:'64x64'
           .buyComplete-content__maincontent__content-boxs__content-inner__image-title__title
             = @product.name
         .buyComplete-content__maincontent__content-boxs__content-inner__price
@@ -25,16 +25,21 @@
           .buyComplete-content__maincontent__content-boxs__content-inner__payment__text
             %p支払い金額
           .buyComplete-content__maincontent__content-boxs__content-inner__payment__price
-            %p¥5,000
-            %button.buyComplete-content__maincontent__content-boxs__content-inner__btn#modal-open-btn 購入
-        = link_to product_buys_path, method: :POST, id: 'item-delete-btn'
+            %p
+              = number_to_currency(@product.price)
+        - if @card.present?
+          = link_to product_buys_path, method: :POST, id: 'item-regist-btn',class:"buyComplete-content__maincontent__content-boxs__content-inner__btn" do
+            %button.buyComplete-content__maincontent__content-boxs__content-inner__btn__buy#modal-open-btn 購入する
+        - else
+          .buyComplete-content__maincontent__content-boxs__content-inner__btn__no-card
+            配送先と支払い方法の入力を完了してください。
+            %button.buyComplete-content__maincontent__content-boxs__content-inner__btn__no-card__buy 購入する
         #overlay
           #modalWindow
             .modal-message-box
               %div 購入が完了しました
-            %button#modal-close-btn 確認
-            -# %button#delete-comformation-btn 削除する
-            
+            = link_to root_path, class: "modal-close-link" do
+              %button.modal-close-btn 確認
     .buyComplete-content__maincontent__adress
       .buyComplete-content__maincontent__adress__inner
         .buyComplete-content__maincontent__adress__inner__boxs
@@ -42,9 +47,12 @@
             %p配送先
           .buyComplete-content__maincontent__adress__inner__boxs__ditail
             .buyComplete-content__maincontent__adress__inner__boxs__ditail__text
-              %p〒780-1234
-              %p高知県高知市1234
-              %p高知太郎
+              %p
+                = "〒#{@address.postal_code}"
+              %p
+                = @user_address
+              %p
+                = @name
           .buyComplete-content__maincontent__adress__inner__boxs__change
             = link_to root_path do
               %span 変更する
@@ -65,14 +73,14 @@
                 .card-data-delete__information__box__card-companys__card-yearmonth
                   = @exp_data
             - else
-              = render "shared/add_card"
+              %p /
             .buyComplete-content__maincontent__payment__inner__boxs__cardinfo__change
               - if @card.present?
                 = link_to card_data_display_cards_path , class: "change" do
                   %span 変更する
                   = fa_icon 'angle-right'
               - else
-                = link_to cards_path , class: "change" do
+                = link_to card_data_buy_cards_path(id: @product.id) , class: "change" do
                   %span 変更する
                   = fa_icon 'angle-right'
 = render 'shared/copywrite-bottom'
