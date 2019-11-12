@@ -12,7 +12,7 @@ class BuysController < ApplicationController
     
     @card = Card.where(user_id: current_user.id).first if Card.where(user_id: current_user.id).present?
     if @card.present?
-      Payjp.api_key = "sk_test_717aca1da4b849138cd2e0ee"
+      Payjp.api_key = Rails.application.credentials.payjp[:PAYJP_PRIVATE_KEY]
       customer = Payjp::Customer.retrieve(@card.customer_id)
       @card_information = customer.cards.retrieve(@card.card_id)
       exp_month = @card_information.exp_month.to_s
@@ -50,7 +50,7 @@ class BuysController < ApplicationController
     else
       @product = Product.find(params[:product_id])
       # テーブル紐付けてるのでログインユーザーのクレジットカードを引っ張ってくる
-      Payjp.api_key = "sk_test_717aca1da4b849138cd2e0ee"
+      Payjp.api_key = Rails.application.credentials.payjp[:PAYJP_PRIVATE_KEY]
       # キーをセットする(環境変数においても良い)
       Payjp::Charge.create(
       amount: @product.price, #支払金額

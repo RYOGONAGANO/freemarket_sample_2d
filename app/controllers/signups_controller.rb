@@ -40,7 +40,7 @@ class SignupsController < ApplicationController
     @user.build_user_detail(session[:user_detail_attributes])
     @user.build_address(session[:address_attributes])
 
-    Payjp.api_key = 'sk_test_717aca1da4b849138cd2e0ee'
+    Payjp.api_key = Rails.application.credentials.payjp[:PAYJP_PRIVATE_KEY]
     if params['payjp-token'].blank?
       render action: "carddata" and return
     else
