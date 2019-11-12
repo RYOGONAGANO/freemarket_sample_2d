@@ -1,0 +1,10 @@
+= render 'shared/header'
+.deleteCompleteBox
+  .deleteCompleteBox__messageBox
+    .deleteCompleteBox__messageBox__mainText
+      %span 商品削除完了
+    .deleteCompleteBox__messageBox__textBox
+      %span 商品を削除しました
+    .deleteCompleteBox__messageBox__button
+      = link_to "メルカリに戻る", root_path, class: "deleteCompleteBox__messageBox__button__link"
+= render 'shared/footer'

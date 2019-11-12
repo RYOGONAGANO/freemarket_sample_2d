@@ -10,7 +10,7 @@ Rails.application.routes.draw do
       get :logout
       get :registrationNewmenbar
     end
-    resources :saling_products, only: [:index]
+    resources :saling_products, only: [:index, :show, :destroy]
     resources :soldout_products, only: [:index]
   end
 

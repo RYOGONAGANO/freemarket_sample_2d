@@ -1,0 +1,142 @@
+= render 'shared/header'
+.detail-contents
+  .product-details
+    .product-details__name
+      %h1
+        = @product.name
+    .product-detail
+      .product-photo
+        .product-photo__carousel.owl-carousel
+          - 10.times do
+            = lazy_image_tag url_for(@product.images[0]), class: "owl-lazy"
+        .product-photo__dots
+          - 10.times do
+            .product-photo__dots__dot
+              %span
+              .product-photo__dots__dot__inner.owl-dot
+                = lazy_image_tag url_for(@product.images[0]), class: "owl-lazy"
+      %table.product-detail__table
+        %tbody
+          %tr
+            %th 出品者
+            %td
+              = link_to root_path do
+                = @product.exhibitor.nickname
+              .table-user-ratings
+                .table-user-ratings__rating
+                  = fa_icon 'laugh', class: "table-user-ratings__rating--good"
+                  %span 100
+                .table-user-ratings__rating
+                  = fa_icon 'meh', class: "table-user-ratings__rating--nomal"
+                  %span 50
+                .table-user-ratings__rating
+                  = fa_icon 'frown', class: "table-user-ratings__rating--bad"
+                  %span 0
+          %tr
+            %th カテゴリー
+            %td
+              = link_to root_path, class: "table-category" do
+                メンズ
+              = link_to root_path, class: "table-category" do
+                = fa_icon 'chevron-right'
+                ジャケット/アウター
+              = link_to root_path, class: "table-category" do
+                = fa_icon 'chevron-right'
+                ダウンジャケット
+          %tr
+            %th ブランド
+            %td
+              = link_to root_path do
+                ウール リッチ
+          %tr
+            %th 商品のサイズ
+            %td
+              M
+          %tr
+            %th 商品の状態
+            %td
+              目立った傷や汚れなし
+          %tr
+            %th 配送料の負担
+            %td
+              送料込み(出品者負担)
+          %tr
+            %th 配送の方法
+            %td
+              らくらくメルカリ便
+          %tr
+            %th 発送元地域
+            %td
+              = link_to root_path do
+                東京
+          %tr
+            %th 発送日の目安
+            %td
+              2~3日で発送
+    .price-box
+      %span.price-box--price
+        = number_to_currency(@product.price)
+      %span.price-box--tax (税込)
+      %span.price-box--shipping-free 送料込み
+    .product-details__description
+      %P
+        = simple_format(@product.description)
+    
+  .product-editBoxs
+    .product-editBoxs__buttons1
+      = link_to root_path, class: 'product-editBoxs__buttons1__buttonEdit' do
+        .product-editBoxs__buttons1__buttonEdit__text
+          %span 商品の編集
+    .product-editBoxs__buttons2
+      %span or
+    .product-editBoxs__buttons3
+      = link_to root_path, class: 'product-editBoxs__buttons3__buttonStop' do
+        .product-editBoxs__buttons3__buttonStop__text
+          %span 出品を一旦停止する
+    .product-editBoxs__buttons4
+      = link_to user_saling_product_path(current_user,@product), method: :delete, class: 'product-editBoxs__buttons4__buttonDelete' do
+        .product-editBoxs__buttons4__buttonDelete__text
+          %span この商品を削除する
+  .product-messages
+    .product-messages__form
+      %p
+        相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+      %textarea{type: 'text', class: 'product-messages__form__textarea'}
+      %button{type: 'submit', class: 'product-messages__form__submit-btn'}
+        %span コメントする
+  .links-prev-next
+    .links-prev-next__prev
+      - if @previous
+        = link_to product_path(@previous.id) do
+          = fa_icon 'chevron-left'
+          %span
+            = @previous.name
+    .links-prev-next__next
+      - if @next
+        = link_to product_path(@next.id) do
+          %span
+            = @next.name
+          = fa_icon 'chevron-right'
+  .social-medias
+    .social-medias__icons
+      = link_to root_path, class: 'social-medias__icons__icon' do
+        .social-medias__icons__icon--facebook
+          %i{class: 'fab fa-facebook-square'}
+      = link_to root_path, class: 'social-medias__icons__icon' do
+        .social-medias__icons__icon--twitter
+          %i{class: 'fab fa-twitter-square'}
+      = link_to root_path, class: 'social-medias__icons__icon' do
+        .social-medias__icons__icon--line
+          %i{class: 'fab fa-line'}
+      = link_to root_path, class: 'social-medias__icons__icon' do
+        .social-medias__icons__icon--pinterest
+          %i{class: 'fab fa-pinterest-square'}
+%ul.nav-crumb-list
+  %li{itemscope: "", itemtype: "”http://data-vocabulary.org/Breadcrumb”"}
+    = link_to root_path, class: 'nav-product__toppage', itemprop: "url" do
+      %span メルカリ
+      = fa_icon 'chevron-right'
+  %li{itemscope: "", itemtype: "”http://data-vocabulary.org/Breadcrumb”"}
+    %span{itemprop: "title"}
+      商品名
+= render 'shared/footer'
