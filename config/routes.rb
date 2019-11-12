@@ -32,6 +32,7 @@ Rails.application.routes.draw do
   resources :cards, only: [:index, :new, :create, :destroy] do
     collection do
       get :card_data_display
+      get :card_data_buy
     end
   end
 end
