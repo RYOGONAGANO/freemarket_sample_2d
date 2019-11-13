@@ -27,7 +27,7 @@ lady_skart = lady.children.create(name: "スカート")
 lady_onepiece = lady.children.create(name: "ワンピース")
 lady_shoues = lady.children.create(name: "靴")
 lady_roomwear = lady.children.create(name: "ルームウェア/パジャマ")
-lady_legwea = lady.children.create(name: "レッグウェア")
+lady_legwear = lady.children.create(name: "レッグウェア")
 lady_cap = lady.children.create(name: "帽子")
 lady_bag = lady.children.create(name: "バッグ")
 lady_accesary = lady.children.create(name: "アクセサリー")
@@ -141,7 +141,7 @@ lady_roomwear.children.create(
     {name: "ルームウェア"}
   ]
 )
-lady_legwea.children.create(
+lady_legwear.children.create(
   [
     {name: "ソックス"},
     {name: "スパッツ/レギンス"},
@@ -454,7 +454,7 @@ mens_swimsuit.children.create(
     {name: "その他"}
   ]
 )
-mens_legwea.children.create(
+mens_legwear.children.create(
   [
     {name: "ソックス"},
     {name: "レギンス/スパッツ"},
