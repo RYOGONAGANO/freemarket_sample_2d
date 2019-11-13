@@ -131,18 +131,20 @@
           %i{class: 'fab fa-pinterest-square'}
   .other-products
     %h2.other-products__username
-      出品者 さんのその他の出品
+      = @product.exhibitor.nickname
+      %span さんのその他の出品
     .other-products__box
-      - @buyer_products.each do |buyer_product|
+      - @exhibiter_products.each do |exhibiter_product|
         .other-products__box__product
-          = link_to product_path(buyer_product.id) do
-            = lazy_image_tag url_for(buyer_product.images[0]), class: "other-products__box__product__image"
+          = link_to product_path(exhibiter_product.id) do
+            .other-products__box__product__image-box
+              = lazy_image_tag url_for(exhibiter_product.images[0]), class: "other-products__box__product__image-box--image"
             .other-products__box__product__index
               .other-products__box__product__index__name
-                = buyer_product.name
+                = exhibiter_product.name
               .other-products__box__product__index__price-like
                 .other-products__box__product__index__price-like__price
-                  = number_to_currency(buyer_product.price)
+                  = number_to_currency(exhibiter_product.price)
                 .other-products__box__product__index__price-like__like
                   = fa_icon 'heart'
                   %span 15
