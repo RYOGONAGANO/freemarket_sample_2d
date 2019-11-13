@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:index, :profile, :profilechange]
 
   def index
     @user = User.find_by(id: current_user)
