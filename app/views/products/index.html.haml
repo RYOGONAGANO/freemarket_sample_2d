@@ -24,8 +24,8 @@
               .content__main1__category1__box__grid__item1
                 .content__main1__category1__box__grid__item1__image
                   = lazy_image_tag url_for(product.images[0])
-                  .content__main1__category1__box__grid__item1__image__price
-                    %span=number_to_currency(product.price)
+                .content__main1__category1__box__grid__item1__image__price
+                  %span=number_to_currency(product.price)
                 .content__main1__category1__box__grid__item1__name
                   =product.name
                   .content__main1__category1__box__grid__item1__name__opacity
