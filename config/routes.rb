@@ -28,6 +28,10 @@ Rails.application.routes.draw do
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
-  resources :cards, only: [:index, :new, :create, :destroy]
-
+  resources :cards, only: [:index, :new, :create, :destroy] do
+    collection do
+      get :card_data_display
+      get :card_data_buy
+    end
+  end
 end

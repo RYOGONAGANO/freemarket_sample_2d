@@ -11,7 +11,7 @@ class User < ApplicationRecord
   validates :email,    presence: true, format: { with: VALID_EMAIL_REGEX }
   validates :password, presence: true, length: { minimum: 7, maximum: 128 }
 
-  has_many :cards
+  has_one :card
   has_one :user_detail, dependent: :destroy
   accepts_nested_attributes_for :user_detail
   has_one :address, dependent: :destroy

@@ -1,0 +1,29 @@
+= render 'shared/logo-onlyheader'
+.card-data-display
+  .card-data-display__top
+    支払い方法
+  .card-data-display__information
+    .card-data-display__information__box
+      .card-data-display__information__box__card-ichiran
+        クレジットカード一覧
+      - if @card.present?
+        .card-data-display__information__box__card-companys
+          = form_with(url: card_path(@card.id), method: :display, local: true, id: 'charge-form') do |f|
+            .card-data-display__information__box__card-companys__box
+              .card-data-display__information__box__card-companys__box__card-company
+                = image_tag "#{@card_src}", id: "card-data-display__information__box__card-companys__box__card-company__icon", class: "card-data-display__information__box__card-companys__box__card-company__icon"
+              .card-data-display__information__box__card-companys__card-number-box
+                .card-data-display__information__box__card-companys__card-number-box__number
+                  %span ************
+                  = @card_information.last4
+                .card-data-display__information__box__card-companys__card-number-box__mark
+              .card-data-display__information__box__card-companys__card-yearmonth
+                = @exp_data
+      - else
+        = render "shared/add_card"
+    .card-data-display__information__btn
+      = link_to :back do
+        %button{type: "submit", class: "submit"}
+          次に進む
+
+= render 'shared/copywrite-bottom'
