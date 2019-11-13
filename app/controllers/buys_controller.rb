@@ -67,7 +67,7 @@ class BuysController < ApplicationController
   end
 
   def set_card
-    @card = Card.where(user_id: current_user.id).first if Card.where(user_id: current_user.id).present?
+    @card = current_user.card if current_user.card.present?
   end
 
   def redirect_exhibiter

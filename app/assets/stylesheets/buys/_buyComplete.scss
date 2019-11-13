@@ -252,8 +252,6 @@
   //flexboxで子要素のボタンとメッセージボックスの要素を配置する
     display: flex;
     flex-wrap: wrap;
-    // justify-content: space-between;
-  
     .modal-message-box {
       width: 100%;
   //下記heightの60pxはボタンの高さで、それを画面の大きさから引いています。

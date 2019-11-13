@@ -63,8 +63,8 @@ class CardsController < ApplicationController
       )
       @card = Card.new(user_id: current_user.id, customer_id: customer.id, card_id: customer.default_card)
       if @card.save
-        binding.pry
-        if request.path == card_data_buy_cards_path
+        path = Rails.application.routes.recognize_path(request.referer)
+        if path[:action] == "card_data_buy"
           redirect_to new_product_buy_path(session[:id])
         else
           redirect_to action: "index"
@@ -108,7 +108,7 @@ class CardsController < ApplicationController
 
   def card_data_buy
     session[:id] = params[:id]
-    card = Card.find_by(user_id: current_user.id)
+    card = current_user.card
   end
 
   private
