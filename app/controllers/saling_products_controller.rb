@@ -1,5 +1,7 @@
 class SalingProductsController < ApplicationController
   before_action :set_product, only: [:show, :destroy]
+  before_action :authenticate_user!
+
   def index
     @products = current_user.saling_products.with_attached_images
   end
