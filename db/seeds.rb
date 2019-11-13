@@ -7,17 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 lady = Category.create(name: "レディース")
 mens = Category.create(name: "メンズ")
-baby_kids = Category.create(name: "ベビー・キッズ")
-interior_dwelling_accessory = Category.create(name: "インテリア・住まい・小物")
+# baby_kids = Category.create(name: "ベビー・キッズ")
+# interior_dwelling_accessory = Category.create(name: "インテリア・住まい・小物")
 book_music_game = Category.create(name: "本・音楽・ゲーム")
-toy_hobby_goods = Category.create(name: "おもちゃ・ホビー・グッズ")
-cosme_perfume_beauty = Category.create(name: "コスメ・香水・美容")
-electronics_smartphone_camera = Category.create(name: "家電・スマホ・カメラ")
-sports_lisure = Category.create(name: "スポーツ・レジャー")
-handmade = Category.create(name: "ハンドメイド")
-ticket = Category.create(name: "チケット")
-bicycle_bike = Category.create(name: "自転車・オートバイ")
-etc = Category.create(name: "その他")
+# toy_hobby_goods = Category.create(name: "おもちゃ・ホビー・グッズ")
+# cosme_perfume_beauty = Category.create(name: "コスメ・香水・美容")
+# electronics_smartphone_camera = Category.create(name: "家電・スマホ・カメラ")
+# sports_lisure = Category.create(name: "スポーツ・レジャー")
+# handmade = Category.create(name: "ハンドメイド")
+# ticket = Category.create(name: "チケット")
+# bicycle_bike = Category.create(name: "自転車・オートバイ")
+# etc = Category.create(name: "その他")
 
 
 lady_tops = lady.children.create(name: "トップス")
@@ -27,7 +27,7 @@ lady_skart = lady.children.create(name: "スカート")
 lady_onepiece = lady.children.create(name: "ワンピース")
 lady_shoues = lady.children.create(name: "靴")
 lady_roomwear = lady.children.create(name: "ルームウェア/パジャマ")
-lady_regwea = lady.children.create(name: "レッグウェア")
+lady_legwea = lady.children.create(name: "レッグウェア")
 lady_cap = lady.children.create(name: "帽子")
 lady_bag = lady.children.create(name: "バッグ")
 lady_accesary = lady.children.create(name: "アクセサリー")
@@ -141,7 +141,7 @@ lady_roomwear.children.create(
     {name: "ルームウェア"}
   ]
 )
-lady_regwea.children.create(
+lady_legwea.children.create(
   [
     {name: "ソックス"},
     {name: "スパッツ/レギンス"},
@@ -297,17 +297,271 @@ lady_etc.children.create(
   ]
 )
 
+mens_tops = mens.children.create(name: "トップス")
+mens_jacket = mens.children.create(name: "ジャケット/アウター")
+mens_pants = mens.children.create(name: "パンツ")
+mens_shoues = mens.children.create(name: "靴")
+mens_bag = mens.children.create(name: "バッグ")
+mens_suit = mens.children.create(name: "スーツ")
+mens_cap = mens.children.create(name: "帽子")
+mens_accesary = mens.children.create(name: "アクセサリー")
+mens_zakka = mens.children.create(name: "小物")
+mens_clock = mens.children.create(name: "時計")
+mens_swimsuit = mens.children.create(name: "水着")
+mens_legwear = mens.children.create(name: "レッグウェア")
+mens_underwear = mens.children.create(name: "アンダーウェア")
+mens_etc = mens.children.create(name: "その他")
+
+mens_tops.children.create(
+  [
+    {name: "Tシャツ/カットソー(半袖/袖なし)"},
+    {name: "Tシャツ/カットソー(七分/長袖)"},
+    {name: "シャツ"},
+    {name: "ポロシャツ"},
+    {name: "タンクトップ"},
+    {name: "ニット/セーター"},
+    {name: "パーカー"},
+    {name: "カーディガン"},
+    {name: "スウェット"},
+    {name: "ジャージ"},
+    {name: "ベスト"},
+    {name: "その他"}
+  ]
+)
+mens_jacket.children.create(
+  [
+    {name: "テーラードジャケット"},
+    {name: "ノーカラージャケット"},
+    {name: "Gジャン/デニムジャケット"},
+    {name: "レザージャケット"},
+    {name: "ダウンジャケット"},
+    {name: "ライダースジャケット"},
+    {name: "ミリタリージャケット"},
+    {name: "ナイロンジャケット"},
+    {name: "フライトジャケット"},
+    {name: "ピーコート"},
+    {name: "ステンカラーコート"},
+    {name: "トレンチコート"},
+    {name: "モッズコート"}
+  ]
+)
+mens_pants.children.create(
+  [
+    {name: "デニム/ジーンズ"},
+    {name: "ワークパンツ/カーゴパンツ"},
+    {name: "スラックス"},
+    {name: "チノパン"},
+    {name: "ショートパンツ"},
+    {name: "ペインターパンツ"},
+    {name: "サルエルパンツ"},
+    {name: "オーバーオール"},
+    {name: "その他"}
+  ]
+)
+mens_shoues.children.create(
+  [
+    {name: "スニーカー"},
+    {name: "サンダル"},
+    {name: "ブーツ"},
+    {name: "モカシン"},
+    {name: "ドレス/ビジネス"},
+    {name: "長靴/レインシューズ"},
+    {name: "デッキシューズ"},
+    {name: "その他"}
+  ]
+)
+mens_bag.children.create(
+  [
+    {name: "ショルダーバッグ"},
+    {name: "トートバッグ"},
+    {name: "ボストンバッグ"},
+    {name: "リュック/バックパック"},
+    {name: "ウエストポーチ"},
+    {name: "ボディバッグ"},
+    {name: "ドラムバッグ"},
+    {name: "ビジネスバッグ"},
+    {name: "トラベルバッグ"},
+    {name: "メッセンジャーバッグ"},
+    {name: "エコバッグ"},
+    {name: "その他"}
+  ]
+)
+mens_suit.children.create(
+  [
+    {name: "スーツジャケット"},
+    {name: "スーツベスト"},
+    {name: "スラックス"},
+    {name: "セットアップ"},
+    {name: "その他"}
+  ]
+)
+mens_cap.children.create(
+  [
+    {name: "キャップ"},
+    {name: "ハット"},
+    {name: "ニットキャップ/ビーニー"},
+    {name: "ハンチング/ベレー帽"},
+    {name: "キャスケット"},
+    {name: "サンバイザー"},
+    {name: "その他"}
+  ]
+)
+mens_accesary.children.create(
+  [
+    {name: "ネックレス"},
+    {name: "ブレスレット"},
+    {name: "バングル/リストバンド"},
+    {name: "リング"},
+    {name: "ピアス(片耳用)"},
+    {name: "ピアス(両耳用)"},
+    {name: "アンクレット"},
+    {name: "その他"}
+  ]
+)
+mens_zakka.children.create(
+  [
+    {name: "長財布"},
+    {name: "折り財布"},
+    {name: "マネークリップ"},
+    {name: "コインケース/小銭入れ"},
+    {name: "名刺入れ/定期入れ"},
+    {name: "キーケース"},
+    {name: "キーホルダー"},
+    {name: "ネクタイ"},
+    {name: "手袋"},
+    {name: "ハンカチ"},
+    {name: "ベルト"},
+    {name: "マフラー"},
+    {name: "ストール"},
+    {name: "バンダナ"}
+  ]
+)
+mens_clock.children.create(
+  [
+    {name: "腕時計(アナログ)"},
+    {name: "腕時計(デジタル)"},
+    {name: "ラバーベルト"},
+    {name: "レザーベルト"},
+    {name: "金属ベルト"},
+    {name: "その他"}
+  ]
+)
+mens_swimsuit.children.create(
+  [
+    {name: "一般水着"},
+    {name: "スポーツ用"},
+    {name: "アクセサリー"},
+    {name: "その他"}
+  ]
+)
+mens_legwea.children.create(
+  [
+    {name: "ソックス"},
+    {name: "レギンス/スパッツ"},
+    {name: "レッグウォーマー"},
+    {name: "その他"}
+  ]
+)
+mens_underwear.children.create(
+  [
+    {name: "トランクス"},
+    {name: "ボクサーパンツ"},
+    {name: "その他"}
+  ]
+)
+mens_etc.children.create(
+  [
+    {name: "その他"}
+  ]
+)
+
 book = book_music_game.children.create(name: "本")
+comic = book_music_game.children.create(name: "漫画")
+magazine = book_music_game.children.create(name: "雑誌")
+cd = book_music_game.children.create(name: "CD")
+dvd_bluray = book_music_game.children.create(name: "DVD/ブルーレイ")
+record = book_music_game.children.create(name: "レコード")
+tvgame = book_music_game.children.create(name: "テレビゲーム")
 
 book.children.create(
   [
     {name: "文学/小説"},
     {name: "人文/社会"},
-    {name: "ノンフィクション/教養"}
+    {name: "ノンフィクション/教養"},
+    {name: "地図/旅行ガイド"},
+    {name: "ビジネス/経済"},
+    {name: "健康/医学"},
+    {name: "コンピュータ/IT"},
+    {name: "趣味/スポーツ/実用"},
+    {name: "住まい/暮らし/子育て"},
+    {name: "アート/エンタメ"},
+    {name: "洋書"},
+    {name: "絵本"},
+    {name: "参考書"},
+    {name: "その他"}
   ]
 )
-
-
+comic.children.create(
+  [
+    {name: "全巻セット"},
+    {name: "少年漫画"},
+    {name: "少女漫画"},
+    {name: "青年漫画"},
+    {name: "女性漫画"},
+    {name: "同人誌"},
+    {name: "その他"}
+  ]
+)
+magazine.children.create(
+  [
+    {name: "アート/エンタメ/ホビー"},
+    {name: "ファッション"},
+    {name: "ニュース/総合"},
+    {name: "趣味/スポーツ"},
+    {name: "その他"}
+  ]
+)
+cd.children.create(
+  [
+    {name: "邦楽"},
+    {name: "洋楽"},
+    {name: "アニメ"},
+    {name: "クラシック"},
+    {name: "K-POP/アジア"},
+    {name: "キッズ/ファミリー"},
+    {name: "その他"}
+  ]
+)
+dvd_bluray.children.create(
+  [
+    {name: "日本映画"},
+    {name: "外国映画"},
+    {name: "アニメ"},
+    {name: "TVドラマ"},
+    {name: "ミュージック"},
+    {name: "お笑い/バラエティ"},
+    {name: "スポーツ/フィットネス"},
+    {name: "キッズ/ファミリー"},
+    {name: "その他"}
+  ]
+)
+record.children.create(
+  [
+    {name: "邦楽"},
+    {name: "洋楽"},
+    {name: "その他"}
+  ]
+)
+tvgame.children.create(
+  [
+    {name: "家庭用ゲーム本体"},
+    {name: "家庭用ゲームソフト"},
+    {name: "携帯用ゲーム本体"},
+    {name: "携帯用ゲームソフト"},
+    {name: "PCゲーム"},
+    {name: "その他"}
+  ]
+)
 
 
 
