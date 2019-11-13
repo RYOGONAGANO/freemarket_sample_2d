@@ -44,7 +44,7 @@ class CardsController < ApplicationController
   end
 
   def new # カードの登録画面。送信ボタンを押すとcreateアクションへ。
-    @card = Card.find_by(user_id: current_user.id)
+    @card = current_user.card
     redirect_to action: "index" if @card.present?
   end
 
@@ -63,10 +63,11 @@ class CardsController < ApplicationController
       )
       @card = Card.new(user_id: current_user.id, customer_id: customer.id, card_id: customer.default_card)
       if @card.save
+        binding.pry
         if request.path == card_data_buy_cards_path
-          redirect_to action: "index"
-        else
           redirect_to new_product_buy_path(session[:id])
+        else
+          redirect_to action: "index"
         end
       else
         redirect_to action: "create"

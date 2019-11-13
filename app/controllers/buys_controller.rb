@@ -2,15 +2,14 @@ class BuysController < ApplicationController
   require "payjp"
   before_action :authenticate_user!, only: [:new, :create]
   before_action :redirect_exhibiter, only: [:new]
+  before_action :set_card, only: [:new, :create]
 
   def new
-    @product = Product.find(params[:product_id])
     @address = current_user.address
     @user_address = Prefecture.find(@product.shipping_area).name + " " + @address.city + @address.address
-    @user = UserDetail.find_by(user_id: current_user)
+    @user = current_user.user_detail
     @name = @user.last_name + " " + @user.first_name
     
-    @card = Card.where(user_id: current_user.id).first if Card.where(user_id: current_user.id).present?
     if @card.present?
       Payjp.api_key = Rails.application.credentials.payjp[:PAYJP_PRIVATE_KEY]
       customer = Payjp::Customer.retrieve(@card.customer_id)
@@ -42,9 +41,8 @@ class BuysController < ApplicationController
 
   def create #クレジット購入
     # 購入した際の情報を元に引っ張ってくる
-    card = current_user.card
 
-    if card.blank?
+    if @card.blank?
       redirect_to action: "new"
       flash[:alert] = '購入にはクレジットカード登録が必要です'
     else
@@ -54,7 +52,7 @@ class BuysController < ApplicationController
       # キーをセットする(環境変数においても良い)
       Payjp::Charge.create(
       amount: @product.price, #支払金額
-      customer: card.customer_id, #顧客ID
+      customer: @card.customer_id, #顧客ID
       currency: 'jpy', #日本円
       )
       # ↑商品の金額をamountへ、cardの顧客idをcustomerへ、currencyをjpyへ入れる
@@ -66,6 +64,10 @@ class BuysController < ApplicationController
       end
       #↑この辺はこちら側のテーブル設計どうりに色々しています
     end
+  end
+
+  def set_card
+    @card = Card.where(user_id: current_user.id).first if Card.where(user_id: current_user.id).present?
   end
 
   def redirect_exhibiter
