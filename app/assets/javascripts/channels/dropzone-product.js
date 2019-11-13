@@ -17,7 +17,7 @@ jQuery(document).ready(function() {
             <a href="" class="upload-edit">編集</a>
         </div>`,
     maxFiles: 10,
-    maxFilesize: 10,
+    maxFilesize: 100,
     dictCancelUpload: "削除",
     autoProcessQueue: false,
     dictDefaultMessage: "ドラッグアンドドロップ<br>またはクリックしてファイルをアップロード",
