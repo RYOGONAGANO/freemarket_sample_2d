@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :destroy]
 
   def index
-    @products = Product.with_attached_images.where(buyer_id: nil).limit(10)
+    @products = Product.with_attached_images.where(buyer_id: nil).order(id: "DESC").limit(10)
   end
 
   def new
