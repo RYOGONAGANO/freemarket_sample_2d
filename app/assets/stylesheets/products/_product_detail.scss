@@ -72,6 +72,7 @@
           font-size: 0;
           &__dot {
             width: 60px;
+            height: 60px;
             max-height: none;
             position: relative;
             overflow: hidden;
@@ -89,14 +90,14 @@
             }
             &__inner {
               position: static;
-              width: auto;
-              height: auto;
+              width: 60px;
+              height: 60px;
               padding: 0;
               pointer-events: none;
               overflow: hidden;
               img {
-                width: 100%;
-                vertical-align: bottom;
+                @include image;
+                @include center;
               }
             }
           }
