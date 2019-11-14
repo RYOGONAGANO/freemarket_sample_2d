@@ -17,6 +17,18 @@ class UsersController < ApplicationController
   def show
   end
 
+  def destroy
+    products = current_user.buyed_products
+    products.each do |product|
+      product.destroy
+    end
+    if current_user.destroy
+      redirect_to root_path
+    else
+      render profilechange_users_path
+    end
+  end
+
 
 
 end
