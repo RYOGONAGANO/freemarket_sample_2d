@@ -9,14 +9,16 @@
     &__link {
       display: block;
       &--toppage-image {
-        @include slide-banner-owl-item-background("mercari-ad-toppage.png");
+        @include slide-banner-owl-item-background("fmarket_logo_red.svg");
+        background-repeat: no-repeat;
       }
       &--camp {
-        @include slide-banner-owl-item-background("index_camp.png");
+        @include slide-banner-owl-item-background("fmarket_logo_white.svg");
         background-repeat: no-repeat;
       }
       &--cm {
-        @include slide-banner-owl-item-background("index_cm.jpg");
+        @include slide-banner-owl-item-background("logo_gray.svg");
+        background-repeat: no-repeat;
       }
     }
     & .owl-dots {
