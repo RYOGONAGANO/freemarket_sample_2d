@@ -13,7 +13,7 @@ class ProductsController < ApplicationController
     @category_grandchildren = Category.find_by(name: "#{params[:child_id]}").children if params[:child_id].present?
     @category_size = Category.find_by(name: "#{params[:size]}") if params[:size].present?
     @size = @category_size[:id] if @category_size.present?
-    @size_val = Product.sizes if (33 <= @size.to_i && @size.to_i <= 102) || (@size.to_i == 13) || (193 <= @size.to_i && @size.to_i <= 195)
+    @size_val = Product.sizes if (23 <= @size.to_i && @size.to_i <= 82) || (170 <= @size.to_i && @size.to_i <= 201) || (216 <= @size.to_i && @size.to_i <= 249)
     delivery = Product.fees[:"#{params[:method]}"]
     if delivery == 1
       @delivery_method1 = Product.shipping_method1s
