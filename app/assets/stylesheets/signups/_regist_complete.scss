@@ -58,6 +58,8 @@
   .userRegist-complete-advertisement {
     width: 700px;
     height: 250px;
-    background-color: colors(black);
+    margin: auto;
+    background-color: colors(gray);
+    border: 1px solid colors(title-gray);
   }
 }
